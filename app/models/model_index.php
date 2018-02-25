@@ -104,10 +104,10 @@ class model_index extends Model
         return $result;
     }
 
-    function getCountNews($id)
+    function getCountNews()
     {
         $sql = "SELECT count(*) as count FROM tbl_news";
-        $param = array($id);
+//        $param = array($id);
         $result = $this->doSelect($sql);
         return $result;
     }

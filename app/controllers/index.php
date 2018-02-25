@@ -7,12 +7,12 @@ class Index extends Controller
         parent::__construct();
     }
 
-    function category($id = '')
+    function category($id)
     {
         if ($id != '' && is_numeric($id)) {
-            $id_isset = $this->model->getIssetCategory($id);
+            $id_isset = $this->model->getIssetCategory();
             if (sizeof($id_isset) > 0) {
-                $CountNews = $this->model->getCountNews($id);
+                $CountNews = $this->model->getCountNews();
                 if ($CountNews[0]['count'] > 0) {
                     Model::sessionInit();
                     $UserID = Model::sessionGet('userId');
@@ -83,8 +83,9 @@ class Index extends Controller
         $getCategory =$this->model->getCategory();
         $getsuggestNews = $this->model->getsuggestNews();
         $getCategory =$this->model->getCategory();
+        $getNewsVip = $this->model->getNewsVip();
 
-        $data = array('sliders' => $sliders,'getPrice' => $getPrice,'getNews' => $getNews,'getCategory' => $getCategory,'getsuggestNews' => $getsuggestNews,'getCategory' => $getCategory);
+        $data = array( 'getNewsVip' => $getNewsVip,'sliders' => $sliders,'getPrice' => $getPrice,'getNews' => $getNews,'getCategory' => $getCategory,'getsuggestNews' => $getsuggestNews,'getCategory' => $getCategory);
 
         if($deviceType=='computer') {
             $this->view('index/index', $data);

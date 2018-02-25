@@ -1,5 +1,5 @@
 <?php
-define('URL', "http://localhost/rahaatbekhon/");
+define('URL', "http://localhost/rahaatbekhoon/");
 define('URL_FOOTER', "raahatbekhon.ir");
 define('SERVER_NAME', "localhost");
 define('NAME', "راحت بخون");

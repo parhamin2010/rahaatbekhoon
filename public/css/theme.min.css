@@ -3897,7 +3897,7 @@ label.check-handler input[type=checkbox]:checked + ._check:before, label.check-h
 
 .homepage__header__content {
     width: calc(100% - 280px);
-    min-height: 250px
+    /*min-height: 250px*/
 }
 
 .home__page .media-gallery__body .media-aside {

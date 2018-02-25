@@ -3,7 +3,7 @@ $userId = Model::sessionGet('userId');
 $level = Model::sessionGet('level');
 ?>
 <header id="dk-header">
-    <div class="header">
+    <div class="header" style="padding: 10px;margin-bottom: 20px">
         <div class="inner-wraper">
             <div class="runit left">
                 <div class="topbar">

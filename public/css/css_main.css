@@ -373,7 +373,7 @@ h4 {
 }
 
 .header {
-    background-color: #50b33c;
+    background-color: #da0202;
     height: 96px;
     font-family: 'iran_sansregular',sans-serif;
     margin: 0 auto
@@ -786,7 +786,7 @@ h4 {
 
 .header .search-box {
     margin-left: 47px !important;
-    position: relative !important;
+    /*position: absolute !important;*/
     float: right !important;
     z-index: 1311 !important
 }
@@ -1190,9 +1190,9 @@ span.search-subtitle_asimg {
 }
 
 .navigation {
-    background: #50b33c;
-    border-top: 1px solid #00a157;
-    border-bottom: 1px solid #50b33c;
+    background: #6f0000;
+    border-top: 1px solid #6f0000;
+    border-bottom: 1px solid #6f0000;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
@@ -1200,7 +1200,7 @@ span.search-subtitle_asimg {
     -o-box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
     height: 40px;
     min-width: 980px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     /*padding-bottom: 40px;*/
     color:#fff;
 }
@@ -3693,7 +3693,7 @@ input#subscribe-emial {
 }
 
 #dk-header {
-    background-color: #50b33c
+    background-color: #da0202;
 }
 
 .wmax .inner-wraper {

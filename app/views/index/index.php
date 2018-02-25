@@ -77,76 +77,83 @@ $newsVip = $data['getNewsVip'];
 
 <body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
 
+
+
 <div class="container">
     <main class="home__page">
         <div class="homepage">
+            <div class="container">
+                <?php require('app/views/include/heading.php'); ?>
+            </div>
             <!-- ========== NAVBAR ========== -->
             <?php require('app/views/include/header.php'); ?>
             <!-- ========== NAVBAR : END ========== -->
+            <div class="W-100" >
+                <?php require('app/views/index/slider.php'); ?>
 
+            </div>
             <div class="homepage__header">
                 <div class="homepage__header__content">
-                    <?php
-                    if (sizeof($news) > 0) {
-                        ?>
-                        <div class="news-ticker" id="news-ticker" style="min-width: 1200px">
-                            <div class="news-ticker__head">
-                                <div class="news-ticker__head--loader">
-                                    <div class="radial-progress">
-                                        <svg height="26" width="26">
-                                            <circle cx="13" cy="13" r="12" stroke="#2899d5" stroke-width="2"
-                                                    fill="transparent"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="news-ticker__head--txt">
-                                    <span>اخبار کوتاه</span>
-                                </div>
-                                <div class="news-ticker__head--sep"></div>
-                                <div class="news-ticker__head--nav">
-                                    <i class="icon-arrow-up down"></i>
-                                    <i class="icon-arrow-up up"></i>
-                                </div>
-                            </div>
-
-                            <div id="tick-text" style="background: rgba(76, 175, 80, 0.2);">
-                                <ul class="news-ticker__txt innerWrap news-items">
-
-                                    <?php
-                                    foreach ($news as $newsInfo) {
-                                        ?>
-                                        <li class="_item list">
-                                        <span class="_text">
-                                            <a href="blog/<?= $newsInfo['n_id'] ?>"
-                                               title="<?= $newsInfo['title'] ?>"><?= $newsInfo['title'] ?></a>
-                                        </span>
-
-                                            <div class="news-ticker__time">
-                                                <div class="news-ticker__time--txt">
-                                                    <span><?= $newsInfo['time'] ?>
-                                                        &nbsp;<?= $newsInfo['date_created'] ?></span>
-                                                </div>
-                                                <i class="icon-clock-icon" style="margin-right: 5px"></i>
-                                            </div>
-                                        </li>
-                                        <?php
-                                    }
-                                    ?>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                    ?>
-                    <?php require('app/views/index/slider.php'); ?>
+<!--                    --><?php
+//                    if (sizeof($news) > 0) {
+//                        ?>
+<!--                        <div class="news-ticker" id="news-ticker" style="min-width: 1200px">-->
+<!--                            <div class="news-ticker__head">-->
+<!--                                <div class="news-ticker__head--loader">-->
+<!--                                    <div class="radial-progress">-->
+<!--                                        <svg height="26" width="26">-->
+<!--                                            <circle cx="13" cy="13" r="12" stroke="#2899d5" stroke-width="2"-->
+<!--                                                    fill="transparent"/>-->
+<!--                                        </svg>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="news-ticker__head--txt">-->
+<!--                                    <span>اخبار کوتاه</span>-->
+<!--                                </div>-->
+<!--                                <div class="news-ticker__head--sep"></div>-->
+<!--                                <div class="news-ticker__head--nav">-->
+<!--                                    <i class="icon-arrow-up down"></i>-->
+<!--                                    <i class="icon-arrow-up up"></i>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!---->
+<!--                            <div id="tick-text" style="background: rgba(76, 175, 80, 0.2);">-->
+<!--                                <ul class="news-ticker__txt innerWrap news-items">-->
+<!---->
+<!--                                    --><?php
+//                                    foreach ($news as $newsInfo) {
+//                                        ?>
+<!--                                        <li class="_item list">-->
+<!--                                        <span class="_text">-->
+<!--                                            <a href="blog/--><?//= $newsInfo['n_id'] ?><!--"-->
+<!--                                               title="--><?//= $newsInfo['title'] ?><!--">--><?//= $newsInfo['title'] ?><!--</a>-->
+<!--                                        </span>-->
+<!---->
+<!--                                            <div class="news-ticker__time">-->
+<!--                                                <div class="news-ticker__time--txt">-->
+<!--                                                    <span>--><?//= $newsInfo['time'] ?>
+<!--                                                        &nbsp;--><?//= $newsInfo['date_created'] ?><!--</span>-->
+<!--                                                </div>-->
+<!--                                                <i class="icon-clock-icon" style="margin-right: 5px"></i>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                        --><?php
+//                                    }
+//                                    ?>
+<!---->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        --><?php
+//                    }
+//                    ?>
 
                 </div>
             </div>
             <?php
             if (sizeof($newsVip) > 0) {
                 ?>
-                <div class="homepage__main" style="margin-top: 20px">
+                <div class="homepage__main" >
                     <section class="carousel" style="height: 469px;">
                         <div class="module-title">
                             <h1 class="module-title__txt">

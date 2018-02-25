@@ -1,0 +1,139 @@
+#slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+#slider:hover {
+    cursor: pointer;
+}
+
+#slider ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+#slider > ul > li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#slider ul li:first-child {
+    display: list-item;
+}
+
+#slider .sliderCaption {
+    width: 100%;
+    height: 43px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(30, 30, 30, 0.8);
+    z-index: 9999;
+}
+
+.captionList {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.captionItem {
+    float: left;
+    position: relative;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background: transparent;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+.captionItem:hover, .activeItem {
+    color: rgba(30, 30, 30, 0.9);
+    background: #fff;
+    border-bottom: 2px solid #50b33c;
+    border-left: 1px solid rgba(30, 30, 30, 0.8)
+}
+
+.captionItem:first-child {
+    border-left: none;
+}
+.captionItem:hover:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -20px;
+    left: 45%;
+    border: 10px solid transparent;
+    border-bottom-color: #fff
+}
+
+.activeItem:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -20px;
+    left: 45%;
+    border: 10px solid transparent;
+    border-bottom-color: #fff
+}
+
+#slider .next, #slider .prev {
+    position: absolute;
+    z-index: 9999;
+    opacity: 0;
+    box-sizing: border-box;
+    width: 35px;
+    height: 38px;
+    background: transparent;
+    display: inline-block;
+}
+
+#slider .next {
+    right: 0;
+}
+
+#slider .prev {
+    left: 0;
+}
+
+#slider .next div.toRight, #slider .prev div.toLeft {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    border-top: 3px solid #fff;
+    border-radius: 3px;
+}
+
+.next div.toRight {
+    right: 15px;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+}
+
+.prev div.toLeft {
+    left: 15px;
+    border-left: 3px solid #fff;
+    transform: rotate(-45deg);
+}
+
+#slider .next:hover, #slider .prev:hover {
+    cursor: pointer;
+}
+
+#slider .next:hover .toRight, #slider .prev:hover .toLeft {
+    opacity: 0.7;
+}

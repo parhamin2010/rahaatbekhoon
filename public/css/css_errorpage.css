@@ -1,0 +1,145 @@
+#main {
+    background-color: transparent
+}
+
+.error-page {
+    direction: rtl;
+    box-sizing: border-box
+}
+
+.error-page > * {
+    box-sizing: border-box
+}
+
+.error-page__message {
+    text-align: center;
+    background: #2B393F;
+}
+
+.error-page__message--logo {
+    display: block;
+    margin: 65px auto 0
+}
+
+.error-page__message--title {
+    margin-top: 55px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.error-page__message--subtitle {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 15px
+}
+
+.error-page__message--button {
+    font: normal 13px iran_sansregular;
+    display: inline-block;
+    margin: 30px auto 55px;
+    padding: 0 25px;
+    color: #fff;
+    background-color: #2196f3
+}
+
+.showme {
+    font-weight: bold;
+    color: #2196f3
+}
+
+.inline {
+    margin: 0 3px;
+    display: inline;
+    padding: 1px 11px
+}
+
+.error-page__guide-text {
+    margin: 30px auto 0;
+    color: #fff;
+    font-size: 15px
+}
+
+.error-page__message--button:hover {
+    color: #fff;
+    background-color: #208de6
+}
+
+.error-page__message--button:focus {
+    color: #fff;
+    background-color: #2196f3
+}
+
+.error-page__suggestion {
+    margin-top: 30px
+}
+
+.error-page__suggestion--title {
+    font: normal 15px iran_sansregular;
+    color: #fff;
+}
+
+.error-page__suggestion--title:before {
+    content: '';
+    background: url(../Image/Public/vtwo/slices.png) no-repeat;
+    background-position: -35px -652px;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin-left: 3px;
+    vertical-align: -1px
+}
+
+.error-page__suggestion--items {
+    margin-top: 20px
+}
+
+.error-page__suggestion--item {
+    background-color: #fff;
+    float: right;
+    display: inline-block;
+    width: calc(25% - 7.5px);
+    margin: 10px 0 0 10px
+}
+
+.error-page__suggestion--item:nth-child(4n) {
+    margin-left: inherit
+}
+
+.error-page__suggestion--item-img {
+    width: 100%;
+    position: absolute;
+    background-color: #fff
+}
+
+.error-page__suggestion--item-img-holder {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+.image-placeholder {
+    padding-bottom: 95%;
+    display: inline-block;
+    width: 100%;
+    position: relative
+}
+
+.error-page__suggestion--item-img-caption {
+    font: normal 14px iran_sansregular;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    white-space: nowrap
+}
+
+.error-page__suggestion .carousel {
+    margin-top: 30px
+}

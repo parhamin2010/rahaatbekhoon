@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20161003 at Wed Mar 15 10:16:45 2017
+ By www-data
+</metadata>
+<defs>
+<font id="beeptunes" horiz-adv-x="1024" >
+  <font-face 
+    font-family="beeptunes"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="1024"
+    panose-1="0 0 0 0 0 0 0 0 0 0"
+    ascent="960"
+    descent="-64"
+    bbox="0 -64 1097 960"
+    underline-thickness="0"
+    underline-position="0"
+    unicode-range="U+0020-E602"
+  />
+<missing-glyph horiz-adv-x="0" 
+ />
+    <glyph glyph-name=".notdef" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="512" 
+d="M0 0v0v0v0z" />
+    <glyph glyph-name="uniE600" unicode="&#xe600;" 
+d="M996 -36q-14 -14 -32 -21t-36.5 -7t-36 7t-31.5 21l-170 170q-26 -17 -54.5 -30t-59 -22.5t-62.5 -14.5t-65 -5q-93 0 -175 35.5t-142.5 96.5t-96 142.5t-35.5 174.5t35.5 175t96 142.5t142.5 96t175 35.5t174.5 -35.5t142.5 -96t96.5 -142.5t35.5 -175q0 -33 -5 -65
+t-14.5 -62.5t-22.5 -59t-30 -54.5l170 -170q14 -14 21 -31.5t7 -36t-7 -36.5t-21 -32v0zM449 832q-67 0 -125 -25.5t-101.5 -69t-69 -101.5t-25.5 -125q0 -66 25.5 -124.5t69 -102t101.5 -68.5t125 -25q66 0 124.5 25t102 68.5t68.5 102t25 124.5q0 67 -25 125t-68.5 101.5
+t-102 69t-124.5 25.5v0z" />
+    <glyph glyph-name="uniE601" unicode="&#xe601;" 
+d="M736 960h-448q-20 0 -37.5 -7.5t-30.5 -20.5t-20.5 -30.5t-7.5 -37.5v-832q0 -20 7.5 -37.5t20.5 -30.5t30.5 -20.5t37.5 -7.5h448q20 0 37.5 7.5t30.5 20.5t20.5 30.5t7.5 37.5v832q0 20 -7.5 37.5t-20.5 30.5t-30.5 20.5t-37.5 7.5v0zM384 912h256v-32h-256v32v0z
+M512 0q-13 0 -25 5t-20.5 13.5t-13.5 20.5t-5 25t5 25t13.5 20.5t20.5 13.5t25 5t25 -5t20.5 -13.5t13.5 -20.5t5 -25t-5 -25t-13.5 -20.5t-20.5 -13.5t-25 -5v0zM768 192h-512v640h512v-640v0z" />
+    <glyph glyph-name="uniE602" unicode="&#xe602;" horiz-adv-x="1097" 
+d="M731 494q0 8 -5 13t-13 5h-128v201q0 8 -5 13q-6 5 -13 5h-110q-7 0 -13 -5q-5 -5 -5 -13v-201h-128q-8 0 -13 -5q-5 -6 -5 -13q0 -8 5 -13l201 -202q5 -5 13 -5t13 5l201 201q5 7 5 14v0zM1097 366q0 -91 -64 -155q-64 -65 -155 -65h-622q-106 0 -181 75q-75 76 -75 181
+q0 75 40 137q40 63 107 95q-1 17 -1 24q0 121 86 207t207 86q89 0 163 -50t108 -132q40 36 95 36q60 0 103 -43t43 -104q0 -43 -24 -79q75 -17 122 -77q48 -60 48 -136v0z" />
+  </font>
+</defs></svg>

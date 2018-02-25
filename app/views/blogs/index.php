@@ -1,0 +1,395 @@
+<?php
+Model::sessionInit();
+$news = $data['getNews'];
+$newsVip = $data['getNewsVip'];
+$newsTop = $data['getTopNews'];
+?>
+<!doctype html>
+<html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#">
+<head>
+    <base href="<?= URL; ?>">
+    <meta charset="UTF-8">
+    <title><?= NAME; ?> | <?= $news['0']['name']; ?></title>
+
+    <meta name="description"
+          content="<?= NAME; ?>"/>
+    <meta name="robots" content="noodp"/>
+    <link rel="canonical" href="<?= URL; ?>"/>
+    <meta property="og:locale" content="fa_IR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="<?= NAME; ?>"/>
+    <meta property="og:description"
+          content="<?= NAME; ?>"/>
+    <meta property="og:url" content="<?= URL; ?>"/>
+    <meta property="og:site_name" content="<?= NAME; ?>"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description"
+          content="<?= NAME; ?>"/>
+    <meta name="twitter:title" content="<?= NAME; ?>"/>
+    <meta name="twitter:creator" content="<?= NAME; ?>"/>
+
+    <link rel='stylesheet' id='cptch_stylesheet-css' href='public/css/front_end_style.css?ver=2.0.5' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='dashicons-css' href='public/css/dashicons.min.css?ver=2.0.5' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='cptch_desktop_style-css' href='public/css/desktop_style.css?ver=2.0.5' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
+    <script type='text/javascript' src='public/js/jquery/jquery.js?ver=2.0.5'></script>
+    <script type='text/javascript'
+            src='public/js/jquery/jquery-migrate.min.js?ver=2.0.5'></script>
+
+
+    <script src="public/js/js_public.js?v=LWsGw_qSybcpEPGlMdah59AY_VUrUk4Vs5LiLIzcDVc1"></script>
+    <script src="public/js/js_xdomainrequest.js?v=Ic2FfCKfX6xdPI1Jw9VidPrd4w4Ij8BW7O9rAhd6b9A1"></script>
+    <script src="public/js/js_main.js?v=7TforAN8Kth9M52b0-uWjqite87JW22DKFXR9sHSufs1"></script>
+    <script src="public/js/js_pagePath.js?v=Xyyl-H9AlOT8fWAgNY1sD-8bhQv1glWO-0MiC_Wx8rU1"></script>
+    <script src="public/js/js_emstrack.js?v=ZoELSPG0SdWVAMBXGZZM03-7uWDmCv9UGrjOM4b7SI41"></script>
+    <script type='text/javascript' language='JavaScript'>var currentDate = '2/6/2018 7:57:50 PM'</script>
+
+    <?php require('app/views/include/favicon.php'); ?>
+
+    <link href="public/css/css_main.css?v=d34y6GouB8OIqYbVXfO54Dw2tDZG8gAwP5JRzPLXebU1"
+          rel="stylesheet"/>
+</head>
+
+<body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
+
+<div class="container">
+    <main class="home__page">
+        <div class="homepage">
+            <!-- ========== NAVBAR ========== -->
+            <?php require('app/views/include/header.php'); ?>
+            <!-- ========== NAVBAR : END ========== -->
+
+            <div class="homepage__header">
+                <div class="homepage__header__content">
+                    <?php
+                    if (sizeof($news) > 0) {
+                        ?>
+                        <div class="news-ticker" id="news-ticker" style="min-width: 1200px">
+                            <div class="news-ticker__head">
+                                <div class="news-ticker__head--loader">
+                                    <div class="radial-progress">
+                                        <svg height="26" width="26">
+                                            <circle cx="13" cy="13" r="12" stroke="#2899d5" stroke-width="2"
+                                                    fill="transparent"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="news-ticker__head--txt">
+                                    <span>اخبار کوتاه</span>
+                                </div>
+                                <div class="news-ticker__head--sep"></div>
+                                <div class="news-ticker__head--nav">
+                                    <i class="icon-arrow-up down"></i>
+                                    <i class="icon-arrow-up up"></i>
+                                </div>
+                            </div>
+
+                            <div id="tick-text" style="background: rgba(76, 175, 80, 0.2);">
+                                <ul class="news-ticker__txt innerWrap news-items">
+
+                                    <?php
+                                    foreach ($news as $newsInfo) {
+                                        ?>
+                                        <li class="_item list">
+                                        <span class="_text">
+                                            <a href="blog/<?= $newsInfo['n_id'] ?>"
+                                               title="<?= $newsInfo['title'] ?>"><?= $newsInfo['title'] ?></a>
+                                        </span>
+
+                                            <div class="news-ticker__time">
+                                                <div class="news-ticker__time--txt">
+                                                    <span><?= $newsInfo['time'] ?>
+                                                        &nbsp;<?= $newsInfo['date_created'] ?></span>
+                                                </div>
+                                                <i class="icon-clock-icon" style="margin-right: 5px"></i>
+                                            </div>
+                                        </li>
+                                        <?php
+                                    }
+                                    ?>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    <div id="tiles-4" class="tiles" style="min-width: 1200px">
+                        <?php
+                        if (isset($newsTop[0]['n_id'])) {
+                            ?>
+                            <a href="blog/<?= $newsTop[0]['n_id'] ?>"
+                               id="tile-4-6-0" title="<?= $newsTop[0]['title'] ?>"
+                               target="_self" class="tiles__item">
+                                <img src="public/images/news/<?= $newsTop[0]['i_image'] ?>"
+                                     alt="<?= $newsTop[0]['title'] ?>" width="100%"
+                                     height="100%" class="tiles__item--img" style="position: absolute;z-index: 0">
+                                <div style="width: 100%;height:160px">&nbsp;</div>
+                                <div style="width: 100%;height:200px">
+                                    <p style="width: 100%;background:rgba(0,0,0,0.9 );position: absolute;z-index: 1;padding-right: 10px;padding-left: 10px;padding-bottom: 100px;padding-top: 15px;color:#fff;font-size: 10pt"><?= $newsTop[0]['title'] ?></p>
+                                </div>
+                            </a>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                        if (isset($newsTop[1]['n_id'])) {
+                            ?>
+                            <a href="blog/<?= $newsTop[1]['n_id'] ?>"
+                               id="tile-4-6-1" title="<?= $newsTop[1]['title'] ?>" target="_self" class="tiles__item">
+                                <img src="public/images/news/<?= $newsTop[1]['i_image'] ?>"
+                                     alt="<?= $newsTop[1]['title'] ?>" width="100%" height="100%"
+                                     class="tiles__item--img">
+                                <div style="width: 100%;height:160px">&nbsp;</div>
+                                <div style="width: 100%;height:200px">
+                                    <p style="width: 100%;background:rgba(0,0,0,0.9 );position: absolute;z-index: 1;padding-right: 10px;padding-left: 10px;padding-bottom: 100px;padding-top: 15px;color:#fff;font-size: 10pt"><?= $newsTop[1]['title'] ?></p>
+                                </div>
+                            </a>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                        if (isset($newsTop[2]['n_id'])) {
+                            ?>
+                            <a href="blog/<?= $newsTop[2]['n_id'] ?>"
+                               id="tile-4-6-2" title="<?= $newsTop[2]['title'] ?>" target="_self"
+                               class="tiles__item hor">
+                                <img src="public/images/news/<?= $newsTop[2]['i_image'] ?>"
+                                     alt="<?= $newsTop[2]['title'] ?>" width="100%" height="100%"
+                                     class="tiles__item--img">
+                                <div style="width: 100%;height:160px">&nbsp;</div>
+                                <div style="width: 100%;height:200px">
+                                    <p style="width: 100%;background:rgba(0,0,0,0.9 );position: absolute;z-index: 1;padding-right: 10px;padding-left: 10px;padding-bottom: 100px;padding-top: 15px;color:#fff;font-size: 10pt"><?= $newsTop[2]['title'] ?></p>
+                                </div>
+                            </a>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                        if (isset($newsTop[3]['n_id'])) {
+                            ?>
+                            <a href="blog/<?= $newsTop[3]['n_id'] ?>"
+                               id="tile-4-6-3" title="<?= $newsTop[3]['title'] ?>" target="_self"
+                               class="tiles__item hor">
+                                <img src="public/images/news/<?= $newsTop[3]['i_image'] ?>"
+                                     alt="<?= $newsTop[3]['title'] ?>" width="100%" height="100%"
+                                     class="tiles__item--img">
+                                <div style="width: 100%;height:160px">&nbsp;</div>
+                                <div style="width: 100%;height:200px">
+                                    <p style="width: 100%;background:rgba(0,0,0,0.9 );position: absolute;z-index: 1;padding-right: 10px;padding-left: 10px;padding-bottom: 100px;padding-top: 15px;color:#fff;font-size: 10pt"><?= $newsTop[3]['title'] ?></p>
+                                </div>
+                            </a>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                        if (isset($newsTop[4]['n_id'])) {
+                            ?>
+                            <a href="blog/<?= $newsTop[4]['n_id'] ?>"
+                               id="tile-4-6-4"
+                               title="<?= $newsTop[4]['title'] ?>" target="_self" class="tiles__item">
+                                <img src="public/images/news/<?= $newsTop[4]['i_image'] ?>"
+                                     alt="<?= $newsTop[4]['title'] ?>" width="100%" height="100%"
+                                     class="tiles__item--img">
+                                <div style="width: 100%;height:160px">&nbsp;</div>
+                                <div style="width: 100%;height:200px">
+                                    <p style="width: 100%;background:rgba(0,0,0,0.9 );position: absolute;z-index: 1;padding-right: 10px;padding-left: 10px;padding-bottom: 100px;padding-top: 15px;color:#fff;font-size: 10pt"><?= $newsTop[4]['title'] ?></p>
+                                </div>
+                            </a>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                        if (isset($newsTop[5]['n_id'])) {
+                            ?>
+                            <a href="blog/<?= $newsTop[5]['n_id'] ?>"
+                               id="tile-4-6-5"
+                               title="<?= $newsTop[5]['title'] ?>" target="_self" class="tiles__item">
+                                <img src="public/images/news/<?= $newsTop[5]['i_image'] ?>"
+                                     alt="<?= $newsTop[5]['title'] ?>" width="100%" height="100%"
+                                     class="tiles__item--img">
+                                <div style="width: 100%;height:160px">&nbsp;</div>
+                                <div style="width: 100%;height:200px">
+                                    <p style="width: 100%;background:rgba(0,0,0,0.9 );position: absolute;z-index: 1;padding-right: 10px;padding-left: 10px;padding-bottom: 100px;padding-top: 15px;color:#fff;font-size: 10pt"><?= $newsTop[5]['title'] ?></p>
+                                </div>
+                            </a>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+            if (sizeof($newsVip) > 0) {
+                ?>
+                <div class="homepage__main">
+                    <section class="carousel" style="height: 469px;">
+                        <div class="module-title">
+                            <h1 class="module-title__txt">
+                                <span>اخبار </span><span class="bold">ویژه</span></h1>
+                            <div class="module-title__sep"></div>
+                        </div>
+                        <div class="carousel__body load-failed">
+                            <?php
+                            foreach ($newsVip as $newsVipInfo) {
+                                ?>
+                                <a href="blog/<?= $newsVipInfo['n_id'] ?>"
+                                   class="carousel__body__item" title="<?= $newsVipInfo['title'] ?>">
+                                    <img src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
+                                         data-lazy-src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
+                                         width="284" height="180" class="image__img wp-post-image"
+                                         alt="<?= $newsVipInfo['title'] ?>">
+                                    <span class="item__txt">
+                                    <span><?= $newsVipInfo['title'] ?></span>
+                                </span>
+                                    <span class="item__details">
+                                <time datetime="<?= $newsVipInfo['time'] ?>&nbsp;<?= $newsVipInfo['date_created'] ?>"
+                                      class="item__details--date"><?= $newsVipInfo['time'] ?>
+                                    &nbsp;<?= $newsVipInfo['date_created'] ?></time>
+                                <i class="icon-clock-icon" style="margin-right: 5px"></i>
+                            </span>
+                                </a>
+
+                                <?php
+                            }
+                            ?>
+                        </div>
+                        <div class="carousel__btn--left">
+                            <i class="icon-arrow-up"></i>
+                        </div>
+                        <div class="carousel__btn--right">
+                            <i class="icon-arrow-up"></i>
+                        </div>
+                    </section>
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+
+        <div class="main" style="background: #2b393f;">
+            <div class="main__aside sticky-sidebar__distant">
+                <div class="theiaStickySidebar">
+                </div>
+            </div>
+
+            <?php
+            $news = $data['getNews'];
+            if (sizeof($news) > 0) {
+                ?>
+                <div class="main__content" style="margin-right: -2px;">
+                    <div class="module-title">
+                        <div class="module-title__txt">
+                            <span class="bold" style="color: #fff;">آخرین  </span><span
+                                    style="color: #fff;">عنوان‌ها</span>
+                        </div>
+                        <div class="module-title__sep"></div>
+                    </div>
+                    <div class="topics">
+                        <div class="topics__content">
+                            <section class="masonry-gallery" style="    margin-right: 23px;">
+                                <h2 class="disappear">آخرین عنوان‌ها</h2>
+
+                                <?php
+                                foreach ($news as $newsInfo) {
+                                    ?>
+                                    <div class="masonry-gallery__item">
+                                        <div class="image">
+                                            <span class="image__mask"></span>
+
+                                            <a href="blog/<?= $newsInfo['n_id'] ?>"
+                                               title="<?= $newsInfo['title'] ?>" class="image__linker">
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                     data-lazy-src="public/images/news/<?= $newsInfo['i_image'] ?>"
+                                                     width="284" height="180" class="image__img wp-post-image"
+                                                     alt="<?= $newsInfo['title'] ?>"> </a>
+
+
+                                            <a href="blogs/category/<?= $newsInfo['cat_id'] ?>"
+                                               title="<?= $newsInfo['name'] ?>"
+                                               class="image__badge"><?= $newsInfo['name'] ?></a> <span
+                                                    class="image__fav">
+                                                            <span class="popularity">
+                                  <span class="popularity__comments">
+                                    <i class="icon-comment"></i>
+                                    <span style="margin-top: -5px;margin-left: 5px;" class="popularity__comments--num">۰</span>
+                                  </span>
+                                  <span class="popularity__likes">
+                                    <i class="icon-view"></i>
+                                    <span style="margin-top: -5px;margin-left: 5px;" class="popularity__likes--num"><?= $newsInfo['view'] ?></span>
+                                  </span>
+                                </span>
+                            </span>
+                                        </div>
+
+                                        <a href="blog/<?= $newsInfo['n_id'] ?>"
+                                           title="<?= $newsInfo['title'] ?>"
+                                           class="masonry-gallery__item__title"><?= $newsInfo['title'] ?></a>
+
+                                        <div class="masonry-gallery__item__description"><?= $newsInfo['subtitle'] ?></div>
+                                        <div class="masonry-gallery__item__detail" style="float: left">
+                                        <span class="past-time"><?= $newsInfo['time'] ?>
+                                            &nbsp;<?= $newsInfo['date_created'] ?></span>
+                                            <i class="icon-clock-icon" style="margin-right: 5px"></i>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+
+                            </section>
+                        </div>
+                    </div>
+                    <!--                <div class="module-title">-->
+                    <!--                    <div class="module-title__sep"></div>-->
+                    <!--                    <a href="http://www.digikala.com/mag/%d8%a8%d8%a7%db%8c%da%af%d8%a7%d9%86%db%8c/"-->
+                    <!--                       class="module-title__btn">مشاهده عناوین بیشتر</a>-->
+                    <!--                </div>-->
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+    </main>
+    <?php require('app/views/include/login.php'); ?>
+    <!-- ========================= FOOTER ========================= -->
+    <?php require('app/views/include/footer.php'); ?>
+    <!-- ========================= FOOTER : END========================= -->
+
+</div>
+
+<link rel='stylesheet' id='video-videojs-style-css'
+      href='public/js/video-js.min.css?ver=2.0.5'
+      type='text/css' media='all'/>
+
+<script type='text/javascript'
+        src='public/js/theme.min.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/ResizeSensor.min.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/masonry.pkgd.min.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/flickity.pkgd.min.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/jquery.vertical.carousel.min.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/theia-sticky-sidebar.min.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/jquery.popupmanager.min.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/jquery.sonar.min.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/images-lazy-load.min.js?ver=2.0.5'></script>
+
+<script type='text/javascript'
+        src='public/js/search.min.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/video-js-player.min.js?ver=2.0.5'></script>
+
+<script type='text/javascript' src='public/js/media-player.min.js?ver=2.0.5'></script>
+
+</body>
+</html>

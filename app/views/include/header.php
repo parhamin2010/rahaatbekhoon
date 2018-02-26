@@ -6,24 +6,24 @@ $level = Model::sessionGet('level');
     <div class="header" style="padding: 10px;margin-bottom: 20px">
         <div class="inner-wraper">
             <div class="runit left">
-                <div class="topbar" style="margin-top: 15px">
+                <div class="topbar" style="margin-top: -10px;">
                     <ul class="tbar" style="margin-right: 80px;">
                         <span id="udpUserInfo">
                             <?php
                             if ($userId == false) {
                                 ?>
                                 <li style="background: #000;padding: 1px 7px;">
-                                    <a style="color: #eff0ef;direction: ltr;cursor: pointer" data-toggle="modal" data-target="#Google-Login-Modal" id='signin'>عضویت<span class='user-icon'></span></a>
+                                    <a style="color: #fff;direction: ltr;cursor: pointer" data-toggle="modal" data-target="#Google-Login-Modal" id='signin'>عضویت<span class='user-icon'></span></a>
                                 </li>
                                 <li id='welcometxt'>
-                                    <a style="cursor: pointer" data-toggle="modal" data-target="#Google-Login-Modal" id='signin'>ورود</a>
+                                    <a style="cursor: pointer;color: #fff" data-toggle="modal" data-target="#Google-Login-Modal" id='signin'>ورود</a>
                                 </li>
                             <?php } else { ?>
                                 <li id='welcometxt'>
-                                    <a href="user/logout">خروج</a>
+                                    <a href="user/logout" style="color: #fff">خروج</a>
                                 </li>
                                 <li style="background: #000;padding: 1px 7px;">
-                                    <a style="color: #eff0ef;direction: ltr;" href='user/profile'>پنل کاربری<span class='user-icon'></span></a>
+                                    <a style="color: #fff;direction: ltr;" href='user/profile'>پنل کاربری<span class='user-icon'></span></a>
                                 </li>
                             <?php } ?>
                         </span>
@@ -31,6 +31,7 @@ $level = Model::sessionGet('level');
                 </div>
             </div>
             <?php require('app/views/include/heading.php'); ?>
+
         </div>
             <div class="logo-box right">
                 <a href='<?= URL; ?>'>

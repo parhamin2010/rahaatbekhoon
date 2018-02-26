@@ -194,7 +194,7 @@ $newsVip = $data['getNewsVip'];
                     <div class="module-title">
                         <div class="module-title__txt">
                             <span class="bold" style="color: #fff;">آخرین  </span><span
-                                style="color: #fff;">عنوان‌ها</span>
+                                style="color: #fff;">نشریات</span>
                         </div>
                         <div class="module-title__sep"></div>
                     </div>
@@ -233,17 +233,6 @@ $newsVip = $data['getNewsVip'];
                                   </span>
                                 </span>
                             </span>
-                                        </div>
-
-                                        <a href="blog/<?= $newsInfo['n_id'] ?>"
-                                           title="<?= $newsInfo['title'] ?>"
-                                           class="masonry-gallery__item__title"><?= $newsInfo['title'] ?></a>
-
-                                        <div class="masonry-gallery__item__description"><?= $newsInfo['subtitle'] ?></div>
-                                        <div class="masonry-gallery__item__detail" style="float: left">
-                                        <span class="past-time"><?= $newsInfo['time'] ?>
-                                            &nbsp;<?= $newsInfo['date_created'] ?></span>
-                                            <i class="icon-clock-icon" style="margin-right: 5px"></i>
                                         </div>
                                     </div>
                                     <?php

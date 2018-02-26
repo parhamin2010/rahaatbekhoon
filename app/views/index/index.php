@@ -27,6 +27,8 @@ $newsVip = $data['getNewsVip'];
     <meta name="twitter:title" content="<?= NAME; ?>"/>
     <meta name="twitter:creator" content="<?= NAME; ?>"/>
 
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <!-- Customizable CSS -->
@@ -36,8 +38,6 @@ $newsVip = $data['getNewsVip'];
     <link href="public/css/application.track.index.css" rel="stylesheet" type="text/css">
 
     <?php require('app/views/include/favicon.php'); ?>
-    <link rel="stylesheet" href="public/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
     <!-- Customizable CSS -->
     <link rel="stylesheet" href="public/css/main.css">

@@ -7221,7 +7221,7 @@ body.error404 .homepage__top--sep, body.error404 .self-grow-wrapper {
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
-    overflow-x: hidden
+    /*overflow-x: hidden*/
 }
 
 @media screen and (max-width: 1439px) {

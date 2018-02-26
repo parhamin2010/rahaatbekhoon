@@ -20,9 +20,9 @@
         <div class="container" style="width: 100% !important;">
 
             <div class="controls clearfix hidden-xs">
-                <a href="#" data-target=".silder4" class="btn btn-primary pull-left owl-prev"><i
+                <a href="#" data-target=".silder4" class="btn btn-reddit pull-left owl-prev"><i
                             class="fa fa-angle-left"></i></a>
-                <a href="#" data-target=".silder4" class="btn btn-primary pull-right owl-next"><i
+                <a href="#" data-target=".silder4" class="btn btn-reddit pull-right owl-next"><i
                             class="fa fa-angle-right"></i></a>
             </div>
             <!-- /.controls -->

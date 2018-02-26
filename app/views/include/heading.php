@@ -10,7 +10,15 @@ $level = Model::sessionGet('level');
                     <?=
                     Model::jaliliDate('l j F Y | H:i');
                     ?>
-                    <hr style="margin-top: 2px">
+                    <div style="text-align: left;float: left">
+                        <span class="fa fa-telegram" style="font-size: 13pt;margin-left: 6px"></span>
+                        <span class="fa fa-instagram" style="font-size: 13pt;margin-left: 6px"></span>
+                        <span class="fa fa-twitter" style="font-size: 13pt;margin-left: 6px"></span>
+                        <span class="fa fa-facebook" style="font-size: 13pt;margin-left: 6px"></span>
+                        <span class="fa fa-google-plus" style="font-size: 13pt;margin-left: 6px"></span>
+                        <span class="fa fa-rss" style="font-size: 13pt"></span>
+                    </div>
+                    <hr style="margin-top: 8px">
                     <div style="margin-top:0px;color: #fff">
                         <input type="text" id="Searcher" style=";width: 350px;padding: 5px" autocomplete="off" onkeypress="if(event.keyCode==13) return mykeypress(event)" placeholder="عبارت مورد نظرتان را جستجو کنید..." />
                     </div>

@@ -2652,15 +2652,15 @@ label.check-handler input[type=checkbox]:checked + ._check:before, label.check-h
 }
 
 .search-box {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 0;
     opacity: 0;
     height: 100%;
-    background: hsla(0, 0%, 100%, .98);
+    background: rgba(255,255,255,0.7);
     z-index: 10;
-    overflow: hidden
+    /*overflow: hidden*/
 }
 
 .search-box.opened {

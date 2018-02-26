@@ -373,7 +373,7 @@ h4 {
 }
 
 .header {
-    background-color: #da0202;
+    /*background-color: #da0202;*/
     height: 96px;
     font-family: 'iran_sansregular',sans-serif;
     margin: 0 auto

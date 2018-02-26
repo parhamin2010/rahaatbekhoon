@@ -2,12 +2,12 @@
 $userId = Model::sessionGet('userId');
 $level = Model::sessionGet('level');
 ?>
-<header id="dk-header">
+<header id="dk-header" style="background: url('public/images/bgheader.png')no-repeat;background-size: cover">
     <div class="header" style="padding: 10px;margin-bottom: 20px">
         <div class="inner-wraper">
             <div class="runit left">
-                <div class="topbar">
-                    <ul class="tbar" style="margin-right: 250px;">
+                <div class="topbar" style="margin-top: 15px">
+                    <ul class="tbar" style="margin-right: 80px;">
                         <span id="udpUserInfo">
                             <?php
                             if ($userId == false) {
@@ -29,13 +29,9 @@ $level = Model::sessionGet('level');
                         </span>
                     </ul>
                 </div>
-                <div class="search-box">
-                    <input type="text" id="SearchBox" autocomplete="off"
-                           onkeypress="if(event.keyCode==13) return mykeypress(event)"
-                           placeholder="عبارت مورد نظرتان را جستجو کنید..."/>
-                    <a id="btnSearch"></a>
-                </div>
             </div>
+            <?php require('app/views/include/heading.php'); ?>
+        </div>
             <div class="logo-box right">
                 <a href='<?= URL; ?>'>
                     <img src='public/images/pixel-perfect-final-v02-01.png'
@@ -44,7 +40,6 @@ $level = Model::sessionGet('level');
                 </a>
             </div>
         </div>
-    </div>
 </header>
 
 <nav class='navigation' role='navigation' style="color">

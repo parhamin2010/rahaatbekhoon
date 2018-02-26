@@ -72,7 +72,6 @@ $newsVip = $data['getNewsVip'];
             <!-- ========== NAVBAR : END ========== -->
             <div class="W-100" >
                 <?php require('app/views/index/slider.php'); ?>
-
             </div>
             <div class="homepage__header">
                 <div class="homepage__header__content">

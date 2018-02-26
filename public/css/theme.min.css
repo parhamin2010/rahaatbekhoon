@@ -1553,7 +1553,7 @@ button, input[type=button], input[type=file], input[type=reset], input[type=subm
 }
 
 .masonry-gallery__item:hover .image__badge {
-    top: 20px
+    bottom: 10px
 }
 
 .masonry-gallery__item:hover .image__fav {
@@ -1599,8 +1599,8 @@ button, input[type=button], input[type=file], input[type=reset], input[type=subm
 }
 
 .masonry-gallery__item .image__badge {
-    top: -40px;
-    left: 20px;
+    bottom: -40px;
+    right: 12px;
     z-index: 4;
     color: #fff;
     background-color: #0eabef;
@@ -7221,7 +7221,7 @@ body.error404 .homepage__top--sep, body.error404 .self-grow-wrapper {
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
-    overflow-x: hidden
+    /*overflow-x: hidden*/
 }
 
 @media screen and (max-width: 1439px) {

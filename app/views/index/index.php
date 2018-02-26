@@ -27,6 +27,8 @@ $newsVip = $data['getNewsVip'];
     <meta name="twitter:title" content="<?= NAME; ?>"/>
     <meta name="twitter:creator" content="<?= NAME; ?>"/>
 
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <!-- Customizable CSS -->
@@ -36,8 +38,6 @@ $newsVip = $data['getNewsVip'];
     <link href="public/css/application.track.index.css" rel="stylesheet" type="text/css">
 
     <?php require('app/views/include/favicon.php'); ?>
-    <link rel="stylesheet" href="public/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
     <!-- Customizable CSS -->
     <link rel="stylesheet" href="public/css/main.css">
@@ -70,71 +70,73 @@ $newsVip = $data['getNewsVip'];
             <!-- ========== NAVBAR ========== -->
             <?php require('app/views/include/header.php'); ?>
             <!-- ========== NAVBAR : END ========== -->
-            <div class="W-100" >
+            <div class="W-100">
                 <?php require('app/views/index/slider.php'); ?>
             </div>
             <div class="homepage__header">
                 <div class="homepage__header__content">
-<!--                    --><?php
-//                    if (sizeof($news) > 0) {
-//                        ?>
-<!--                        <div class="news-ticker" id="news-ticker" style="min-width: 1200px">-->
-<!--                            <div class="news-ticker__head">-->
-<!--                                <div class="news-ticker__head--loader">-->
-<!--                                    <div class="radial-progress">-->
-<!--                                        <svg height="26" width="26">-->
-<!--                                            <circle cx="13" cy="13" r="12" stroke="#2899d5" stroke-width="2"-->
-<!--                                                    fill="transparent"/>-->
-<!--                                        </svg>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="news-ticker__head--txt">-->
-<!--                                    <span>اخبار کوتاه</span>-->
-<!--                                </div>-->
-<!--                                <div class="news-ticker__head--sep"></div>-->
-<!--                                <div class="news-ticker__head--nav">-->
-<!--                                    <i class="icon-arrow-up down"></i>-->
-<!--                                    <i class="icon-arrow-up up"></i>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!---->
-<!--                            <div id="tick-text" style="background: rgba(76, 175, 80, 0.2);">-->
-<!--                                <ul class="news-ticker__txt innerWrap news-items">-->
-<!---->
-<!--                                    --><?php
-//                                    foreach ($news as $newsInfo) {
-//                                        ?>
-<!--                                        <li class="_item list">-->
-<!--                                        <span class="_text">-->
-<!--                                            <a href="blog/--><?//= $newsInfo['n_id'] ?><!--"-->
-<!--                                               title="--><?//= $newsInfo['title'] ?><!--">--><?//= $newsInfo['title'] ?><!--</a>-->
-<!--                                        </span>-->
-<!---->
-<!--                                            <div class="news-ticker__time">-->
-<!--                                                <div class="news-ticker__time--txt">-->
-<!--                                                    <span>--><?//= $newsInfo['time'] ?>
-<!--                                                        &nbsp;--><?//= $newsInfo['date_created'] ?><!--</span>-->
-<!--                                                </div>-->
-<!--                                                <i class="icon-clock-icon" style="margin-right: 5px"></i>-->
-<!--                                            </div>-->
-<!--                                        </li>-->
-<!--                                        --><?php
-//                                    }
-//                                    ?>
-<!---->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        --><?php
-//                    }
-//                    ?>
+                    <!--                    --><?php
+                    //                    if (sizeof($news) > 0) {
+                    //                        ?>
+                    <!--                        <div class="news-ticker" id="news-ticker" style="min-width: 1200px">-->
+                    <!--                            <div class="news-ticker__head">-->
+                    <!--                                <div class="news-ticker__head--loader">-->
+                    <!--                                    <div class="radial-progress">-->
+                    <!--                                        <svg height="26" width="26">-->
+                    <!--                                            <circle cx="13" cy="13" r="12" stroke="#2899d5" stroke-width="2"-->
+                    <!--                                                    fill="transparent"/>-->
+                    <!--                                        </svg>-->
+                    <!--                                    </div>-->
+                    <!--                                </div>-->
+                    <!--                                <div class="news-ticker__head--txt">-->
+                    <!--                                    <span>اخبار کوتاه</span>-->
+                    <!--                                </div>-->
+                    <!--                                <div class="news-ticker__head--sep"></div>-->
+                    <!--                                <div class="news-ticker__head--nav">-->
+                    <!--                                    <i class="icon-arrow-up down"></i>-->
+                    <!--                                    <i class="icon-arrow-up up"></i>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!---->
+                    <!--                            <div id="tick-text" style="background: rgba(76, 175, 80, 0.2);">-->
+                    <!--                                <ul class="news-ticker__txt innerWrap news-items">-->
+                    <!---->
+                    <!--                                    --><?php
+                    //                                    foreach ($news as $newsInfo) {
+                    //                                        ?>
+                    <!--                                        <li class="_item list">-->
+                    <!--                                        <span class="_text">-->
+                    <!--                                            <a href="blog/--><? //= $newsInfo['n_id'] ?><!--"-->
+                    <!--                                               title="--><? //= $newsInfo['title'] ?><!--">-->
+                    <? //= $newsInfo['title'] ?><!--</a>-->
+                    <!--                                        </span>-->
+                    <!---->
+                    <!--                                            <div class="news-ticker__time">-->
+                    <!--                                                <div class="news-ticker__time--txt">-->
+                    <!--                                                    <span>--><? //= $newsInfo['time'] ?>
+                    <!--                                                        &nbsp;-->
+                    <? //= $newsInfo['date_created'] ?><!--</span>-->
+                    <!--                                                </div>-->
+                    <!--                                                <i class="icon-clock-icon" style="margin-right: 5px"></i>-->
+                    <!--                                            </div>-->
+                    <!--                                        </li>-->
+                    <!--                                        --><?php
+                    //                                    }
+                    //                                    ?>
+                    <!---->
+                    <!--                                </ul>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                        --><?php
+                    //                    }
+                    //                    ?>
 
                 </div>
             </div>
             <?php
             if (sizeof($newsVip) > 0) {
                 ?>
-                <div class="homepage__main" >
+                <div class="homepage__main">
                     <section class="carousel" style="height: 469px;">
                         <div class="module-title">
                             <h1 class="module-title__txt">
@@ -193,7 +195,7 @@ $newsVip = $data['getNewsVip'];
                     <div class="module-title">
                         <div class="module-title__txt">
                             <span class="bold" style="color: #fff;">آخرین  </span><span
-                                style="color: #fff;">عنوان‌ها</span>
+                                    style="color: #fff;">نشریات</span>
                         </div>
                         <div class="module-title__sep"></div>
                     </div>
@@ -209,40 +211,31 @@ $newsVip = $data['getNewsVip'];
                                         <div class="image">
                                             <span class="image__mask"></span>
 
-                                            <a href="blog/<?= $newsInfo['n_id'] ?>"
-                                               title="<?= $newsInfo['title'] ?>" class="image__linker">
-                                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                     data-lazy-src="public/images/news/<?= $newsInfo['i_image'] ?>"
-                                                     width="284" height="180" class="image__img wp-post-image"
-                                                     alt="<?= $newsInfo['title'] ?>"> </a>
+                                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                 data-lazy-src="public/images/news/<?= $newsInfo['i_image'] ?>"
+                                                 width="284" height="180" class="image__img wp-post-image"
+                                                 alt="<?= $newsInfo['title'] ?>">
 
 
                                             <a href="blogs/category/<?= $newsInfo['cat_id'] ?>"
                                                title="<?= $newsInfo['name'] ?>"
-                                               class="image__badge"><?= $newsInfo['name'] ?></a> <span
-                                                class="image__fav">
-                                                            <span class="popularity">
-                                  <span class="popularity__comments">
-                                    <i class="icon-comment"></i>
-                                    <span style="margin-top: -5px;margin-left: 5px;" class="popularity__comments--num">۰</span>
-                                  </span>
-                                  <span class="popularity__likes">
-                                    <i class="icon-view"></i>
-                                    <span style="margin-top: -5px;margin-left: 5px;" class="popularity__likes--num"><?= $newsInfo['view'] ?></span>
-                                  </span>
-                                </span>
-                            </span>
-                                        </div>
-
-                                        <a href="blog/<?= $newsInfo['n_id'] ?>"
-                                           title="<?= $newsInfo['title'] ?>"
-                                           class="masonry-gallery__item__title"><?= $newsInfo['title'] ?></a>
-
-                                        <div class="masonry-gallery__item__description"><?= $newsInfo['subtitle'] ?></div>
-                                        <div class="masonry-gallery__item__detail" style="float: left">
-                                        <span class="past-time"><?= $newsInfo['time'] ?>
-                                            &nbsp;<?= $newsInfo['date_created'] ?></span>
-                                            <i class="icon-clock-icon" style="margin-right: 5px"></i>
+                                               class="image__badge">
+                                                <i class="fa fa-cloud-download"></i> دانلود
+                                            </a>
+                                            <span class="image__fav">
+                                                <span class="popularity">
+                                                      <span class="popularity__comments">
+                                                        <i class="icon-comment"></i>
+                                                        <span style="margin-top: -5px;margin-left: 5px;"
+                                                              class="popularity__comments--num">۰</span>
+                                                      </span>
+                                                      <span class="popularity__likes">
+                                                        <i class="icon-view"></i>
+                                                        <span style="margin-top: -5px;margin-left: 5px;"
+                                                              class="popularity__likes--num"><?= $newsInfo['view'] ?></span>
+                                                      </span>
+                                                </span>
+                                        </span>
                                         </div>
                                     </div>
                                     <?php
@@ -327,8 +320,6 @@ $newsVip = $data['getNewsVip'];
         src='public/js/video-js-player.min.js?ver=2.0.5'></script>
 
 <script type='text/javascript' src='public/js/media-player.min.js?ver=2.0.5'></script>
-
-
 
 
 </body>

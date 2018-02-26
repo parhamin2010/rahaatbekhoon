@@ -8517,19 +8517,20 @@ a.brown-bt {
 
 .owl-pagination {
     text-align: center;
-    margin-top: 10px
+    margin-top: 20px
 }
 
 .owl-pagination .owl-page {
     display: inline-block;
     width: 14px;
     height: 14px;
-    background-color: #e0e0e0;
+    /*margin-top: 10px;*/
+    background-color: none;
     margin: 0 3px
 }
 
 .owl-pagination .owl-page.active {
-    background-color: #4a525d
+    background-color: none
 }
 
 .row {

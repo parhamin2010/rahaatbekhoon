@@ -2319,7 +2319,7 @@ img[src="assets/images/blank.gif"] {
 #owl-main {
     text-align: center;
     cursor: default;
-    height: 541px;
+    height: 500px;
 }
 
 #owl-main .owl-controls {
@@ -2716,6 +2716,7 @@ img[src="assets/images/blank.gif"] {
 
 #owl-main .owl-controls .owl-page {
     display: inline-block;
+    padding-top: 5px;
 }
 
 #owl-main .owl-pagination .owl-page span {
@@ -2751,7 +2752,7 @@ img[src="assets/images/blank.gif"] {
     background-color: #FFFFFF;
     background-position: center 55%;
     background-size: cover;
-    height: 310px;
+    height: 480px;
 }
 
 #owl-main .item .caption {

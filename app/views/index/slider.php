@@ -1,4 +1,4 @@
-<div style="direction: ltr;height: 310px" id="hero" class="home-page-slider4">
+<div style="direction: ltr;height: 480px" id="hero" class="home-page-slider4">
     <div id="owl-main" class="owl-carousel silder4 owl-inner-nav owl-ui-sm">
         <?php
         $detect = new Mobile_Detect;
@@ -9,7 +9,7 @@
             <a href="blog/<?= $slider['n_id']; ?>">
                 <div class="item"
                      style="background-image: url('public/images/news/<?= $slider['i_image']; ?>');background-repeat: no-repeat;background-size: 100% 100%;"></div>
-                <p style="direction:rtl;font-size: 14px;margin-top: -51px;background: #e7d080;color: #000;float: right;padding: 15px 10px 15px 0;width: 100%;text-align: right;">
+                <p style="direction:rtl;font-size: 14px;margin-top: -51px;background: rgba(255,255,255,0.8);color: #000;float: right;padding: 15px 10px 15px 0;width: 100%;text-align: right;">
                     <?= $deviceType=='computer' ? $slider['title']:Model::summary($slider['title'],80); ?></p>
             </a><!-- /.item<?= $slider['n_id']; ?> -->
             <?php

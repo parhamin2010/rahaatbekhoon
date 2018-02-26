@@ -140,7 +140,7 @@ $newsVip = $data['getNewsVip'];
                     <section class="carousel" style="height: 469px;">
                         <div class="module-title">
                             <h1 class="module-title__txt">
-                                <span>اخبار </span><span class="bold">ویژه</span></h1>
+                                <span>آخرین </span><span class="bold">اخبار</span></h1>
                             <div class="module-title__sep"></div>
                         </div>
                         <div class="carousel__body load-failed">

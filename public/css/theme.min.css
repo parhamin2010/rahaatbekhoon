@@ -1601,7 +1601,7 @@ button, input[type=button], input[type=file], input[type=reset], input[type=subm
 .masonry-gallery__item .image__badge {
     bottom: -40px;
     right: 12px;
-    z-index: 4;
+    z-index: 40;
     color: #fff;
     background-color: #0eabef;
     font-size: 12px;

@@ -6,7 +6,7 @@ $level = Model::sessionGet('level');
     <div class="W-100" style="background: rgba(255,255,255,1)">
         <div>
             <div class="inner-wraper">
-                <div class="runit left" style="color: #fff; font-size: 8pt;text-align: left">
+                <div class="runit left" style="color: #ffffff; font-size: 8pt;text-align: left">
                     <?=
                     Model::jaliliDate('j F Y - H:i:s');
                     ?>

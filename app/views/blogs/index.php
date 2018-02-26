@@ -28,6 +28,28 @@ $newsTop = $data['getTopNews'];
     <meta name="twitter:title" content="<?= NAME; ?>"/>
     <meta name="twitter:creator" content="<?= NAME; ?>"/>
 
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <!-- Customizable CSS -->
+    <link href="public/css/pace-theme-flash.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="public/css/animate.min.css">
+    <link rel="stylesheet" href="public/css/bootstrap-social.css">
+    <link href="public/css/application.track.index.css" rel="stylesheet" type="text/css">
+
+    <?php require('app/views/include/favicon.php'); ?>
+
+    <!-- Customizable CSS -->
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/owl.carousel.css">
+    <link rel="stylesheet" href="public/css/owl.transitions.css">
+    <link href="public/css/lightbox.css" rel="stylesheet">
+
+
+    <link href="public/css/css_main.css?v=d34y6GouB8OIqYbVXfO54Dw2tDZG8gAwP5JRzPLXebU1"
+          rel="stylesheet"/>
+
     <link rel='stylesheet' id='cptch_stylesheet-css' href='public/css/front_end_style.css?ver=2.0.5' type='text/css'
           media='all'/>
     <link rel='stylesheet' id='dashicons-css' href='public/css/dashicons.min.css?ver=2.0.5' type='text/css'
@@ -35,27 +57,11 @@ $newsTop = $data['getTopNews'];
     <link rel='stylesheet' id='cptch_desktop_style-css' href='public/css/desktop_style.css?ver=2.0.5' type='text/css'
           media='all'/>
     <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
-    <script type='text/javascript' src='public/js/jquery/jquery.js?ver=2.0.5'></script>
-    <script type='text/javascript'
-            src='public/js/jquery/jquery-migrate.min.js?ver=2.0.5'></script>
-
-
-    <script src="public/js/js_public.js?v=LWsGw_qSybcpEPGlMdah59AY_VUrUk4Vs5LiLIzcDVc1"></script>
-    <script src="public/js/js_xdomainrequest.js?v=Ic2FfCKfX6xdPI1Jw9VidPrd4w4Ij8BW7O9rAhd6b9A1"></script>
-    <script src="public/js/js_main.js?v=7TforAN8Kth9M52b0-uWjqite87JW22DKFXR9sHSufs1"></script>
-    <script src="public/js/js_pagePath.js?v=Xyyl-H9AlOT8fWAgNY1sD-8bhQv1glWO-0MiC_Wx8rU1"></script>
-    <script src="public/js/js_emstrack.js?v=ZoELSPG0SdWVAMBXGZZM03-7uWDmCv9UGrjOM4b7SI41"></script>
-    <script type='text/javascript' language='JavaScript'>var currentDate = '2/6/2018 7:57:50 PM'</script>
-
-    <?php require('app/views/include/favicon.php'); ?>
-
-    <link href="public/css/css_main.css?v=d34y6GouB8OIqYbVXfO54Dw2tDZG8gAwP5JRzPLXebU1"
-          rel="stylesheet"/>
 </head>
 
 <body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
 
-<div class="container">
+<div class="container" style="padding: 0 !important;">
     <main class="home__page">
         <div class="homepage">
             <!-- ========== NAVBAR ========== -->
@@ -361,9 +367,37 @@ $newsTop = $data['getTopNews'];
 
 </div>
 
-<link rel='stylesheet' id='video-videojs-style-css'
-      href='public/js/video-js.min.css?ver=2.0.5'
-      type='text/css' media='all'/>
+<!-- JavaScripts placed at the end of the document so the pages load faster -->
+<script src="public/js/jquery-1.11.1.min.js"></script>
+<script src="public/js/owl.carousel.min.js"></script>
+<script src="public/js/scripts.js"></script>
+<script src="public/js/login.js"></script>
+
+<script src="public/js/jquery.noty.packaged.js"></script>
+<script src="public/js/jquery-latest.js"></script>
+<script src="public/js/jquery.noty.packaged.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/bootstrap-hover-dropdown.min.js"></script>
+<script src="public/js/countdown.js"></script>
+<script src="public/js/echo.min.js"></script>
+<script src="public/js/bootstrap-slider.min.js"></script>
+<script src="public/js/lightbox.min.js"></script>
+<script src="public/js/bootstrap-select.min.js"></script>
+<script src="public/js/Track-player.js"></script>
+<script src="public/js/wow.min.js"></script>
+<script src="public/js/pace.js"></script>
+
+
+<script type='text/javascript' src='public/js/jquery/jquery.js?ver=2.0.5'></script>
+<script type='text/javascript'
+        src='public/js/jquery/jquery-migrate.min.js?ver=2.0.5'></script>
+
+<!--<script src="public/js/js_public.js?v=LWsGw_qSybcpEPGlMdah59AY_VUrUk4Vs5LiLIzcDVc1"></script>-->
+<!--<script src="public/js/js_xdomainrequest.js?v=Ic2FfCKfX6xdPI1Jw9VidPrd4w4Ij8BW7O9rAhd6b9A1"></script>-->
+<!--<script src="public/js/js_main.js?v=7TforAN8Kth9M52b0-uWjqite87JW22DKFXR9sHSufs1"></script>-->
+<!--<script src="public/js/js_pagePath.js?v=Xyyl-H9AlOT8fWAgNY1sD-8bhQv1glWO-0MiC_Wx8rU1"></script>-->
+<!--<script src="public/js/js_emstrack.js?v=ZoELSPG0SdWVAMBXGZZM03-7uWDmCv9UGrjOM4b7SI41"></script>-->
+
 
 <script type='text/javascript'
         src='public/js/theme.min.js?ver=2.0.5'></script>
@@ -390,6 +424,7 @@ $newsTop = $data['getTopNews'];
         src='public/js/video-js-player.min.js?ver=2.0.5'></script>
 
 <script type='text/javascript' src='public/js/media-player.min.js?ver=2.0.5'></script>
+
 
 </body>
 </html>

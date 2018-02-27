@@ -83,6 +83,31 @@ $UserID = Model::sessionGet('userId');
         }
     </style>
 
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <!-- Customizable CSS -->
+    <link href="public/css/pace-theme-flash.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="public/css/animate.min.css">
+    <link rel="stylesheet" href="public/css/bootstrap-social.css">
+    <link href="public/css/application.track.index.css" rel="stylesheet" type="text/css">
+
+    <?php require('app/views/include/favicon.php'); ?>
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+
+    <!-- Customizable CSS -->
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/owl.carousel.css">
+    <link rel="stylesheet" href="public/css/owl.transitions.css">
+    <link href="public/css/lightbox.css" rel="stylesheet">
+
+    <link href="public/css/css_main.css?v=d34y6GouB8OIqYbVXfO54Dw2tDZG8gAwP5JRzPLXebU1"
+          rel="stylesheet"/>
+    <link href="public/css/css_HomePage.css?v=xir1k7vh8U8EsdD9UJmw_kH1ptTEnN8lVeXlkL9SNQM1"
+          rel="stylesheet"/>
+
+
+    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
+
 </head>
 
 <body class="rtl post-template-default single single-post postid-368348 single-format-standard wmax"
@@ -90,6 +115,9 @@ $UserID = Model::sessionGet('userId');
 
 <?php require('app/views/include/login.php'); ?>
 
+<div class="container" style="padding: 0 !important;overflow-x: hidden">
+    <main class="" style="background: rgb(43, 57, 63);">
+        <div class="homepage">
 <!-- ========== NAVBAR ========== -->
 <?php require('app/views/include/header.php'); ?>
 <!-- ========== NAVBAR : END ========== -->
@@ -432,7 +460,7 @@ $UserID = Model::sessionGet('userId');
                     </div>
                 </div>
                 <div class="topics__aside sticky-sidebar__simple"
-                     style="position: relative; overflow: visible; box-sizing: border-box; min-height: 2183px;float:left">
+                     style="position: relative; overflow: visible; box-sizing: border-box; min-height: 2183px;float:left;margin-top: 25px">
                     <div class="theiaStickySidebar"
                          style="padding-top: 0px; padding-bottom: 1px; position: fixed; transform: translateY(-9px); width: 305px; top: 0px; left: 34.5px;">
                         <div class="post-nav">

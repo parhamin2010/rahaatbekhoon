@@ -8,7 +8,7 @@ $newsVip = $data['getNewsVip'];
 <head>
     <base href="<?= URL; ?>">
     <meta charset="UTF-8">
-    <title><?= NAME; ?> | <?= $news['0']['name']; ?></title>
+    <title><?= NAME; ?></title>
 
     <meta name="description"
           content="<?= NAME; ?>"/>

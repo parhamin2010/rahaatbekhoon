@@ -67,7 +67,7 @@ $UserName = Model::sessionGet('name');
 
 
             <div class="container" style="direction: rtl">
-                <div class="main">
+                <div class="main" style="">
                     <div class="voucher-wrap" dir="rtl" style="margin: 10px">
                         <h5>فرم ارتباط با ما</h5>
                         <div class="row wrap" style="background-color: #fefefe;margin: -10px 0 0 0">

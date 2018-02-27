@@ -46,11 +46,15 @@ Model::sessionInit();
           rel="stylesheet"/>
     <link href="public/css/css_errorpage.css?v=W9Zha4MI1vBChZOtmEGTp21CQvDyoRYjpgwgdm7ErAQ1"
           rel="stylesheet"/>
+    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
+
 </head>
 <body class="wmax">
 
 <?php require('app/views/include/login.php'); ?>
-
+<div class="container" style="padding: 0 !important;overflow-x: hidden">
+    <main class="" style="background: rgb(43, 57, 63);">
+        <div class="homepage">
 <!-- ========== NAVBAR ========== -->
 <?php require('app/views/include/header.php'); ?>
 <!-- ========== NAVBAR : END ========== -->

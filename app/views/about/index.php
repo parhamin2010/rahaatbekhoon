@@ -46,16 +46,40 @@ Model::sessionInit();
           rel="stylesheet"/>
     <link href="public/css/css_errorpage.css?v=W9Zha4MI1vBChZOtmEGTp21CQvDyoRYjpgwgdm7ErAQ1"
           rel="stylesheet"/>
+
+
+
+
+    <!-- Customizable CSS -->
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/owl.carousel.css">
+    <link rel="stylesheet" href="public/css/owl.transitions.css">
+    <link href="public/css/lightbox.css" rel="stylesheet">
+
+
+    <link href="public/css/css_main.css?v=d34y6GouB8OIqYbVXfO54Dw2tDZG8gAwP5JRzPLXebU1"
+          rel="stylesheet"/>
+
+    <link rel='stylesheet' id='cptch_stylesheet-css' href='public/css/front_end_style.css?ver=2.0.5' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='dashicons-css' href='public/css/dashicons.min.css?ver=2.0.5' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='cptch_desktop_style-css' href='public/css/desktop_style.css?ver=2.0.5' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
+
+
+
+
+
 </head>
-<body class="wmax">
-
+<body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
+<div class="homepage">
 <?php require('app/views/include/login.php'); ?>
-
     <!-- ========== NAVBAR ========== -->
     <?php require('app/views/include/header.php'); ?>
     <!-- ========== NAVBAR : END ========== -->
-
-    <div id="main">
+    <div id="W-100" style="background: rgb(43, 57, 63);">
         <div class="inner-wraper">
 
             <div id='content' style="width:100%;text-align: center;">
@@ -89,30 +113,33 @@ Model::sessionInit();
         <div class="clear"></div>
 
     </div>
+    </div>
 
     <!-- ========================= FOOTER ========================= -->
     <?php require('app/views/include/footer.php'); ?>
     <!-- ========================= FOOTER : END========================= -->
 
     <!-- JavaScripts placed at the end of the document so the pages load faster -->
-    <script src="public/js/jquery-1.11.1.min.js"></script>
-    <script src="public/js/owl.carousel.min.js"></script>
-    <script src="public/js/scripts.js"></script>
-    <script src="public/js/login.js"></script>
 
-    <script src="public/js/jquery.noty.packaged.js"></script>
-    <script src="public/js/jquery-latest.js"></script>
-    <script src="public/js/jquery.noty.packaged.js"></script>
-    <script src="public/js/bootstrap.min.js"></script>
-    <script src="public/js/bootstrap-hover-dropdown.min.js"></script>
-    <script src="public/js/countdown.js"></script>
-    <script src="public/js/echo.min.js"></script>
-    <script src="public/js/bootstrap-slider.min.js"></script>
-    <script src="public/js/lightbox.min.js"></script>
-    <script src="public/js/bootstrap-select.min.js"></script>
-    <script src="public/js/Track-player.js"></script>
-    <script src="public/js/wow.min.js"></script>
-    <script src="public/js/pace.js"></script>
 
 </body>
+
+<script src="public/js/jquery-1.11.1.min.js"></script>
+<script src="public/js/owl.carousel.min.js"></script>
+<script src="public/js/scripts.js"></script>
+<script src="public/js/login.js"></script>
+
+<script src="public/js/jquery.noty.packaged.js"></script>
+<script src="public/js/jquery-latest.js"></script>
+<script src="public/js/jquery.noty.packaged.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/bootstrap-hover-dropdown.min.js"></script>
+<script src="public/js/countdown.js"></script>
+<script src="public/js/echo.min.js"></script>
+<script src="public/js/bootstrap-slider.min.js"></script>
+<script src="public/js/lightbox.min.js"></script>
+<script src="public/js/bootstrap-select.min.js"></script>
+<script src="public/js/Track-player.js"></script>
+<script src="public/js/wow.min.js"></script>
+<script src="public/js/pace.js"></script>
 </html>

@@ -46,46 +46,33 @@ $UserName = Model::sessionGet('name');
           rel="stylesheet"/>
     <link href="public/css/css_HomePage.css?v=xir1k7vh8U8EsdD9UJmw_kH1ptTEnN8lVeXlkL9SNQM1"
           rel="stylesheet"/>
+
+
+    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
+
+
 </head>
-<body class="wmax" style="background:#283036;">
+<body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
 
-<?php require('app/views/include/login.php'); ?>
+<div class="container" style="padding: 0 !important;overflow-x: hidden">
+    <main class="" style="background: rgb(43, 57, 63);">
+        <div class="homepage">
+            <?php require('app/views/include/login.php'); ?>
 
-<!-- ========== NAVBAR ========== -->
-<?php require('app/views/include/header.php'); ?>
-<!-- ========== NAVBAR : END ========== -->
+            <!-- ========== NAVBAR ========== -->
+            <?php require('app/views/include/header.php'); ?>
+            <!-- ========== NAVBAR : END ========== -->
 
-<div class="container">
-    <div class="row inner-bottom-sm">
-        <div class="contact-page">
 
-            <div class="col-lg-3 sign-in">
-                <aside class="sidebar">
-                    <div class="beep-side-widget what-is-beep white-bg contact-info" dir="rtl">
-                        <h5>اطلاعات تماس</h5>
-                        <div class="clearfix phone-no">
-                                <span class="contact-i" style="float: right; margin-top: 10px; margin-left: 5px;"><i
-                                            class="fa fa-phone"></i></span>
-                            <span class="contact-span"
-                                  style="padding-top: 10px;">051-33123313<br>051-33123314</span>
-                        </div>
-                        <div class="clearfix email">
-                                <span class="contact-i"
-                                      style="float: right; margin-bottom: 15px; margin-top: 10px; margin-left: 5px;"><i
-                                            class="fa fa-envelope"></i></span>
-                            <span class="contact-span" style="padding-top: 15px;"><a
-                                        href="mailto:support@headphone.com">info@irandall.ir</a></span>
-                        </div>
-                    </div>
-                </aside>
-            </div>
 
-            <div class="col-lg-9">
+
+            <div class="container" style="direction: rtl">
                 <div class="main">
-                    <div class="voucher-wrap" dir="rtl">
+                    <div class="voucher-wrap" dir="rtl" style="margin: 10px">
                         <h5>فرم ارتباط با ما</h5>
                         <div class="row wrap" style="background-color: #fefefe;margin: -10px 0 0 0">
-                            <div id="labelTest" class="google-signup-tip">سوالات،انتقادات و پیشنهادات خود را از طریق فرم زیر می
+                            <div id="labelTest" class="google-signup-tip">سوالات،انتقادات و پیشنهادات خود را از طریق فرم
+                                زیر می
                                 توانید برای ما ارسال کنید.
                             </div>
                             <hr>
@@ -135,12 +122,27 @@ $UserName = Model::sessionGet('name');
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+
+                    </div>
+                    <div style="margin: 10px;width: 300px">
+                        <aside class="">
+                            <div class="beep-side-widget what-is-beep white-bg contact-info" dir="rtl">
+                                <h5>اطلاعات تماس</h5>
+                                <div class="clearfix phone-no">
+                                <span class="contact-i" style="float: right; margin: 10px; margin-left: 5px;"><i
+                                        class="fa fa-phone"></i></span>
+                                    <span class="contact-span"
+                                          style="padding-top: 10px;">051-33123313<br>051-33123314</span>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
         </div><!-- /.contact-page -->
-    </div><!-- /.row -->
+    </main><!-- /.row -->
 </div><!-- /.container -->
 
 
@@ -178,11 +180,11 @@ $UserName = Model::sessionGet('name');
         var text = document.getElementById("text").value;
         if (text == "") {
             generate('warning', '<div class="activity-item">لطفا ابتدا پیام خود را نوشته و سپس اقدام به ارسال کنید.</div>');
-        }else if (email == "") {
+        } else if (email == "") {
             generate('warning', '<div class="activity-item">لطفا ایمیل خود را وارد کنید.</div>');
-        }else if (title == "") {
+        } else if (title == "") {
             generate('warning', '<div class="activity-item">لطفا عنوان پیام خود را وارد کنید.</div>');
-        }else if (name == "") {
+        } else if (name == "") {
             generate('warning', '<div class="activity-item">لطفا نام و نام خانوادگی خود را وارد کنید.</div>');
         }
         else {

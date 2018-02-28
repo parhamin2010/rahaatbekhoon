@@ -30,10 +30,10 @@
 <div class="homepage__header" style="width: 270px;position: absolute;float: left;margin-right: 80%;margin-top: 10px;">
     <div class="homepage__header__content">
         <div id="tiles-4" class="tiles">
-            <a href="http://yjc.ir/fa/ads/redirect/a/1426" style="height: 460px;margin-right: -6px;margin-left: -21px;border-top-right-radius: 0px;border-top-left-radius: 0px"
+            <a href="https://www.isna.ir/redirect/ads/193" style="height: 460px;margin-right: -6px;margin-left: -21px;border-top-right-radius: 0px;border-top-left-radius: 0px"
                id="tile-4-6-0" title="2"
                target="_self" class="tiles__item">
-                <img src="http://cdn.yjc.ir/files/adv/3320_142.gif"
+                <img src="https://cdn.isna.ir/d/2018/01/10/0/57619752.gif"
                      alt="2" width="100%"
                      height="100%" class="tiles__item--img" style="position: absolute;z-index: 0">
             </a>

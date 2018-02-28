@@ -129,48 +129,44 @@ $UserID = Model::sessionGet('userId');
                 <div class="topics__content">
                     <div class="post-module post-368348 post type-post status-publish format-standard has-post-thumbnail hentry category-74 category-94 category-87 category-89 tag-flamethrower tag-the-boring-company tag-46990 tag-518 tag-133"
                          id="post-368348" style="padding: 0 30px;">
-                        <article style="margin-top: 30px;">
-                            <div class="row" style="margin-bottom: 25px;height: 300px">
-                                <div class="col-md-7 col-sm-12 sign-in">
-                                    <figure class="post-attachment" style="margin-bottom: 10px">
-
-                                            <a
-                                                    href="public/images/news/<?= $news['all_images'][0]['i_image']; ?>"
-                                                    data-lightbox="image-1"
-                                                    data-title="<?= $news[0]['title']; ?>">
-                                                <img alt="<?= Model::summary($news[0]['title'], 100); ?>"
-                                                     onerror="this.src='public/images/album-default.jpg'"
-                                                     class="album-cover"
-                                                     style="height: 300px"
-                                                     src="public/images/news/<?= $news['all_images'][0]['i_image']; ?>"/>
-                                                <div class="zoom-overlay"></div>
-                                            </a>
-
-                                        <figcaption class="hidden-seo">
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-md-5 col-sm-12 sign-in">
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12" style="text-align: left;height: 22px">
-                                            <span class="post-module__author--date"><?= $news[0]['time'] ?>
-                                                &nbsp;&nbsp;<?= $news[0]['date_created'] ?></span>
-                                        </div>
-
-                                        <div class="col-md-12 col-sm-12 " style="margin-top: 15px;height: 40px">
-                                            <h1 class="_txt"
-                                                style="font-size: 13pt;margin-top: 15px;font-weight: bold;line-height: 25px"><?= $news[0]['title'] ?></h1>
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 " style="height: 45px;">
-                                            <h4 class="_txt"
-                                                style="line-height: 24px;color: #50b33c;margin-top: 15px;font-size: 14px;"><?= $news[0]['subtitle'] ?></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <article>
                             <div class="post-module__content">
-                                <?= htmlspecialchars_decode($news[0]['description']) ?>
-                            </  div>
+                                <figure class="post-attachment" style="margin-bottom: 10px;float: left;position: relative;padding: 10px">
+                                    <a href="public/images/news/<?= $news['all_images'][0]['i_image']; ?>"
+                                       data-lightbox="image-1"
+                                       data-title="<?= $news[0]['title']; ?>">
+                                        <img alt="<?= Model::summary($news[0]['title'], 100); ?>"
+                                             onerror="this.src='public/images/album-default.jpg'"
+                                             class="album-cover"
+                                             style="height: 300px;border-radius: 10px"
+                                             src="public/images/news/<?= $news['all_images'][0]['i_image']; ?>"/>
+                                        <div class="zoom-overlay"></div>
+                                    </a>
+                                    <figcaption class="hidden-seo">
+                                    </figcaption>
+                                </figure>
+                                <p style="position: relative;text-align: justify;direction: rtl">
+
+                                </p>
+                                <p style="position: relative;text-align: justify;direction: rtl">
+                                    <span style="text-align: right">
+                                        <?= $news[0]['date_created'] ?>
+                                    </span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;
+                                    <span style="text-align: left">
+                                        <?= $news[0]['time'] ?>
+                                    </span><br>
+                                    <p style="font-weight: bold;font-size: 14pt">
+                                    <?= $news[0]['title'] ?>
+                                </p>
+                                <p style="position: relative;text-align: justify;direction: rtl;margin-top: -20px">
+                                    <?= $news[0]['subtitle'] ?>
+                                </p>
+                                <p style="position: relative;text-align: justify;direction: rtl;margin-top: -20px">
+                                    <?= htmlspecialchars_decode($news[0]['description']) ?>
+                                </p>
+                            </div>
                             <?php
                             if ($news[0]['tag'] != '0') {
                                 ?>
@@ -192,8 +188,9 @@ $UserID = Model::sessionGet('userId');
                                 <?php
                             }
                             ?>
-                            <div class="col-md-12 col-sm-12 ">
-                                <div style="color: #9ba4ab;float: left;">
+                        </article>
+                        <div class="col-md-12 col-sm-12 ">
+                            <div style="color: #9ba4ab;float: left;">
                                                 <span class="social-networks">
                                                          <a class="icon-telegram" rel="nofollow"
                                                             href="https://telegram.me/share/url?url=<?= URL ?>blog/<?= $news[0]['n_id'] ?>&amp;text=<?= $news[0]['title'] ?>"
@@ -220,10 +217,8 @@ $UserID = Model::sessionGet('userId');
                                                             target="_blank">
                                                          </a>
                                                    </span>
-                                </div>
                             </div>
-                        </article>
-
+                        </div>
                         <div class="comments-template">
                             <div class="_sep"></div>
                             <?php

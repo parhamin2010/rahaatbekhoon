@@ -2,7 +2,7 @@
 $userId = Model::sessionGet('userId');
 $level = Model::sessionGet('level');
 ?>
-<header id="dk-header" style="background: url('public/images/bgheader.png')no-repeat;background-size: cover">
+<header id="dk-header" style="background: url('public/images/bgheader.png')no-repeat;background-size: cover;z-index: 2000">
     <div class="header" style="padding: 10px;margin-bottom: 20px">
         <div class="inner-wraper">
             <div class="runit left">

@@ -16,17 +16,17 @@ class model_rss extends Model
                 LEFT JOIN tbl_images c
                 ON a.image_id=c.i_id
                 WHERE a.status=1
-                ORDER BY a.date_created DESC LIMIT 30";
+                ORDER BY a.date_created DESC LIMIT 15";
         $results = $this->doSelect($sql);
 
         $rss_channel = new rssGenerator_channel();
         $rss_channel->atomLinkHref = '';
         $rss_channel->title = NAME;
         $rss_channel->link = URL;
-        $rss_channel->description = 'The latest news about web-development.';
+        $rss_channel->description = '';
         $rss_channel->language = 'en-us';
-        $rss_channel->generator = 'PHP RSS Feed Generator';
-        $rss_channel->managingEditor = 'editor@mysite.com (Alex Jefferson)';
+        $rss_channel->generator = '';
+        $rss_channel->managingEditor = '';
         $rss_channel->webMaster = DEVELOPER;
 
         foreach ($results as $result) {

@@ -1,9 +1,9 @@
 
-<div class="homepage__header" style="width: 400px;position: absolute;float: left;margin-right: 66%;margin-top: 10px">
+<div class="homepage__header" style="width: 400px;position: absolute;float: left;text-align: left;left:45px;margin-top: 10px">
     <div class="homepage__header__content">
         <div id="tiles-4" class="tiles">
             <a href="http://yjc.ir/fa/ads/redirect/a/1484" style="height: 225px;margin-right: -68px;border-top-right-radius: 0px;border-top-left-radius: 0px"
-               id="tile-4-6-0" title="2"
+               id="tile-4-6-0" title="شرکت آسمان طلوع فردا"
                target="_self" class="tiles__item">
                 <img src="http://cdn.yjc.ir/files/adv/3222_640.gif"
                      alt="2" width="100%"
@@ -13,11 +13,11 @@
     </div>
 </div>
 
-<div class="homepage__header" style="width: 400px;position: absolute;float: left;margin-right: 66%;margin-top: 245px">
+<div class="homepage__header" style="width: 400px;position: absolute;float: left;text-align: left;left:45px;margin-top: 245px">
     <div class="homepage__header__content">
         <div id="tiles-4" class="tiles">
             <a href="http://yjc.ir/fa/ads/redirect/a/1511" style="height: 225px;margin-right: -68px;border-top-right-radius: 0px;border-top-left-radius: 0px"
-               id="tile-4-6-0" title="2"
+               id="tile-4-6-0" title="مکانی برای تبلیغات شما"
                target="_self" class="tiles__item">
                 <img src="http://cdn.yjc.ir/files/adv/3194_550.gif"
                      alt="2" width="100%"
@@ -27,11 +27,11 @@
     </div>
 </div>
 
-<div class="homepage__header" style="width: 270px;position: absolute;float: left;margin-right: 80%;margin-top: 10px;">
+<div class="homepage__header" style="width: 270px;position: absolute;float: left;text-align: left;left:-15px;margin-top: 10px;">
     <div class="homepage__header__content">
         <div id="tiles-4" class="tiles">
             <a href="https://www.isna.ir/redirect/ads/193" style="height: 460px;margin-right: -6px;margin-left: -21px;border-top-right-radius: 0px;border-top-left-radius: 0px"
-               id="tile-4-6-0" title="2"
+               id="tile-4-6-0" title="فروش زمستانی نیسان"
                target="_self" class="tiles__item">
                 <img src="https://cdn.isna.ir/d/2018/01/10/0/57619752.gif"
                      alt="2" width="100%"

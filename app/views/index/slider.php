@@ -1,5 +1,5 @@
 
-<div class="homepage__header" style="width: 400px;position: absolute;float: left;margin-right: 66%;margin-top: 10px">
+<div class="homepage__header" style="width: 400px;position: absolute;float: left;text-align: left;left:45px;margin-top: 10px">
     <div class="homepage__header__content">
         <div id="tiles-4" class="tiles">
             <a href="http://yjc.ir/fa/ads/redirect/a/1484" style="height: 225px;margin-right: -68px;border-top-right-radius: 0px;border-top-left-radius: 0px"
@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div class="homepage__header" style="width: 400px;position: absolute;float: left;margin-right: 66%;margin-top: 245px">
+<div class="homepage__header" style="width: 400px;position: absolute;float: left;text-align: left;left:45px;margin-top: 245px">
     <div class="homepage__header__content">
         <div id="tiles-4" class="tiles">
             <a href="http://yjc.ir/fa/ads/redirect/a/1511" style="height: 225px;margin-right: -68px;border-top-right-radius: 0px;border-top-left-radius: 0px"
@@ -27,7 +27,7 @@
     </div>
 </div>
 
-<div class="homepage__header" style="width: 270px;position: absolute;float: left;margin-right: 80%;margin-top: 10px;">
+<div class="homepage__header" style="width: 270px;position: absolute;float: left;text-align: left;left:-15px;margin-top: 10px;">
     <div class="homepage__header__content">
         <div id="tiles-4" class="tiles">
             <a href="https://www.isna.ir/redirect/ads/193" style="height: 460px;margin-right: -6px;margin-left: -21px;border-top-right-radius: 0px;border-top-left-radius: 0px"

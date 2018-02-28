@@ -66,7 +66,7 @@ $UserID = Model::sessionGet('userId');
           type="text/css" media="all">
     <link rel="stylesheet" id="responsive-lightbox-nivo-default-css" href="public/DigiWeb_files/default.css"
           type="text/css" media="all">
-    <link rel="stylesheet" id="theme-style-css" href="public/DigiWeb_files/theme.min.css" type="text/css" media="all">
+<!--    <link rel="stylesheet" id="theme-style-css" href="public/DigiWeb_files/theme.min.css" type="text/css" media="all">-->
     <script type="text/javascript" src="public/DigiWeb_files/jquery.js"></script>
     <script type="text/javascript" src="public/DigiWeb_files/jquery-migrate.min.js"></script>
     <script type="text/javascript" src="public/DigiWeb_files/nivo-lightbox.min.js"></script>
@@ -106,7 +106,9 @@ $UserID = Model::sessionGet('userId');
           rel="stylesheet"/>
 
 
-    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
+<!--    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>-->
+
+
 
 
 
@@ -522,10 +524,9 @@ $UserID = Model::sessionGet('userId');
                     <div class="theiaStickySidebar"
                          style="padding-top: 0px; padding-bottom: 1px; position: fixed; transform: translateY(-9px); width: 305px; top: 0px; left: 34.5px;">
                         <div class="post-nav">
-
                             <div class="post-nav__body">
-                                <div class="_title" style="padding-left: 210px;">
-                                    <span class="bold" style="color: #50b33c">آرشیو خبر</span>
+                                <div class="_title" style="padding-left: 210px">
+                                    <span class="bold" style="color: #6f0000">آرشیو خبر</span>
                                 </div>
                                 <ul class="related-posts">
                                     <?php

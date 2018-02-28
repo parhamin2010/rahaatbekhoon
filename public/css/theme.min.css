@@ -4542,22 +4542,22 @@ body.page-template-page-video .media-page {
 }
 
 .post-nav ._title {
-    padding: 35px 0;
+    padding: 10px 0;
     font-size: 15px
 }
 
 .post-nav ._title:before {
     content: "";
     display: block;
-    width: 45px;
-    height: 1px;
-    background-color: #63d0df;
+    width: 200px;
+    height: 2px;
+    background-color: #9f191f;
     position: absolute;
-    bottom: 23px;
-    left: 50%;
+    bottom: 19px;
+    left: 102px;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    transform: translateX(-50%)
+    transform: translateX(-50%);
 }
 
 .post-nav__top .product-carousel {
@@ -4618,19 +4618,11 @@ body.page-template-page-video .media-page {
 .post-nav__body .related-posts__item {
     min-height: 110px;
     border-right: 5px solid transparent;
-    padding: 20px 30px 20px 20px;
+    padding: 10px 10px 10px 10px;
     cursor: pointer
 }
 
-.post-nav__body .related-posts__item:before {
-    content: "";
-    display: block;
-    width: calc(100% - 40px);
-    height: 2px;
-    background-color: #f8f8f8;
-    top: 0;
-    left: 0
-}
+
 
 .post-nav__body .related-posts__item:first-child:before {
     top: -2px

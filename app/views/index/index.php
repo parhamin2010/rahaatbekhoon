@@ -61,7 +61,7 @@ $newsVip = $data['getNewsVip'];
 
 <body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
 
-   <a href="https://raahatbekhar.com"> <img src="public/images/raahatbekhar.png" style="width: 175px;
+   <a href="https://raahatbekhar.com"> <img class="animated bounce infinite" src="public/images/raahatbekhar.png" style="width: 175px;
     height: 109px;
     position: fixed;
     z-index: 200;

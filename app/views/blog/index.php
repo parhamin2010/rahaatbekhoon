@@ -145,9 +145,7 @@ $UserID = Model::sessionGet('userId');
                                     <figcaption class="hidden-seo">
                                     </figcaption>
                                 </figure>
-                                <p style="position: relative;text-align: justify;direction: rtl">
 
-                                </p>
                                 <p style="position: relative;text-align: justify;direction: rtl">
                                     <span style="text-align: right">
                                         <?= $news[0]['date_created'] ?>
@@ -451,8 +449,7 @@ $UserID = Model::sessionGet('userId');
 
                             <div class="post-nav__body">
                                 <div class="_title" style="padding-left: 210px;">
-                                    <span class="bold" style="color: #50b33c">اخبار</span>
-                                    <span style="color: #50b33c">مرتبط</span>
+                                    <span class="bold" style="color: #50b33c">آرشیو خبر</span>
                                 </div>
                                 <ul class="related-posts">
                                     <?php

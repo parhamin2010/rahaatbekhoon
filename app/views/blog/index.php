@@ -133,25 +133,19 @@ $UserID = Model::sessionGet('userId');
                             <div class="row" style="margin-bottom: 25px;height: 300px">
                                 <div class="col-md-7 col-sm-12 sign-in">
                                     <figure class="post-attachment" style="margin-bottom: 10px">
-                                        <?php
-                                        $i = 1;
-                                        foreach ($news['all_images'] as $img) {
-                                            ?>
-                                            <a <?= $i != 1 ? "hidden" : ""; ?>
-                                                    href="public/images/news/<?= $img['i_image']; ?>"
+
+                                            <a
+                                                    href="public/images/news/<?= $news['all_images'][0]['i_image']; ?>"
                                                     data-lightbox="image-1"
                                                     data-title="<?= $news[0]['title']; ?>">
                                                 <img alt="<?= Model::summary($news[0]['title'], 100); ?>"
                                                      onerror="this.src='public/images/album-default.jpg'"
                                                      class="album-cover"
                                                      style="height: 300px"
-                                                     src="public/images/news/<?= $img['i_image']; ?>"/>
+                                                     src="public/images/news/<?= $news['all_images'][0]['i_image']; ?>"/>
                                                 <div class="zoom-overlay"></div>
                                             </a>
-                                            <?php
-                                            $i++;
-                                        }
-                                        ?>
+
                                         <figcaption class="hidden-seo">
                                         </figcaption>
                                     </figure>

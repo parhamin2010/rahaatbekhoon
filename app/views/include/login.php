@@ -7,14 +7,14 @@
                 <h4 class="modal-title">ورود</h4>
             </div>
             <div class="modal-body">
-                <div class="login-with-title">ورود و ثبت نام سریع با گوگل</div>
+                <div class="login-with-title" style="font-size: 10pt;">ورود و ثبت نام سریع با گوگل</div>
                 <div class="login-with-social">
                     <a href="<?= $data['getGoogleLoginLink'] ?>" title="ورود و ثبت نام با استفاده از اکانت گوگل شما" style="padding: 10px 16px;text-align: right;color: #fff" class="btn btn-block btn-social btn-google">
                         <span style="color: #fff;font-size: 1.2em;margin-top: 2px" class="fa fa-google-plus"></span> ورود سریع با حساب گوکل
                     </a>
                 </div>
-                <div class="login-with-or">یا</div>
-                <a onclick="GoogleloginRegularStyle()" id="btn-regular-login" class="regular-login">ورود به <?= NAME; ?></a>
+                <div class="login-with-or" style="font-size: 10pt;">یا</div>
+                <a onclick="GoogleloginRegularStyle()" style="font-size: 10pt;" id="btn-regular-login" class="regular-login">ورود به <?= NAME; ?></a>
                 <div id="form-regular-login" class="login-fold">
                     <p class="email-wrap">
                         <label for="username-input">پست الکترونیکی (*)</label>
@@ -36,8 +36,8 @@
                 </div>
             </div>
             <div class="modal-footer" style="margin-top: 10px !important;">
-                <span>اکانت <?= NAME; ?> و گوگل ندارید؟!</span>
-                <a style="color: inherit" href="register" class="signup-inside" title="ثبت نام مستقیم در سایت">&nbsp;  ثبت نام کنید   &nbsp;</a>
+                <span style="font-size: 8pt">اکانت <?= NAME; ?> و گوگل ندارید؟!</span>
+                <a style="color: inherit;font-size: 6pt" href="register" class="signup-inside" title="ثبت نام مستقیم در سایت">&nbsp;  ثبت نام کنید   &nbsp;</a>
             </div>
         </div>
     </div>

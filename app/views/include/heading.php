@@ -11,12 +11,12 @@ $level = Model::sessionGet('level');
                     Model::jaliliDate('l j F Y | H:i');
                     ?>
                     <div style="text-align: left;float: left">
-                        <a href="#"><span class="fa fa-telegram" style="font-size: 13pt;margin-left: 6px"></span></a>
-                        <a href="#"><span class="fa fa-instagram" style="font-size: 13pt;margin-left: 6px"></span></a>
-                        <a href="#"><span class="fa fa-twitter" style="font-size: 13pt;margin-left: 6px"></span></a>
-                        <a href="#"><span class="fa fa-facebook" style="font-size: 13pt;margin-left: 6px"></span></a>
-                        <a href="#"><span class="fa fa-google-plus" style="font-size: 13pt;margin-left: 6px"></span></a>
-                        <a href="rss"><span class="fa fa-rss" style="font-size: 13pt"></span></a>
+                        <a href="#" target="_blank"><span class="fa fa-telegram" style="font-size: 13pt;margin-left: 6px"></span></a>
+                        <a href="#" target="_blank"><span class="fa fa-instagram" style="font-size: 13pt;margin-left: 6px"></span></a>
+                        <a href="#" target="_blank"><span class="fa fa-twitter" style="font-size: 13pt;margin-left: 6px"></span></a>
+                        <a href="#" target="_blank"><span class="fa fa-facebook" style="font-size: 13pt;margin-left: 6px"></span></a>
+                        <a href="#" target="_blank"><span class="fa fa-google-plus" style="font-size: 13pt;margin-left: 6px"></span></a>
+                        <a href="rss" target="_blank"><span class="fa fa-rss" style="font-size: 13pt"></span></a>
                     </div>
                     <hr style="margin-top: 8px">
                     <div style="margin-top:0px;color: #fff">

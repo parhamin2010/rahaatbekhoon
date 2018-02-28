@@ -62,7 +62,7 @@ $level = Model::sessionGet('level');
                 }
                 ?>
                 <li class='l_one'>
-                    <a href="about" title='راهکارهای ما'>راهکارهای ما</a>
+                    <a href="about" title='راهکارهای ما'>درباره ما</a>
                 </li>
                 <li class='l_one'>
                     <a href="contact" title='ارتباط با ما'>ارتباط با ما</a>

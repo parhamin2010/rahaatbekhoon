@@ -65,7 +65,7 @@ $newsVip = $data['getNewsVip'];
     height: 109px;
     position: fixed;
     z-index: 200;
-    margin-right: 87.5%;
+    margin-right: 89.5%;
     margin-top: 170px;
     padding: 5px;
     text-align: center;
@@ -85,7 +85,7 @@ $newsVip = $data['getNewsVip'];
             <!-- ========== NAVBAR ========== -->
             <?php require('app/views/include/header.php'); ?>
             <!-- ========== NAVBAR : END ========== -->
-            <div class="W-100">
+            <div class="W-100" style="z-index: 300;background: #2b393f">
                 <?php require('app/views/index/slider.php'); ?>
             </div>
             <div class="homepage__header">

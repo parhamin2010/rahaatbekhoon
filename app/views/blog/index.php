@@ -171,15 +171,12 @@ $UserID = Model::sessionGet('userId');
                                             <h4 class="_txt"
                                                 style="line-height: 24px;color: #50b33c;margin-top: 15px;font-size: 14px;"><?= $news[0]['subtitle'] ?></h4>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-
                             <div class="post-module__content">
                                 <?= htmlspecialchars_decode($news[0]['description']) ?>
                             </div>
-
                             <?php
                             if ($news[0]['tag'] != '0') {
                                 ?>

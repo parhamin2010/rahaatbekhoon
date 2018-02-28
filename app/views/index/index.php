@@ -85,7 +85,7 @@ $newsVip = $data['getNewsVip'];
             <!-- ========== NAVBAR ========== -->
             <?php require('app/views/include/header.php'); ?>
             <!-- ========== NAVBAR : END ========== -->
-            <div class="W-100" style="z-index: 300;background: #2b393f">
+            <div class="W-100" style="z-index: 300;background: #4f0000;box-shadow: 0px 1px 10px #000">
                 <?php require('app/views/index/slider.php'); ?>
             </div>
             <div class="homepage__header">

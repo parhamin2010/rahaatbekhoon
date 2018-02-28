@@ -1203,7 +1203,7 @@ span.search-subtitle_asimg {
     height: 40px;
     min-width: 980px;
     margin-bottom: 0px;
-    z-index: 100;
+    z-index: 400;
     /*padding-bottom: 40px;*/
     color:#fff;
 }

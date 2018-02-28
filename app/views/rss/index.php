@@ -1,3 +1,1 @@
-<?php
-echo $data['getNews'];
-?>
+<?= $data['getNews']; ?>

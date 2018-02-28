@@ -61,6 +61,21 @@ $newsVip = $data['getNewsVip'];
 
 <body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
 
+   <a href="https://raahatbekhar.com"> <img src="public/images/raahatbekhar.png" style="width: 175px;
+    height: 109px;
+    position: fixed;
+    z-index: 200;
+    margin-right: 87.5%;
+    margin-top: 170px;
+    padding: 5px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0px;
+    box-shadow: 0px 0 10px 4px rgba(0,0,0,0.5);
+    "/>
+   </a>
+
 <?php require('app/views/include/login.php'); ?>
 
 

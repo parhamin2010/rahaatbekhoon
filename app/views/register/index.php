@@ -39,6 +39,7 @@ Model::sessionInit();
     <link rel="stylesheet" href="public/css/owl.carousel.css">
     <link rel="stylesheet" href="public/css/owl.transitions.css">
     <link href="public/css/lightbox.css" rel="stylesheet">
+    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
 
     <link href="public/css/css_main.css?v=d34y6GouB8OIqYbVXfO54Dw2tDZG8gAwP5JRzPLXebU1"
           rel="stylesheet"/>
@@ -48,7 +49,9 @@ Model::sessionInit();
 <body class="wmax" style="background:#283036;">
 
 <?php require('app/views/include/login.php'); ?>
-
+<div class="container" style="padding: 0 !important;">
+    <main class="home__page" >
+        <div class="homepage">
 <!-- ========== NAVBAR ========== -->
 <?php require('app/views/include/header.php'); ?>
 <!-- ========== NAVBAR : END ========== -->
@@ -75,7 +78,7 @@ Model::sessionInit();
                             <div class="register-form outer-top-xs">
                                 <div class="form-group" align="right">
                                     <label class="info-title" for="email"><span style="color: red">*</span> پست الکترونیکی</label>
-                                    <input type="email" class="form-control unicase-form-control text-input"
+                                    <input  type="email" class="form-control unicase-form-control text-input"
                                            id="email" name="email" oninput="setCustomValidity('')"
                                            onchange="checkEmail();"
                                            oninvalid="this.setCustomValidity('یک ایمیل معتبر وارد کنید')" required>
@@ -86,7 +89,7 @@ Model::sessionInit();
                                     <label class="info-title" for="name"><span style="color: red">*</span> نام و نام خانوادگی</label>
                                     <input type="text" class="form-control unicase-form-control text-input"
                                            id="name" name="name" oninput="setCustomValidity('')"
-                                           style="text-align: right;width: 100%"
+                                           style="text-align: right;width: 100%;border: 1px solid #e6e7e8;"
                                            oninvalid="this.setCustomValidity('نام و نام خانوادگی خود را ترجیحا به فارسی وارد کنید.')"
                                            required>
                                 </div>

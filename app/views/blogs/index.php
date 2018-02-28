@@ -60,7 +60,6 @@ $newsTop = $data['getTopNews'];
 </head>
 
 <body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
-
 <div class="container" style="padding: 0 !important;overflow-x: hidden">
     <main class="home__page" style="background: rgb(43, 57, 63);">
         <div class="homepage">

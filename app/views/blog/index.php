@@ -124,14 +124,12 @@ $UserID = Model::sessionGet('userId');
 
 <div class="container" style="transform: none;padding-right: 0;padding-left: 0">
     <div class="main single__page" style="transform: none;">
-
         <div class="main__content" style="transform: none;">
             <div class="topics wrapper" style="transform: none;margin-bottom: 40px;">
                 <div class="topics__content">
                     <div class="post-module post-368348 post type-post status-publish format-standard has-post-thumbnail hentry category-74 category-94 category-87 category-89 tag-flamethrower tag-the-boring-company tag-46990 tag-518 tag-133"
                          id="post-368348" style="padding: 0 30px;">
                         <article style="margin-top: 30px;">
-
                             <div class="row" style="margin-bottom: 25px;height: 300px">
                                 <div class="col-md-7 col-sm-12 sign-in">
                                     <figure class="post-attachment" style="margin-bottom: 10px">
@@ -158,27 +156,53 @@ $UserID = Model::sessionGet('userId');
                                         </figcaption>
                                     </figure>
                                 </div>
-
                                 <div class="col-md-5 col-sm-12 sign-in">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12" style="text-align: left;height: 22px">
                                             <span class="post-module__author--date"><?= $news[0]['time'] ?>
                                                 &nbsp;&nbsp;<?= $news[0]['date_created'] ?></span>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 " style="height: 22px">
-                                            <h4 class="_txt"
-                                                style="color: #50b33c;margin-top: 15px;font-size: 20px;"><?= $news[0]['title_no'] ?></h4>
-                                        </div>
+
                                         <div class="col-md-12 col-sm-12 " style="margin-top: 15px;height: 40px">
-                                            <h4 class="_txt"
-                                                style="font-size: 13px;margin-top: 15px;"><?= $news[0]['title'] ?></h4>
+                                            <h1 class="_txt"
+                                                style="font-size: 13pt;margin-top: 15px;font-weight: bold;line-height: 25px"><?= $news[0]['title'] ?></h1>
                                         </div>
                                         <div class="col-md-12 col-sm-12 " style="height: 45px;">
                                             <h4 class="_txt"
                                                 style="line-height: 24px;color: #50b33c;margin-top: 15px;font-size: 14px;"><?= $news[0]['subtitle'] ?></h4>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 " style="margin-top: calc(100% - 207px)">
-                                            <div style="color: #9ba4ab;float: left;">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post-module__content">
+                                <?= htmlspecialchars_decode($news[0]['description']) ?>
+                            </div>
+
+                            <?php
+                            if ($news[0]['tag'] != '0') {
+                                ?>
+                                <div class="_sep"></div>
+                                <div class="post-module__tags">
+                                    <span class="post-module__tags--title">برچسب‌ها :</span>
+                                    <?php
+                                    $tags = explode(",", $news[0]['tag']);
+                                    foreach ($tags as $tag) {
+                                        if ($tag != '') {
+                                            ?>
+                                            <a href="tag/<?= $tag; ?>" rel="tag"
+                                               class="post-tag post-module__tags--item item"><?= $tag; ?></a>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                            <div class="col-md-12 col-sm-12 ">
+                                <div style="color: #9ba4ab;float: left;">
                                                 <span class="social-networks">
                                                          <a class="icon-telegram" rel="nofollow"
                                                             href="https://telegram.me/share/url?url=<?= URL ?>blog/<?= $news[0]['n_id'] ?>&amp;text=<?= $news[0]['title'] ?>"
@@ -205,36 +229,10 @@ $UserID = Model::sessionGet('userId');
                                                             target="_blank">
                                                          </a>
                                                    </span>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="post-module__content">
-                                <?= htmlspecialchars_decode($news[0]['description']) ?>
-                            </div>
-                            <?php
-                            if ($news[0]['tag'] != '0') {
-                                ?>
-                                <div class="_sep"></div>
-                                <div class="post-module__tags">
-                                    <span class="post-module__tags--title">برچسب‌ها :</span>
-                                    <?php
-                                    $tags = explode(",", $news[0]['tag']);
-                                    foreach ($tags as $tag) {
-                                        if ($tag != '') {
-                                            ?>
-                                            <a href="tag/<?= $tag; ?>" rel="tag"
-                                               class="post-tag post-module__tags--item item"><?= $tag; ?></a>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </div>
-                                <?php
-                            }
-                            ?>
                         </article>
+
                         <div class="comments-template">
                             <div class="_sep"></div>
                             <?php

@@ -176,7 +176,7 @@ $UserID = Model::sessionGet('userId');
                             </div>
                             <div class="post-module__content">
                                 <?= htmlspecialchars_decode($news[0]['description']) ?>
-                            </div>
+                            </  div>
                             <?php
                             if ($news[0]['tag'] != '0') {
                                 ?>

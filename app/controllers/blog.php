@@ -21,9 +21,11 @@ class Blog extends Controller
                 $iconfavCheck = $this->model->iconfavCheck($UserID, "track-" . $id);
                 $sameNews = $this->model->sameNews($id);
                 $getCategory =$this->model->getCategory();
+                $getsuggestNews = $this->model->getsuggestNews();
+
                 $data = array('infoUser' => $infoUser, 'getNews' => $getNews, 'RateStatus' => $RateStatus,
                     'iconfavCheck' => $iconfavCheck, 'comment' => $comment, 'sameNews' => $sameNews,
-                    'getCategory' => $getCategory);
+                    'getCategory' => $getCategory,'getsuggestNews' => $getsuggestNews);
 
                 $this->view('blog/index', $data);
             } else {

@@ -409,6 +409,33 @@
     flex-direction: row-reverse
 }
 
+.pulsee:hover{
+@keyframes pulse {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1)
+}
+50% {
+-webkit-transform: scale3d(1.05, 1.05, 1.05);
+transform: scale3d(1.05, 1.05, 1.05)
+}
+100% {
+-webkit-transform: scale3d(1, 1, 1);
+transform: scale3d(1, 1, 1)
+}
+}
+
+.pulse {
+-webkit-animation-name: pulse;
+animation-name: pulse
+}
+}
+.pulsee:hover {
+    -webkit-animation-name: pulse;
+    animation-name: pulse
+}
+
+
 .archive-header .category__sort .order__list, .archive__page .archive-header .media-header__content, .carousel__body__item, .competition .items-wrapper, .competition .items-wrapper__item .details, .countdown, .exam, .favourites, .favourites-list .items-wrapper, .favourites-list .items-wrapper__item .details, .favourites__list .item__detail, .followings .items-wrapper, .followings .items-wrapper__item .details, .footer, .homepage, .homepage__header__aside, .homepage__header__content, .homepage__main, .images-viewer, .images-viewer__thumbnails > *, .instagram-album, .login-box, .login-box .input-wrapper, .login-pop, .login-pop__wrapper, .masonry-gallery__item, .media-gallery, .media-gallery__body .media-aside .media-list, .media-gallery__body .media-aside .media-list__item .detail-wrapper, .media-page, .menu, .menu__row .mega__list, .menu__row .mega__show .last-posts__item, .news, .news__item, .news__item__content, .not-found__box, .notification__items, .notifications-list__page .archive-header .category__sort .order__list, .post-module, .post-module__comments, .post-module__comments ._item, .post-module__content ol:not(.images-viewer__thumbnails), .post-module__content ul:not(.images-viewer__thumbnails), .post-module__features--advantages, .post-module__features--defects, .post-module__features .list, .post-nav, .post-nav__body, .post-nav__body .related-posts, .post-nav__body .related-posts__item .detail-wrapper, .post-nav__top, .post-nav__top .product-carousel__item, .profile__page .archive-header .category__sort .order__list, .profile__page .topics__content, .search-box, .search-box__wrapper, .search-box__wrapper__bottom .search-footer-menu > .item .sub-menu, .search-box__wrapper__result .no-result, .search-box__wrapper__result .search-results__main .dk-results, .search-box__wrapper__result .search-results__main .dk-results__badge ._txt, .search-box__wrapper__result .search-results__main .dk-results__items, .search-box__wrapper__result .search-results__main .dk-results__items .item, .search-box__wrapper__result .search-results__main .mag-results, .search-box__wrapper__result .search-results__main .mag-results .results-list > .item .detail-wrapper, .search-box__wrapper__result .search-results__side, .search-box__wrapper__result .search-results__side .autocomplete, .search-box__wrapper__result .search-results__side .suggestion, .search-page__page .archive-header .category__sort .order__list, .search-page__page .autocomplete, .search-page__page .dk-results, .search-page__page .dk-results__badge ._txt, .search-page__page .dk-results__items, .search-page__page .dk-results__items .item, .search-page__page .no-result, .search-results-box, .search-results-box .items-wrapper, .setting .account, .short-news__page .archive-header .category__sort .order__list, .short-news__page .media-header__content, .sticky-wrapper, .studies .items-wrapper, .studies .items-wrapper__item .details, .test, .user-bar, .user-bar .parw, .user-bar__list, .user-pane.logged-in .icon-user .user, [role=dialog] .modal-dialog .modal-content form {
     -ms-flex-direction: column;
     -webkit-flex-direction: column;

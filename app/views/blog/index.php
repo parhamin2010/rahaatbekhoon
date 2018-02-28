@@ -108,6 +108,52 @@ $UserID = Model::sessionGet('userId');
 
     <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
 
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <!-- Customizable CSS -->
+    <link href="public/css/pace-theme-flash.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="public/css/animate.min.css">
+    <link rel="stylesheet" href="public/css/bootstrap-social.css">
+    <link href="public/css/application.track.index.css" rel="stylesheet" type="text/css">
+
+    <?php require('app/views/include/favicon.php'); ?>
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+
+    <!-- Customizable CSS -->
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/owl.carousel.css">
+    <link rel="stylesheet" href="public/css/owl.transitions.css">
+    <link href="public/css/lightbox.css" rel="stylesheet">
+
+    <link href="public/css/css_main.css?v=d34y6GouB8OIqYbVXfO54Dw2tDZG8gAwP5JRzPLXebU1"
+          rel="stylesheet"/>
+    <link href="public/css/css_HomePage.css?v=xir1k7vh8U8EsdD9UJmw_kH1ptTEnN8lVeXlkL9SNQM1"
+          rel="stylesheet"/>
+    <link href="public/css/css_errorpage.css?v=W9Zha4MI1vBChZOtmEGTp21CQvDyoRYjpgwgdm7ErAQ1"
+          rel="stylesheet"/>
+    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 
 <body class="rtl post-template-default single single-post postid-368348 single-format-standard wmax"
@@ -217,6 +263,36 @@ $UserID = Model::sessionGet('userId');
                                                    </span>
                             </div>
                         </div>
+                        <section>
+                            <hr>
+                            <div class="error-page">
+                                <div class="error-page__suggestion">
+                                    <div class="error-page__suggestion--title" style="color:#6b7074;text-align: right">اخبار مرتبط :</div>
+                                    <ul class="error-page__suggestion--items clearfix" style="margin-bottom: 30px;">
+                                        <?php
+                                        $news = $data['getsuggestNews'];
+                                        foreach ($news as $newsInfo) {
+                                            ?>
+                                            <li class="error-page__suggestion--item dk-box">
+                                                <a href="<?= URL; ?>blog/<?= $newsInfo['n_id']; ?>" class="image-placeholder">
+                                                    <img onload="this.nextElementSibling.remove()"
+                                                         class="error-page__suggestion--item-img"
+                                                         style="height: 80%;"
+                                                         src="public/images/news/<?= $newsInfo['i_image']; ?>"
+                                                         alt="mobile"/>
+                                                    <img class="error-page__suggestion--item-img-holder"
+                                                         src="public/images/placeholder.png"
+                                                         alt="placeholder"/>
+                                                    <span class="error-page__suggestion--item-img-caption" style="font-size: 8pt"><?= Model::summary($newsInfo['title'], 70); ?></span>
+                                                </a>
+                                            </li>
+                                            <?php
+                                        }
+                                        ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
                         <div class="comments-template">
                             <div class="_sep"></div>
                             <?php
@@ -499,6 +575,45 @@ $UserID = Model::sessionGet('userId');
             </div>
         </div>
     </div>
+    <div class="container" style="padding: 0px 100px 0px 50px ;overflow-x: hidden">
+    <main class="" style="background: rgb(43, 57, 63);">
+        <div class="homepage">
+
+
+        </div>
+    </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- ========================= FOOTER ========================= -->
     <br><?php require('app/views/include/footer.php'); ?>
     <!-- ========================= FOOTER : END========================= -->

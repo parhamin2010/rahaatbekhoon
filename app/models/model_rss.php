@@ -9,6 +9,16 @@ class model_rss extends Model
 
     function getNews()
     {
+
+        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+                LEFT JOIN tbl_category b
+                ON a.cat_id=b.id
+                LEFT JOIN tbl_images c
+                ON a.image_id=c.i_id
+                WHERE a.status=1
+                ORDER BY a.date_created DESC LIMIT 30";
+        $results = $this->doSelect($sql);
+
         $rss_channel = new rssGenerator_channel();
         $rss_channel->atomLinkHref = '';
         $rss_channel->title = NAME;
@@ -19,22 +29,15 @@ class model_rss extends Model
         $rss_channel->managingEditor = 'editor@mysite.com (Alex Jefferson)';
         $rss_channel->webMaster = DEVELOPER;
 
-        $item = new rssGenerator_item();
-        $item->title = 'New website launched';
-        $item->description = 'Today I finaly launch a new website.';
-        $item->link = 'http://newsite.com';
-        $item->guid = 'http://newsite.com';
-        $item->pubDate = 'Tue, 07 Mar 2006 00:00:01 GMT';
-        $rss_channel->items[] = $item;
-
-        $item = new rssGenerator_item();
-        $item->title = 'Another website launched';
-        $item->description = 'Just another website launched.';
-        $item->link = 'http://anothersite.com';
-        $item->guid = 'http://anothersite.com';
-        $item->pubDate = 'Wed, 08 Mar 2006 00:00:01 GMT';
-        $rss_channel->items[] = $item;
-
+        foreach ($results as $result) {
+            $item = new rssGenerator_item();
+            $item->title = $result['title'];
+            $item->description = $result['subtitle'];
+            $item->link = URL.'blog/'.$result['n_id'];
+            $item->enclosure_url = URL.'public/images/news/'.$result['i_image'];
+            $item->pubDate = $result['date_created'];
+            $rss_channel->items[] = $item;
+        }
         $rss_feed = new rssGenerator_rss();
         $rss_feed->encoding = 'UTF-8';
         $rss_feed->version = '2.0';

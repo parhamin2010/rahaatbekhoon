@@ -215,7 +215,7 @@ $UserID = Model::sessionGet('userId');
                             if ($news[0]['tag'] != '0') {
                                 ?>
                                 <div class="_sep"></div>
-                                <div class="post-module__tags">
+                                <div class="post-module__tags ">
                                     <span class="post-module__tags--title">برچسب‌ها :</span>
                                     <?php
                                     $tags = explode(",", $news[0]['tag']);

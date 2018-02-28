@@ -61,8 +61,18 @@ $level = Model::sessionGet('level');
                     <?php
                 }
                 ?>
+
                 <li class='l_one'>
-                    <a href="about" title='راهکارهای ما'>درباره ما</a>
+                    <a href="about" title='اخبار و رویدادها'>اخبار و رویدادها</a>
+                </li>
+                <li class='l_one'>
+                    <a href="about" title='مجلات و نشریات'>مجلات و نشریات</a>
+                </li>
+                <li class='l_one'>
+                    <a href="https://raahatbekhar.com/" title='فروشگاه راحت بخون'>فروشگاه</a>
+                </li>
+                <li class='l_one'>
+                    <a href="about" title='درباره ما'>درباره ما</a>
                 </li>
                 <li class='l_one'>
                     <a href="contact" title='ارتباط با ما'>ارتباط با ما</a>

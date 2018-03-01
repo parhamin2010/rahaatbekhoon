@@ -42,7 +42,7 @@ class rssGenerator_rss
         $rss .= '<!-- Generated on ' . date('r') . ' -->' . "\n";
         $rss .= '<rss version="' . $this->rss_version . '" xmlns:atom="http://www.w3.org/2005/Atom">' . "\n";
         $rss .= '  <channel>' . "\n";
-        $rss .= '    <atom:link href="' . ($channel->atomLinkHref ? $channel->atomLinkHref : $selfUrl) . '" rel="self" type="application/rss+xml" />' . "\n";
+//        $rss .= '    <atom:link href="' . ($channel->atomLinkHref ? $channel->atomLinkHref : $selfUrl) . '" rel="self" type="application/rss+xml" />' . "\n";
         $rss .= '    <title>' . $channel->title . '</title>' . "\n";
         $rss .= '    <link>' . $channel->link . '</link>' . "\n";
         $rss .= '    <description>' . $channel->description . '</description>' . "\n";

@@ -24,10 +24,11 @@ class model_rss extends Model
         $rss_channel->title = NAME;
         $rss_channel->link = URL;
         $rss_channel->description = '';
+        $rss_channel->copyright = 'Copyright '.date("Y").' www.'.URL_FOOTER;
         $rss_channel->language = 'en-us';
         $rss_channel->generator = '';
         $rss_channel->managingEditor = '';
-        $rss_channel->webMaster = DEVELOPER;
+        $rss_channel->webMaster = '';
 
         foreach ($results as $result) {
             $item = new rssGenerator_item();
@@ -35,6 +36,7 @@ class model_rss extends Model
             $item->description = $result['subtitle'];
             $item->link = URL.'blog/'.$result['n_id'];
             $item->enclosure_url = URL.'public/images/news/'.$result['i_image'];
+            $item->enclosure_type = 'image/jpeg';
             $item->pubDate = $result['date_created'];
             $rss_channel->items[] = $item;
         }

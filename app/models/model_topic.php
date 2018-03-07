@@ -1,6 +1,6 @@
 <?php
 
-class model_blogs extends Model
+class model_topic extends Model
 {
 
     function __construct()

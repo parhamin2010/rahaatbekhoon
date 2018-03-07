@@ -1340,7 +1340,7 @@ span.search-subtitle_asimg {
 .navigation .mrg-auto ul.root > li > ul.level {
     display: none;
     position: absolute;
-    border-bottom: 1px solid #e1e1e1;
+    /*border-bottom: 1px solid #e1e1e1;*/
     top: 40px;
     left: 0;
     right: 0;

@@ -77,14 +77,25 @@ $activeSubMenu = 'categoriesManage';
                         <div class="box-body">
                                 <div class="box-body">
                                     <div class='row'>
-                                        <div class='col-md-4'>
+                                        <div class='col-md-6'>
                                             <div class="form-group" style="text-align:right">
                                                 <label align="right" for="nameStyle">:نام دسته بندی</label>
                                                 <input style="border-radius: 3px;text-align:right" type="text" value="<?= $style['0']['name']; ?>"
                                                        class="form-control" id="nameStyle" name="nameStyle" required>
                                             </div>
                                         </div>
-                                        <div class='col-md-4'>
+                                        <div class='col-md-6'>
+                                            <div class="form-group" style="text-align:right">
+                                                <label for="category">: دسته بندی اصلی</label>
+                                                <select id="category" name="category" class="form-control select2"
+                                                        style="border-radius: 3px;width: 100%;direction: rtl"
+                                                        required>
+                                                    <option <?php if ($style['0']['main_cat']==1) { ?>selected="selected"<?php } ?> value="1">اخبار و رویدادها</option>
+                                                    <option <?php if ($style['0']['main_cat']==2) { ?>selected="selected"<?php } ?> value="2">نشریات و مقالات</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class='col-md-6'>
                                             <div class="form-group" style="text-align:right">
                                                 <label for="iconStyle">: آیکون</label>
                                                 <select id="iconStyle" name="iconStyle" class="form-control select2"
@@ -353,7 +364,7 @@ $activeSubMenu = 'categoriesManage';
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class='col-md-4'>
+                                        <div class='col-md-6'>
                                             <div class="form-group" style="text-align:right">
                                                 <label for="statusStyle">: وضعیت</label>
                                                 <select id="statusStyle" name="statusStyle" class="form-control select2"
@@ -412,6 +423,7 @@ $activeSubMenu = 'categoriesManage';
         var name = document.getElementById("nameStyle").value;
         var icon = document.getElementById("iconStyle").value;
         var status = document.getElementById("statusStyle").value;
+        var category = document.getElementById("category").value;
         if (name == "") {
             generate('warning', '<div class="activity-item" style="text-align:right" dir="rtl">نام دسته بندی را وارد کنید.</div>');
         }
@@ -422,6 +434,7 @@ $activeSubMenu = 'categoriesManage';
                     'name': name,
                     'icon': icon,
                     'status': status,
+                    'category': category,
                     'id':<?php echo $data['attrId']; ?>
                 },
                 function (data) {

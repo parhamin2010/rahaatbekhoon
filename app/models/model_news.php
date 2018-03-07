@@ -1,6 +1,6 @@
 <?php
 
-class model_blog extends Model
+class model_news extends Model
 {
 
     function __construct()

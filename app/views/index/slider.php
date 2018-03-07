@@ -54,7 +54,7 @@
         $sliders = $data['sliders'];
         foreach ($sliders as $slider) {
             ?>
-            <a href="blog/<?= $slider['n_id']; ?>">
+            <a href="news/<?= $slider['n_id']; ?>">
                 <div class="item"
                      style="background-image: url('public/images/news/<?= $slider['i_image']; ?>');background-repeat: no-repeat;background-size: 100% 100%;"></div>
                 <div style="position: absolute;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;

@@ -74,6 +74,7 @@ $activeSubMenu = 'categoriesManage';
                                     <th style="text-align:center;width: 50px">ردیف</th>
                                     <th style="text-align:center">نام</th>
                                     <th style="text-align:center;width: 50px">نماد</th>
+                                    <th style="text-align:center;">دسته بندی اصلی</th>
                                     <th style="text-align:center;">تعداد خبر ثبت شده</th>
                                     <th style="text-align:center">وضعیت</th>
                                     <th style="text-align:center;width: 100px">عملیات</th>
@@ -91,6 +92,7 @@ $activeSubMenu = 'categoriesManage';
                                         <td style="text-align:center"><i style="margin-left: 10px"
                                                                          class="icon fa <?= $style['icon']; ?> fa-fw"></i>
                                         </td>
+                                        <td style="text-align:center"><?= $style['main_cat'] == 1 ? "اخبار و رویدادها" : "نشریات و مجلات"; ?></td>
                                         <td style="text-align:center"><?= $style['count']; ?></td>
                                         <td style="text-align:center"><?= $style['status'] == 1 ? "<i class='fa fa-check text-success fa-fw'></i> فعال" : "<i class='fa fa-close text-danger fa-fw'></i> غیرفعال"; ?></td>
                                         <td style="text-align:center">

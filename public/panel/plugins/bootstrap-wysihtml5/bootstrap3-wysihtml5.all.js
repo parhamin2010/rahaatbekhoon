@@ -4403,7 +4403,7 @@ wysihtml5.browser = (function() {
      * will automatically be auto-linked when either the user inserts them via copy&paste or presses the
      * space bar when the caret is directly after such an url.
      * This behavior cannot easily be avoided in IE < 9 since the logic is hardcoded in the mshtml.dll
-     * (related blog post on msdn
+     * (related news post on msdn
      * http://blogs.msdn.com/b/ieinternals/archive/2009/09/17/prevent-automatic-hyperlinking-in-contenteditable-html.aspx).
      */
     doesAutoLinkingInContentEditable: function() {

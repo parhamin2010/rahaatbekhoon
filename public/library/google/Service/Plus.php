@@ -475,7 +475,7 @@ class Google_Service_Plus_Moments_Resource extends Google_Service_Resource
 
   /**
    * Record a moment representing a user's action such as making a purchase or
-   * commenting on a blog. (moments.insert)
+   * commenting on a news. (moments.insert)
    *
    * @param string $userId The ID of the user to record actions for. The only
    * valid values are "me" and the ID of the authenticated user.

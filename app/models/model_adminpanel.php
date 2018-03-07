@@ -363,17 +363,17 @@ class model_adminpanel extends Model
         return $result;
     }
 
-    function addCategories($name, $icon)
+    function addCategories($name, $category, $icon)
     {
-        $sql = "SELECT * FROM tbl_category WHERE name=?";
-        $param = array($name);
+        $sql = "SELECT * FROM tbl_category WHERE name=? and main_cat=?";
+        $param = array($name,$category);
         $result = $this->doSelect($sql, $param);
 
         if (sizeof($result) > 0) {
             echo "error";
         } else {
-            $sql2 = "INSERT INTO tbl_category (name,icon,link,status) VALUES (?,?,?,?)";
-            $params = [$name, $icon, $name, "1"];
+            $sql2 = "INSERT INTO tbl_category (name,icon,main_cat,link,status) VALUES (?,?,?,?,?)";
+            $params = [$name, $icon, $category, $name, "1"];
             $this->doQuery($sql2, $params);
             echo "ok";
         }
@@ -381,19 +381,17 @@ class model_adminpanel extends Model
 
     function getstyleInfoEdit($attrId)
     {
-        $sql = "SELECT name,icon,status
-         FROM tbl_category
-         WHERE id=? ";
+        $sql = "SELECT * FROM tbl_category WHERE id=? ";
         $param = array($attrId);
 
         $result = $this->doSelect($sql, $param);
         return $result;
     }
 
-    function editCategories($name, $icon, $status, $id)
+    function editCategories($name, $category, $icon, $status, $id)
     {
-        $sql3 = "UPDATE tbl_category SET name=?, icon=?, status=?, link=?  WHERE id=?";
-        $params1 = [$name, $icon, $status, $name, $id];
+        $sql3 = "UPDATE tbl_category SET name=?, icon=?, main_cat=?, status=?, link=?  WHERE id=?";
+        $params1 = [$name, $icon, $category, $status, $name, $id];
         $this->doQuery($sql3, $params1);
         echo "ok";
     }

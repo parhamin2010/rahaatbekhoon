@@ -1,6 +1,6 @@
 <?php
 
-class Blogs extends Controller
+class Topic extends Controller
 {
     function __construct()
     {
@@ -42,7 +42,7 @@ class Blogs extends Controller
                     $data = array('getNews' => $getNews, 'getNewsVip' => $getNewsVip,
                         'getCategory' => $getCategory,'getTopNews' => $getTopNews);
 
-                    $this->view('blogs/index', $data);
+                    $this->view('topic/index', $data);
                 } else {
                     $detect = new Mobile_Detect;
                     $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
@@ -52,10 +52,10 @@ class Blogs extends Controller
                     $data = array('getsuggestNews' => $getsuggestNews,'getCategory' => $getCategory);
 
                     if($deviceType=='computer') {
-                        $this->view('blogs/noNews', $data);
+                        $this->view('topic/noNews', $data);
                     }
                     else {
-                        $this->view('blogs/noNewsMobile', $data);
+                        $this->view('topic/noNewsMobile', $data);
                     }
                 }
             } else {

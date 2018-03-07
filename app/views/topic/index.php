@@ -313,7 +313,7 @@ $newsTop = $data['getTopNews'];
                                                      alt="<?= $newsInfo['title'] ?>"> </a>
 
 
-                                            <a href="blogs/category/<?= $newsInfo['cat_id'] ?>"
+                                            <a href="topic/category/<?= $newsInfo['cat_id'] ?>"
                                                title="<?= $newsInfo['name'] ?>"
                                                class="image__badge"><?= $newsInfo['name'] ?></a> <span
                                                     class="image__fav">

@@ -164,7 +164,7 @@ $newsVip = $data['getNewsVip'];
                             <?php
                             foreach ($newsVip as $newsVipInfo) {
                                 ?>
-                                <a href="blog/<?= $newsVipInfo['n_id'] ?>"
+                                <a href="news/<?= $newsVipInfo['n_id'] ?>"
                                    class="carousel__body__item" title="<?= $newsVipInfo['title'] ?>">
                                     <img src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
                                          data-lazy-src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
@@ -234,7 +234,7 @@ $newsVip = $data['getNewsVip'];
                                                  alt="<?= $newsInfo['title'] ?>">
 
 
-                                            <a href="blogs/category/<?= $newsInfo['cat_id'] ?>"
+                                            <a href="topic/category/<?= $newsInfo['cat_id'] ?>"
                                                title="<?= $newsInfo['name'] ?>"
                                                class="image__badge">
                                                 <i class="fa fa-cloud-download"></i> دانلود

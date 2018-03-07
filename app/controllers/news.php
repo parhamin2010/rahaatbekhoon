@@ -1,6 +1,6 @@
 <?php
 
-class Blog extends Controller
+class News extends Controller
 {
     function __construct()
     {
@@ -27,7 +27,7 @@ class Blog extends Controller
                     'iconfavCheck' => $iconfavCheck, 'comment' => $comment, 'sameNews' => $sameNews,
                     'getCategory' => $getCategory,'getsuggestNews' => $getsuggestNews);
 
-                $this->view('blog/index', $data);
+                $this->view('news/index', $data);
             } else {
                 $detect = new Mobile_Detect;
                 $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');

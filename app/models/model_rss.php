@@ -34,7 +34,7 @@ class model_rss extends Model
             $item = new rssGenerator_item();
             $item->title = $result['title'];
             $item->description = $result['subtitle'];
-            $item->link = URL.'blog/'.$result['n_id'];
+            $item->link = URL.'news/'.$result['n_id'];
             $item->enclosure_url = URL.'public/images/news/'.$result['i_image'];
             $item->enclosure_type = 'image/jpeg';
             $item->pubDate = $result['date_created'];

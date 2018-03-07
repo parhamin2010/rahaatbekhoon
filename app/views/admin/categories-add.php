@@ -74,14 +74,25 @@ $activeSubMenu = 'categoryAdd';
                         <div class="box-body">
                                 <div class="box-body">
                                     <div class='row'>
-                                        <div class='col-md-6'>
+                                        <div class='col-md-4'>
                                             <div class="form-group" style="text-align:right">
                                                 <label align="right" for="nameStyle">:نام دسته بندی</label>
                                                 <input style="border-radius: 3px;text-align:right" type="text"
                                                        class="form-control" id="nameStyle" name="nameStyle" required>
                                             </div>
                                         </div>
-                                        <div class='col-md-6'>
+                                        <div class='col-md-4'>
+                                            <div class="form-group" style="text-align:right">
+                                                <label for="category">: دسته بندی اصلی</label>
+                                                <select id="category" name="category" class="form-control select2"
+                                                        style="border-radius: 3px;width: 100%;direction: rtl"
+                                                        required>
+                                                    <option value="1">اخبار و رویدادها</option>
+                                                    <option value="2">نشریات و مقالات</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class='col-md-4'>
                                             <div class="form-group" style="text-align:right">
                                                 <label for="iconStyle">: آیکون</label>
                                                 <select id="iconStyle" name="iconStyle" class="form-control select2"
@@ -558,6 +569,7 @@ $activeSubMenu = 'categoryAdd';
     $("#btnsubmit").on('click', function () {
         var name = document.getElementById("nameStyle").value;
         var icon = document.getElementById("iconStyle").value;
+        var category = document.getElementById("category").value;
         if (name == "") {
             generate('warning', '<div class="activity-item" style="text-align:right" dir="rtl">نام دسته بندی را وارد کنید.</div>');
         }
@@ -566,6 +578,7 @@ $activeSubMenu = 'categoryAdd';
                 "adminpanel/addcategory",
                 {
                     'name': name,
+                    'category': category,
                     'icon': icon
                 },
                 function (data) {

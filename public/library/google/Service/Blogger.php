@@ -67,7 +67,7 @@ class Google_Service_Blogger extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'users/{userId}/blogs/{blogId}',
+              'path' => 'users/{userId}/topic/{blogId}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'userId' => array(
@@ -92,11 +92,11 @@ class Google_Service_Blogger extends Google_Service
     $this->blogs = new Google_Service_Blogger_Blogs_Resource(
         $this,
         $this->serviceName,
-        'blogs',
+        'topic',
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'blogs/{blogId}',
+              'path' => 'topic/{blogId}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -114,7 +114,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'getByUrl' => array(
-              'path' => 'blogs/byurl',
+              'path' => 'topic/byurl',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'url' => array(
@@ -128,7 +128,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'listByUser' => array(
-              'path' => 'users/{userId}/blogs',
+              'path' => 'users/{userId}/topic',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'userId' => array(
@@ -166,7 +166,7 @@ class Google_Service_Blogger extends Google_Service
         array(
           'methods' => array(
             'approve' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}/comments/{commentId}/approve',
+              'path' => 'topic/{blogId}/posts/{postId}/comments/{commentId}/approve',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'blogId' => array(
@@ -186,7 +186,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}/comments/{commentId}',
+              'path' => 'topic/{blogId}/posts/{postId}/comments/{commentId}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'blogId' => array(
@@ -206,7 +206,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}/comments/{commentId}',
+              'path' => 'topic/{blogId}/posts/{postId}/comments/{commentId}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -230,7 +230,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}/comments',
+              'path' => 'topic/{blogId}/posts/{postId}/comments',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -274,7 +274,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'listByBlog' => array(
-              'path' => 'blogs/{blogId}/comments',
+              'path' => 'topic/{blogId}/comments',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -309,7 +309,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'markAsSpam' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}/comments/{commentId}/spam',
+              'path' => 'topic/{blogId}/posts/{postId}/comments/{commentId}/spam',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'blogId' => array(
@@ -329,7 +329,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'removeContent' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}/comments/{commentId}/removecontent',
+              'path' => 'topic/{blogId}/posts/{postId}/comments/{commentId}/removecontent',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'blogId' => array(
@@ -359,7 +359,7 @@ class Google_Service_Blogger extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'blogs/{blogId}/pageviews',
+              'path' => 'topic/{blogId}/pageviews',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -384,7 +384,7 @@ class Google_Service_Blogger extends Google_Service
         array(
           'methods' => array(
             'delete' => array(
-              'path' => 'blogs/{blogId}/pages/{pageId}',
+              'path' => 'topic/{blogId}/pages/{pageId}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'blogId' => array(
@@ -399,7 +399,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'blogs/{blogId}/pages/{pageId}',
+              'path' => 'topic/{blogId}/pages/{pageId}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -418,7 +418,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'insert' => array(
-              'path' => 'blogs/{blogId}/pages',
+              'path' => 'topic/{blogId}/pages',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'blogId' => array(
@@ -432,7 +432,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'blogs/{blogId}/pages',
+              'path' => 'topic/{blogId}/pages',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -463,7 +463,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'blogs/{blogId}/pages/{pageId}',
+              'path' => 'topic/{blogId}/pages/{pageId}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'blogId' => array(
@@ -486,7 +486,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'publish' => array(
-              'path' => 'blogs/{blogId}/pages/{pageId}/publish',
+              'path' => 'topic/{blogId}/pages/{pageId}/publish',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'blogId' => array(
@@ -501,7 +501,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'revert' => array(
-              'path' => 'blogs/{blogId}/pages/{pageId}/revert',
+              'path' => 'topic/{blogId}/pages/{pageId}/revert',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'blogId' => array(
@@ -516,7 +516,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'update' => array(
-              'path' => 'blogs/{blogId}/pages/{pageId}',
+              'path' => 'topic/{blogId}/pages/{pageId}',
               'httpMethod' => 'PUT',
               'parameters' => array(
                 'blogId' => array(
@@ -549,7 +549,7 @@ class Google_Service_Blogger extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'users/{userId}/blogs/{blogId}/posts/{postId}',
+              'path' => 'users/{userId}/topic/{blogId}/posts/{postId}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'userId' => array(
@@ -573,7 +573,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'users/{userId}/blogs/{blogId}/posts',
+              'path' => 'users/{userId}/topic/{blogId}/posts',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'userId' => array(
@@ -635,7 +635,7 @@ class Google_Service_Blogger extends Google_Service
         array(
           'methods' => array(
             'delete' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}',
+              'path' => 'topic/{blogId}/posts/{postId}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'blogId' => array(
@@ -650,7 +650,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}',
+              'path' => 'topic/{blogId}/posts/{postId}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -681,7 +681,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'getByPath' => array(
-              'path' => 'blogs/{blogId}/posts/bypath',
+              'path' => 'topic/{blogId}/posts/bypath',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -704,7 +704,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'insert' => array(
-              'path' => 'blogs/{blogId}/posts',
+              'path' => 'topic/{blogId}/posts',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'blogId' => array(
@@ -726,7 +726,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'blogs/{blogId}/posts',
+              'path' => 'topic/{blogId}/posts',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -777,7 +777,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}',
+              'path' => 'topic/{blogId}/posts/{postId}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'blogId' => array(
@@ -812,7 +812,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'publish' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}/publish',
+              'path' => 'topic/{blogId}/posts/{postId}/publish',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'blogId' => array(
@@ -831,7 +831,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'revert' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}/revert',
+              'path' => 'topic/{blogId}/posts/{postId}/revert',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'blogId' => array(
@@ -846,7 +846,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'search' => array(
-              'path' => 'blogs/{blogId}/posts/search',
+              'path' => 'topic/{blogId}/posts/search',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'blogId' => array(
@@ -869,7 +869,7 @@ class Google_Service_Blogger extends Google_Service
                 ),
               ),
             ),'update' => array(
-              'path' => 'blogs/{blogId}/posts/{postId}',
+              'path' => 'topic/{blogId}/posts/{postId}',
               'httpMethod' => 'PUT',
               'parameters' => array(
                 'blogId' => array(
@@ -943,15 +943,15 @@ class Google_Service_Blogger_BlogUserInfos_Resource extends Google_Service_Resou
 {
 
   /**
-   * Gets one blog and user info pair by blogId and userId. (blogUserInfos.get)
+   * Gets one news and user info pair by blogId and userId. (blogUserInfos.get)
    *
-   * @param string $userId ID of the user whose blogs are to be fetched. Either
+   * @param string $userId ID of the user whose topic are to be fetched. Either
    * the word 'self' (sans quote marks) or the user's profile identifier.
-   * @param string $blogId The ID of the blog to get.
+   * @param string $blogId The ID of the news to get.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string maxPosts Maximum number of posts to pull back with the
-   * blog.
+   * news.
    * @return Google_Service_Blogger_BlogUserInfo
    */
   public function get($userId, $blogId, $optParams = array())
@@ -963,25 +963,25 @@ class Google_Service_Blogger_BlogUserInfos_Resource extends Google_Service_Resou
 }
 
 /**
- * The "blogs" collection of methods.
+ * The "topic" collection of methods.
  * Typical usage is:
  *  <code>
  *   $bloggerService = new Google_Service_Blogger(...);
- *   $blogs = $bloggerService->blogs;
+ *   $topic = $bloggerService->topic;
  *  </code>
  */
 class Google_Service_Blogger_Blogs_Resource extends Google_Service_Resource
 {
 
   /**
-   * Gets one blog by ID. (blogs.get)
+   * Gets one news by ID. (topic.get)
    *
-   * @param string $blogId The ID of the blog to get.
+   * @param string $blogId The ID of the news to get.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string maxPosts Maximum number of posts to pull back with the
-   * blog.
-   * @opt_param string view Access level with which to view the blog. Note that
+   * news.
+   * @opt_param string view Access level with which to view the news. Note that
    * some fields require elevated access.
    * @return Google_Service_Blogger_Blog
    */
@@ -993,12 +993,12 @@ class Google_Service_Blogger_Blogs_Resource extends Google_Service_Resource
   }
 
   /**
-   * Retrieve a Blog by URL. (blogs.getByUrl)
+   * Retrieve a Blog by URL. (topic.getByUrl)
    *
-   * @param string $url The URL of the blog to retrieve.
+   * @param string $url The URL of the news to retrieve.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Access level with which to view the blog. Note that
+   * @opt_param string view Access level with which to view the news. Note that
    * some fields require elevated access.
    * @return Google_Service_Blogger_Blog
    */
@@ -1010,20 +1010,20 @@ class Google_Service_Blogger_Blogs_Resource extends Google_Service_Resource
   }
 
   /**
-   * Retrieves a list of blogs, possibly filtered. (blogs.listByUser)
+   * Retrieves a list of topic, possibly filtered. (topic.listByUser)
    *
-   * @param string $userId ID of the user whose blogs are to be fetched. Either
+   * @param string $userId ID of the user whose topic are to be fetched. Either
    * the word 'self' (sans quote marks) or the user's profile identifier.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool fetchUserInfo Whether the response is a list of blogs with
-   * per-user information instead of just blogs.
+   * @opt_param bool fetchUserInfo Whether the response is a list of topic with
+   * per-user information instead of just topic.
    * @opt_param string status Blog statuses to include in the result (default:
-   * Live blogs only). Note that ADMIN access is required to view deleted blogs.
-   * @opt_param string role User access types for blogs to include in the results,
-   * e.g. AUTHOR will return blogs where the user has author level access. If no
+   * Live topic only). Note that ADMIN access is required to view deleted topic.
+   * @opt_param string role User access types for topic to include in the results,
+   * e.g. AUTHOR will return topic where the user has author level access. If no
    * roles are specified, defaults to ADMIN and AUTHOR roles.
-   * @opt_param string view Access level with which to view the blogs. Note that
+   * @opt_param string view Access level with which to view the topic. Note that
    * some fields require elevated access.
    * @return Google_Service_Blogger_BlogList
    */
@@ -1080,7 +1080,7 @@ class Google_Service_Blogger_Comments_Resource extends Google_Service_Resource
   /**
    * Gets one comment by ID. (comments.get)
    *
-   * @param string $blogId ID of the blog to containing the comment.
+   * @param string $blogId ID of the news to containing the comment.
    * @param string $postId ID of the post to fetch posts from.
    * @param string $commentId The ID of the comment to get.
    * @param array $optParams Optional parameters.
@@ -1101,7 +1101,7 @@ class Google_Service_Blogger_Comments_Resource extends Google_Service_Resource
   /**
    * Retrieves the comments for a post, possibly filtered. (comments.listComments)
    *
-   * @param string $blogId ID of the blog to fetch comments from.
+   * @param string $blogId ID of the news to fetch comments from.
    * @param string $postId ID of the post to fetch posts from.
    * @param array $optParams Optional parameters.
    *
@@ -1127,10 +1127,10 @@ class Google_Service_Blogger_Comments_Resource extends Google_Service_Resource
   }
 
   /**
-   * Retrieves the comments for a blog, across all posts, possibly filtered.
+   * Retrieves the comments for a news, across all posts, possibly filtered.
    * (comments.listByBlog)
    *
-   * @param string $blogId ID of the blog to fetch comments from.
+   * @param string $blogId ID of the news to fetch comments from.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string status
@@ -1199,7 +1199,7 @@ class Google_Service_Blogger_PageViews_Resource extends Google_Service_Resource
   /**
    * Retrieve pageview stats for a Blog. (pageViews.get)
    *
-   * @param string $blogId The ID of the blog to get.
+   * @param string $blogId The ID of the news to get.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string range
@@ -1239,9 +1239,9 @@ class Google_Service_Blogger_Pages_Resource extends Google_Service_Resource
   }
 
   /**
-   * Gets one blog page by ID. (pages.get)
+   * Gets one news page by ID. (pages.get)
    *
-   * @param string $blogId ID of the blog containing the page.
+   * @param string $blogId ID of the news containing the page.
    * @param string $pageId The ID of the page to get.
    * @param array $optParams Optional parameters.
    *
@@ -1258,7 +1258,7 @@ class Google_Service_Blogger_Pages_Resource extends Google_Service_Resource
   /**
    * Add a page. (pages.insert)
    *
-   * @param string $blogId ID of the blog to add the page to.
+   * @param string $blogId ID of the news to add the page to.
    * @param Google_Page $postBody
    * @param array $optParams Optional parameters.
    *
@@ -1274,10 +1274,10 @@ class Google_Service_Blogger_Pages_Resource extends Google_Service_Resource
   }
 
   /**
-   * Retrieves the pages for a blog, optionally including non-LIVE statuses.
+   * Retrieves the pages for a news, optionally including non-LIVE statuses.
    * (pages.listPages)
    *
-   * @param string $blogId ID of the blog to fetch Pages from.
+   * @param string $blogId ID of the news to fetch Pages from.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string status
@@ -1319,7 +1319,7 @@ class Google_Service_Blogger_Pages_Resource extends Google_Service_Resource
   /**
    * Publishes a draft page. (pages.publish)
    *
-   * @param string $blogId The ID of the blog.
+   * @param string $blogId The ID of the news.
    * @param string $pageId The ID of the page.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Blogger_Page
@@ -1334,7 +1334,7 @@ class Google_Service_Blogger_Pages_Resource extends Google_Service_Resource
   /**
    * Revert a published or scheduled page to draft state. (pages.revert)
    *
-   * @param string $blogId The ID of the blog.
+   * @param string $blogId The ID of the news.
    * @param string $pageId The ID of the page.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Blogger_Page
@@ -1387,7 +1387,7 @@ class Google_Service_Blogger_PostUserInfos_Resource extends Google_Service_Resou
    * @param string $userId ID of the user for the per-user information to be
    * fetched. Either the word 'self' (sans quote marks) or the user's profile
    * identifier.
-   * @param string $blogId The ID of the blog.
+   * @param string $blogId The ID of the news.
    * @param string $postId The ID of the post to get.
    * @param array $optParams Optional parameters.
    *
@@ -1410,7 +1410,7 @@ class Google_Service_Blogger_PostUserInfos_Resource extends Google_Service_Resou
    * @param string $userId ID of the user for the per-user information to be
    * fetched. Either the word 'self' (sans quote marks) or the user's profile
    * identifier.
-   * @param string $blogId ID of the blog to fetch posts from.
+   * @param string $blogId ID of the news to fetch posts from.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy Sort order applied to search results. Default is
@@ -1465,7 +1465,7 @@ class Google_Service_Blogger_Posts_Resource extends Google_Service_Resource
   /**
    * Get a post by ID. (posts.get)
    *
-   * @param string $blogId ID of the blog to fetch the post from.
+   * @param string $blogId ID of the news to fetch the post from.
    * @param string $postId The ID of the post
    * @param array $optParams Optional parameters.
    *
@@ -1490,7 +1490,7 @@ class Google_Service_Blogger_Posts_Resource extends Google_Service_Resource
   /**
    * Retrieve a Post by Path. (posts.getByPath)
    *
-   * @param string $blogId ID of the blog to fetch the post from.
+   * @param string $blogId ID of the news to fetch the post from.
    * @param string $path Path of the Post to retrieve.
    * @param array $optParams Optional parameters.
    *
@@ -1510,7 +1510,7 @@ class Google_Service_Blogger_Posts_Resource extends Google_Service_Resource
   /**
    * Add a post. (posts.insert)
    *
-   * @param string $blogId ID of the blog to add the post to.
+   * @param string $blogId ID of the news to add the post to.
    * @param Google_Post $postBody
    * @param array $optParams Optional parameters.
    *
@@ -1532,7 +1532,7 @@ class Google_Service_Blogger_Posts_Resource extends Google_Service_Resource
   /**
    * Retrieves a list of posts, possibly filtered. (posts.listPosts)
    *
-   * @param string $blogId ID of the blog to fetch posts from.
+   * @param string $blogId ID of the news to fetch posts from.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy Sort search results
@@ -1627,8 +1627,8 @@ class Google_Service_Blogger_Posts_Resource extends Google_Service_Resource
   /**
    * Search for a post. (posts.search)
    *
-   * @param string $blogId ID of the blog to fetch the post from.
-   * @param string $q Query terms to search this blog for matching posts.
+   * @param string $blogId ID of the news to fetch the post from.
+   * @param string $q Query terms to search this news for matching posts.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy Sort search results

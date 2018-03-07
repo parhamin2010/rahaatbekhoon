@@ -192,7 +192,7 @@ $('.homepage-owl-carousel').each(function(){
     });
 });
 
-$(".blog-slider").owlCarousel({
+$(".news-slider").owlCarousel({
     items : 3,
     itemsDesktopSmall :[979,2],
     itemsDesktop : [1199,2],

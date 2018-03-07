@@ -256,7 +256,7 @@ class adminPanel extends Controller
             header("Location:" . URL . "adminpanel/login");
         } else {
             if (isset($_POST['name'])) {
-                $this->model->addCategories($_POST['name'], $_POST['icon']);
+                $this->model->addCategories($_POST['name'], $_POST['category'], $_POST['icon']);
             }
         }
     }
@@ -267,7 +267,7 @@ class adminPanel extends Controller
             header("Location:" . URL . "adminpanel/login");
         } else {
             if (isset($_POST['name'])) {
-                $this->model->editCategories($_POST['name'], $_POST['icon'], $_POST['status'], $_POST['id']);
+                $this->model->editCategories($_POST['name'], $_POST['category'], $_POST['icon'], $_POST['status'], $_POST['id']);
             }
         }
     }

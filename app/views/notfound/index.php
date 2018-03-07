@@ -58,91 +58,160 @@ Model::sessionInit();
 <div class="container" style="padding: 0 !important;overflow-x: hidden">
     <main class="" style="background: rgb(43, 57, 63);">
         <div class="homepage">
-<?php require('app/views/include/header.php'); ?>
-<!-- ========== NAVBAR : END ========== -->
+            <?php require('app/views/include/header.php'); ?>
+            <!-- ========== NAVBAR : END ========== -->
 
-<div id="main">
-    <div id='content' style="width:100%;text-align: center;">
-        <section>
-            <div class="error-page">
+            <div id="main">
+                <div id='content' style="width:100%;text-align: center;">
+                    <section>
+                        <div class="error-page">
 
-                <div id="ctl29_error404" class="error-page__message dk-box">
+                            <div id="ctl29_error404" class="error-page__message dk-box">
 
-                    <img class="error-page__message--logo"
-                         src="public/images/4xx_.png"
-                         alt="digikala error page"/>
+                                <img class="error-page__message--logo"
+                                     src="public/images/4xx_.png"
+                                     alt="digikala error page"/>
 
-                    <h1 class="error-page__message--title">متاسفانه صفحه مورد نظر شما یافت نشد.</h1>
+                                <h1 class="error-page__message--title">متاسفانه صفحه مورد نظر شما یافت نشد.</h1>
 
 
-                    <p class="error-page__guide-text">می توانید از <span class="showme">اخبار زیر</span> دیدن
-                        کنید یا به <a href="<?= URL; ?>" class="error-page__message--button dk-box inline">صفحه اصلی</a>
-                        بروید.</p>
+                                <p class="error-page__guide-text">می توانید از <span class="showme">اخبار زیر</span>
+                                    دیدن
+                                    کنید یا به <a href="<?= URL; ?>" class="error-page__message--button dk-box inline">صفحه
+                                        اصلی</a>
+                                    بروید.</p>
 
-                </div>
+                            </div>
 
-                <div class="error-page__suggestion">
+                            <div class="error-page__suggestion">
 
-                    <div class="error-page__suggestion--title" style="text-align: right">
-                        پیشنهاد می‌کنیم از اخبار زیر دیدن فرمایید :
-                    </div>
+                                <div class="error-page__suggestion--title" style="text-align: right">
+                                    پیشنهاد می‌کنیم از اخبار زیر دیدن فرمایید :
+                                </div>
 
-                    <ul class="error-page__suggestion--items clearfix" style="margin-bottom: 30px;">
+                                <ul class="error-page__suggestion--items clearfix" style="margin-bottom: 30px;">
 
-                        <?php
-                        $news = $data['getsuggestNews'];
-                        foreach ($news as $newsInfo) {
+                                    <?php
+                                    $news = $data['getsuggestNews'];
+                                    foreach ($news as $newsInfo) {
 
-                            ?>
-                            <li class="error-page__suggestion--item dk-box">
-                                <a href="<?= URL; ?>blog/<?= $newsInfo['n_id']; ?>" class="image-placeholder">
-                                    <img onload="this.nextElementSibling.remove()"
-                                         class="error-page__suggestion--item-img"
-                                         style="height: 80%;margin-right: -149px;"
-                                         src="public/images/news/<?= $newsInfo['i_image']; ?>"
-                                         alt="mobile"/>
-                                    <img class="error-page__suggestion--item-img-holder"
-                                         src="public/images/placeholder.png"
-                                         alt="placeholder"/>
-                                    <span class="error-page__suggestion--item-img-caption"><?= Model::summary($newsInfo['title'], 70); ?></span>
-                                </a>
-                            </li>
+                                        ?>
+                                        <li class="error-page__suggestion--item dk-box">
+                                            <a href="<?= URL; ?>blog/<?= $newsInfo['n_id']; ?>"
+                                               class="image-placeholder">
+                                                <img onload="this.nextElementSibling.remove()"
+                                                     class="error-page__suggestion--item-img"
+                                                     style="height: 80%;margin-right: -149px;"
+                                                     src="public/images/news/<?= $newsInfo['i_image']; ?>"
+                                                     alt="mobile"/>
+                                                <img class="error-page__suggestion--item-img-holder"
+                                                     src="public/images/placeholder.png"
+                                                     alt="placeholder"/>
+                                                <span class="error-page__suggestion--item-img-caption"><?= Model::summary($newsInfo['title'], 70); ?></span>
+                                            </a>
+                                        </li>
 
-                            <?php
-                        }
-                        ?>
+                                        <?php
+                                    }
+                                    ?>
 
-                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </section>
-    </div>
-</div>
-<div class="clear"></div>
+            <div class="clear"></div>
 
-<!-- ========================= FOOTER ========================= -->
-<?php require('app/views/include/footer.php'); ?>
-<!-- ========================= FOOTER : END========================= -->
+            <!-- ========================= FOOTER ========================= -->
+            <?php require('app/views/include/footer.php'); ?>
+            <!-- ========================= FOOTER : END========================= -->
 
-<!-- JavaScripts placed at the end of the document so the pages load faster -->
-<script src="public/js/jquery-1.11.1.min.js"></script>
-<script src="public/js/owl.carousel.min.js"></script>
-<script src="public/js/scripts.js"></script>
-<script src="public/js/login.js"></script>
+            <!-- JavaScripts placed at the end of the document so the pages load faster -->
+            <script src="public/js/jquery-1.11.1.min.js"></script>
+            <script src="public/js/owl.carousel.min.js"></script>
+            <script src="public/js/scripts.js"></script>
+            <script src="public/js/login.js"></script>
 
-<script src="public/js/jquery.noty.packaged.js"></script>
-<script src="public/js/jquery-latest.js"></script>
-<script src="public/js/jquery.noty.packaged.js"></script>
-<script src="public/js/bootstrap.min.js"></script>
-<script src="public/js/bootstrap-hover-dropdown.min.js"></script>
-<script src="public/js/countdown.js"></script>
-<script src="public/js/echo.min.js"></script>
-<script src="public/js/bootstrap-slider.min.js"></script>
-<script src="public/js/lightbox.min.js"></script>
-<script src="public/js/bootstrap-select.min.js"></script>
-<script src="public/js/Track-player.js"></script>
-<script src="public/js/wow.min.js"></script>
-<script src="public/js/pace.js"></script>
+            <script src="public/js/jquery.noty.packaged.js"></script>
+            <script src="public/js/jquery-latest.js"></script>
+            <script src="public/js/jquery.noty.packaged.js"></script>
+            <script src="public/js/bootstrap.min.js"></script>
+            <script src="public/js/bootstrap-hover-dropdown.min.js"></script>
+            <script src="public/js/countdown.js"></script>
+            <script src="public/js/echo.min.js"></script>
+            <script src="public/js/bootstrap-slider.min.js"></script>
+            <script src="public/js/lightbox.min.js"></script>
+            <script src="public/js/bootstrap-select.min.js"></script>
+            <script src="public/js/Track-player.js"></script>
+            <script src="public/js/wow.min.js"></script>
+            <script src="public/js/pace.js"></script>
 
+            <script>(function (w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                    var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-52DB6Z');</script><!-- End Google Tag Manager -->
+            <script> var newSearchPopup = true </script>
+            <script src="public/js/js_jquery.js"></script>
+            <script type='text/javascript'>var iDkConfig = new DkConfig();
+                iDkConfig.IsCrawler = false;
+                iDkConfig.TemplateServerUrl = 'https://template.digi-kala.com/digikala/';
+                iDkConfig.WebPushApiUrl = 'https://webpushapi.digikala.com/';
+                iDkConfig.IsDKNet = false;
+                iDkConfig.DigiKalaWebApiUrl = 'https://api.digikala.com/';
+                iDkConfig.ServiceUrl = '';
+                iDkConfig.SearchServiceUrl = 'https://search.digikala.com/';
+                iDkConfig.FileServerUrl = 'https://file.digi-kala.com/digikala/';
+                iDkConfig.TvFileServerUrl = 'https://tv.digikala.com/';
+                iDkConfig.AccountSiteUrl = 'https://accounts.digikala.com/';
+                iDkConfig.DigiKalaMagUrl = '';
+                iDkConfig.IsLogin = 'False';
+                iDkConfig.AutoCompleteUrl = 'https://search.digikala.com/api/AutoComplete/';
+                var ServiceUrl = '';
+                var ClientWebApiServiceUrl = 'https://api.digikala.com/';
+                var SearchServiceUrl = 'https://search.digikala.com/';
+                var FileServerUrl = 'https://file.digi-kala.com/digikala/';
+                var TvFileServerUrl = 'https://tv.digikala.com/';
+                var TemplateServerUrl = 'https://template.digi-kala.com/digikala/';
+                var AccountSiteUrl = 'https://accounts.digikala.com/';</script>
+            <script src="public/js/js_public.js"></script>
+            <script src="public/js/js_xdomainrequest.js"></script>
+            <script src="public/js/js_main.js"></script>
+
+
+            <script type='text/javascript' src='public/js/jquery/jquery.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/jquery/jquery-migrate.min.js?ver=2.0.5'></script>
+
+
+            <script type='text/javascript'
+                    src='public/js/theme.min.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/ResizeSensor.min.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/masonry.pkgd.min.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/flickity.pkgd.min.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/jquery.vertical.carousel.min.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/theia-sticky-sidebar.min.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/jquery.popupmanager.min.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/jquery.sonar.min.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/images-lazy-load.min.js?ver=2.0.5'></script>
+
+            <script type='text/javascript'
+                    src='public/js/search.min.js?ver=2.0.5'></script>
+            <script type='text/javascript'
+                    src='public/js/video-js-player.min.js?ver=2.0.5'></script>
+
+            <script type='text/javascript' src='public/js/media-player.min.js?ver=2.0.5'></script>
 </body>
 </html>

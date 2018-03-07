@@ -2800,7 +2800,7 @@ label {
 ::selection {
     color: #fff;
     text-shadow: none;
-    background: #50b33c
+    background: #fff
 }
 
 .icon-share:hover:after {

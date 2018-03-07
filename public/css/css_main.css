@@ -438,7 +438,7 @@ h4 {
 }
 
 .header .topbar ul.tbar li a:hover {
-    color: #0c9b11
+    color: #000000
 }
 
 .header .topbar ul.tbar li a span {
@@ -1317,7 +1317,7 @@ span.search-subtitle_asimg {
 }
 
 .navigation .mrg-auto ul.root > li.current > a {
-    color: #0c9b11
+    color: #000000
 }
 
 .navigation .mrg-auto ul.root > li > span > span.arr {
@@ -1480,7 +1480,7 @@ span.search-subtitle_asimg {
 }
 
 .navigation .mrg-auto ul.root > li > ul.level > li .submenu .rows .firstrow table td ul > li.item > a:hover {
-    color: #0c9b11
+    color: #000000
 }
 
 .navigation .mrg-auto ul.root > li > ul.level > li .submenu .rows .firstrow table td ul > li > a.new, .navigation .mrg-auto ul.root > li > ul.level > li .submenu .rows .firstrow table td ul > li.title a.new {
@@ -3140,7 +3140,7 @@ s {
 }
 
 #dk-breadcrumbs li a:hover {
-    color: #0c9b11
+    color: #000000
 }
 
 #dk-breadcrumbs li:last-child a {

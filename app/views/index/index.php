@@ -6,6 +6,8 @@ $newsVip = $data['getNewsVip'];
 <!doctype html>
 <html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#">
 <head>
+
+
     <base href="<?= URL; ?>">
     <meta charset="UTF-8">
     <title><?= NAME; ?></title>
@@ -59,22 +61,22 @@ $newsVip = $data['getNewsVip'];
 
 </head>
 
-<body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
+<body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax" style="font-size: 12pt">
 
-   <a href="https://raahatbekhar.com"> <img class="animated pulsee infinite" src="public/images/raahatbekhar.png" style="width: 175px;
-    height: 109px;
-    position: fixed;
-    z-index: 200;
-    margin-right: 89.5%;
-    margin-top: 170px;
-    padding: 5px;
-    text-align: center;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 0px;
-    box-shadow: 0px 0 10px 4px rgba(0,0,0,0.5);
-    "/>
-   </a>
+<!--   <a href="https://raahatbekhar.com"> <img class="animated pulsee infinite" src="public/images/raahatbekhar.png" style="width: 175px;-->
+<!--    height: 109px;-->
+<!--    position: fixed;-->
+<!--    z-index: 200;-->
+<!--    margin-right: 89.5%;-->
+<!--    margin-top: 170px;-->
+<!--    padding: 5px;-->
+<!--    text-align: center;-->
+<!--    border-top-right-radius: 10px;-->
+<!--    border-bottom-right-radius: 10px;-->
+<!--    padding: 0px;-->
+<!--    box-shadow: 0px 0 10px 4px rgba(0,0,0,0.5);-->
+<!--    "/>-->
+<!--   </a>-->
 
 <?php require('app/views/include/login.php'); ?>
 
@@ -283,6 +285,7 @@ $newsVip = $data['getNewsVip'];
 <script src="public/js/owl.carousel.min.js"></script>
 <script src="public/js/scripts.js"></script>
 <script src="public/js/login.js"></script>
+<script type="text/javascript" src="public/js/jquery.js"></script>
 
 <script src="public/js/jquery.noty.packaged.js"></script>
 <script src="public/js/jquery-latest.js"></script>
@@ -299,15 +302,61 @@ $newsVip = $data['getNewsVip'];
 <script src="public/js/pace.js"></script>
 
 
-<script type='text/javascript' src='public/js/jquery/jquery.js?ver=2.0.5'></script>
+
+
+
+
+
+
+
+
+   <script>(function (w, d, s, l, i) {
+           w[l] = w[l] || [];
+           w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+           var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+           j.async = true;
+           j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+           f.parentNode.insertBefore(j, f);
+       })(window, document, 'script', 'dataLayer', 'GTM-52DB6Z');</script><!-- End Google Tag Manager -->
+   <script> var newSearchPopup = true </script>
+   <script src="public/js/js_jquery.js"></script>
+   <script type='text/javascript'>var iDkConfig = new DkConfig();
+       iDkConfig.IsCrawler = false;
+       iDkConfig.TemplateServerUrl = 'https://template.digi-kala.com/digikala/';
+       iDkConfig.WebPushApiUrl = 'https://webpushapi.digikala.com/';
+       iDkConfig.IsDKNet = false;
+       iDkConfig.DigiKalaWebApiUrl = 'https://api.digikala.com/';
+       iDkConfig.ServiceUrl = '';
+       iDkConfig.SearchServiceUrl = 'https://search.digikala.com/';
+       iDkConfig.FileServerUrl = 'https://file.digi-kala.com/digikala/';
+       iDkConfig.TvFileServerUrl = 'https://tv.digikala.com/';
+       iDkConfig.AccountSiteUrl = 'https://accounts.digikala.com/';
+       iDkConfig.DigiKalaMagUrl = '';
+       iDkConfig.IsLogin = 'False';
+       iDkConfig.AutoCompleteUrl = 'https://search.digikala.com/api/AutoComplete/';
+       var ServiceUrl = '';
+       var ClientWebApiServiceUrl = 'https://api.digikala.com/';
+       var SearchServiceUrl = 'https://search.digikala.com/';
+       var FileServerUrl = 'https://file.digi-kala.com/digikala/';
+       var TvFileServerUrl = 'https://tv.digikala.com/';
+       var TemplateServerUrl = 'https://template.digi-kala.com/digikala/';
+       var AccountSiteUrl = 'https://accounts.digikala.com/';</script>
+   <script src="public/js/js_public.js"></script>
+   <script src="public/js/js_xdomainrequest.js"></script>
+   <script src="public/js/js_main.js"></script>
+
+
+
+
+   <script type='text/javascript' src='public/js/jquery/jquery.js?ver=2.0.5'></script>
 <script type='text/javascript'
         src='public/js/jquery/jquery-migrate.min.js?ver=2.0.5'></script>
 
-<!--<script src="public/js/js_public.js?v=LWsGw_qSybcpEPGlMdah59AY_VUrUk4Vs5LiLIzcDVc1"></script>-->
-<!--<script src="public/js/js_xdomainrequest.js?v=Ic2FfCKfX6xdPI1Jw9VidPrd4w4Ij8BW7O9rAhd6b9A1"></script>-->
-<!--<script src="public/js/js_main.js?v=7TforAN8Kth9M52b0-uWjqite87JW22DKFXR9sHSufs1"></script>-->
-<!--<script src="public/js/js_pagePath.js?v=Xyyl-H9AlOT8fWAgNY1sD-8bhQv1glWO-0MiC_Wx8rU1"></script>-->
-<!--<script src="public/js/js_emstrack.js?v=ZoELSPG0SdWVAMBXGZZM03-7uWDmCv9UGrjOM4b7SI41"></script>-->
+<script src="public/js/js_public.js?v=LWsGw_qSybcpEPGlMdah59AY_VUrUk4Vs5LiLIzcDVc1"></script>
+<script src="public/js/js_xdomainrequest.js?v=Ic2FfCKfX6xdPI1Jw9VidPrd4w4Ij8BW7O9rAhd6b9A1"></script>
+<script src="public/js/js_main.js?v=7TforAN8Kth9M52b0-uWjqite87JW22DKFXR9sHSufs1"></script>
+<script src="public/js/js_pagePath.js?v=Xyyl-H9AlOT8fWAgNY1sD-8bhQv1glWO-0MiC_Wx8rU1"></script>
+<script src="public/js/js_emstrack.js?v=ZoELSPG0SdWVAMBXGZZM03-7uWDmCv9UGrjOM4b7SI41"></script>
 
 
 <script type='text/javascript'

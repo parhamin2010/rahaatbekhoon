@@ -65,7 +65,7 @@ $level = Model::sessionGet('level');
                             if($category['main_cat']==1) {
                                 ?>
                                 <li class="l_two">
-                                    <a href="topic/category/<?= $category['id']; ?>" title="<?= $category['name']; ?>">
+                                    <a href="topic/category/<?= $category['id']; ?>/<?= str_replace(" ","_",$category['link']); ?>" title="<?= $category['name']; ?>">
                                         <?= $category['name']; ?>
                                     </a>
                                 </li>
@@ -83,7 +83,7 @@ $level = Model::sessionGet('level');
                             if($category['main_cat']==2) {
                                 ?>
                                 <li class="l_two">
-                                    <a href="mag/category/<?= $category['id']; ?>" title="<?= $category['name']; ?>">
+                                    <a href="mag/category/<?= $category['id']; ?>/<?= str_replace(" ","_",$category['link']); ?>" title="<?= $category['name']; ?>">
                                         <?= $category['name']; ?>
                                     </a>
                                 </li>
@@ -100,7 +100,7 @@ $level = Model::sessionGet('level');
                     <a href="contact" title="ارتباط با ما">ارتباط با ما</a>
                 </li>
             </ul>
-            <div class="promotion-badge"><a href="/special-offer">فروشگاه اینترنتی راحت بخر</a></div>
+            <div class="promotion-badge"><a href="raahatbekhar.com">فروشگاه اینترنتی راحت بخر</a></div>
         </div>
     </div>
 </nav>

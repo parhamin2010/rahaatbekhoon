@@ -100,7 +100,7 @@ $newsTop = $data['getTopNews'];
                                         ?>
                                         <li class="_item list">
                                         <span class="_text">
-                                            <a href="news/<?= $newsInfo['n_id'] ?>"
+                                            <a href="mag/<?= $newsInfo['n_id'] ?>"
                                                title="<?= $newsInfo['title'] ?>"><?= $newsInfo['title'] ?></a>
                                         </span>
 
@@ -126,10 +126,10 @@ $newsTop = $data['getTopNews'];
                         <?php
                         if (isset($newsTop[0]['n_id'])) {
                             ?>
-                            <a href="news/<?= $newsTop[0]['n_id'] ?>"
+                            <a href="mag/<?= $newsTop[0]['n_id'] ?>"
                                id="tile-4-6-0" title="<?= $newsTop[0]['title'] ?>"
                                target="_self" class="tiles__item">
-                                <img src="public/images/news/<?= $newsTop[0]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[0]['i_image'] ?>"
                                      alt="<?= $newsTop[0]['title'] ?>" width="100%"
                                      height="100%" class="tiles__item--img" style="position: absolute;z-index: 0">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -143,9 +143,9 @@ $newsTop = $data['getTopNews'];
                         <?php
                         if (isset($newsTop[1]['n_id'])) {
                             ?>
-                            <a href="news/<?= $newsTop[1]['n_id'] ?>"
+                            <a href="mag/<?= $newsTop[1]['n_id'] ?>"
                                id="tile-4-6-1" title="<?= $newsTop[1]['title'] ?>" target="_self" class="tiles__item">
-                                <img src="public/images/news/<?= $newsTop[1]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[1]['i_image'] ?>"
                                      alt="<?= $newsTop[1]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -159,10 +159,10 @@ $newsTop = $data['getTopNews'];
                         <?php
                         if (isset($newsTop[2]['n_id'])) {
                             ?>
-                            <a href="news/<?= $newsTop[2]['n_id'] ?>"
+                            <a href="mag/<?= $newsTop[2]['n_id'] ?>"
                                id="tile-4-6-2" title="<?= $newsTop[2]['title'] ?>" target="_self"
                                class="tiles__item hor">
-                                <img src="public/images/news/<?= $newsTop[2]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[2]['i_image'] ?>"
                                      alt="<?= $newsTop[2]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -176,10 +176,10 @@ $newsTop = $data['getTopNews'];
                         <?php
                         if (isset($newsTop[3]['n_id'])) {
                             ?>
-                            <a href="news/<?= $newsTop[3]['n_id'] ?>"
+                            <a href="mag/<?= $newsTop[3]['n_id'] ?>"
                                id="tile-4-6-3" title="<?= $newsTop[3]['title'] ?>" target="_self"
                                class="tiles__item hor">
-                                <img src="public/images/news/<?= $newsTop[3]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[3]['i_image'] ?>"
                                      alt="<?= $newsTop[3]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -193,10 +193,10 @@ $newsTop = $data['getTopNews'];
                         <?php
                         if (isset($newsTop[4]['n_id'])) {
                             ?>
-                            <a href="news/<?= $newsTop[4]['n_id'] ?>"
+                            <a href="mag/<?= $newsTop[4]['n_id'] ?>"
                                id="tile-4-6-4"
                                title="<?= $newsTop[4]['title'] ?>" target="_self" class="tiles__item">
-                                <img src="public/images/news/<?= $newsTop[4]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[4]['i_image'] ?>"
                                      alt="<?= $newsTop[4]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -210,10 +210,10 @@ $newsTop = $data['getTopNews'];
                         <?php
                         if (isset($newsTop[5]['n_id'])) {
                             ?>
-                            <a href="news/<?= $newsTop[5]['n_id'] ?>"
+                            <a href="mag/<?= $newsTop[5]['n_id'] ?>"
                                id="tile-4-6-5"
                                title="<?= $newsTop[5]['title'] ?>" target="_self" class="tiles__item">
-                                <img src="public/images/news/<?= $newsTop[5]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[5]['i_image'] ?>"
                                      alt="<?= $newsTop[5]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -241,10 +241,10 @@ $newsTop = $data['getTopNews'];
                             <?php
                             foreach ($newsVip as $newsVipInfo) {
                                 ?>
-                                <a href="news/<?= $newsVipInfo['n_id'] ?>"
+                                <a href="mag/<?= $newsVipInfo['n_id'] ?>"
                                    class="carousel__body__item" title="<?= $newsVipInfo['title'] ?>">
-                                    <img src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
-                                         data-lazy-src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
+                                    <img src="public/images/mag/<?= $newsVipInfo['i_image'] ?>"
+                                         data-lazy-src="public/images/mag/<?= $newsVipInfo['i_image'] ?>"
                                          width="284" height="180" class="image__img wp-post-image"
                                          alt="<?= $newsVipInfo['title'] ?>">
                                     <span class="item__txt">
@@ -289,7 +289,7 @@ $newsTop = $data['getTopNews'];
                     <div class="module-title">
                         <div class="module-title__txt">
                             <span class="bold" style="color: #fff;">آخرین  </span><span
-                                    style="color: #fff;">عنوان‌ها</span>
+                                style="color: #fff;">عنوان‌ها</span>
                         </div>
                         <div class="module-title__sep"></div>
                     </div>
@@ -305,10 +305,10 @@ $newsTop = $data['getTopNews'];
                                         <div class="image">
                                             <span class="image__mask"></span>
 
-                                            <a href="news/<?= $newsInfo['n_id'] ?>"
+                                            <a href="mag/<?= $newsInfo['n_id'] ?>"
                                                title="<?= $newsInfo['title'] ?>" class="image__linker">
                                                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                     data-lazy-src="public/images/news/<?= $newsInfo['i_image'] ?>"
+                                                     data-lazy-src="public/images/mag/<?= $newsInfo['i_image'] ?>"
                                                      width="284" height="180" class="image__img wp-post-image"
                                                      alt="<?= $newsInfo['title'] ?>"> </a>
 
@@ -316,7 +316,7 @@ $newsTop = $data['getTopNews'];
                                             <a href="topic/category/<?= $newsInfo['cat_id'] ?>"
                                                title="<?= $newsInfo['name'] ?>"
                                                class="image__badge"><?= $newsInfo['name'] ?></a> <span
-                                                    class="image__fav">
+                                                class="image__fav">
                                                             <span class="popularity">
                                   <span class="popularity__comments">
                                     <i class="icon-comment"></i>
@@ -330,7 +330,7 @@ $newsTop = $data['getTopNews'];
                             </span>
                                         </div>
 
-                                        <a href="news/<?= $newsInfo['n_id'] ?>"
+                                        <a href="mag/<?= $newsInfo['n_id'] ?>"
                                            title="<?= $newsInfo['title'] ?>"
                                            class="masonry-gallery__item__title"><?= $newsInfo['title'] ?></a>
 

@@ -123,7 +123,7 @@ $newsVip = $data['getNewsVip'];
                     //                                        ?>
                     <!--                                        <li class="_item list">-->
                     <!--                                        <span class="_text">-->
-                    <!--                                            <a href="blog/--><? //= $newsInfo['n_id'] ?><!--"-->
+                    <!--                                            <a href="news/--><? //= $newsInfo['n_id'] ?><!--"-->
                     <!--                                               title="--><? //= $newsInfo['title'] ?><!--">-->
                     <? //= $newsInfo['title'] ?><!--</a>-->
                     <!--                                        </span>-->

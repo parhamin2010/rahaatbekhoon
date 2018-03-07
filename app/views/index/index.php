@@ -167,6 +167,7 @@ $newsVip = $data['getNewsVip'];
                                 <a href="news/<?= $newsVipInfo['n_id'] ?>"
                                    class="carousel__body__item" title="<?= $newsVipInfo['title'] ?>">
                                     <img src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
+                                         onerror="this.src='public/images/default.png'"
                                          data-lazy-src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
                                          width="284" height="180" class="image__img wp-post-image"
                                          alt="<?= $newsVipInfo['title'] ?>">
@@ -229,6 +230,7 @@ $newsVip = $data['getNewsVip'];
                                             <span class="image__mask"></span>
 
                                             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                 onerror="this.src='public/images/default.png'"
                                                  data-lazy-src="public/images/news/<?= $newsInfo['i_image'] ?>"
                                                  width="284" height="180" class="image__img wp-post-image"
                                                  alt="<?= $newsInfo['title'] ?>">

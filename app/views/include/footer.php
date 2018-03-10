@@ -63,7 +63,8 @@
             <div class='inner-wraper clearfix'>
                 <div class='copyright-bar-slogan' style="padding: 0 5px;">
                     <span id='copyright-full' style="margin: 25px 0;color: #fff;">استفاده از مطالب <?= NAME; ?> فقط برای مقاصد غیر تجاری و با ذکر منبع بلامانع است. کليه حقوق اين سايت متعلق به <?= NAME; ?> می‌باشد.</span>
-                    <span style="margin: 25px 0;color: #fff;">Copyright © 2018 <?= URL_FOOTER; ?></span>
+
+                    <span style="padding: 18px 0;float: left;color: #fff;">Copyright © 2018 <?= str_replace("http://","www.",URL_FOOTER); ?></span>
                 </div>
 
             </div>

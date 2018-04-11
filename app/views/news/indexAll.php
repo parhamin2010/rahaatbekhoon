@@ -87,9 +87,9 @@
                         </div>
                         <div class="topics">
                             <div class="topics__content">
-                                <section id="infinite-articles" class="masonry-gallery" style="    margin-right: 23px;">
-                                    <h2 class="disappear">آخرین عنوان‌ها</h2>
-                                    
+                                <h2 class="disappear">آخرین عنوان‌ها</h2>
+                                <section id="infinite-articles" class="masonry-gallery" style="margin-right: 23px;height: auto !important;">
+    
                                     <?php
                                         foreach ($news as $newsInfo) {
                                             ?>
@@ -138,7 +138,6 @@
                                             <?php
                                         }
                                     ?>
-
                                 </section>
                             </div>
                         </div>
@@ -192,34 +191,37 @@
             track_click++;
         }); //initial data to load
 
-        $(".load_more").click(function (e) { //user clicks on button
+        $(".module-title__btn").click(function (e) { //user clicks on button
 
             $(this).hide(); //hide load more button on click
-            $('.gridlove-loader').show(); //show loading image
 
             if (track_click <= total_pages) //make sure user clicks are still less than total pages
             {
                 //post page number and load returned data into result element
-                $.post('index/GetItems', {'page': track_click}, function (data) {
+                $.post('news/GetItems', {'page': track_click}, function (data) {
 
-                    $(".load_more").show(); //bring back load more button
+                    $(".module-title__btn").show(); //bring back load more button
 
                     $("#infinite-articles").append(data); //append data received from server
 
                     //scroll page to button element
                     $("html, body").animate({scrollTop: $("#load_more_button").offset().top}, 500);
-                    
-                    track_click++; //user click increment on load button
 
+                    track_click++; //user click increment on load button
+                    var el = document.getElementById("infinite-articles");
+                    var height = el.offsetHeight;
+                    var newHeight = height + 308.636;
+                    el.style.height = newHeight + 'px';
+                    
                 }).fail(function (xhr, ajaxOptions, thrownError) {
                     alert(thrownError); //alert any HTTP error
-                    $(".load_more").show(); //bring back load more button
+                    $(".module-title__btn").show(); //bring back load more button
                 });
 
 
                 if (track_click >= total_pages - 1) {
                     //reached end of the page yet? disable load button
-                    $(".load_more").attr("disabled", "disabled");
+                    $(".module-title__btn").attr("disabled", "disabled");
                 }
             }
 

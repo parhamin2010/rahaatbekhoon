@@ -260,6 +260,7 @@
                                                     <a href="news/' . $result['n_id'] . '"
                                                        title="' . $result['title'] . '" class="image__linker">
                                                         <img src="public/images/news/' . $result['i_image'] . '"
+                                                             onerror="this.src=\'public/images/default.png\'"
                                                              width="284" height="180" class="image__img wp-post-image"
                                                              alt="' . $result['title'] . '"> </a>
 

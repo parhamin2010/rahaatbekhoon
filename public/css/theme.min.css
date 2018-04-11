@@ -7251,7 +7251,7 @@ body.error404 .homepage__top--sep, body.error404 .self-grow-wrapper {
 
     .carousel__body, .footer, .home__page .carousel .module-title, .home__page .media-gallery .module-title, .home__page .media-gallery__body, body.page-template-page-podcast .breadcrumbs, body.page-template-page-podcast .media-header, body.page-template-page-video .breadcrumbs, body.page-template-page-video .media-header {
         width: 1060px;
-        margin: 0 auto
+        margin: -20px auto
     }
 
     .footer__bottom .copy-right {

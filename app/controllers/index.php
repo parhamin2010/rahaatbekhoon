@@ -16,12 +16,14 @@ class Index extends Controller
         $getPrice = $this->model->getPrices();
         $getNews = $this->model->getNews();
         $sliders =$this->model->sliders();
-        $getCategory =$this->model->getCategory();
         $getsuggestNews = $this->model->getsuggestNews();
         $getCategory =$this->model->getCategory();
         $getNewsVip = $this->model->getNewsVip();
+        $getCountNews = $this->model->getCountNewsVIP();
 
-        $data = array( 'getNewsVip' => $getNewsVip,'sliders' => $sliders,'getPrice' => $getPrice,'getNews' => $getNews,'getCategory' => $getCategory,'getsuggestNews' => $getsuggestNews,'getCategory' => $getCategory);
+        $data = array( 'getNewsVip' => $getNewsVip,'sliders' => $sliders,'getPrice' => $getPrice,'getNews' => $getNews,
+                       'getCategory' => $getCategory,'getsuggestNews' => $getsuggestNews,
+                       'getCountNews' => $getCountNews);
 
         if($deviceType=='computer') {
             $this->view('index/index', $data);
@@ -32,7 +34,6 @@ class Index extends Controller
         else {
             $this->view('index/index', $data);
         }
-//        $data = array();
     }
 
     public function LoginRegular()

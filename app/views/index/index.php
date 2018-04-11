@@ -82,7 +82,7 @@
 <?php require('app/views/include/login.php'); ?>
 
 
-<div class="container" style="padding: 0 !important;">
+<div class="container" style="padding: 0 !important; color: ">
     <main class="home__page" style="background: rgb(43, 57, 63);">
         <div class="homepage">
             <!-- ========== NAVBAR ========== -->

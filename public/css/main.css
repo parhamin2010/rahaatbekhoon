@@ -278,10 +278,10 @@ header a {
 }
 
 .wrapper {
-    width: 1190px;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
+    /*width: 1190px;*/
+    /*margin: 0 auto;*/
+    /*padding: 0;*/
+    /*position: relative;*/
 }
 
 ul.top-menu.separated {

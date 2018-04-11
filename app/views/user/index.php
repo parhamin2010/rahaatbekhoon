@@ -1,27 +1,32 @@
 <?php
 Model::sessionInit();
 ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#">
 <head>
     <base href="<?= URL; ?>">
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="<?= NAME; ?>">
-    <meta name="robots" content="all">
+    <meta charset="UTF-8">
+    <title><?= NAME; ?> | <?= $news['0']['name']; ?></title>
 
-    <title><?= NAME; ?> | پنل کاربری</title>
-    <meta http-equiv="content-language" content="fa"/>
-    <meta charset="UTF-8"/>
-    <meta name="author" content="<?= NAME; ?>"/>
-    <meta name="language" content="fa"/>
-    <meta name="document-type" content="Public"/>
-    <meta name="document-rating" content="General"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="resource-type" content="document"/>
+    <meta name="description"
+          content="<?= NAME; ?>"/>
+    <meta name="robots" content="noodp"/>
+    <link rel="canonical" href="<?= URL; ?>"/>
+    <meta property="og:locale" content="fa_IR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="<?= NAME; ?>"/>
+    <meta property="og:description"
+          content="<?= NAME; ?>"/>
+    <meta property="og:url" content="<?= URL; ?>"/>
+    <meta property="og:site_name" content="<?= NAME; ?>"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description"
+          content="<?= NAME; ?>"/>
+    <meta name="twitter:title" content="<?= NAME; ?>"/>
+    <meta name="twitter:creator" content="<?= NAME; ?>"/>
+
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <!-- Customizable CSS -->
@@ -31,8 +36,6 @@ Model::sessionInit();
     <link href="public/css/application.track.index.css" rel="stylesheet" type="text/css">
 
     <?php require('app/views/include/favicon.php'); ?>
-    <link rel="stylesheet" href="public/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
     <!-- Customizable CSS -->
     <link rel="stylesheet" href="public/css/main.css">
@@ -40,20 +43,27 @@ Model::sessionInit();
     <link rel="stylesheet" href="public/css/owl.transitions.css">
     <link href="public/css/lightbox.css" rel="stylesheet">
 
+
     <link href="public/css/css_main.css?v=d34y6GouB8OIqYbVXfO54Dw2tDZG8gAwP5JRzPLXebU1"
           rel="stylesheet"/>
-    <link href="public/css/css_HomePage.css?v=xir1k7vh8U8EsdD9UJmw_kH1ptTEnN8lVeXlkL9SNQM1"
-          rel="stylesheet"/>
+
+    <link rel='stylesheet' id='cptch_stylesheet-css' href='public/css/front_end_style.css?ver=2.0.5' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='dashicons-css' href='public/css/dashicons.min.css?ver=2.0.5' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='cptch_desktop_style-css' href='public/css/desktop_style.css?ver=2.0.5' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='theme-style-css' href='public/css/theme.min.css?ver=2.0.5' type='text/css' media='all'/>
 </head>
-<body class="wmax" style="background:#283036;">
 
-<?php require('app/views/include/login.php'); ?>
+<body class="rtl home page-template page-template-page-home page-template-page-home-php page page-id-123 wmax">
+<div class="container" style="padding: 0 !important;overflow-x: hidden">
+    <main class="home__page" style="background: rgb(43, 57, 63);">
+        <div class="homepage">
+            <!-- ========== NAVBAR ========== -->
+            <?php require('app/views/include/header.php'); ?>
+            <!-- ========== NAVBAR : END ========== -->
 
-<!-- ========== NAVBAR ========== -->
-<?php require('app/views/include/header.php'); ?>
-<!-- ========== NAVBAR : END ========== -->
-
-<div id="main">
     <div class='container' style="margin-bottom: -75px;margin-top: 18px;">
         <div class='row single-product outer-bottom-sm ' style="margin-bottom: 5px;">
             <div class="col-lg-12">
@@ -63,7 +73,7 @@ Model::sessionInit();
                             <div class="main">
 
                                 <section class="album-list-widget white user-profile mode-block"
-                                         style="margin-top: -9px !important;">
+                                         style="margin-top: -9px !important;width: 100%">
                                     <h5 align="right">
                                         <div class="header-text">اطلاعات شما <i
                                                     style="color: lightslategrey;margin-left: 4px" class="fa fa-user"
@@ -103,7 +113,9 @@ Model::sessionInit();
         </div><!-- /.row -->
     </div><!-- /.container -->
 </div>
-
+        <br>
+        <br>
+        <br>
 <!-- ========================= FOOTER ========================= -->
 <?php require('app/views/include/footer.php'); ?>
 <!-- ========================= FOOTER : END========================= -->

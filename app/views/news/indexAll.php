@@ -222,6 +222,7 @@
                 if (track_click >= total_pages - 1) {
                     //reached end of the page yet? disable load button
                     $(".module-title__btn").attr("disabled", "disabled");
+                    $(".module-title__btn").text("تمام شد!");
                 }
             }
 

@@ -22,7 +22,7 @@
                style="height: 225px;margin-right: -68px;border-top-right-radius: 0px;border-top-left-radius: 0px"
                id="tile-4-6-0" title="مکانی برای تبلیغات شما"
                target="_self" class="tiles__item">
-                <img src="http://cdn.yjc.ir/files/adv/3194_550.gif"
+                <img src="https://cdn.yjc.ir/files/adv/3728_606.gif"
                      alt="2" width="100%"
                      height="100%" class="tiles__item--img" style="position: absolute;z-index: 0">
             </a>

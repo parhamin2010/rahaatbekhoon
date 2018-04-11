@@ -20,6 +20,13 @@ class model_news extends Model
         $result = $this->doSelect($sql);
         return $result;
     }
+    
+    function getCountNews()
+    {
+        $sql = "SELECT count(*) as count FROM tbl_news";
+        $result = $this->doSelect($sql);
+        return $result;
+    }
 
     function getCategory()
     {
@@ -213,6 +220,68 @@ class model_news extends Model
                 ORDER BY RAND() LIMIT 5";
         $params = array($result1['cat_id']);
         $result = $this->doSelect($sql, $params);
+        return $result;
+    }
+    
+    
+    function getItems($post)
+    {
+        if (isset($post)) {
+            $page_number = filter_var($post["page"], FILTER_SANITIZE_NUMBER_INT, FILTER_FLAG_STRIP_HIGH);
+            
+            $position = ($page_number * ITEM_PER_PAGE);
+            
+            $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+                LEFT JOIN tbl_category b 
+                ON a.cat_id=b.id
+                LEFT JOIN tbl_images c 
+                ON a.image_id=c.i_id
+                WHERE a.status=1
+                ORDER BY a.n_id DESC LIMIT $position, " . ITEM_PER_PAGE;
+            $results = $this->doSelect($sql);
+            
+            foreach ($results as $result) {
+                echo '<li class="ex34" id="post-'.$result['n_id'].'">';
+                
+                if ($result['i_image'] != "") {
+                    echo '<a title="' . $result['title'] . '" href="blog/'.$result['n_id'].'">
+                            <img width="300" height="244" src="public/images/news/' . $result['i_image'] . '"
+                                 class="attachment-thumbnail-blog-masonry wp-post-image"
+                                 alt="' . $result['title'] . '">
+                        </a>
+                        <div class="post-likes">
+                            <a href="blogs/category/' . $result['cat_id'] . '"
+                               class="zilla-likes" id="zilla-likes-' . $result['n_id'] . '" title="' . $result['name'] . '">
+                                <span class="zilla-likes-count">' . $result['name'] . '</span>
+                                <span class="zilla-likes-postfix"></span>
+                            </a>
+                        </div>';
+                }
+                
+            }
+        }
+    }
+    
+    function getCountNewsPage()
+    {
+        $get_total_rows = 0;
+        $sql = "SELECT COUNT(*) AS count FROM tbl_news";
+        $result = $this->doSelect($sql);
+        $get_total_rows = $result[0]['count'];
+        $total_pages = ceil($get_total_rows / ITEM_PER_PAGE);
+        
+        return $total_pages;
+    }
+    function getNewsAll()
+    {
+        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+                LEFT JOIN tbl_category b 
+                ON a.cat_id=b.id
+                LEFT JOIN tbl_images c 
+                ON a.image_id=c.i_id
+                WHERE a.status=1
+                ORDER BY a.n_id DESC LIMIT 36";
+        $result = $this->doSelect($sql);
         return $result;
     }
 }

@@ -2800,7 +2800,7 @@ label {
 ::selection {
     color: #fff;
     text-shadow: none;
-    background: #fff
+    background: #d3d3d3;
 }
 
 .icon-share:hover:after {
@@ -2821,10 +2821,6 @@ label {
 
 .icon-download:hover:after {
     color: #2484c6
-}
-
-.icon-user:after {
-    content: "\e058"
 }
 
 .icon-trophy:after {

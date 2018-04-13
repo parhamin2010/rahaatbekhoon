@@ -25,7 +25,7 @@
                     
                     $data = array('infoUser'     => $infoUser, 'getNews' => $getNews, 'RateStatus' => $RateStatus,
                                   'iconfavCheck' => $iconfavCheck, 'comment' => $comment, 'sameNews' => $sameNews,
-                                  'getCategory'  => $getCategory, 'getsuggestNews' => $getsuggestNews);
+                                  'getCategory'  => $getCategory, 'getsuggestNews' => $getsuggestNews, 'idNews' => $id);
                     
                     $this->view('news/index', $data);
                 } else {

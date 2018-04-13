@@ -269,7 +269,7 @@ select {
 }
 
 input[type="text"], textarea {
-    border: 0px solid #d7d7d7;
+    /*border: 0px solid #d7d7d7;*/
     color: #828282;
     margin: 0;
     outline: medium none;
@@ -277,10 +277,10 @@ input[type="text"], textarea {
 }
 
 input[type="text"]:focus, textarea:focus {
-    outline: medium none;
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .25);    /*border: 1px solid #00afc8*/
+    /*outline: medium none;*/
+    /*-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, .25);*/
+    /*-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .25);*/
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, .25);    !*border: 1px solid #00afc8*!*/
 }
 
 input[type="text"], textarea {

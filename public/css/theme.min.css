@@ -5617,10 +5617,6 @@ body.page-template-page-video .media-page {
     color: #6b7074
 }
 
-.comment-form .comment-fields .input-textbox:last-child {
-    margin: 0
-}
-
 .comment-form .comment-form-comment {
     height: 40px;
     width: calc(100% - 55px);

@@ -1,7 +1,9 @@
 <?php
-Model::sessionInit();
-$news = $data['getNews'];
-$UserID = Model::sessionGet('userId');
+    Model::sessionInit();
+    $news = $data['getNews'];
+    $UserID = Model::sessionGet('userId');
+    $UserEmail = Model::sessionGet('email');
+    $UserName = Model::sessionGet('name');
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#" style="transform: none;">
@@ -70,7 +72,7 @@ $UserID = Model::sessionGet('userId');
     <script type="text/javascript" src="public/DigiWeb_files/jquery.js"></script>
     <script type="text/javascript" src="public/DigiWeb_files/jquery-migrate.min.js"></script>
     <script type="text/javascript" src="public/DigiWeb_files/nivo-lightbox.min.js"></script>
-
+    
     <?php require('app/views/include/favicon.php'); ?>
 
     <link href="public/css/css_main.css?v=d34y6GouB8OIqYbVXfO54Dw2tDZG8gAwP5JRzPLXebU1"
@@ -89,7 +91,7 @@ $UserID = Model::sessionGet('userId');
     <link rel="stylesheet" href="public/css/animate.min.css">
     <link rel="stylesheet" href="public/css/bootstrap-social.css">
     <link href="public/css/application.track.index.css" rel="stylesheet" type="text/css">
-
+    
     <?php require('app/views/include/favicon.php'); ?>
     <link rel="stylesheet" href="public/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
@@ -115,7 +117,7 @@ $UserID = Model::sessionGet('userId');
     <link rel="stylesheet" href="public/css/animate.min.css">
     <link rel="stylesheet" href="public/css/bootstrap-social.css">
     <link href="public/css/application.track.index.css" rel="stylesheet" type="text/css">
-
+    
     <?php require('app/views/include/favicon.php'); ?>
     <link rel="stylesheet" href="public/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
@@ -142,6 +144,8 @@ $UserID = Model::sessionGet('userId');
 
 <?php require('app/views/include/login.php'); ?>
 
+<input type="hidden" value="<?= $data['idNews']; ?>" id="p_id_get" name="p_id_get">
+<input type="hidden" value="<?= $UserID ?>" id="userIdGet" name="userIdGet">
 <div class="container" style="padding: 0 !important;overflow-x: hidden">
     <main class="" style="background: rgb(43, 57, 63);">
         <div class="homepage">
@@ -194,25 +198,25 @@ $UserID = Model::sessionGet('userId');
                                             </p>
                                         </div>
                                         <?php
-                                        if ($news[0]['tag'] != '0') {
-                                            ?>
-                                            <div class="_sep"></div>
-                                            <div class="post-module__tags ">
-                                                <span class="post-module__tags--title">برچسب‌ها :</span>
-                                                <?php
-                                                $tags = explode(",", $news[0]['tag']);
-                                                foreach ($tags as $tag) {
-                                                    if ($tag != '') {
-                                                        ?>
-                                                        <a href="tag/<?= $tag; ?>" rel="tag"
-                                                           class="post-tag post-module__tags--item item"><?= $tag; ?></a>
-                                                        <?php
-                                                    }
-                                                }
+                                            if ($news[0]['tag'] != '0') {
                                                 ?>
-                                            </div>
-                                            <?php
-                                        }
+                                                <div class="_sep"></div>
+                                                <div class="post-module__tags ">
+                                                    <span class="post-module__tags--title">برچسب‌ها :</span>
+                                                    <?php
+                                                        $tags = explode(",", $news[0]['tag']);
+                                                        foreach ($tags as $tag) {
+                                                            if ($tag != '') {
+                                                                ?>
+                                                                <a href="tag/<?= $tag; ?>" rel="tag"
+                                                                   class="post-tag post-module__tags--item item"><?= $tag; ?></a>
+                                                                <?php
+                                                            }
+                                                        }
+                                                    ?>
+                                                </div>
+                                                <?php
+                                            }
                                         ?>
                                     </article>
                                     <div class="col-md-12 col-sm-12 ">
@@ -255,26 +259,26 @@ $UserID = Model::sessionGet('userId');
                                                 <ul class="error-page__suggestion--items clearfix"
                                                     style="margin-bottom: 30px;">
                                                     <?php
-                                                    $news = $data['getsuggestNews'];
-                                                    foreach ($news as $newsInfo) {
-                                                        ?>
-                                                        <li class="error-page__suggestion--item dk-box">
-                                                            <a href="<?= URL; ?>news/<?= $newsInfo['n_id']; ?>"
-                                                               class="image-placeholder">
-                                                                <img onload="this.nextElementSibling.remove()"
-                                                                     class="error-page__suggestion--item-img"
-                                                                     style="height: 80%;"
-                                                                     src="public/images/news/<?= $newsInfo['i_image']; ?>"
-                                                                     alt="mobile"/>
-                                                                <img class="error-page__suggestion--item-img-holder"
-                                                                     src="public/images/placeholder.png"
-                                                                     alt="placeholder"/>
-                                                                <span class="error-page__suggestion--item-img-caption"
-                                                                      style="font-size: 8pt"><?= Model::summary($newsInfo['title'], 70); ?></span>
-                                                            </a>
-                                                        </li>
-                                                        <?php
-                                                    }
+                                                        $news = $data['getsuggestNews'];
+                                                        foreach ($news as $newsInfo) {
+                                                            ?>
+                                                            <li class="error-page__suggestion--item dk-box">
+                                                                <a href="<?= URL; ?>news/<?= $newsInfo['n_id']; ?>"
+                                                                   class="image-placeholder">
+                                                                    <img onload="this.nextElementSibling.remove()"
+                                                                         class="error-page__suggestion--item-img"
+                                                                         style="height: 80%;"
+                                                                         src="public/images/news/<?= $newsInfo['i_image']; ?>"
+                                                                         alt="mobile"/>
+                                                                    <img class="error-page__suggestion--item-img-holder"
+                                                                         src="public/images/placeholder.png"
+                                                                         alt="placeholder"/>
+                                                                    <span class="error-page__suggestion--item-img-caption"
+                                                                          style="font-size: 8pt"><?= Model::summary($newsInfo['title'], 70); ?></span>
+                                                                </a>
+                                                            </li>
+                                                            <?php
+                                                        }
                                                     ?>
                                                 </ul>
                                             </div>
@@ -283,239 +287,130 @@ $UserID = Model::sessionGet('userId');
                                     <div class="comments-template">
                                         <div class="_sep"></div>
                                         <?php
-                                        if ($UserID == false) {
-                                            ?>
-                                            <div id="respond" class="comment-respond">
-                                                <label class="info-title" for="InputComments">برای ثبت نظر می بایست
-                                                    ابتدا
-                                                    <a style="cursor: pointer" data-toggle="modal"
-                                                       data-target="#Google-Login-Modal"
-                                                       id="signin">وارد</a> شوید.</label>
-                                            </div><!-- #respond -->
+                                            if ($UserID == false) {
+                                                ?>
+                                                <div id="respond" class="comment-respond">
+                                                    <label class="info-title" for="InputComments">برای ثبت نظر می بایست ابتدا
+                                                        <a style="cursor: pointer" data-toggle="modal"
+                                                           data-target="#Google-Login-Modal"
+                                                           id="signin">وارد</a> شوید.</label>
+                                                </div><!-- #respond -->
+            
+                                            <?php } else { ?>
+                                                <div id="respond" class="comment-respond">
+                                                    <strong id="reply-title" class="comment-reply-title" style="float: right">دیدگاه شما
+                                                        <small>
+                                                            <a rel="nofollow" id="cancel-comment-reply-link"
+                                                               href="blog//#respond"
+                                                               style="display:none;"><i class="icon-close"></i>انصراف</a>
+                                                        </small>
+                                                    </strong>
+                                                    <br>
+                                                    <form role="form" class="comment-form">
+                                                        <div class="comment-form_avatar"><i class="icon-user"></i></div>
+                                                        <div class="comment-fields">
+                                                            <div class="input-textbox">
+                                                                <input type="text" name="author" id="author"
+                                                                       class="input form-control"
+                                                                       style="border: 0"
+                                                                       placeholder="نام * "
+                                                                       value="<?= $UserName; ?>"
+                                                                       tabindex="1" readonly>
+                                                            </div>
+                                                            <div class="input-textbox">
+                                                                <input type="email" name="email" id="email"
+                                                                       class="input form-control"
+                                                                       style="border: 0"
+                                                                       placeholder="ایمیل * "
+                                                                       value="<?= $UserEmail; ?>"
+                                                                       tabindex="2" readonly>
+                                                            </div>
+                                                        </div>
 
-                                        <?php } else { ?>
-                                            <div id="respond" class="comment-respond">
-                                                <strong id="reply-title" class="comment-reply-title">دیدگاه شما
-                                                    <small><a rel="nofollow" id="cancel-comment-reply-link"
-                                                              href="https://www.digikala.com/mag/%d8%a7%db%8c%d9%84%d8%a7%d9%86-%d9%85%d8%a7%d8%b3%da%a9-%d8%a2%d8%aa%d8%b4%e2%80%8c%d8%a7%d9%81%da%a9%d9%86-%d9%87%d9%85-%d9%85%db%8c%e2%80%8c%d9%81%d8%b1%d9%88%d8%b4%d8%af/#respond"
-                                                              style="display:none;"><i class="icon-close"></i>انصراف</a>
-                                                    </small>
-                                                </strong>
-                                                <form action="news/addComment" method="post"
-                                                      id="commentform" class="comment-form">
-                                                    <div class="comment-form_avatar"><i class="icon-user"></i></div>
-                                                    <div class="comment-fields">
-
-                                                        <p class="cptch_block"><span
-                                                                    class="cptch_wrap cptch_math_actions">
-				<label class="cptch_label" for="cptch_input_94"><span class="cptch_span">
-                        <input id="cptch_input_94"
-                               class="cptch_input cptch_wp_comments"
-                               type="text"
-                               autocomplete="off"
-                               name="cptch_number"
-                               value="" maxlength="2"
-                               size="2"
-                               aria-required="true"
-                               required="required"
-                               style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"></span>
-					<span class="cptch_span">&nbsp;+&nbsp;</span>
-					<span class="cptch_span">هفت</span>
-					<span class="cptch_span">&nbsp;=&nbsp;</span>
-					<span class="cptch_span">11</span>
-					<input type="hidden" name="cptch_result" value="pYU="><input type="hidden" name="cptch_time"
-                                                                                 value="1518106942">
-					<input type="hidden" name="cptch_form" value="wp_comments">
-				</label><span class="cptch_reload_button_wrap hide-if-no-js">
-					<noscript>
-						&lt;style type="text/css"&gt;
-							.hide-if-no-js {
-								display: none !important;
-							}
-						&lt;/style&gt;
-					</noscript>
-					<span class="cptch_reload_button dashicons dashicons-update"></span>
-				</span></span></p>
-                                                    </div>
-                                                    <div class="comment-form-comment"><textarea id="comment"
-                                                                                                name="comment"
-                                                                                                style="border:0"
-                                                                                                class="form-control"
-                                                                                                cols="45"
-                                                                                                rows="8"
-                                                                                                aria-required="true"
-                                                                                                placeholder="دیدگاه"></textarea>
-                                                    </div>
-                                                    <p class="form-submit"><input style="border:0" name="submit"
-                                                                                  type="submit"
-                                                                                  id="submit-comment"
-                                                                                  class="comment-submit-btn"
-                                                                                  value="ارسال دیدگاه">
-                                                        <input style="border:0" type="hidden" name="comment_post_ID"
-                                                               value="368348"
-                                                               id="comment_post_ID">
-                                                        <input style="border:0" type="hidden" name="comment_parent"
-                                                               id="comment_parent"
-                                                               value="0">
-                                                    </p></form>
-                                            </div><!-- #respond -->
-                                        <?php } ?>
+                                                        <div class="comment-form-comment">
+                                            <textarea id="InputComments" name="InputComments" style="border: 0;"
+                                                      class="form-control" cols="45"
+                                                      rows="8" aria-required="true"
+                                                      placeholder="ثبت دیدگاه"></textarea>
+                                                        </div>
+                                                        <p class="form-submit" style="margin-top: 45px">
+                                                            <button id="btn-send-comment"
+                                                                    style="float:left;color: #000;border: 1px solid;" type="button"
+                                                                    class="comment-submit-btn btn-upper btn btn-primary checkout-page-button">
+                                                                ارسال دیدگاه
+                                                            </button>
+                                                        </p>
+                                                    </form>
+                                                </div><!-- #respond -->
+                                            <?php } ?>
 
                                         <div id="comments">
-
-                                            <div class="module-title">
-                                                <div class="module-title__txt">
-                                                    <strong class="bold heading">۲ دیدگاه</strong>
-                                                </div>
-                                                <div class="module-title__sep"></div>
-                                            </div>
-
-                                            <div id="commentlist-container">
-
-                                                <ol class="post-module__comments commentlist">
-
-                                                    <li class="comment even thread-even depth-1 single-comment _item _person"
-                                                        id="li-comment-201416">
-                                                        <div id="comment-201416" class="comment-body">
-
-                                                            <div class="_item__user comment-meta ">
-                                                                <img src="public/DigiWeb_files/Default_Profile_Picture1.jpg"
-                                                                     width="35"
-                                                                     height="35" alt="سعید"
-                                                                     class="avatar avatar-35wp-user-avatar wp-user-avatar-35 alignnone photo avatar-default">
-                                                                <span class="_item__user--name vcard">
-                    <span class="fn">سعید</span>
-                </span>
-                                                                <span class="_item__user--date">
-                    <i class="icon-clock-icon"></i>
-                    <time datetime="۱۳۹۶-۱۱-۸ ۱۳:۵۹:۰۸ +۰۳:۳۰" class="_date">۸ بهمن ۱۳۹۶  |  ۱۳:۵۹</time>
-                </span>
-                                                                <?php
-                                                                if ($UserID == true) {
-                                                                    ?>
-                                                                    <div class="_item__user--like-reply">
-                                                        <span class="_btn">
-                        <a rel="nofollow" class="comment-reply-link"
-                           href="https://www.digikala.com/mag/%d8%a7%db%8c%d9%84%d8%a7%d9%86-%d9%85%d8%a7%d8%b3%da%a9-%d8%a2%d8%aa%d8%b4%e2%80%8c%d8%a7%d9%81%da%a9%d9%86-%d9%87%d9%85-%d9%85%db%8c%e2%80%8c%d9%81%d8%b1%d9%88%d8%b4%d8%af/?replytocom=201416#respond"
-                           onclick="return addComment.moveForm( &quot;comment-201416&quot;, &quot;201416&quot;, &quot;respond&quot;, &quot;368348&quot; )"
-                           aria-label="پاسخ به سعید"><i class="icon-reply-arrow"></i></a>
-                                                        </span>
-
-                                                                    </div>
-                                                                    <?php
-                                                                }
-                                                                ?>
-                                                            </div>
-
-                                                            <div class="_item__comment">
-                                                                <p>عجیبه که تعبیر شما از کلمه Boring در اسم این شرکت به
-                                                                    صورت خسته
-                                                                    بوده! در اینجا به معنی حفاری هست… چه ربطی به خسته
-                                                                    داره
-                                                                    آخه…؟!!</p>
-                                                            </div>
-
+                                            <?php
+                                                $comments = $data['comment'];
+                                                if (sizeof($comments) > 0) {
+                                                    ?>
+                                                    <div class="module-title">
+                                                        <div class="module-title__txt">
+                                                            <strong class="bold heading"><?= sizeof($comments); ?> دیدگاه</strong>
                                                         </div>
+                                                        <div class="module-title__sep"></div>
+                                                    </div>
+                                                    <div id="commentlist-container">
 
-                                                        <ol class="children _item__comment__reply">
+                                                        <ol class="post-module__comments commentlist">
+                                                            <?php
+                                                                foreach ($comments as $comment) {
+                                                                    if ($comment['image'] == "0") {
+                                                                        $url = "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment['email']))) . "?d=identicon&r=x";
+                                                                    } else {
+                                                                        $url = $comment['image'];
+                                                                    }
+                                                                    ?>
 
-                                                            <li class="comment byuser comment-author-amir-mirzaee bypostauthor odd alt depth-2 single-comment _item _person"
-                                                                id="li-comment-201498">
-                                                                <div id="comment-201498" class="comment-body">
+                                                                    <li class="comment even thread-even depth-1 single-comment _item _person"
+                                                                        id="li-comment-201416">
+                                                                        <div id="comment-201416" class="comment-body">
 
-                                                                    <div class="_item__user comment-meta post-author">
-                                                                        <img src="public/DigiWeb_files/Default_Profile_Picture1.jpg"
-                                                                             width="35" height="35"
-                                                                             alt="امیرحسین میرزایی"
-                                                                             class="avatar avatar-35 wp-user-avatar wp-user-avatar-35 alignnone photo">
-                                                                        <span class="_item__user--name vcard">
-                    <span class="fn">امیرحسین میرزایی</span>
-                </span>
-                                                                        <span class="_item__user--date">
-                    <i class="icon-clock-icon"></i>
-                    <time datetime="۱۳۹۶-۱۱-۹ ۱۲:۲۷:۵۰ +۰۳:۳۰" class="_date">۹ بهمن ۱۳۹۶  |  ۱۲:۲۷</time>
-                </span>
-
-                                                                        <?php
-                                                                        if ($UserID == true) {
-                                                                            ?>
-                                                                            <div class="_item__user--like-reply">
-                                                                <span class="_btn">
-                        <a rel="nofollow" class="comment-reply-link"
-                           href="news/6/?replytocom=201498#respond"
-                           onclick="return addComment.moveForm( &quot;comment-201498&quot;, &quot;201498&quot;, &quot;respond&quot;, &quot;368348&quot; )"
-                           aria-label="پاسخ به امیرحسین میرزایی"><i class="icon-reply-arrow"></i></a>                    </span>
-
+                                                                            <div class="_item__user comment-meta "
+                                                                                 style="padding-left: 10px;">
+                                                                                <img src="<?= $url; ?>"
+                                                                                     alt="<?= $comment['name']; ?>"
+                                                                                     onerror="this.src='public/images/singers/singer-50x50.jpg'"
+                                                                                     width="35"
+                                                                                     height="35"
+                                                                                     class="avatar avatar-35wp-user-avatar wp-user-avatar-35 alignnone photo avatar-default">
+                                                                                <span class="_item__user--name vcard">
+                                                            <span class="fn"><?= $comment['name']; ?></span>
+                                                        </span>
+                                                                                <span class="_item__user--date">
+                                                            <time datetime="<?= Model::time_elapsed_string('@' . $comment['cm_date']); ?>"
+                                                                  class="_date"></time>
+                                                        </span>
+                                                                                <div class="_item__user--like-reply">
+                                                            <span class="comment-like-message">
+                                                            <time datetime="<?= Model::time_elapsed_string('@' . $comment['cm_date']); ?>"
+                                                                  class="_date"><?= Model::time_elapsed_string('@' . $comment['cm_date']); ?></time>
+                                                                <i class="icon-clock-icon"></i>
+                                                            </span>
+                                                                                </div>
                                                                             </div>
-                                                                            <?php
-                                                                        }
-                                                                        ?>
-                                                                    </div>
 
-                                                                    <div class="_item__comment">
-                                                                        <p>اسم اساسا نباید ترجمه بشه و ما هم The Boring
-                                                                            Company رو
-                                                                            ترجمه نکرده و به صورت اصلی در متن کار
-                                                                            کرده‌ایم.<br>
-                                                                            منظور از «شرکت خسته»، شوخی با ایلان ماسک و
-                                                                            ایهام در
-                                                                            نام‌گذاری شرکت اوست.</p>
-                                                                    </div>
+                                                                            <div class="_item__comment">
+                                                                                <p style="text-align: justify;padding: 0 30px;font-size: 9pt;"><?= $comment['cm_text']; ?></p>
+                                                                            </div>
 
-                                                                </div>
+                                                                        </div>
 
-                                                            </li><!-- #comment-## -->
-                                                        </ol><!-- .children -->
-                                                    </li><!-- #comment-## -->
-                                                    <li class="comment even thread-even depth-1 single-comment _item _person"
-                                                        id="li-comment-201452">
-                                                        <div id="comment-201452" class="comment-body">
-
-                                                            <div class="_item__user comment-meta ">
-                                                                <img src="public/DigiWeb_files/Default_Profile_Picture1.jpg"
-                                                                     width="35"
-                                                                     height="35" alt="سعید"
-                                                                     class="avatar avatar-35wp-user-avatar wp-user-avatar-35 alignnone photo avatar-default">
-                                                                <span class="_item__user--name vcard">
-                    <span class="fn">سعید</span>
-                </span>
-                                                                <span class="_item__user--date">
-                    <i class="icon-clock-icon"></i>
-                    <time datetime="۱۳۹۶-۱۱-۸ ۱۳:۵۹:۰۸ +۰۳:۳۰" class="_date">۸ بهمن ۱۳۹۶  |  ۱۳:۵۹</time>
-                </span>
-                                                                <?php
-                                                                if ($UserID == true) {
-                                                                    ?>
-                                                                    <div class="_item__user--like-reply">
-                                                        <span class="_btn">
-                        <a rel="nofollow" class="comment-reply-link"
-                           href="https://www.digikala.com/mag/%d8%a7%db%8c%d9%84%d8%a7%d9%86-%d9%85%d8%a7%d8%b3%da%a9-%d8%a2%d8%aa%d8%b4%e2%80%8c%d8%a7%d9%81%da%a9%d9%86-%d9%87%d9%85-%d9%85%db%8c%e2%80%8c%d9%81%d8%b1%d9%88%d8%b4%d8%af/?replytocom=201452#respond"
-                           onclick="return addComment.moveForm( &quot;comment-201452&quot;, &quot;201452&quot;, &quot;respond&quot;, &quot;368348&quot; )"
-                           aria-label="پاسخ به سعید"><i class="icon-reply-arrow"></i></a>
-                                                        </span>
-
-                                                                    </div>
+                                                                    </li><!-- #comment-## -->
+                                    
                                                                     <?php
                                                                 }
-                                                                ?>
-                                                            </div>
-
-                                                            <div class="_item__comment">
-                                                                <p>عجیبه که تعبیر شما از کلمه Boring در اسم این شرکت به
-                                                                    صورت خسته
-                                                                    بوده! در اینجا به معنی حفاری هست… چه ربطی به خسته
-                                                                    داره
-                                                                    آخه…؟!!</p>
-                                                            </div>
-
-                                                        </div>
-                                                    </li><!-- #comment-## -->
-                                                </ol>
-
-                                                <div class="module-title pagination-wrapper"></div>
-                                            </div>
-
-
+                                                            ?>
+                                                        </ol>
+                                                    </div>
+                                                    <?php
+                                                }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
@@ -531,33 +426,35 @@ $UserID = Model::sessionGet('userId');
                                             </div>
                                             <ul class="related-posts">
                                                 <?php
-                                                $news = $data['sameNews'];
-                                                foreach ($news as $newsInfo) {
-                                                    ?>
-                                                    <li class="related-posts__item">
-                                                        <a href="news/<?= $newsInfo['n_id']; ?>"
-                                                           title="<?= $newsInfo['title']; ?>"
-                                                           class="image-wrapper">
-                                                            <img src="public/images/news/<?= $newsInfo['i_image']; ?>"
-                                                                 width="60"
-                                                                 height="60" class="image-wrapper__img wp-post-image"
-                                                                 style="border-radius:3px"
-                                                                 alt="<?= $newsInfo['title']; ?>"
-                                                                 data-lazy-loaded="true"> </a>
-                                                        <div class="detail-wrapper">
+                                                    $news = $data['sameNews'];
+                                                    foreach ($news as $newsInfo) {
+                                                        ?>
+                                                        <li class="related-posts__item">
                                                             <a href="news/<?= $newsInfo['n_id']; ?>"
                                                                title="<?= $newsInfo['title']; ?>"
-                                                               class="detail-wrapper__title"><?= Model::summary($newsInfo['title'], 90); ?></a>
-                                                            <div class="detail-wrapper__time" style="text-align: left">
+                                                               class="image-wrapper">
+                                                                <img src="public/images/news/<?= $newsInfo['i_image']; ?>"
+                                                                     width="60"
+                                                                     height="60"
+                                                                     class="image-wrapper__img wp-post-image"
+                                                                     style="border-radius:3px"
+                                                                     alt="<?= $newsInfo['title']; ?>"
+                                                                     data-lazy-loaded="true"> </a>
+                                                            <div class="detail-wrapper">
+                                                                <a href="news/<?= $newsInfo['n_id']; ?>"
+                                                                   title="<?= $newsInfo['title']; ?>"
+                                                                   class="detail-wrapper__title"><?= Model::summary($newsInfo['title'], 90); ?></a>
+                                                                <div class="detail-wrapper__time"
+                                                                     style="text-align: left">
                                                     <span class="detail-wrapper__time--detail"><?= $newsInfo['date_created']; ?>
                                                         &nbsp;<?= $newsInfo['time']; ?></span>
-                                                                <i class="icon-clock-icon"
-                                                                   style="margin-top: 5px;margin-right: 5px"></i>
+                                                                    <i class="icon-clock-icon"
+                                                                       style="margin-top: 5px;margin-right: 5px"></i>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </li>
-                                                    <?php
-                                                }
+                                                        </li>
+                                                        <?php
+                                                    }
                                                 ?>
                                             </ul>
                                         </div>
@@ -595,6 +492,7 @@ $UserID = Model::sessionGet('userId');
 
             </div>
             <!-- JavaScripts placed at the end of the document so the pages load faster -->
+            <script type="text/javascript" src="public/DigiWeb_files/jquery.form.min.js"></script>
             <script src="public/js/jquery-1.11.1.min.js"></script>
             <script src="public/js/owl.carousel.min.js"></script>
             <script src="public/js/scripts.js"></script>
@@ -602,7 +500,6 @@ $UserID = Model::sessionGet('userId');
 
             <script src="public/js/jquery.noty.packaged.js"></script>
             <script src="public/js/jquery-latest.js"></script>
-            <script src="public/js/jquery.noty.packaged.js"></script>
             <script src="public/js/bootstrap.min.js"></script>
             <script src="public/js/bootstrap-hover-dropdown.min.js"></script>
             <script src="public/js/countdown.js"></script>
@@ -613,8 +510,37 @@ $UserID = Model::sessionGet('userId');
             <script src="public/js/Track-player.js"></script>
             <script src="public/js/wow.min.js"></script>
             <script src="public/js/pace.js"></script>
-
-            <script type="text/javascript" src="public/DigiWeb_files/jquery.form.min.js"></script>
+            
+            <script type="text/javascript">
+                $("#btn-send-comment").on('click', function () {
+                    var message = document.getElementById("InputComments").value;
+                    var ProductID = document.getElementById("p_id_get").value;
+                    var userID = document.getElementById("userIdGet").value;
+                    if (message == "") {
+                        generate('warning', '<div class="activity-item">لطفا ابتدا نظر خود را نوشته و سپس اقدام به ارسال کنید.</div>');
+                    }
+                    else {
+                        $.post(
+                            "news/sendComment",
+                            {
+                                'ProductID': ProductID,
+                                'message': message,
+                                'user_id': userID
+                            },
+                            function (data) {
+                                if (data == "ok") {
+                                    generate('success', '<div class="activity-item">نظر شما باموفقیت ثبت و پس از تایید نمایش داده خواهد شد.</div>');
+                                    document.getElementById('respond').style.display = 'none';
+                                }
+                                else {
+                                    generate('warning', '<div class="activity-item">نظر شما قبلا ثبت شده است.</div>');
+                                }
+                            }
+                        );
+                    }
+                });
+            </script>
+            
 
             <script type="text/javascript" src="public/DigiWeb_files/scripts.js"></script>
 

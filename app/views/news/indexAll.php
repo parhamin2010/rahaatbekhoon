@@ -214,8 +214,8 @@
                     el.style.height = newHeight + 'px';
                     
                 }).fail(function (xhr, ajaxOptions, thrownError) {
-                    alert(thrownError); //alert any HTTP error
-                    $(".module-title__btn").show(); //bring back load more button
+                    alert("متاسفانه خطایی رخ داده است!لطفا مجددا تلاش نمایید.");
+                    $(".module-title__btn").show();
                 });
 
 

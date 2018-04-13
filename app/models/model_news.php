@@ -76,34 +76,33 @@
             
             return $result;
         }
-        
+    
         function sendCommentSave($post)
         {
             $p_id = str_replace("track-", "", $post['ProductID']);
             $sql = "SELECT * FROM `tbl_comments` WHERE `cm_user_id` = ? AND `p_id` = ? AND `cm_date` = ? AND `type` = ?";
-            $params = array($post['user_id'], $p_id, time(), "track");
+            $params = array($post['user_id'], $p_id, time(), "news");
             $res = $this->doSelect($sql, $params);
-            
+        
             if (sizeof($res) > 0) {
                 echo "isset";
             } else {
                 $sql = "INSERT INTO tbl_comments (p_id,cm_user_id,cm_text,cm_date,type) VALUES (?,?,?,?,?)";
-                $value = array($p_id, $post['user_id'], $post['message'], time(), "track");
+                $value = array($p_id, $post['user_id'], $post['message'], time(), "news");
                 $this->doQuery($sql, $value);
                 echo "ok";
             }
         }
-        
+    
         function getComment($idproduct)
         {
             $sql = "SELECT image,email,cm_date,name,cm_text
                 FROM tbl_comments a 
                 LEFT JOIN tbl_user b 
                 ON a.cm_user_id=b.id 
-                WHERE a.p_id=? AND a.type='track' AND a.cm_status=1 ORDER BY cm_id DESC LIMIT 20";
+                WHERE a.p_id=? AND a.cm_status=1 ORDER BY cm_id DESC LIMIT 20";
             $data = array($idproduct);
             $result = $this->doSelect($sql, $data);
-            
             return $result;
         }
         

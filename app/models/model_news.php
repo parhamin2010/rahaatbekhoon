@@ -54,7 +54,7 @@
                 ON a.cat_id=b.id
                 LEFT JOIN tbl_images c 
                 ON a.image_id=c.i_id
-                WHERE a.status=1 AND a.n_id=?";
+                WHERE a.status=1 AND a.n_id=? limit 4";
             $result = $this->doSelect($sql, array($id));
             
             $image_id = @$result[0]['image_id'];

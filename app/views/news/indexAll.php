@@ -190,6 +190,13 @@
 
         var total_pages = <?= $data['getCountNewsPage']; ?>;
         $('#infinite-articles').load("news/GetItems", {'page': track_click}, function () {
+            if(track_click!=0) {
+                if (track_clicked >= total_pages - 1) {
+                    //reached end of the page yet? disable load button
+                    $(".module-title__btn").attr("disabled", "disabled");
+                    $(".module-title__btn").text("تمام شد!");
+                }
+            }
             track_click++;
         }); //initial data to load
 

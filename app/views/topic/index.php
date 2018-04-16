@@ -88,7 +88,8 @@
                         <div class="topics">
                             <div class="topics__content">
                                 <h2 class="disappear">آخرین عنوان‌ها</h2>
-                                <section id="infinite-articles" class="masonry-gallery" style="margin-right: 23px;height: auto !important;">
+                                <section id="infinite-articles" class="masonry-gallery"
+                                         style="margin-right: 23px;height: auto !important;">
                                     
                                     <?php
                                         foreach ($news as $newsInfo) {
@@ -162,7 +163,6 @@
 </div>
 
 
-
 <!-- JavaScripts placed at the end of the document so the pages load faster -->
 <script src="public/js/jquery-1.11.1.min.js"></script>
 <script src="public/js/owl.carousel.min.js"></script>
@@ -190,7 +190,8 @@
         var track_clicked = 0; //track user click on "load more" button, righ now it is 0 click
 
         var total_pages = <?= $data['getCountNewsPage']; ?>;
-        $('#infinite-articles').load("topic/GetItems", {'page': track_clicked,'id': CategoryID}, function () {
+        $('#infinite-articles').load("topic/GetItems", {'page': track_clicked, 'id': CategoryID}, function () {
+
             if (track_clicked >= total_pages - 1) {
                 //reached end of the page yet? disable load button
                 $(".module-title__btn").attr("disabled", "disabled");
@@ -206,7 +207,7 @@
             if (track_clicked <= total_pages) //make sure user clicks are still less than total pages
             {
                 //post page number and load returned data into result element
-                $.post('topic/GetItems', {'page': track_clicked,'id': CategoryID}, function (data) {
+                $.post('topic/GetItems', {'page': track_clicked, 'id': CategoryID}, function (data) {
 
                     $(".module-title__btn").show(); //bring back load more button
 
@@ -237,8 +238,6 @@
         });
     });
 </script>
-
-
 
 
 <script>(function (w, d, s, l, i) {
@@ -307,8 +306,6 @@
         src='public/js/video-js-player.min.js?ver=2.0.5'></script>
 
 <script type='text/javascript' src='public/js/media-player.min.js?ver=2.0.5'></script>
-
-
 
 
 </body>

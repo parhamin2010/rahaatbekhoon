@@ -623,5 +623,8 @@
                     src='public/js/video-js-player.min.js?ver=2.0.5'></script>
 
             <script type='text/javascript' src='public/js/media-player.min.js?ver=2.0.5'></script>
+
+
+
 </body>
 </html>

@@ -3765,7 +3765,7 @@ label.check-handler input[type=checkbox]:checked + ._check:before, label.check-h
 
 .carousel {
     background-color: #eee;
-    cursor: -webkit-grab;
+    /*cursor: -webkit-grab;*/
     cursor: grab;
     overflow: hidden
 }

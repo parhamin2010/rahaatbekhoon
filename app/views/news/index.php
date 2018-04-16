@@ -328,7 +328,7 @@
                                                         </div>
 
                                                         <div class="comment-form-comment">
-                                            <textarea id="InputComments" name="InputComments" style="border: 0;"
+                                            <textarea id="InputComments" name="InputComments" style="border: 0;overflow: hidden;"
                                                       class="form-control" cols="45"
                                                       rows="8" aria-required="true"
                                                       placeholder="ثبت دیدگاه"></textarea>

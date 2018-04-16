@@ -1967,7 +1967,7 @@ span.search-subtitle_asimg {
     background: #9f191f;
     height: 40px;
     cursor: pointer;
-    display: none;
+    /*display: none;*/
     float: left;
     text-align: center;
     position: relative;
@@ -3432,7 +3432,7 @@ input#subscribe-emial {
 
 .wmin #dk-footer .copyright-bar {
     background-color: #646871;
-    height: 78px
+    /*height: 78px*/
 }
 
 #dk-footer .copyright-bar li {

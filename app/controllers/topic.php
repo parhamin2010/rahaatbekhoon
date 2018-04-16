@@ -35,12 +35,14 @@ class Topic extends Controller
                     Model::sessionInit();
                     $UserID = Model::sessionGet('userId');
                     $getNews = $this->model->getNews($id);
+                    $getCountNewsPage = $this->model->getCountNewsPage($id);
                     $getNewsVip = $this->model->getNewsVip($id);
                     $getCategory =$this->model->getCategory();
                     $getTopNews =$this->model->getTopNews($id);
 
                     $data = array('getNews' => $getNews, 'getNewsVip' => $getNewsVip,
-                        'getCategory' => $getCategory,'getTopNews' => $getTopNews);
+                                  'getCountNewsPage' => $getCountNewsPage, 'idNews' => $id,
+                                  'getCategory' => $getCategory,'getTopNews' => $getTopNews);
 
                     $this->view('topic/index', $data);
                 } else {
@@ -88,6 +90,11 @@ class Topic extends Controller
                 $this->view('notfound/indexMobile', $data);
             }
         }
+    }
+    
+    public function GetItems()
+    {
+        $this->model->getItems($_POST);
     }
 
     function addRatingAjax()

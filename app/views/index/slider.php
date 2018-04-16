@@ -1,4 +1,4 @@
-<div style="position: relative;direction: ltr;height: 480px;width: 100%" id="hero" class="home-page-slider4">
+<div style="position: relative;direction: ltr;height: 480px;width: 100%;margin: 5px !important" id="hero" class="home-page-slider4">
     <div id="owl-main" class="owl-carousel silder4 owl-inner-nav owl-ui-sm">
         <?php
         $detect = new Mobile_Detect;

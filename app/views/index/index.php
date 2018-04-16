@@ -95,7 +95,7 @@ $newsVip = $data['getNewsVip'];
                             <a href="http://yjc.ir/fa/ads/redirect/a/1484" id="tile-4-6-0" title="تیک بان"
                                target="_self">
                                 <img src="http://www.kkhosro.ir/wp-content/uploads/2018/01/advertsing-banner-4.gif"
-                                     alt="2" class="" style="width: 100%;height:190px;padding:5px;">
+                                     alt="2" class="" style="width: 100%;height:205px;padding:5px;">
                             </a>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ $newsVip = $data['getNewsVip'];
                             <a href="http://yjc.ir/fa/ads/redirect/a/1484" id="tile-4-6-0" title="تیک بان"
                                target="_self">
                                 <img src="https://cdn.kaprila.com/image/21/7b848c82-b4b8-41aa-b4b3-20b805e5e3c4.gif"
-                                     alt="2" class="" style="width: 100%;height:475px;padding:5px;">
+                                     alt="2" class="" style="width: 100%;height:490px;padding:5px;">
                             </a>
                         </div>
                     </div>

@@ -31,6 +31,9 @@ Model::sessionInit();
     <link href="public/css/lightbox.css" rel="stylesheet">
     <?php require('app/views/include/favicon.php'); ?>
 
+    <link href="public/css/theme.min2.css"
+          rel="stylesheet"/>
+
     <link href="public/css/m_css_shared.css?v=0gAq23DV9fbKtKuZmriMbf8GOukU7uHZKwtGePzPsHY1"
           rel="stylesheet"/>
 
@@ -1382,6 +1385,7 @@ Model::sessionInit();
     </div>
 </div>
 
+<script src="public/js/theme.min.js.download"></script>
 <script src="public/js/jquery-1.11.1.min.js"></script>
 <script src="public/js/owl.carousel.min.js"></script>
 <script src="public/js/scripts.js"></script>

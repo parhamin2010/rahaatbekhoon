@@ -236,11 +236,11 @@ Model::sessionInit();
 
         <symbol id="icon-menu" viewBox="0 0 50 32">
             <title>menu_filled</title>
-            <path class="path1" fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="4"
+            <path class="path1" fill="none" stroke="#000" stroke-width="3" stroke-miterlimit="4"
                   stroke-linecap="butt" stroke-linejoin="miter" d="M50 16h-50"></path>
-            <path class="path2" fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="4"
+            <path class="path2" fill="none" stroke="#000" stroke-width="3" stroke-miterlimit="4"
                   stroke-linecap="butt" stroke-linejoin="miter" d="M50 1h-50"></path>
-            <path class="path3" fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="4"
+            <path class="path3" fill="none" stroke="#000" stroke-width="3" stroke-miterlimit="4"
                   stroke-linecap="butt" stroke-linejoin="miter" d="M0 31h50"></path>
         </symbol>
         <symbol id="icon-menu_2" viewBox="0 0 1024 1024">
@@ -1270,7 +1270,7 @@ Model::sessionInit();
 
                             <a href="<?= URL; ?>" title="<?= NAME; ?>" target="_self">
 
-                                <img style="width: 110px;margin-top: -10px;"
+                                <img style="width: 75px;margin-top: -10px;"
                                      src="public/images/pixel-perfect-final-v02-01.png"/>
                             </a>
                         </h1>
@@ -1294,14 +1294,6 @@ Model::sessionInit();
         <?php require('app/views/index/slider.php'); ?>
 
 
-        <div class="mrg-bottom center dk-box dk-tr-banner" style="height: 54px;margin-top: 10px;margin-bottom: 25px;text-align: center;">
-            <a href="about">
-                <img src="public/images/about.jpg"
-                     alt="راهکارهای ما"
-                     style="width: 94%;"
-                     title="راهکارهای ما"/>
-            </a>
-        </div>
 
         <div class="carousel carousel--incredible" style="direction: rtl">
             <div class="carousel__wrapper">
@@ -1309,7 +1301,8 @@ Model::sessionInit();
             <span>
                 <svg class="icon-stop-watch"><use xmlns:xlink="http://www.w3.org/1999/xlink"
                                                   xlink:href="#icon-stop-watch"></use></svg>
-آخرین عناوین            </span>
+آخرین اخبار
+            </span>
                 </div>
 
                 <div class="carousel__list">
@@ -1339,20 +1332,53 @@ Model::sessionInit();
                     }
                     ?>
                 </div>
-                <a href="#" class="carousel--incredible__button btn_mo-ripple"
-                   title="مشاهده تمامی مطالب">مشاهده تمامی مطالب</a>
+                <a href="news" class="carousel--incredible__button btn_mo-ripple"
+                   title="مشاهده تمامی مطالب" style="background: #6f0000 !important;">مشاهده عناوین بیشتر</a>
 
             </div>
         </div>
+        <div class="carousel carousel--incredible" style="direction: rtl">
+            <div class="carousel__wrapper">
+                <div class="carousel__header">
+            <span>
+                <svg class="icon-stop-watch"><use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                  xlink:href="#icon-stop-watch"></use></svg>
+آخرین نشریات
+            </span>
+                </div>
 
-
+                <div class="carousel__list">
+                    <?php
+                    $news = $data['getNews'];
+                    foreach ($news as $newsInfo) {
+                        ?>
+                        <a class="carousel__item incredible"
+                           href="blog/<?= $newsInfo['n_id']; ?>"
+                           title="<?= $newsInfo['title']; ?>">
+                            <span class="incredible__title"><?= Model::summary($newsInfo['title'], 70); ?></span>
+                            <span style="margin: 10px 0;width: 100%;" class="_wrapper">
+                                    <p style="left: 0;bottom: 0;margin-bottom: 31px;position: absolute;background: rgba(0,0,0,0.7);padding-right: 15px;padding-left: 15px;padding-top: 5px;padding-bottom: 5px;color: #e6e7e8">
+                                        <?= $newsInfo['name']; ?>
+                                    </p>
+                                <img style="width: 100%;height: 100%" class="incredible__image"
+                                     src="public/images/news/<?= $newsInfo['i_image']; ?>">
+                            </span>
+                            <div>
+                                <p style="float: left;margin-left:10px;margin-right:10px "><?= $newsInfo['date_created']; ?></p>
+                                <p style="float: left;margin-right:10px "><?= $newsInfo['time']; ?></p>
+                                <p style="float: right;color: #00a65a;margin-right:10px "><?= $newsInfo['title_no']; ?></p>
+                            </div>
+                        </a>
+                        <?php
+                    }
+                    ?>
+                </div>
+                <a href="news" class="carousel--incredible__button btn_mo-ripple"
+                   title="مشاهده تمامی مطالب" style="background: #6f0000 !important;">مشاهده عناوین بیشتر</a>
+            </div>
+        </div>
         <!-- Footer -->
-        <footer role="contentinfo">
-            <ul>
-                <li><span style="color: #00a65a;">Copyright © 2018 <?= URL_FOOTER; ?></span></li>
-            </ul>
-        </footer>
-
+            <?php require('app/views/include/footerMobile.php'); ?>
     </div>
 </div>
 

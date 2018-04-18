@@ -263,7 +263,8 @@
 .carousel--incredible__button {
     margin: 25px 10px 0;
     display: block;
-    background: #50b33c;
+    background: url(../images/bgheader.png)no-repeat;
+    background-size: cover;
     color: #fff;
     font-size: 3.5vw;
     line-height: 45px;

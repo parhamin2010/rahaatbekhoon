@@ -6,8 +6,8 @@ $level = Model::sessionGet('level');
 <div class="off-canvas-panel_mo" data-popup="off-canvas_menu">
     <div class="off-canvas-panel-wrapper_mo">
         <div class="off-canvas-logo">
-            <a href="<?= URL; ?>">
-                <img style="width: 185px;margin: 18px 0 0 40px;"
+            <a href="<?= URL; ?>" style="text-align: center">
+                <img style="width: 95px;margin: 25px 0 0 0px;"
                      src="public/images/pixel-perfect-final-v02-01.png"/>
             </a>
         </div>

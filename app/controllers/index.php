@@ -32,7 +32,7 @@ class Index extends Controller
             $this->view('index/index', $data);
         }
         else {
-            $this->view('index/index', $data);
+            $this->view('index/indexMobile', $data);
         }
     }
 

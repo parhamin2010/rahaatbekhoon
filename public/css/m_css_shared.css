@@ -6184,7 +6184,6 @@ input[type=tel]:-moz-placeholder, input[type=email]:-moz-placeholder, input[type
 }
 
 header[role=banner]#dk-header_mo {
-    height: 50px;
     width: 100%;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .4);
     background: #fff;
@@ -6192,17 +6191,17 @@ header[role=banner]#dk-header_mo {
     position: fixed;
     left: 0;
     right: 0;
-    top: 0
+    top: 0;
+    background: url(../images/bgheader.png)no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 header[role=banner]#dk-header_mo > div {
-    background: #50b33c
 }
 
 header[role=banner]#dk-header_mo .toolbar {
-    height: 50px;
     width: 100%;
-    background: #50b33c
 }
 
 header[role=banner]#dk-header_mo .toolbar > ul {
@@ -6401,7 +6400,8 @@ header[role=banner]#dk-header_mo .logo h4 {
 }
 
 .off-canvas-panel_mo .off-canvas-logo {
-    background-color: #50b33c;
+    background: url(../images/bgheader.png)no-repeat;
+    background-size: cover;
     position: relative;
     height: 110px
 }
@@ -7924,7 +7924,7 @@ header[role=banner]#dk-header_mo .logo h4 {
 }
 
 footer[role="contentinfo"] {
-    height: 40px;
+    /*height: 40px;*/
     background: #36474f;
     display: -webkit-box;
     display: -moz-box;

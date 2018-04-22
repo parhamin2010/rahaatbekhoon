@@ -1271,7 +1271,6 @@ Model::sessionInit();
                         <h1 property="name">
 
                             <a href="<?= URL; ?>" title="<?= NAME; ?>" target="_self">
-
                                 <img style="width: 75px;margin-top: -10px;"
                                      src="public/images/pixel-perfect-final-v02-01.png"/>
                             </a>

@@ -1267,7 +1267,6 @@ Model::sessionInit();
                             <use xlink:href="#icon-menu"></use>
                         </svg>
                     </div>
-
                     <div class="logo pull-right" style="padding: 0;">
                         <h1 property="name">
 

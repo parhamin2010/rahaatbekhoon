@@ -164,6 +164,7 @@
                         <li id="menu-item-356352" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="فیلم" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%d9%81%db%8c%d9%84%d9%85/" class="">فیلم</a></li>
                         <li id="menu-item-356360" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="موسیقی" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%d9%85%d9%88%d8%b3%db%8c%d9%82%db%8c/" class="">موسیقی</a></li>
                     </ul>
+
                 </li>
                 <li id="menu-item-356364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children item"><span class="item__hold"><a title="پادکست‌ها" href="http://www.digikala.com/mag/%d9%be%d8%a7%d8%af%da%a9%d8%b3%d8%aa%e2%80%8c%d9%87%d8%a7/" class=" item__txt"><i class="icon-podcast-icon---menu"></i>پادکست‌ها</a><i class="icon-close"></i></span>
                     <ul class="sub-menu dropdown-menu">

@@ -9,7 +9,11 @@
         
         function index($id = '')
         {
+
             if ($id != '' && is_numeric($id)) {
+                $detect = new Mobile_Detect;
+                $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
+
                 $id_isset = $this->model->getIssetNews($id);
                 if (sizeof($id_isset) > 0) {
                     Model::sessionInit();
@@ -22,12 +26,21 @@
                     $sameNews = $this->model->sameNews($id);
                     $getCategory = $this->model->getCategory();
                     $getsuggestNews = $this->model->getsuggestNews();
-                    
+
                     $data = array('infoUser'     => $infoUser, 'getNews' => $getNews, 'RateStatus' => $RateStatus,
                                   'iconfavCheck' => $iconfavCheck, 'comment' => $comment, 'sameNews' => $sameNews,
                                   'getCategory'  => $getCategory, 'getsuggestNews' => $getsuggestNews, 'idNews' => $id);
-                    
+
                     $this->view('news/index', $data);
+                    if($deviceType=='computer') {
+                        $this->view('news/index', $data);
+                    }
+                    else if($deviceType=='tablet') {
+                        $this->view('news/index', $data);
+                    }
+                    else {
+                        $this->view('news/indexMobile', $data);
+                    }
                 } else {
                     $detect = new Mobile_Detect;
                     $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');

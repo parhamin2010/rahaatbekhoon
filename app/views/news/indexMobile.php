@@ -2,6 +2,7 @@
 <!-- saved from url=(0224)http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/ -->
 <html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+    <base href="<?= URL; ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»</title>
     <link rel="pingback" href="http://www.digikala.com/mag/xmlrpc.php">

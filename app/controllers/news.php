@@ -11,11 +11,10 @@
         {
 
             if ($id != '' && is_numeric($id)) {
-                $detect = new Mobile_Detect;
-                $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
-
                 $id_isset = $this->model->getIssetNews($id);
                 if (sizeof($id_isset) > 0) {
+                    $detect = new Mobile_Detect;
+                    $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
                     Model::sessionInit();
                     $UserID = Model::sessionGet('userId');
                     $infoUser = $this->model->getinfoUser($UserID);
@@ -31,7 +30,6 @@
                                   'iconfavCheck' => $iconfavCheck, 'comment' => $comment, 'sameNews' => $sameNews,
                                   'getCategory'  => $getCategory, 'getsuggestNews' => $getsuggestNews, 'idNews' => $id);
 
-                    $this->view('news/index', $data);
                     if($deviceType=='computer') {
                         $this->view('news/index', $data);
                     }

@@ -7,7 +7,6 @@
     <title>پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»</title>
     <link rel="pingback" href="http://www.digikala.com/mag/xmlrpc.php">
 
-
     <!-- This site is optimized with the Yoast SEO Premium plugin v6.2 - https://yoa.st/1yg?utm_content=6.2 -->
     <meta name="description" content="براین مرچنت روزنامه‌نگار کارآزموده حوزه تکنولوژی در این کتاب داستانی را از درون شرکت اپل برای‌تان روایت می‌کند که تا به حال نشنیده‌اید.">
     <link rel="canonical" href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/">

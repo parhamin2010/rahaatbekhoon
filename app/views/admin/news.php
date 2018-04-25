@@ -94,7 +94,7 @@ $activeSubMenu = 'newsManage';
                                                     onerror="this.src='public/images/Album+Cover+icon2-01.png'"
                                                     style="width: 50px;height: 50px;border-radius: 5%;"
                                                     alt="<?= $newsInfo['title']; ?>"
-                                                    src="public/images/news/<?= $newsInfo['i_image']; ?>"></td>
+                                                    src="<?= $newsInfo['image']; ?>"></td>
                                         <td style="text-align:center;vertical-align: middle"><?= $newsInfo['date_created']; ?></td>
                                         <td style="text-align:center;vertical-align: middle">
                                             <?php if ($newsInfo['status'] == 1) {

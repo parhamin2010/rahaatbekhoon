@@ -36,14 +36,15 @@
             $num=$result->fetchColumn();
             
             if ($num==0) {
-                $sql="INSERT INTO `tbl_news` (title,image ,link,description,cat_id,date_created) VALUES (?,?,?,?,?,?)";
+                $sql="INSERT INTO `tbl_news` (title,image ,link,description,cat_id,date_created,time) VALUES (?,?,?,?,?,?,?)";
                 $result= $connect -> prepare($sql);
                 $result->bindValue(1,$item->title);
                 $result->bindValue(2,$item->enclosure['url']);
                 $result->bindValue(3,$item->link);
                 $result->bindValue(4,$item->description);
                 $result->bindValue(5,$rows['cat_id']);
-                $result->bindValue(6,$item->pubDate);
+                $result->bindValue(6,jdate('Y/n/j'));
+                $result->bindValue(7,jdate('H:i:s'));
                 $query = $result->execute();
             }
         }

@@ -206,10 +206,10 @@ $values = implode(',', $values);
                                             ?>
                                             <tr>
                                                 <td>
-                                                    <a href="<?= URL; ?>blog/<?= $order_data['n_id']; ?>"><?= Model::summary($order_data['title'],70); ?></a>
+                                                    <a target="_blank" href="<?= URL; ?>news/<?= $order_data['n_id']; ?>"><?= Model::summary($order_data['title'],70); ?></a>
                                                 </td>
                                                 <td>
-                                                    <a href="<?= URL; ?>blogs/category/<?= $order_data['n_id']; ?>"><?= $order_data['name']; ?></a>
+                                                    <a target="_blank" href="<?= URL; ?>topic/category/<?= $order_data['id']; ?>"><?= $order_data['name']; ?></a>
                                                 </td>
                                                 <td>
                                                     <?= $order_data['date_created']; ?>
@@ -231,7 +231,7 @@ $values = implode(',', $values);
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer clearfix">
-                            <a href="adminpanel/orders" class="btn btn-sm btn-default btn-flat pull-left">مشاهده
+                            <a href="adminpanel/news" class="btn btn-sm btn-default btn-flat pull-left">مشاهده
                                 همه</a>
                         </div>
                         <!-- /.box-footer -->

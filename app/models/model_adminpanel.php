@@ -36,7 +36,7 @@ class model_adminpanel extends Model
         $sql = "SELECT count(*) AS Count FROM tbl_user WHERE level=3";
         $result['artistCount'] = $this->doSelect($sql);
 
-        $sql = "SELECT count(*) AS Count FROM tbl_news WHERE vip=1";
+        $sql = "SELECT count(*) AS Count FROM tbl_news";
         $result['vipNews'] = $this->doSelect($sql);
 
         $sql = "SELECT count(*) AS Count FROM tbl_news";
@@ -99,7 +99,7 @@ class model_adminpanel extends Model
 
     function getStat()
     {
-        $today_date = date('Y/m/d', time() + (1 * 24 * 3600));
+        $today_date = date('Y/m/d');
         $last_week_time = time() - (9 * 24 * 3600);
         $last_week_date = date('Y/m/d', $last_week_time);
         $dates = $this->getRange($last_week_date, $today_date);
@@ -117,6 +117,7 @@ class model_adminpanel extends Model
                 }
             }
         }
+        
         return $orderStat;
     }
 
@@ -201,7 +202,7 @@ class model_adminpanel extends Model
 
     function latesrNews()
     {
-        $sql = "SELECT a.title,a.n_id,b.name,a.date_created FROM tbl_news a
+        $sql = "SELECT a.title,a.n_id,b.name,b.id,a.date_created FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
                 ORDER BY a.n_id DESC LIMIT 10 ";
@@ -212,11 +213,9 @@ class model_adminpanel extends Model
 
     function getnewsInfo()
     {
-        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+        $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 ORDER BY a.n_id DESC ";
         $result = $this->doSelect($sql);
 
@@ -236,11 +235,9 @@ class model_adminpanel extends Model
 
     function GetNews($id)
     {
-        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+        $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.n_id=?
                 ORDER BY a.n_id DESC";
         $result = $this->doSelect($sql, array($id));
@@ -297,11 +294,9 @@ class model_adminpanel extends Model
 
     function getNewsInfoEdit($attrId)
     {
-        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+        $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.n_id=?
                 ORDER BY a.n_id DESC";
         $param = array($attrId);
@@ -321,15 +316,15 @@ class model_adminpanel extends Model
             $this->doQuery($sql, $value);
             $imgId = Model::$conn->lastInsertId();
 
-            $sql3 = "UPDATE tbl_news SET cat_id=?, vip=?, title=?, title_no=? , subtitle=? , image_id=? , 
-                     description=? ,tag=? ,model=?  WHERE n_id=?";
-            $params = [$post['categoryNews'], $post['typeNews'], $post['titleNews'], $post['numberNews'],
-                $post['subtitleNews'], $imgId, htmlspecialchars($post['descNews']), $post['tagNews'], $post['showNews'], $post['id']];
+            $sql3 = "UPDATE tbl_news SET cat_id=?, title=?, image=? , 
+                     description=? ,tag=?  WHERE n_id=?";
+            $params = [$post['categoryNews'], $post['titleNews'],
+                $imgId, htmlspecialchars($post['descNews']), $post['tagNews'], $post['id']];
         } else {
-            $sql3 = "UPDATE tbl_news SET cat_id=?, vip=?, title=?, title_no=? , subtitle=? ,
-                     description=?  ,tag=? , model=?  WHERE n_id=?";
-            $params = [$post['categoryNews'], $post['typeNews'], $post['titleNews'], $post['numberNews'],
-                $post['subtitleNews'], htmlspecialchars($post['descNews']) ,$post['tagNews'] , $post['showNews'], $post['id']];
+            $sql3 = "UPDATE tbl_news SET cat_id=?, title=?,
+                     description=?  ,tag=?  WHERE n_id=?";
+            $params = [$post['categoryNews'], $post['titleNews'],
+                htmlspecialchars($post['descNews']) ,$post['tagNews'] , $post['id']];
         }
         $this->doQuery($sql3, $params);
         echo "ok";

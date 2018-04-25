@@ -2316,8 +2316,9 @@ to {
 }
 
 .carousel {
-    background-color: #f5f5f5;
-    padding-bottom: 7vw
+    background-color:gainsboro;
+    padding-bottom: 7vw;
+    padding: 10px;
 }
 
 .carousel__body {

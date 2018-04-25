@@ -61,7 +61,12 @@
 .carousel__list::-webkit-scrollbar {
     display: none
 }
-
+ul.grid_list .ex34 {
+    background-color: #f4f4f4;
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
 .carousel {
     padding-bottom: 20px
 }
@@ -184,7 +189,7 @@
 }
 
 .carousel--incredible {
-    padding: 1px 12px 20px
+    margin:10px
 }
 
 .carousel--incredible .carousel__item {
@@ -271,7 +276,17 @@
     border-radius: 3px;
     text-align: center
 }
-
+.carousel--incredible__button1 {
+    margin:5%;
+    display: block;
+    background: #3f4a50;
+    background-size: cover;
+    color: #fff;
+    font-size: 3.5vw;
+    line-height: 45px;
+    border-radius: 3px;
+    text-align: center
+}
 .incredible {
     overflow: hidden;
     min-width: 205px
@@ -384,9 +399,7 @@
 }
 
 .incredible__title {
-    display: block;
     width: 100%;
-    display: block;
     line-height: 35px;
     color: #333;
     font-size: 14px;
@@ -678,4 +691,48 @@
     font: 12px iran_sansregular;
     color: #999;
     text-align: justify
+}
+
+
+
+
+.gridlove-pagination {
+    position: relative;
+    padding-top: 4px;
+    min-height: 43px;
+    clear: both;
+    text-align: center
+}
+.gridlove-loader {
+    margin-right: -25px;
+    right: 50%;
+}
+.gridlove-loader {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: -25px;
+    top: 4px;
+    left: 50%;
+    opacity: 0;
+    z-index: 1
+}
+.gridlove-load-more a, .gridlove-pagination .gridlove-next a, .gridlove-pagination .gridlove-prev a, .gridlove-pagination .next, .gridlove-pagination .prev, .gridlove-infinite-scroll a, .double-bounce1, .double-bounce2, .gridlove-link-pages > span, .module-actions ul.page-numbers span.page-numbers {
+    color: #FFF;
+    background-color: #000;
+}
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: .6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 2s infinite ease-in-out;
+    animation: sk-bounce 2s infinite ease-in-out
+}
+.double-bounce2 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s
 }

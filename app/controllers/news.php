@@ -55,6 +55,9 @@
                 }
             } else {
                 if ($id == '' && !is_numeric($id)) {
+                    $detect = new Mobile_Detect;
+                    $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
+
                     $CountNews = $this->model->getCountNews();
                     if ($CountNews[0]['count'] > 0) {
                         $getNews = $this->model->getNewsAll();
@@ -64,9 +67,13 @@
                         $data = array('getNews'     => $getNews,
                                       'getCountNewsPage' => $getCountNewsPage,
                                       'getCategory' => $getCategory);
-                        
-                        $this->view('news/indexAll', $data);
-                    } else {
+
+
+                        if ($deviceType == 'computer') {
+                            $this->view('news/indexAll', $data);
+                        } else {
+                            $this->view('news/indexAllMobile', $data);
+                        }                    } else {
                         $detect = new Mobile_Detect;
                         $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
                         
@@ -118,7 +125,9 @@
         {
             $this->model->getItems($_POST);
         }
-        
+
+
+
     }
 
 ?>

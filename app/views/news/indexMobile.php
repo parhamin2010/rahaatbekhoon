@@ -1,314 +1,1377 @@
+<?php
+Model::sessionInit();
+$news = $data['getNews'];
+$UserID = Model::sessionGet('userId');
+$UserEmail = Model::sessionGet('email');
+$UserName = Model::sessionGet('name');
+?>
 <!DOCTYPE html>
-<!-- saved from url=(0224)http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/ -->
-<html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#" style="transform: none;">
+<head>
     <base href="<?= URL; ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»</title>
-    <link rel="pingback" href="http://www.digikala.com/mag/xmlrpc.php">
 
-    <!-- This site is optimized with the Yoast SEO Premium plugin v6.2 - https://yoa.st/1yg?utm_content=6.2 -->
-    <meta name="description" content="براین مرچنت روزنامه‌نگار کارآزموده حوزه تکنولوژی در این کتاب داستانی را از درون شرکت اپل برای‌تان روایت می‌کند که تا به حال نشنیده‌اید.">
-    <link rel="canonical" href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/">
-    <meta property="og:locale" content="fa_IR">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»">
-    <meta property="og:description" content="براین مرچنت روزنامه‌نگار کارآزموده حوزه تکنولوژی در این کتاب داستانی را از درون شرکت اپل برای‌تان روایت می‌کند که تا به حال نشنیده‌اید.">
-    <meta property="og:url" content="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/">
-    <meta property="og:site_name" content="دیجی‌کالا مگ">
-    <meta property="article:tag" content="آیفون">
-    <meta property="article:tag" content="اپل">
-    <meta property="article:tag" content="پاورقی دنباله دار">
-    <meta property="article:tag" content="پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»">
-    <meta property="article:tag" content="کتاب">
-    <meta property="article:tag" content="یگانه دستگاه">
-    <meta property="article:section" content="جدیدترین اخبار">
-    <meta property="article:published_time" content="۱۳۹۶-۱۰-۱۷T15:00:50+03:30">
-    <meta property="article:modified_time" content="۱۳۹۷-۰۱-۲۶T18:58:30+04:30">
-    <meta property="og:updated_time" content="۱۳۹۷-۰۱-۲۶T18:58:30+04:30">
-    <meta property="og:image" content="http://www.digikala.com/mag/wp-content/uploads/2018/01/main.png">
-    <meta property="og:image:width" content="822">
-    <meta property="og:image:height" content="522">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="براین مرچنت روزنامه‌نگار کارآزموده حوزه تکنولوژی در این کتاب داستانی را از درون شرکت اپل برای‌تان روایت می‌کند که تا به حال نشنیده‌اید.">
-    <meta name="twitter:title" content="پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»">
-    <meta name="twitter:image" content="http://www.digikala.com/mag/wp-content/uploads/2018/01/main.png">
-    <script type="text/javascript" async="" src="public/diginews/atrk.js.download"></script><script async="" src="public/diginews/analytics.js.download"></script><script async="" src="public/diginews/sp.js.download"></script><script id="scarab-js-api" src="public/diginews/scarab-v2.js.download"></script><script async="" src="public/diginews/gtm.js.download"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/www.digikala.com\/mag\/","name":"\u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0645\u06af","potentialAction":{"@type":"SearchAction","target":"http:\/\/www.digikala.com\/mag\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-    <!-- / Yoast SEO Premium plugin. -->
+    <title><?= NAME; ?></title>
+    <meta name="description"
+          content="<?= NAME; ?>"/>
 
-    <link rel="dns-prefetch" href="http://s.w.org/">
-    <link rel="alternate" type="application/rss+xml" title="دیجی‌کالا مگ » خوراک" href="http://www.digikala.com/mag/feed/">
-    <link rel="alternate" type="application/rss+xml" title="دیجی‌کالا مگ » خوراک دیدگاه‌ها" href="http://www.digikala.com/mag/comments/feed/">
-    <link rel="alternate" type="application/rss+xml" title="دیجی‌کالا مگ » پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون» خوراک دیدگاه‌ها" href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/feed/">
-    <script type="text/javascript">
-        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.digikala.com\/mag\/wp-includes\/js\/wp-emoji-release.min.js?ver=2.0.6.5"}};
-        !function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
-    </script><script src="public/diginews/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
-    <style type="text/css">
-        img.wp-smiley,
-        img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 .07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
-        }
-    </style>
-    <link rel="stylesheet" id="cptch_stylesheet-css" href="public/diginews/front_end_style.css" type="text/css" media="all">
-    <link rel="stylesheet" id="dashicons-css" href="public/diginews/dashicons.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="cptch_mobile_style-css" href="public/diginews/mobile_style.css" type="text/css" media="all">
-    <link rel="stylesheet" id="contact-form-7-css" href="public/diginews/styles.css" type="text/css" media="all">
-    <link rel="stylesheet" id="contact-form-7-rtl-css" href="public/diginews/styles-rtl.css" type="text/css" media="all">
-    <link rel="stylesheet" id="responsive-lightbox-nivo-css" href="public/diginews/nivo-lightbox.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="responsive-lightbox-nivo-default-css" href="public/diginews/default.css" type="text/css" media="all">
-    <link rel="stylesheet" id="theme-style-css" href="public/diginews/theme.min.css" type="text/css" media="all">
-    <script type="text/javascript" src="public/diginews/jquery.js.download"></script>
-    <script type="text/javascript" src="public/diginews/jquery-migrate.min.js.download"></script>
-    <script type="text/javascript" src="public/diginews/nivo-lightbox.min.js.download"></script>
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var rlArgs = {"script":"nivo","selector":"lightbox","customEvents":"","activeGalleries":"1","effect":"fade","clickOverlayToClose":"1","keyboardNav":"1","errorMessage":"The requested content cannot be loaded. Please try again later."};
-        /* ]]> */
-    </script>
-    <script type="text/javascript" src="public/diginews/front.js.download"></script>
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.digikala.com/mag/xmlrpc.php?rsd">
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.digikala.com/mag/wp-includes/wlwmanifest.xml">
-    <link rel="shortlink" href="http://www.digikala.com/mag/?p=361382">
-    <link rel="shortcut icon" type="image/x-icon" href="http://www.digikala.com/mag/wp-content/themes/digikalamag/assets/common/img/favicon.ico">
-    <link rel="apple-touch-icon" type="image/x-icon" href="http://www.digikala.com/mag/wp-content/themes/digikalamag/assets/common/img/favicon.ico">
-    <link rel="amphtml" href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/?amp=1"><meta name="theme-color" content="#2899d5">
-    <meta name="msapplication-navbutton-color" content="#2899d5">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#2899d5">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#419530" id="themeColor">
+    <meta name="author" content="<?= NAME; ?>"/>
+    <meta name="language" content="fa"/>
+    <meta name="document-type" content="Public"/>
+    <meta name="document-rating" content="General"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="resource-type" content="document"/>
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.digikala.com/mag/","name":"خانه"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.digikala.com/mag/category/%d8%ae%d8%a8%d8%b1/","name":"خبر"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.digikala.com/mag/category/%d8%ae%d8%a8%d8%b1/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d8%a7%d8%ae%d8%a8%d8%a7%d8%b1/","name":"جدیدترین اخبار"}}]}</script>
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","headline":"پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»","image":{"@type":"ImageObject","url":"http://www.digikala.com/mag/wp-content/uploads/2018/01/main.png","height":822,"width":522},"author":"تیم تحریریه دیجی‌کالا مگ","editor":"تیم تحریریه دیجی‌کالا مگ","genre":"","wordcount":305,"publisher":{"@type":"Organization","name":"دیجی‌کالا مگ","logo":{"@type":"ImageObject","url":"http://www.digikala.com/mag/wp-content/themes/digikalamag/common/assets/images/digikala-mag-logo.png","width":"211","height":"60"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"2.3","reviewCount":"41","bestRating":"5","worstRating":"0"}},"url":"http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/","datePublished":"2018-01-07T15:00:50+0330","dateCreated":"2018-01-07T15:00:50+0330","dateModified":"2018-04-15T18:58:30+0430","description":"«تاریخچه اختراعی که دنیای گوشی‌های هوشمند را تغییر داد و به سودآورترین محصول جهان تبدیل شد.» «کتابی که پس از خواندش دیگر هرگز به آیفون مثل قبل نگاه نم ..."}</script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NKV8N6R');</script>
-    <!-- End Google Tag Manager --></head>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
 
-<body class="rtl post-template-default single single-post postid-361382 single-format-standard" cz-shortcut-listen="true">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/owl.carousel.css">
+    <link rel="stylesheet" href="public/css/owl.transitions.css">
+    <link href="public/css/lightbox.css" rel="stylesheet">
+    <?php require('app/views/include/favicon.php'); ?>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKV8N6R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div class="container">
+    <link href="public/css/theme.min2.css"
+          rel="stylesheet"/>
 
-    <header class="mobile-bar">
-        <i class="icon-h-menu" data-popup="menu" data-type="popup-handler"></i>
-        <a href="http://www.digikala.com/mag/" class="logo">
-            <i class="icon-digikala-mag-logo"></i>
-        </a>
-        <div class="search" data-popup="search" data-type="popup-handler">
-            <i class="icon-search"></i>
-        </div>
-        <div class="user-pane" data-popup="login" data-type="popup-handler">
-            <i class="icon-user"></i>
-        </div>
-    </header>
-
-    <div class="menu" role="dialog" data-popup="menu">
-        <a href="http://www.digikala.com/mag/" title="دیجی‌کالا مگ" class="menu__logo"></a>
-        <nav class="menu-wrapper">
-            <h1 class="disappear">main menu</h1>
-            <ul id="menu-megamenu" class="menu__list"><li id="menu-item-356292" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children item"><span class="item__hold"><a title="خبر" href="http://www.digikala.com/mag/category/%d8%ae%d8%a8%d8%b1/" class=" item__txt"><i class="icon-news"></i>خبر</a><i class="icon-close"></i></span>
-                    <ul class="sub-menu dropdown-menu">
-                        <li id="menu-item-356296" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent item"><a title="جدیدترین اخبار" href="http://www.digikala.com/mag/category/%d8%ae%d8%a8%d8%b1/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d8%a7%d8%ae%d8%a8%d8%a7%d8%b1/" class="">جدیدترین اخبار</a></li>
-                        <li id="menu-item-356298" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="گزارش و تحلیل" href="http://www.digikala.com/mag/category/%d8%ae%d8%a8%d8%b1/%da%af%d8%b2%d8%a7%d8%b1%d8%b4-%d8%aa%d8%ad%d9%84%db%8c%d9%84/" class="">گزارش و تحلیل</a></li>
-                        <li id="menu-item-356294" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="اخبار دیجی‌کالا" href="http://www.digikala.com/mag/category/%d8%ae%d8%a8%d8%b1/%d8%a7%d8%ae%d8%a8%d8%a7%d8%b1-%d8%af%db%8c%d8%ac%db%8c-%da%a9%d8%a7%d9%84%d8%a7/" class="">اخبار دیجی‌کالا</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-356300" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children item"><span class="item__hold"><a title="دیجیتال" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/" class=" item__txt"><i class="icon-digital"></i>دیجیتال</a><i class="icon-close"></i></span>
-                    <ul class="sub-menu dropdown-menu">
-                        <li id="menu-item-356308" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="راهنمای خرید" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/%d8%b1%d8%a7%d9%87%d9%86%d9%85%d8%a7%db%8c-%d8%ae%d8%b1%db%8c%d8%af/" class="">راهنمای خرید</a></li>
-                        <li id="menu-item-356318" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="نقد و بررسی" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/%d9%86%d9%82%d8%af-%d9%88-%d8%a8%d8%b1%d8%b1%d8%b3%db%8c/" class="">نقد و بررسی</a></li>
-                        <li id="menu-item-356302" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="اپلیکیشن" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/%d8%a7%d9%be%d9%84%db%8c%da%a9%db%8c%d8%b4%d9%86/" class="">اپلیکیشن</a></li>
-                        <li id="menu-item-356314" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="مدرسه عکاسی موبایل" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/mobile-photography-school/" class="">مدرسه عکاسی موبایل</a></li>
-                        <li id="menu-item-356304" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="تجارت الکترونیکی" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/%d8%aa%d8%ac%d8%a7%d8%b1%d8%aa-%d8%a7%d9%84%da%a9%d8%aa%d8%b1%d9%88%d9%86%db%8c%da%a9%db%8c/" class="">تجارت الکترونیکی</a></li>
-                        <li id="menu-item-356310" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="شبکه‌های اجتماعی" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/social-networks/" class="">شبکه‌های اجتماعی</a></li>
-                        <li id="menu-item-356320" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="نکته‌ها و ترفندها" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/%d9%86%da%a9%d8%aa%d9%87-%d9%87%d8%a7-%d8%aa%d8%b1%d9%81%d9%86%d8%af-%d9%87%d8%a7/" class="">نکته‌ها و ترفندها</a></li>
-                        <li id="menu-item-356316" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="مقایسه" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/%d9%85%d9%82%d8%a7%db%8c%d8%b3%d9%87/" class="">مقایسه</a></li>
-                        <li id="menu-item-356306" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="ترین‌ها" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/%d8%aa%d8%b1%db%8c%d9%86-%d9%87%d8%a7/" class="">ترین‌ها</a></li>
-                        <li id="menu-item-356312" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="فناوری اطلاعات" href="http://www.digikala.com/mag/category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/%d9%81%d9%86%d8%a7%d9%88%d8%b1%db%8c-%d8%a7%d8%b7%d9%84%d8%a7%d8%b9%d8%a7%d8%aa/" class="">فناوری اطلاعات</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-356322" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children item"><span class="item__hold"><a title="دانش" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/" class=" item__txt"><i class="icon-knowledge"></i>دانش</a><i class="icon-close"></i></span>
-                    <ul class="sub-menu dropdown-menu">
-                        <li id="menu-item-356340" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="هوا فضا" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/%d9%87%d9%88%d8%a7-%d9%81%d8%b6%d8%a7/" class="">هوا فضا</a></li>
-                        <li id="menu-item-356328" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="حمل و نقل" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/%d8%ad%d9%85%d9%84-%d9%88-%d9%86%d9%82%d9%84/" class="">حمل و نقل</a></li>
-                        <li id="menu-item-356330" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="زمین و محیط زیست" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/%d8%b2%d9%85%db%8c%d9%86-%d9%85%d8%ad%db%8c%d8%b7-%d8%b2%db%8c%d8%b3%d8%aa/" class="">زمین و محیط زیست</a></li>
-                        <li id="menu-item-356338" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="علوم زیستی" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/%d8%b9%d9%84%d9%88%d9%85-%d8%b2%db%8c%d8%b3%d8%aa%db%8c/" class="">علوم زیستی</a></li>
-                        <li id="menu-item-356342" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="هوش مصنوعی و رباتیک" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/robotics/" class="">هوش مصنوعی و رباتیک</a></li>
-                        <li id="menu-item-356332" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="سبک زندگی" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/%d8%b3%d8%a8%da%a9-%d8%b2%d9%86%d8%af%da%af%db%8c/" class="">سبک زندگی</a></li>
-                        <li id="menu-item-356334" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="سلامت و پزشکی" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/health/" class="">سلامت و پزشکی</a></li>
-                        <li id="menu-item-356336" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="صنایع نظامی" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/%d8%b5%d9%86%d8%a7%db%8c%d8%b9-%d9%86%d8%b8%d8%a7%d9%85%db%8c/" class="">صنایع نظامی</a></li>
-                        <li id="menu-item-356326" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="انرژی" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/%d8%a7%d9%86%d8%b1%da%98%db%8c/" class="">انرژی</a></li>
-                        <li id="menu-item-356324" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="اقتصاد" href="http://www.digikala.com/mag/category/%d8%af%d8%a7%d9%86%d8%b4/economy/" class="">اقتصاد</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-356344" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children item"><span class="item__hold"><a title="سرگرمی" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/" class=" item__txt"><i class="icon-entertainment"></i>سرگرمی</a><i class="icon-close"></i></span>
-                    <ul class="sub-menu dropdown-menu">
-                        <li id="menu-item-356362" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="نقد و بررسی بازی" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%d9%86%d9%82%d8%af-%d8%a8%d8%b1%d8%b1%d8%b3%db%8c-%d8%a8%d8%a7%d8%b2%db%8c/" class="">نقد و بررسی بازی</a></li>
-                        <li id="menu-item-356346" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="پیش نمایش بازی" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%d9%be%db%8c%d8%b4-%d9%86%d9%85%d8%a7%db%8c%d8%b4-%d8%a8%d8%a7%d8%b2%db%8c/" class="">پیش نمایش بازی</a></li>
-                        <li id="menu-item-356350" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="خبر بازی" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%d8%ae%d8%a8%d8%b1-%d8%a8%d8%a7%d8%b2%db%8c/" class="">خبر بازی</a></li>
-                        <li id="menu-item-356348" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="ترین‌های بازی" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%d8%aa%d8%b1%db%8c%d9%86-%d9%87%d8%a7%db%8c-%d8%a8%d8%a7%d8%b2%db%8c/" class="">ترین‌های بازی</a></li>
-                        <li id="menu-item-356356" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="گجت‌های بازی" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%da%af%d8%ac%d8%aa-%d9%87%d8%a7%db%8c-%d8%a8%d8%a7%d8%b2%db%8c/" class="">گجت‌های بازی</a></li>
-                        <li id="menu-item-356358" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="موزه‌ی بازی" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%d9%85%d9%88%d8%b2%d9%87-%db%8c-%d8%a8%d8%a7%d8%b2%db%8c/" class="">موزه‌ی بازی</a></li>
-                        <li id="menu-item-356352" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="فیلم" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%d9%81%db%8c%d9%84%d9%85/" class="">فیلم</a></li>
-                        <li id="menu-item-356360" class="menu-item menu-item-type-taxonomy menu-item-object-category item"><a title="موسیقی" href="http://www.digikala.com/mag/category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/%d9%85%d9%88%d8%b3%db%8c%d9%82%db%8c/" class="">موسیقی</a></li>
-                    </ul>
-
-                </li>
-                <li id="menu-item-356364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children item"><span class="item__hold"><a title="پادکست‌ها" href="http://www.digikala.com/mag/%d9%be%d8%a7%d8%af%da%a9%d8%b3%d8%aa%e2%80%8c%d9%87%d8%a7/" class=" item__txt"><i class="icon-podcast-icon---menu"></i>پادکست‌ها</a><i class="icon-close"></i></span>
-                    <ul class="sub-menu dropdown-menu">
-                        <li id="menu-item-356366" class="menu-item menu-item-type-taxonomy menu-item-object-podcast_category item"><a title="دانش" href="http://www.digikala.com/mag/podcast-category/%d8%af%d8%a7%d9%86%d8%b4/" class="">دانش</a></li>
-                        <li id="menu-item-356368" class="menu-item menu-item-type-taxonomy menu-item-object-podcast_category item"><a title="دیجیتال" href="http://www.digikala.com/mag/podcast-category/%d8%af%db%8c%d8%ac%db%8c%d8%aa%d8%a7%d9%84/" class="">دیجیتال</a></li>
-                        <li id="menu-item-356370" class="menu-item menu-item-type-taxonomy menu-item-object-podcast_category item"><a title="سرگرمی" href="http://www.digikala.com/mag/podcast-category/%d8%b3%d8%b1%da%af%d8%b1%d9%85%db%8c/" class="">سرگرمی</a></li>
-                        <li id="menu-item-356372" class="menu-item menu-item-type-taxonomy menu-item-object-podcast_category item"><a title="مصاحبه" href="http://www.digikala.com/mag/podcast-category/%d9%85%d8%b5%d8%a7%d8%ad%d8%a8%d9%87/" class="">مصاحبه</a></li>
-                        <li id="menu-item-356374" class="menu-item menu-item-type-taxonomy menu-item-object-podcast_category item"><a title="برنامه‌نویسی" href="http://www.digikala.com/mag/podcast-category/%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d9%87%e2%80%8c%d9%86%d9%88%db%8c%d8%b3%db%8c/" class="">برنامه‌نویسی</a></li>
-                        <li id="menu-item-356376" class="menu-item menu-item-type-taxonomy menu-item-object-podcast_category item"><a title="عکاسی با موبایل" href="http://www.digikala.com/mag/podcast-category/%d8%b9%da%a9%d8%a7%d8%b3%db%8c-%d8%a8%d8%a7-%d9%85%d9%88%d8%a8%d8%a7%db%8c%d9%84/" class="">عکاسی با موبایل</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-356378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children item"><span class="item__hold"><a title="ویدیوها" href="http://www.digikala.com/mag/%d9%88%db%8c%d8%af%db%8c%d9%88%d9%87%d8%a7/" class=" item__txt"><i class="icon-video-icon---menu"></i>ویدیوها</a><i class="icon-close"></i></span>
-                    <ul class="sub-menu dropdown-menu">
-                        <li id="menu-item-356382" class="menu-item menu-item-type-taxonomy menu-item-object-video_category item"><a title="دانش" href="http://www.digikala.com/mag/video-category/science/" class="">دانش</a></li>
-                        <li id="menu-item-356380" class="menu-item menu-item-type-taxonomy menu-item-object-video_category item"><a title="دیجیتال" href="http://www.digikala.com/mag/video-category/digital/" class="">دیجیتال</a></li>
-                        <li id="menu-item-356384" class="menu-item menu-item-type-taxonomy menu-item-object-video_category item"><a title="سرگرمی" href="http://www.digikala.com/mag/video-category/entertainment/" class="">سرگرمی</a></li>
-                        <li id="menu-item-364184" class="menu-item menu-item-type-taxonomy menu-item-object-video_category item"><a title="مستند رینگ اسپرت" href="http://www.digikala.com/mag/video-category/%d9%85%d8%b3%d8%aa%d9%86%d8%af-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d8%b1%db%8c%d9%86%da%af-%d8%a7%d8%b3%d9%be%d8%b1%d8%aa/" class="">مستند رینگ اسپرت</a></li>
-                    </ul>
-                </li>
-            </ul>        <ul id="menu-%d9%81%d9%87%d8%b1%d8%b3%d8%aa-%d9%be%d8%a7%db%8c%db%8c%d9%86" class="about"><li id="menu-item-124995" class="menu-item menu-item-type-post_type menu-item-object-page item"><span class="item__hold"><a title="درباره دیجی‌کالا مگ" href="http://www.digikala.com/mag/%d8%af%d8%b1%d8%a8%d8%a7%d8%b1%d9%87-%d8%af%db%8c%d8%ac%db%8c%e2%80%8c%da%a9%d8%a7%d9%84%d8%a7-%d9%85%da%af/" class=" item__txt">درباره دیجی‌کالا مگ</a></span></li>
-                <li id="menu-item-124993" class="menu-item menu-item-type-post_type menu-item-object-page item"><span class="item__hold"><a title="شرایط بازنشر محتوا" href="http://www.digikala.com/mag/%d8%b4%d8%b1%d8%a7%db%8c%d8%b7-%d8%a8%d8%a7%d8%b2%d9%86%d8%b4%d8%b1-%d9%85%d8%ad%d8%aa%d9%88%d8%a7/" class=" item__txt">شرایط بازنشر محتوا</a></span></li>
-                <li id="menu-item-125001" class="menu-item menu-item-type-custom menu-item-object-custom item"><span class="item__hold"><a title="فرصت‌های شغلی" target="_blank" href="http://careers.digikala.com/" class=" item__txt">فرصت‌های شغلی</a></span></li>
-            </ul>    </nav>
-    </div>
-    <div class="main">
-        <div class="main__aside">
-            <nav class="breadcrumbs">
-                <h1 class="disappear">breadcrumbs menu</h1>
-                <ul class="breadcrumbs__nav">
-                    <li class="item">
-                        <a href="http://www.digikala.com/mag/" title="خانه">خانه</a>
-                    </li>
-                    <li class="item">
-                        <a href="http://www.digikala.com/mag/category/%d8%ae%d8%a8%d8%b1/" title="خبر">خبر</a>
-                    </li>
-                    <li class="item">
-                        <a href="http://www.digikala.com/mag/category/%d8%ae%d8%a8%d8%b1/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d8%a7%d8%ae%d8%a8%d8%a7%d8%b1/" title="جدیدترین اخبار">جدیدترین اخبار</a>
-                    </li>
-
-                    <li class="item">
-                        پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»                                     </li>
-                </ul>
-
-            </nav>    </div>
-    </div>
-
-    <main class="main">
-        <div class="main__content">
-            <div class="post-module post-361382 post type-post status-publish format-standard has-post-thumbnail hentry category-74 category-87 category-6 tag-203 tag-70 tag-25767 tag-46364 tag-1863 tag-46360" id="post-361382">
-                <article>
-                    <div class="img-wrapper">
-                        <figure class="post-attachment">
-                            <img src="public/diginews/main.png" width="822" height="522" class="post-module__img wp-post-image" alt="" data-lazy-loaded="true">            <figcaption class="hidden-seo">
-                            </figcaption>
-                        </figure>
-                        <div class="social-act">
-
-                            <i class="icon-bookmark-ribbon-outline wishlist-btn login-required" data-id="361382" data-popup="bookmark" data-type="popup-handler"></i>
-
-                            <label class="check-handler like post-like-button">
-                                <input type="checkbox" name="post_like" value="1" data-id="361382">
-                                <i class="icon-like-icon "></i>
-                                <span class="post-like-count" style="display: none;">۳۵</span>
-                            </label>
+    <link href="public/css/m_css_shared.css?v=0gAq23DV9fbKtKuZmriMbf8GOukU7uHZKwtGePzPsHY1"
+          rel="stylesheet"/>
 
 
-                            <span class="post-like-message"></span>
-                        </div>
-                    </div>
-                    <div class="post-module__title">
-                        <h1 class="_txt">پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»</h1>
-                    </div>
-                    <div class="post-module__author">
-                        <img src="public/diginews/Editorial_Board_Profile-60x60.jpg" width="35" height="35" alt="تیم تحریریه دیجی‌کالا مگ" class="avatar avatar-35 wp-user-avatar wp-user-avatar-35 alignnone photo">                    <span class="post-module__author--name"><a href="http://www.digikala.com/mag/author/editorial-board/" title="ارسال شده توسط: تیم تحریریه دیجی‌کالا مگ" rel="author">تیم تحریریه دیجی‌کالا مگ</a></span>
-                        <i class="icon-clock-icon"></i>
-                        <span class="post-module__author--date">۱۷ دی ۱۳۹۶  |  ۱۵:۰۰</span>
-                    </div>
+    <link href="public/css/m_css_home.css?v=-BtyarSwpVtgM7PWltr7FUU-iH5LCn_g1V8aboJgHJ81"
+          rel="stylesheet"/>
+
+    <script src="public/js/m_js_jqueryMain.js?v=CDj9xVFhxyHPplxjnRBjE82eLKk_83_zIvQbY1x5PVY1"></script>
+
+    <script> var disableAutoComplete = false </script>
+</head>
 
 
-                    <div class="post-module__content">
-                        <p>«تاریخچه اختراعی که دنیای گوشی‌های هوشمند را تغییر داد و به سودآورترین محصول جهان تبدیل شد.»</p>
-                        <p>«کتابی که پس از خواندش دیگر هرگز به آیفون مثل قبل نگاه نمی‌کنید.»</p>
-                        <p>«یکی از بهترین کتاب‌های حوزه کسب و کار در سال ۲۰۱۶»</p>
-                        <p>این‌ها فقط بخشی از جملات تحسین‌آمیزی هستند که درباره کتاب «یگانه دستگاه» نوشته شده‌اند. «یگانه دستگاه: تاریخچه مخفی آیفون» کتابی است که توضیح می‌دهد چطور آیفون باعث ایجاد تغییر در جهان شد و اپل را به ارزشمندترین شرکت جهان تبدیل کرد. براین مرچنت روزنامه‌نگار کارآزموده حوزه تکنولوژی در این کتاب داستانی را از درون شرکت اپل برای‌تان روایت می‌کند که تا به حال نشنیده‌اید. او با مهندسین، مخترعین و توسعه‌دهندگانی که در تمام مراحل آفرینش آیفون درگیر بوده‌اند مصاحبه کرده و بسیاری از نقاط تاریک و مبهم درباره آیفون را برای خواننده آشکار می‌کند.</p>
-                        <p>اگر پیش از این پاورقی‌های دنباله‌دار ما را مطالعه کرده باشید می‌دانید که دیجی‌کالا مگ تا امروز مجموعه‌ کتاب‌های «امپراطوری اپ»، «زندگی‌نامه ایلان ماسک»، «عرضه»، «دنیای علی‌بابا» و «راه شیائومی» را ترجمه و به شکل هفتگی منتشر کرده است.</p>
-                        <p>کتاب یگانه دستگاه در قالب&nbsp;۱۸ فصل به همراه مقدمه و پایان‌بندی، مانند پاورقی‌های قبلی منتشر خواهد شد. به دلیل حجم قابل‌توجه کتاب هر فصل به چندین بخش تقسیم شده و سه‌بار در هر هفته شاهد انتشار یک قسمت از این کتاب خواهیم بود.</p>
-                        <p>قسمت نخست پاورقی دنباله‌دار یگانه دستگاه در روز یکشنبه ۱۷ دی‌ماه منتشر می‌شود. هر هفته در روزهای یکشنبه، سه‌شنبه و پنجشنبه منتظر انتشار قسمت جدیدی از این کتاب باشید. اگر این پاورقی را دنبال کنید اولین کسانی خواهید بود که کتاب «یگانه دستگاه: تاریخچه مخفی آیفون» را به زبان فارسی مطالعه کرده‌اند.</p>
-                        <p><a href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%85%D9%82%D8%AF%D9%85%D9%87/" target="_blank" rel="noopener"><img src="public/diginews/The-one-device-03-1.png" class="aligncenter size-full wp-image-361600" alt="تاریخچه مخفی آیفون" width="500" height="171" data-lazy-loaded="true"></a></p>
-                        <h3 style="text-align: center;"><span style="color: #333333;">بخش اول: آزمون تعاملات گسترده‌ی تازه</span></h3>
-                        <p><a href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%D8%A7%D9%88%D9%84/"><img src="public/diginews/The-one-device-04-2.png" class="aligncenter size-full wp-image-368672" alt="" width="500" height="171" data-lazy-loaded="true"></a></p>
-                        <p><a href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%D8%AF%D9%88%D9%85/" target="_blank" rel="noopener"><img src="public/diginews/The-one-device-05.png" class="aligncenter size-full wp-image-366082" alt="یگانه دستگاه" width="500" height="171" data-lazy-loaded="true"></a></p>
-                        <p><a href="http://www.digikala.com/mag/tag/%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-%d9%81%d8%b5%d9%84-%d8%b3%d9%88%d9%85/"><img src="public/diginews/The-one-device-06.png" class="aligncenter wp-image-369418 size-full" alt="" width="500" height="171" data-lazy-loaded="true"></a> <a href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%DA%86%D9%87%D8%A7%D8%B1%D9%85/"><img src="public/diginews/The-one-device-07.png" class="aligncenter wp-image-375275 size-full" alt="" width="500" height="171" data-lazy-loaded="true"></a><a href="http://www.digikala.com/mag/tag/%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-%d9%81%d8%b5%d9%84-%d9%be%d9%86%d8%ac%d9%85/"><img src="public/diginews/The-one-device-08.png" class="aligncenter wp-image-377043 size-full" alt="" width="500" height="171" data-lazy-loaded="true"></a></p>
-                        <h3 style="text-align: center;"><span style="color: #333333;">بخش دوم: ساخت نمونه اولیه</span></h3>
-                        <h3 style="text-align: center;"><a href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%D8%B4%D8%B4%D9%85/"><img src="public/diginews/The-one-device-09-2.png" class="aligncenter wp-image-389337 size-full" alt="" width="500" height="171" data-lazy-loaded="true"></a><a href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%D9%87%D9%81%D8%AA%D9%85/"><img src="public/diginews/The-one-device-10-1.png" class="aligncenter wp-image-389339 size-full" alt="" width="500" height="171" data-lazy-loaded="true"></a> <a href="http://www.digikala.com/mag/tag/%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-%d9%81%d8%b5%d9%84-%d9%87%d8%b4%d8%aa%d9%85/"><img src="public/diginews/The-one-device-11-1.png" class="aligncenter wp-image-390015 size-full" alt="" width="500" height="171" data-lazy-loaded="true"></a> <img src="public/diginews/The-one-device-9.png" class="aligncenter size-full wp-image-361422" alt="" width="500" height="171" data-lazy-loaded="true"> <img src="public/diginews/The-one-device-10.png" class="aligncenter size-full wp-image-361424" alt="" width="500" height="171" data-lazy-loaded="true"> <img src="public/diginews/The-one-device-11.png" class="aligncenter size-full wp-image-361426" alt="" width="500" height="171" data-lazy-loaded="true"></h3>
-                        <h3 style="text-align: center;"><span style="color: #333333;">بخش سوم: ورود به آیفون</span></h3>
-                        <h3 style="text-align: center;"><img src="public/diginews/The-one-device-15-1.png" class="aligncenter size-full wp-image-368678" alt="" width="500" height="171" data-lazy-loaded="true"><img src="public/diginews/The-one-device-13.png" class="aligncenter size-full wp-image-361428" alt="" width="500" height="171" data-lazy-loaded="true"> <img src="public/diginews/The-one-device-14.png" class="aligncenter size-full wp-image-361430" alt="" width="500" height="171" data-lazy-loaded="true"> <img src="public/diginews/The-one-device-15.png" class="aligncenter size-full wp-image-361432" alt="" width="500" height="171" data-lazy-loaded="true"> <img src="public/diginews/The-one-device-16.png" class="aligncenter size-full wp-image-361434" alt="" width="500" height="171" data-lazy-loaded="true"><img src="public/diginews/17.png" class="aligncenter size-full wp-image-361468" alt="" width="500" height="171" data-lazy-loaded="true"></h3>
-                        <h3 style="text-align: center;"><span style="color: #333333;">بخش چهارم: یگانه دستگاه</span></h3>
-                        <h3><img src="public/diginews/The-one-device-22.png" class="aligncenter size-full wp-image-368680" alt="" width="500" height="171" data-lazy-loaded="true"><img src="public/diginews/19.png" class="aligncenter size-full wp-image-361466" alt="" width="500" height="171" data-lazy-loaded="true"></h3>
-                        <p>&nbsp;</p>
-                    </div>
+<body class="rtl post-template-default single single-post postid-368348 single-format-standard wmax"
+      style="transform: none;">
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-add-comment-button" viewBox="0 0 1024 1024">
+            <title>add-comment-button</title>
+            <path class="path1"
+                  d="M1024 102.4c0-56.32-46.080-102.4-102.4-102.4h-819.2c-56.32 0-102.4 46.080-102.4 102.4v614.4c0 56.32 46.080 102.4 102.4 102.4h716.8l204.8 204.8v-921.6zM819.2 614.4h-614.4v-102.4h614.4v102.4zM819.2 460.8h-614.4v-102.4h614.4v102.4zM819.2 307.2h-614.4v-102.4h614.4v102.4z"></path>
+        </symbol>
+        <symbol id="icon-appicon" viewBox="0 0 1024 1024">
+            <title>appicon</title>
+            <path class="path1"
+                  d="M1024 102.4c0-56.32-46.080-102.4-102.4-102.4h-819.2c-56.32 0-102.4 46.080-102.4 102.4v614.4c0 56.32 46.080 102.4 102.4 102.4h716.8l204.8 204.8v-921.6zM819.2 614.4h-614.4v-102.4h614.4v102.4zM819.2 460.8h-614.4v-102.4h614.4v102.4zM819.2 307.2h-614.4v-102.4h614.4v102.4z"></path>
+        </symbol>
 
-                    <div class="post-module__social dialog">
-                        <div class="social-wrapper">
+
+        <symbol viewBox="0 0 6 10" id="caret_left">
+            <title>Fill 1</title>
+            <path d="M5.266.209a.712.712 0 0 0-1.006 0L.208 4.259a.712.712 0 0 0 0 1.007l4.05 4.05A.712.712 0 1 0 5.266 8.31L1.72 4.763l3.546-3.547a.712.712 0 0 0 0-1.007z"
+                  fill="#DBDBDB" fill-rule="evenodd"/>
+        </symbol>
+
+        <symbol viewBox="0 0 16 17" id="hash">
+            <title>Shape</title>
+            <path d="M7.37 0a.671.671 0 0 0-.654.503L5.58 4.794H.67c-.37 0-.67.303-.67.678 0 .375.3.679.67.679h4.55L4.212 9.956H.67c-.37 0-.67.303-.67.678 0 .375.3.679.67.679h3.182l-1.043 3.94a.68.68 0 0 0 .648.853c.296 0 .567-.2.647-.502l1.137-4.291h3.715l-1.044 3.94a.68.68 0 0 0 .648.853.67.67 0 0 0 .647-.502l1.137-4.291h4.91c.37 0 .67-.304.67-.679 0-.375-.3-.678-.67-.678h-4.55l1.008-3.805h3.542c.37 0 .67-.304.67-.679 0-.375-.3-.678-.67-.678H12.07l1.044-3.94a.68.68 0 0 0-.474-.83.669.669 0 0 0-.822.479l-1.137 4.291H6.968L8.012.854A.68.68 0 0 0 7.37 0zm-.762 6.15h3.715L9.315 9.957H5.6l1.008-3.805z"
+                  fill="#7E7E7E" fill-rule="evenodd"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="search_1">
+            <title>Group</title>
+            <g transform="matrix(-1 0 0 1 19.913 0)" fill="#B4B4B4" fill-rule="evenodd">
+                <path d="M15.12 14.246a8.391 8.391 0 0 0 2.126-5.597c0-4.71-3.84-8.529-8.575-8.529C3.937.12.097 3.94.097 8.65c0 4.708 3.84 8.528 8.574 8.528 2.054 0 3.938-.72 5.411-1.922l4.493 4.469a.739.739 0 0 0 .507.216c.17 0 .362-.072.507-.216.29-.289.29-.745 0-1.01l-4.468-4.468zM1.547 8.65c0-3.916 3.188-7.087 7.125-7.087 3.938 0 7.126 3.17 7.126 7.087 0 3.916-3.212 7.087-7.126 7.087-3.913 0-7.125-3.171-7.125-7.087z"/>
+                <path d="M12.415 5.285H5.17a.71.71 0 0 0-.725.721c0 .408.314.72.725.72h7.246a.71.71 0 0 0 .725-.72.725.725 0 0 0-.725-.72zM12.415 7.928H5.17a.71.71 0 0 0-.725.72c0 .41.314.721.725.721h7.246a.71.71 0 0 0 .725-.72.725.725 0 0 0-.725-.721zM8.55 10.57H5.17a.71.71 0 0 0-.726.721c0 .409.314.721.725.721h3.382a.71.71 0 0 0 .724-.72.725.725 0 0 0-.724-.721z"/>
+            </g>
+        </symbol>
+
+
+        <symbol viewBox="0 0 25 25" id="icon-happyFace">
+            <title>happy copy</title>
+            <g fill-rule="nonzero">
+                <path d="M17.557 9.145a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0zM9.507 9.145a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0zM13.22 19.514h-1.943c-2.463 0-4.466-1.979-4.466-4.41a.577.577 0 1 1 1.154 0c0 1.826 1.454 3.256 3.312 3.256h1.944c1.857 0 3.312-1.407 3.312-3.203a.577.577 0 1 1 1.154 0c0 2.443-1.962 4.357-4.466 4.357z"/>
+                <path d="M12.15 24.48C5.45 24.48 0 19.03 0 12.33 0 5.633 5.45.184 12.15.184S24.3 5.633 24.3 12.33c0 6.699-5.45 12.148-12.15 12.148zm0-23.143c-6.063 0-10.996 4.931-10.996 10.994 0 6.062 4.933 10.995 10.996 10.995 6.063 0 10.996-4.933 10.996-10.995 0-6.063-4.933-10.994-10.996-10.994z"/>
+            </g>
+        </symbol>
+
+        <symbol id="icon-stop-watch" viewBox="0 0 32 32">
+            <path d="M15 16.085v-5.584c0-0.271 0.224-0.501 0.5-0.501 0.268 0 0.5 0.224 0.5 0.501v5.584c0.583 0.206 1 0.762 1 1.415s-0.417 1.209-1 1.415v1.584c0 0.271-0.224 0.501-0.5 0.501-0.268 0-0.5-0.224-0.5-0.501v-1.584c-0.583-0.206-1-0.762-1-1.415s0.417-1.209 1-1.415v0 0zM23.271 9.022l1.229-1.229-0.707-0.707 0.707-0.707 2.121 2.121-0.707 0.707-0.707-0.707-1.229 1.229c1.877 2.047 3.022 4.775 3.022 7.771 0 6.351-5.149 11.5-11.5 11.5s-11.5-5.149-11.5-11.5c0-6.184 4.881-11.228 11-11.489v-2.011h-1v-1h3v1h-1v2.011c2.799 0.12 5.338 1.24 7.271 3.012zM15.5 28c5.799 0 10.5-4.701 10.5-10.5s-4.701-10.5-10.5-10.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5v0zM15.5 18c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5v0z"></path>
+        </symbol>
+
+        <symbol id="icon-user-secretDeal" viewBox="0 0 300 282">
+            <path fill="#f5f6f6" className="ast0"
+                  d="M129.6 2h5.8c5.6 3.2 10.8 4.9 17.8 3 10.9-3 18.4 5.5 16.3 16.8-.9 4.9-3.6 9.4-2.6 14.7.9 4.9 2.6 6.3 7.1 3.6 7.3-4.5 15-8.5 22.4-12.9 3.6-2 7.2-3.7 11.4-4 10.8-.6 15.5 3.7 15.7 14.5 0 1.9-.4 4 1.2 5.5 5.5 5.2 6.8 11.8 5.9 20 8.5-5.2 15.1-10.9 22.3-16 4.9-3.5 9.8-5.8 16-5.3 7.2.6 10.5 3.3 11.1 10.6.3 4.5 1 8.3 4.9 11.2 2.6 2 3.9 5 3.6 8.3-.3 5.6 1.9 9.1 7.1 10.9 1.9.7 2.7 2.6 4.2 3.9v15.8c-10.8 14.7-23.6 27.6-37.1 39.9-2.3 2-4.7 4-6.9 6.2-6.2 6.2-5.2 13.4 2.3 18 9.1 5.6 10.9 10.9 7.5 21-.7 2.3-1.6 4.6-3 6.5-3.9 5.6-6 11.4-5.5 18.6.4 5.9-4.2 10.8-8.3 14.5-10.1 9.2-19.6 19-29.6 28.2-9.1 8.2-21.7 5.9-27.3-4.9-1.6-3.2-3.6-3.3-6.5-2.7-5.3 1-10.1.3-13.7-4.2-3-3.7-6-1.4-8.8.4-13.4 9.2-26.8 18.4-39.6 28.6-4.2 3.3-8.8 5.8-13.4 8.2H94.1c-5.8-2.3-4.3-8.9-7.5-12.4s-9.4-.9-12.9-4.9c-4.7-5.3-5.9-14.5-1.6-21.4 3.9-6 8.5-11.5 13.5-16.8 6.2-6.3 11.4-13.5 18-21-19.1 12.9-38 24.3-55.3 38-4.7 3.7-9.8 6.9-15.8 8.1-5.8 1.2-11.2.6-14.8-4.6-3.7-5.5-4.3-11.7-1.2-17.7 1-1.9 2.4-3.6 3.9-5.2 3.7-4.2 6.3-7.1-1.3-10.6-6.9-3.3-6.3-18.1-.1-25 8.3-9.4 19.3-15.7 28.8-23.7 14.1-12.2 29.1-23.6 43.9-35 2.9-2.2 7.9-4.9 5.3-8.8-2.6-3.7-6.2 1-9.2 2.3-18.6 8.9-36.8 18.3-55.7 26.6-12.4 5.5-22.9-1-23-13.4 0-4.5 2-7.8 4.9-10.8 7.1-7.3 15.8-12.4 23.7-18.6 1-.9 2.6-1.2 2.7-2.9-23.2 9.6-31.9 1.2-39.9-13.8v-8.6c5-9.5 15.3-13.5 22.4-20.9 5.5-5.6 11.9-10.2 18.7-14.4C45.4 43 49 39.7 52 36c5.2-6.5 11.5-11.5 19-15.1 7.2-3.3 13.8-7.8 20.4-11.9 7.8-4.7 15.8-7.9 25.2-4.7 4.5 1.9 8.6-.9 13-2.3z"/>
+            <path className="ast1" fill="#ef5662"
+                  d="M213.9 97.3c0 17.6-14.2 31.9-31.9 31.9-10.4 0-19.4-4.7-25.2-12.5 3-5.9 4.7-12.5 4.7-19.4 0-7.1-1.7-13.5-4.7-19.4 5.9-7.6 14.8-12.5 25.2-12.5 17.6-.4 31.9 14.2 31.9 31.9zM232.4 170.2v20.4h-52.5v-20.4c0-12.7-4.7-24-12.9-32.8 4.6 1.7 9.6 2.6 14.8 2.6 8.1 0 15.8-2.4 22.2-6.2 16.5 4.2 28.4 18.9 28.4 36.4zM169 170.2v20.4H67.8v-20.4c0-17.6 12.1-32.4 28.5-36.4 6.6 3.9 14 6.2 22.2 6.2s15.8-2.4 22.2-6.2c16.2 4.2 28.3 18.9 28.3 36.4zM150.4 97.3c0 17.6-14.4 31.9-31.9 31.9-17.7 0-31.9-14.4-31.9-31.9 0-17.7 14.2-31.9 31.9-31.9 17.4-.4 31.9 14.2 31.9 31.9z"/>
+        </symbol>
+
+
+        <symbol id="icon-appointment_reminders" viewBox="0 0 27 32">
+            <title>remind-me</title>
+            <path class="path1"
+                  d="M11.945 4.127c-3.675 0.63-6.051 3.549-6.051 7.452 0 10.105-5.053 9.83-5.053 11.368 0 2.526 5.655 3.158 12.632 3.158s12.632-0.632 12.632-3.158c0-1.539-5.053-1.263-5.053-11.368 0-3.935-2.414-6.87-6.141-7.467"></path>
+            <path class="path2"
+                  d="M15.368 2.737c0 1.046-0.848 1.895-1.895 1.895s-1.895-0.848-1.895-1.895c0-1.046 0.848-1.895 1.895-1.895s1.895 0.848 1.895 1.895z"></path>
+            <path class="path3"
+                  d="M16.092 26.234c0.34 0.504 0.539 1.112 0.539 1.766 0 1.744-1.413 3.158-3.158 3.158s-3.158-1.413-3.158-3.158c0-0.615 0.176-1.189 0.48-1.674"></path>
+        </symbol>
+        <symbol id="icon-black-bubble-speech" viewBox="0 0 1024 1024">
+            <title>black-bubble-speech</title>
+            <path class="path1"
+                  d="M921.6 0h-819.2c-56.32 0-102.4 46.080-102.4 102.4v921.6l204.8-204.8h716.8c56.32 0 102.4-46.080 102.4-102.4v-614.4c0-56.32-46.080-102.4-102.4-102.4z"></path>
+        </symbol>
+        <symbol id="icon-button1" viewBox="0 0 1024 1024">
+            <title>button1</title>
+            <path class="path1"
+                  d="M921.6 0h-819.2c-56.32 0-102.4 46.080-102.4 102.4v921.6l204.8-204.8h716.8c56.32 0 102.4-46.080 102.4-102.4v-614.4c0-56.32-46.080-102.4-102.4-102.4z"></path>
+        </symbol>
+        <symbol id="icon-button2" viewBox="0 0 1126 1024">
+            <title>button2</title>
+            <path class="path1"
+                  d="M921.6 0h-819.2c-56.32 0-102.4 46.080-102.4 102.4v921.6l204.8-204.8h716.8c56.32 0 102.4-46.080 102.4-102.4v-614.4c0-56.32-46.080-102.4-102.4-102.4z"></path>
+        </symbol>
+        <symbol id="icon-button3" viewBox="0 0 1024 1024">
+            <title>button3</title>
+            <path class="path1" d="M588.8 435.2h409.6v-409.6h-409.6v409.6z"></path>
+            <path class="path2" d="M25.6 435.2h409.549v-409.6h-409.549v409.6z"></path>
+            <path class="path3" d="M588.8 998.4h409.6v-409.549h-409.6v409.549z"></path>
+            <path class="path4" d="M25.6 998.4h409.549v-409.549h-409.549v409.549z"></path>
+        </symbol>
+        <symbol id="icon-button4" viewBox="0 0 1126 1024">
+            <title>button4</title>
+            <path class="path1" d="M25.6 435.2h1075.2v-402.944h-1075.2v402.944z"></path>
+            <path class="path2" d="M25.6 998.4h1075.2v-402.944h-1075.2v402.944z"></path>
+        </symbol>
+        <symbol id="icon-checkmark" viewBox="0 0 1024 1024">
+            <title>checkmark</title>
+            <path fill="#90a4af" class="path2" d="M25.6 998.4h1075.2v-402.944h-1075.2v402.944z"></path>
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 1024 1024">
+            <title>clock</title>
+            <path class="path1"
+                  d="M520.661 165.163h-54.357l-18.688 349.824 4.821 36.608 261.632 232.789 41.344-42.411-216.405-231.893z"></path>
+            <path class="path2"
+                  d="M512 0c-282.752 0-512 229.248-512 512s229.248 512 512 512 512-229.248 512-512c0-282.752-229.248-512-512-512zM512 938.667c-235.648 0-426.667-191.019-426.667-426.667s191.019-426.667 426.667-426.667 426.667 191.019 426.667 426.667c0 235.648-191.019 426.667-426.667 426.667z"></path>
+        </symbol>
+        <symbol id="icon-clockwhite" viewBox="0 0 1024 1024">
+            <title>clockwhite</title>
+            <path fill="#fff" class="path1"
+                  d="M554.667 512h213.333v85.333h-298.667v-384h85.333v298.667zM512 1024c282.77 0 512-229.23 512-512s-229.23-512-512-512c-282.77 0-512 229.23-512 512s229.23 512 512 512z"></path>
+        </symbol>
+        <symbol id="icon-commentBUY" viewBox="0 0 1050 1024">
+            <title>commentBUY</title>
+            <path fill="#fff" class="path1"
+                  d="M554.667 512h213.333v85.333h-298.667v-384h85.333v298.667zM512 1024c282.77 0 512-229.23 512-512s-229.23-512-512-512c-282.77 0-512 229.23-512 512s229.23 512 512 512z"></path>
+        </symbol>
+        <symbol id="icon-delete_sign" viewBox="0 0 1024 1024">
+            <title>delete_sign</title>
+            <path class="path1"
+                  d="M843.874 240.474l-603.392 603.392-60.339-60.339 603.392-603.392 60.339 60.339z"></path>
+            <path class="path2"
+                  d="M783.526 843.874l-603.392-603.392 60.339-60.339 603.392 603.392-60.339 60.339z"></path>
+        </symbol>
+
+
+        <symbol id="icon-down" viewBox="0 0 1024 1024">
+            <title>down</title>
+            <path class="path1" d="M512 938.667l-249.6-298.667h499.2z"></path>
+            <path class="path2" d="M426.667 128h170.667v576h-170.667v-576z"></path>
+        </symbol>
+
+        <symbol id="icon-up" viewBox="0 0 1024 1024">
+            <title>up</title>
+            <path class="path1" d="M512 85.333l249.6 298.667h-499.2z"></path>
+            <path class="path2" d="M597.333 896h-170.667v-576h170.667v576z"></path>
+        </symbol>
+
+        <symbol id="icon-expand_arrow" viewBox="0 0 24 24">
+            <path fill="none" stroke="#868686" stroke-width="2" stroke-miterlimit="10" d="M21 8.5l-9 9-9-9"/>
+        </symbol>
+
+
+        <symbol id="icon-filled_like" viewBox="0 0 37 32">
+            <title>like</title>
+            <path class="path1"
+                  d="M18.667 5.479c0 0 3.94-4.412 8.8-4.412s8.8 4.005 8.8 8.824c0 2.988-2.934 5.882-2.934 5.882l-14.666 14.708-14.666-14.708c0 0-2.934-2.896-2.934-5.882 0-4.819 3.94-8.824 8.8-8.824s8.8 4.412 8.8 4.412v0z"></path>
+        </symbol>
+
+        <symbol id="icon-Gift" viewBox="0 0 1024 1024">
+            <title>Gift</title>
+            <path class="path1"
+                  d="M258.462 2.462c-20.313-1.447-44.455 7.532-70.154 33.231-184.635 184.596 68.815 279.385 109.538 279.385h86.154c0 0-206.966-90.673-142.769-168.615 27.136-32.965 49.162-39.198 84.923-16 40.957 26.539 86.145 59.994 115.692 82.462-5.022 6.612-8.615 14.469-8.615 23.385v39.385c0 21.701 17.684 39.385 39.385 39.385h78.769c21.701 0 39.385-17.684 39.385-39.385v-39.385c0-8.915-3.594-16.773-8.615-23.385 29.547-22.468 74.735-55.922 115.692-82.462 35.761-23.198 57.787-16.965 84.923 16 64.197 77.942-142.769 168.615-142.769 168.615h86.154c40.724 0 294.174-94.789 109.538-279.385-51.397-51.397-94.582-36.342-120.615-3.692-64.571 80.932-118.518 148.135-139.077 173.538-6.747-5.415-15.32-8.615-24.615-8.615h-78.769c-9.295 0-17.868 3.2-24.615 8.615-20.559-25.404-74.506-92.607-139.077-173.538-13.017-16.325-30.149-28.091-50.462-29.538zM78.769 354.462c-21.701 0-39.385 17.684-39.385 39.385v118.154c0 21.701 17.684 39.385 39.385 39.385h354.462v-157.538h157.538v157.538h354.462c21.701 0 39.385-17.684 39.385-39.385v-118.154c0-21.701-17.684-39.385-39.385-39.385h-866.462zM157.538 590.769c-21.701 0-39.385 17.684-39.385 39.385v354.462c0 21.701 17.684 39.385 39.385 39.385h275.692v-393.846h157.538v393.846h275.692c21.701 0 39.385-17.684 39.385-39.385v-354.462c0-21.701-17.684-39.385-39.385-39.385h-708.923z"></path>
+        </symbol>
+        <symbol id="icon-info" viewBox="0 0 1024 1024">
+            <title>info</title>
+            <path class="path1"
+                  d="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667c235.648 0 426.667-191.019 426.667-426.667s-191.019-426.667-426.667-426.667zM554.667 725.333h-85.333v-256h85.333v256zM554.667 384h-85.333v-85.333h85.333v85.333z"></path>
+        </symbol>
+        <symbol id="icon-like_outline" viewBox="0 0 1024 1024">
+            <title>like_outline</title>
+            <path class="path1"
+                  d="M699.733 256c85.333 0 153.6 68.267 153.6 153.6s-166.4 273.067-341.333 418.133c-174.933-149.333-341.333-337.067-341.333-418.133 0-85.333 68.267-153.6 153.6-153.6 102.4 0 187.733 128 187.733 128s81.067-128 187.733-128zM699.733 170.667c-76.8 0-145.067 38.4-187.733 98.133-42.667-59.733-110.933-98.133-187.733-98.133-132.267 0-238.933 106.667-238.933 238.933 0 187.733 426.667 529.067 426.667 529.067s426.667-341.333 426.667-529.067c0-132.267-106.667-238.933-238.933-238.933v0z"></path>
+        </symbol>
+
+        <symbol id="icon-location" viewBox="0 0 50 50">
+            <path fill="none" d="M0 0h50v50H0z"/>
+            <path class="second" d="M40 17c0 13.6-15 31-15 31S10 30.9 10 17c0-8.3 6.7-15 15-15s15 6.7 15 15z"
+                  fill="none" stroke="#818485" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10"/>
+            <circle cx="25" cy="18" r="6" fill="none" stroke="#818485" stroke-width="2" stroke-linejoin="round"
+                    stroke-miterlimit="10"/>
+        </symbol>
+
+        <symbol id="icon-logo" viewBox="0 0 3803 1024">
+            <title>logo</title>
+            <path fill="#ee403d" class="path1"
+                  d="M3657.143 658.286h-256c-20.187 0-36.571-16.384-36.571-36.571v-219.429c0-20.187 16.384-36.571 36.571-36.571h256v292.571zM3510.857 219.429h-146.286c-80.786 0-146.286 65.499-146.286 146.286v292.571c0 80.786 65.499 146.286 146.286 146.286h438.857v-585.143h-292.571z"></path>
+            <path fill="#ee403d" class="path2" d="M2998.857 804.571h146.286v-804.571h-146.286v804.571z"></path>
+            <path fill="#ee403d" class="path3"
+                  d="M2779.429 658.286h-256c-20.187 0-36.571-16.384-36.571-36.571v-219.429c0-20.187 16.384-36.571 36.571-36.571h256v292.571zM2486.857 219.429c-80.786 0-146.286 65.499-146.286 146.286v292.571c0 80.786 65.499 146.286 146.286 146.286h438.857v-585.143h-438.857z"></path>
+            <path fill="#ee403d" class="path4" d="M1755.429 0v804.571h146.286v-804.571h-146.286z"></path>
+            <path fill="#ee403d" class="path5"
+                  d="M2093.722 512l246.857-292.571h-192.037l-246.821 292.571 246.857 292.571h192l-246.857-292.571z"></path>
+            <path fill="#808283" class="path6" d="M1536 146.286h146.286v-146.286h-146.286v146.286z"></path>
+            <path fill="#808283" class="path7" d="M1536 804.571h146.286v-585.143h-146.286v585.143z"></path>
+            <path fill="#808283" class="path8"
+                  d="M1316.571 658.286h-256c-20.187 0-36.571-16.384-36.571-36.571v-219.429c0-20.187 16.384-36.571 36.571-36.571h256v292.571zM1024 219.429c-80.786 0-146.286 65.499-146.286 146.286v292.571c0 80.786 65.499 146.286 146.286 146.286h292.571v36.571c0 20.187-16.384 36.571-36.571 36.571h-271.872l122.77 146.286h185.673c80.786 0 146.286-65.499 146.286-146.286v-658.286h-438.857z"></path>
+            <path fill="#808283" class="path9" d="M658.286 146.286h146.286v-146.286h-146.286v146.286z"></path>
+            <path fill="#808283" class="path10" d="M658.286 804.571h146.286v-585.143h-146.286v585.143z"></path>
+            <path fill="#808283" class="path11"
+                  d="M438.857 658.286h-256c-20.187 0-36.571-16.384-36.571-36.571v-219.429c0-20.187 16.384-36.571 36.571-36.571h256v292.571zM438.857 219.429h-292.571c-80.786 0-146.286 65.499-146.286 146.286v292.571c0 80.786 65.499 146.286 146.286 146.286h438.857v-804.571h-146.286v219.429z"></path>
+        </symbol>
+
+        <symbol id="icon-menu" viewBox="0 0 50 32">
+            <title>menu_filled</title>
+            <path class="path1" fill="none" stroke="#000" stroke-width="3" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M50 16h-50"></path>
+            <path class="path2" fill="none" stroke="#000" stroke-width="3" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M50 1h-50"></path>
+            <path class="path3" fill="none" stroke="#000" stroke-width="3" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 31h50"></path>
+        </symbol>
+        <symbol id="icon-menu_2" viewBox="0 0 1024 1024">
+            <title>menu_2</title>
+            <path class="path1"
+                  d="M597.333 512c0 47.128-38.205 85.333-85.333 85.333s-85.333-38.205-85.333-85.333c0-47.128 38.205-85.333 85.333-85.333s85.333 38.205 85.333 85.333z"></path>
+            <path class="path2"
+                  d="M597.333 213.333c0 47.128-38.205 85.333-85.333 85.333s-85.333-38.205-85.333-85.333c0-47.128 38.205-85.333 85.333-85.333s85.333 38.205 85.333 85.333z"></path>
+            <path class="path3"
+                  d="M597.333 810.667c0 47.128-38.205 85.333-85.333 85.333s-85.333-38.205-85.333-85.333c0-47.128 38.205-85.333 85.333-85.333s85.333 38.205 85.333 85.333z"></path>
+        </symbol>
+        <symbol id="icon-minus" viewBox="0 0 1024 1024">
+            <title>minus</title>
+            <path class="path3"
+                  d="M597.333 810.667c0 47.128-38.205 85.333-85.333 85.333s-85.333-38.205-85.333-85.333c0-47.128 38.205-85.333 85.333-85.333s85.333 38.205 85.333 85.333z"></path>
+        </symbol>
+        <symbol id="icon-minus-full" viewBox="0 0 20 20">
+            <title>minus</title>
+            <path class="path1"
+                  d="M16 10c0 0.553-0.048 1-0.601 1h-10.798c-0.552 0-0.601-0.447-0.601-1s0.049-1 0.601-1h10.799c0.552 0 0.6 0.447 0.6 1z"></path>
+        </symbol>
+
+        <symbol id="icon-phone" viewBox="0 0 50 50">
+            <path fill="none" stroke="#818485" stroke-width="2" stroke-miterlimit="10"
+                  d="M30.217 35.252s4.05-2.318 5.11-2.875c1.056-.56 2.15-.7 2.816-.294 1.007.616 9.463 6.24 10.175 6.74.712.498 1.055 1.923.076 3.32-.975 1.395-5.473 6.915-7.38 6.856-1.908-.063-9.845-.237-24.812-15.208C1.238 18.826 1.062 10.887 1 8.978.94 7.07 6.46 2.57 7.855 1.595c1.398-.975 2.825-.608 3.32.078.565.78 6.125 9.21 6.737 10.176.42.66.265 1.76-.294 2.818-.556 1.06-2.874 5.11-2.874 5.11s1.634 2.786 7.16 8.31c5.527 5.527 8.313 7.164 8.313 7.164z"/>
+        </symbol>
+
+        <symbol id="icon-plus" viewBox="0 0 24 24">
+            <path fill="none" stroke="#a8a9ab" stroke-width="2" stroke-miterlimit="10" d="M12 19V5M5 12h14"/>
+        </symbol>
+        <symbol id="icon-plus-gift" viewBox="0 0 24 24">
+            <path fill="red" stroke="#fe5353" stroke-width="2" stroke-miterlimit="10" d="M12 19V5M5 12h14"/>
+        </symbol>
+        <symbol id="icon-plus_filled" viewBox="0 0 1024 1024">
+            <title>plus_filled</title>
+            <path class="path1"
+                  d="M512 61.44c-248.443 0-450.56 202.117-450.56 450.56s202.117 450.56 450.56 450.56 450.56-202.117 450.56-450.56-202.117-450.56-450.56-450.56zM737.28 532.48h-204.8v204.8h-40.96v-204.8h-204.8v-40.96h204.8v-204.8h40.96v204.8h204.8v40.96z"></path>
+        </symbol>
+
+        <symbol id="icon-recurring_appointment" viewBox="0 0 26 26">
+            <path d="M25.925 9.422a.573.573 0 0 1-.504.504c-.13.015-3.26.27-5.957-.26a.574.574 0 0 1-.437-.397.57.57 0 0 1 .14-.576l5.527-5.527a.577.577 0 0 1 .97.295c.533 2.7.278 5.83.262 5.96z"/>
+            <path fill="none" stroke="#2196f3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M22.11 5.982A11.478 11.478 0 0 0 13 1.5C6.65 1.5 1.5 6.65 1.5 13c0 6.352 5.15 11.5 11.5 11.5 5.813 0 10.618-4.313 11.392-9.913"/>
+        </symbol>
+
+
+        <symbol id="icon-search" viewBox="0 0 32 32">
+            <title>search_test</title>
+            <path class="path1" fill="#fff"
+                  d="M10.927 1.561c5.245 0 9.366 4.121 9.366 9.366s-4.121 9.366-9.366 9.366c-5.245 0-9.366-4.121-9.366-9.366s4.121-9.366 9.366-9.366v0zM0 10.927c0 6.088 4.839 10.927 10.927 10.927s10.927-4.839 10.927-10.927c0-6.088-4.839-10.927-10.927-10.927s-10.927 4.839-10.927 10.927z"></path>
+            <path class="path2" fill="#fff" d="M32 29.346l-2.654 2.654-9.834-9.834v-2.654h2.654z"></path>
+            <path class="path3" fill="#fff"
+                  d="M17.427 18.737l1.104-1.104 3.974 3.974-1.104 1.104-3.974-3.974z"></path>
+        </symbol>
+
+        <symbol id="icon-Shopping_Cart" viewBox="0 0 33 32">
+            <title>shopping_cart</title>
+            <path class="path1" fill="none" stroke="#8b8c8f" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M5.849 29.189c0 1.099 0.891 1.99 1.99 1.99s1.99-0.891 1.99-1.99c0-1.099-0.891-1.99-1.99-1.99s-1.99 0.891-1.99 1.99z"></path>
+            <path class="path2" fill="none" stroke="#8b8c8f" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M14.473 29.189c0 1.099 0.891 1.99 1.99 1.99s1.99-0.891 1.99-1.99c0-1.099-0.891-1.99-1.99-1.99s-1.99 0.891-1.99 1.99z"></path>
+            <path class="path3" fill="#8b8c8f"
+                  d="M30.167 1.327c0 0.733 0.594 1.327 1.327 1.327s1.327-0.594 1.327-1.327c0-0.733-0.594-1.327-1.327-1.327s-1.327 0.594-1.327 1.327z"></path>
+            <path class="path4" fill="none" stroke="#8b8c8f" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M5.621 27.199h10.144c2.269 0 2.602-1.157 3.001-2.67l5.304-21.414c0.477-1.607 1.149-2.452 3.003-2.452h4.421"></path>
+            <path class="path5" fill="none" stroke="#8b8c8f" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M22.206 9.287h-20.565l4.77 12.604h12.737"></path>
+        </symbol>
+
+        <symbol id="icon-full-cart2" viewBox="0 0 34 32">
+            <title>full_shopping-cart</title>
+            <path class="path1" fill="none" stroke="#8b8c8f" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M6.837 29.189c0 1.099 0.885 1.99 1.978 1.99s1.978-0.891 1.978-1.99c0-1.099-0.885-1.99-1.978-1.99s-1.978 0.891-1.978 1.99z"></path>
+            <path class="path2" fill="none" stroke="#8b8c8f" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M15.408 29.189c0 1.099 0.885 1.99 1.978 1.99s1.978-0.891 1.978-1.99c0-1.099-0.885-1.99-1.978-1.99s-1.978 0.891-1.978 1.99z"></path>
+            <path class="path3" fill="#8b8c8f"
+                  d="M31.004 1.327c0 0.733 0.59 1.327 1.319 1.327s1.319-0.594 1.319-1.327c0-0.733-0.59-1.327-1.319-1.327s-1.319 0.594-1.319 1.327z"></path>
+            <path class="path4" fill="none" stroke="#8b8c8f" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M6.611 27.199h10.081c2.255 0 2.586-1.157 2.982-2.67l5.271-21.414c0.474-1.607 1.142-2.452 2.984-2.452h4.393"></path>
+            <path class="path5" fill="none" stroke="#8b8c8f" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M23.093 9.287h-20.437l4.741 12.604h12.658"></path>
+            <path class="path6" fill="#4CAF50"
+                  d="M17.706 8.908c0 4.92-3.964 8.908-8.853 8.908s-8.853-3.988-8.853-8.908c0-4.92 3.964-8.908 8.853-8.908s8.853 3.988 8.853 8.908z"></path>
+        </symbol>
+        <symbol id="icon-sorting_answers" viewBox="0 0 1024 1024">
+            <title>sorting_answers</title>
+            <path class="path1" d="M0 472.615h787.692v78.769h-787.692v-78.769z"></path>
+            <path class="path2" d="M0 236.308h1024v78.769h-1024v-78.769z"></path>
+            <path class="path3" d="M0 708.923h551.385v78.769h-551.385v-78.769z"></path>
+        </symbol>
+        <symbol id="icon-star" viewBox="0 0 1024 1024">
+            <title>star</title>
+            <path class="path3" d="M0 708.923h551.385v78.769h-551.385v-78.769z"></path>
+        </symbol>
+        <symbol id="icon-star_filled" viewBox="0 0 1024 1024">
+            <title>star_filled</title>
+            <path class="path1"
+                  d="M817.582 956.314l-305.582-197.755-305.603 197.755 93.696-351.744-282.563-229.499 363.5-19.599 130.97-339.62 130.99 339.62 363.479 19.599-282.563 229.519 93.676 351.724z"></path>
+        </symbol>
+        <symbol id="icon-thumbs_up" viewBox="0 0 1024 1024">
+            <title>thumbs_up</title>
+            <path class="path1" d="M42.667 426.667h170.667v512h-170.667v-512z"></path>
+            <path class="path2"
+                  d="M755.2 938.667h-371.2c-46.933 0-85.333-38.4-85.333-85.333v-435.2c0-21.333 8.533-42.667 25.6-59.733l273.067-273.067c0 0 85.333 21.333 85.333 102.4 0 29.867-55.467 196.267-55.467 196.267h268.8c46.933 0 85.333 38.4 85.333 85.333v55.467c0 17.067-4.267 38.4-12.8 55.467l-136.533 307.2c-12.8 29.867-42.667 51.2-76.8 51.2z"></path>
+        </symbol>
+        <symbol id="icon-thumbs_down" viewBox="0 0 1024 1024">
+            <title>thumbs_down</title>
+            <path class="path1" d="M981.333 597.333h-170.667v-512h170.667v512z"></path>
+            <path class="path2"
+                  d="M268.8 85.333h371.2c46.933 0 85.333 38.4 85.333 85.333v435.2c0 21.333-8.533 42.667-25.6 59.733l-273.067 273.067c0 0-85.333-21.333-85.333-102.4 0-29.867 55.467-196.267 55.467-196.267h-268.8c-46.933 0-85.333-38.4-85.333-85.333v-55.467c0-17.067 4.267-38.4 12.8-55.467l136.533-307.2c12.8-29.867 42.667-51.2 76.8-51.2z"></path>
+        </symbol>
+
+
+        <symbol id="icon-truck" viewBox="0 0 50 50">
+            <circle fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" cx="13" cy="44" r="5"/>
+            <circle fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" cx="39" cy="44" r="5"/>
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"
+                  d="M45 44h2c1.018 0 2-.982 2-2v-9.615c0-1.75-1.414-3.73-1.414-3.73l-4.125-5.5C42.618 22.136 41.356 21 40 21h-8c-1.018 0-2 .983-2 2v19c0 1.014.988 1.992 2 2h2m15-11H38c-1 0-2-1-2-2v-4c0-1.107 1-2 2-2h6.846"/>
+            <path fill="none" stroke="currentColor" stroke-width="1.997" stroke-miterlimit="10"
+                  d="M18 44h10.154A1.848 1.848 0 0 0 30 42.158V15.906C30 14.892 29.204 14 28.188 14H2.846A1.848 1.848 0 0 0 1 15.84v26.165C1 43.02 1.983 44 3 44h5"/>
+        </symbol>
+
+
+        <symbol id="icon-truckDK" viewBox="0 0 1781 1024">
+            <title>truckDK</title>
+            <path fill="#ef413d" class="path1"
+                  d="M1736.348 504.58h-237.449c-24.588 0-44.522-19.934-44.522-44.522v0c0-24.588 19.934-44.522 44.522-44.522h237.449c24.588 0 44.522 19.934 44.522 44.522v0c0 24.588-19.934 44.522-44.522 44.522z"></path>
+            <path fill="#ef413d" class="path2"
+                  d="M1558.261 356.174h-59.362c-24.588 0-44.522-19.934-44.522-44.522v0c0-24.588 19.934-44.522 44.522-44.522h59.362c24.588 0 44.522 19.934 44.522 44.522v0c0 24.588-19.934 44.522-44.522 44.522z"></path>
+            <path fill="#ef413d" class="path3"
+                  d="M1558.261 682.667h-59.362c-24.588 0-44.522-19.934-44.522-44.522v0c0-24.588 19.934-44.522 44.522-44.522h59.362c24.588 0 44.522 19.934 44.522 44.522v0c0 24.588-19.934 44.522-44.522 44.522z"></path>
+            <path fill="#ef413d" class="path4"
+                  d="M1038.841 949.797c-32.786 0-59.362-26.577-59.362-59.362s26.577-59.362 59.362-59.362c32.786 0 59.362 26.577 59.362 59.362s-26.577 59.362-59.362 59.362zM1038.841 756.87c-73.767 0-133.565 59.799-133.565 133.565s59.799 133.565 133.565 133.565c73.767 0 133.565-59.799 133.565-133.565s-59.799-133.565-133.565-133.565z"></path>
+            <path fill="#ef413d" class="path5"
+                  d="M296.812 949.797c-32.786 0-59.362-26.577-59.362-59.362s26.577-59.362 59.362-59.362c32.786 0 59.362 26.577 59.362 59.362s-26.577 59.362-59.362 59.362zM296.812 756.87c-73.767 0-133.565 59.799-133.565 133.565s59.799 133.565 133.565 133.565c73.767 0 133.565-59.799 133.565-133.565s-59.799-133.565-133.565-133.565z"></path>
+            <path fill="#ef413d" class="path6"
+                  d="M331.907 357.658h67.305c8.195 0 14.841 6.646 14.841 14.841v118.725c0 8.195-6.646 14.841-14.841 14.841h-224.621c-8.305 0-12.089-10.368-5.734-15.716l153.493-129.202c2.674-2.253 6.061-3.488 9.557-3.488v0zM517.937 595.107c-8.198 0-14.841-6.646-14.841-14.841v-281.971c0-16.393-13.288-29.681-29.681-29.681h-194.946c-7.302 0-14.348 2.692-19.788 7.56l-258.68 228.405v326.493c0 16.393 13.288 29.681 29.681 29.681h30.613c13.582 0 25.363-9.24 28.749-22.394 23.095-89.717 110.993-154.208 207.768-154.208s178.063 64.491 201.158 154.208c3.387 13.155 15.167 22.394 28.749 22.394h282.214c13.582 0 25.363-9.24 28.749-22.394 23.095-89.717 104.383-154.208 201.158-154.208s178.063 64.491 201.158 154.208c3.387 13.155 15.167 22.394 28.749 22.394h65.42c16.393 0 29.681-13.288 29.681-29.681v-206.284c0-16.393-13.288-29.681-29.681-29.681h-816.232z"></path>
+            <path fill="#ef413d" class="path7"
+                  d="M1107.977 356.174l-54.916-85.173-23.125 24.502v60.671h-41.554v-213.704h41.554v97.609l19.622-27.072 54.483-70.537h53.818l-75.405 95.039 77.59 118.665h-52.067zM955.733 254.955c0 15.17-2.659 28.951-7.373 41.349-4.719 12.398-11.528 23.044-20.136 31.94-8.605 8.895-18.96 15.776-30.922 20.637-11.959 4.865-25.211 7.293-39.598 7.293h-65.218v-213.704h65.655c14.294 0 27.396 3.131 39.307 8.041 11.908 4.912 22.115 12.151 30.628 21.050 8.507 8.895 15.443 19.735 20.207 32.18 4.767 12.448 7.45 26.422 7.45 41.589v9.626zM1335.652 0h-712.348c-16.393 0-29.681 13.288-29.681 29.681v445.217c0 16.393 13.288 29.681 29.681 29.681h712.348c16.393 0 29.681-13.288 29.681-29.681v-445.217c0-16.393-13.288-29.681-29.681-29.681v0z"></path>
+            <path fill="#ef413d" class="path8"
+                  d="M858.142 178.087h-21.133v142.47h20.697c17.307 0 30.687-5.476 39.731-16.903 9.044-11.424 13.775-27.497 13.775-48.698v-9.916c0-21.584-4.684-38.532-13.63-49.665s-22.228-17.286-39.44-17.286z"></path>
+        </symbol>
+        <symbol id="icon-truckPOST" viewBox="0 0 1781 1024">
+            <title>truckPOST</title>
+            <path fill="#ffc106" class="path1"
+                  d="M1498.899 415.536h237.449c24.589 0 44.522 19.933 44.522 44.522s-19.933 44.522-44.522 44.522h-237.449c-24.589 0-44.522-19.933-44.522-44.522s19.933-44.522 44.522-44.522z"></path>
+            <path fill="#ffc106" class="path2"
+                  d="M1498.899 267.13h59.362c24.589 0 44.522 19.933 44.522 44.522s-19.933 44.522-44.522 44.522h-59.362c-24.589 0-44.522-19.933-44.522-44.522s19.933-44.522 44.522-44.522z"></path>
+            <path fill="#ffc106" class="path3"
+                  d="M1498.899 593.623h59.362c24.589 0 44.522 19.933 44.522 44.522s-19.933 44.522-44.522 44.522h-59.362c-24.589 0-44.522-19.933-44.522-44.522s19.933-44.522 44.522-44.522z"></path>
+            <path fill="#ffc106" class="path4"
+                  d="M1038.841 756.87c-73.766 0-133.565 59.799-133.565 133.565s59.799 133.565 133.565 133.565c73.766 0 133.565-59.799 133.565-133.565s-59.799-133.565-133.565-133.565zM1038.841 949.797c-32.785 0-59.362-26.577-59.362-59.362s26.577-59.362 59.362-59.362c32.785 0 59.362 26.577 59.362 59.362s-26.577 59.362-59.362 59.362z"></path>
+            <path fill="#ffc106" class="path5"
+                  d="M296.812 756.87c-73.766 0-133.565 59.799-133.565 133.565s59.799 133.565 133.565 133.565c73.766 0 133.565-59.799 133.565-133.565s-59.799-133.565-133.565-133.565zM296.812 949.797c-32.785 0-59.362-26.577-59.362-59.362s26.577-59.362 59.362-59.362c32.785 0 59.362 26.577 59.362 59.362s-26.577 59.362-59.362 59.362z"></path>
+            <path fill="#ffc106" class="path6"
+                  d="M517.936 595.107c-8.196 0-14.841-6.644-14.841-14.841v-281.971c0-16.392-13.289-29.681-29.681-29.681h-194.946c-7.619 0-14.569 2.872-19.825 7.593l-258.644 228.372v326.493c0 16.392 13.289 29.681 29.681 29.681h30.601c13.795-0.003 25.391-9.418 28.715-22.173 23.138-89.933 111.024-154.548 207.814-154.548 0.442-0.003 0.964-0.005 1.487-0.005 95.474 0 175.801 64.851 199.334 152.906 3.697 14.402 15.293 23.817 29.088 23.821h282.209c13.795-0.003 25.391-9.418 28.715-22.173 24.692-89.755 105.396-154.445 201.21-154.445s176.518 64.69 200.82 152.775c3.714 14.423 15.31 23.839 29.105 23.843h65.299c16.392 0 29.681-13.289 29.681-29.681v-206.284c0-16.392-13.289-29.681-29.681-29.681h-816.232zM331.895 357.658h67.317c8.196 0 14.841 6.644 14.841 14.841v118.725c0 8.196-6.644 14.841-14.841 14.841h-224.627c-0.003 0-0.007 0-0.011 0-4.918 0-8.904-3.987-8.904-8.904 0-2.735 1.233-5.182 3.174-6.816l153.495-129.213c2.56-2.16 5.897-3.473 9.54-3.473 0.006 0 0.012 0 0.018 0z"></path>
+            <path fill="#ffc106" class="path7"
+                  d="M1371.27 29.681c0-16.392-13.289-29.681-29.681-29.681h-712.348c-16.392 0-29.681 13.289-29.681 29.681v445.217c0 16.392 13.289 29.681 29.681 29.681h712.348c16.392 0 29.681-13.289 29.681-29.681v-445.217z"></path>
+        </symbol>
+        <symbol id="icon-truckTIPAX" viewBox="0 0 1781 1024">
+            <title>truckTIPAX</title>
+            <path fill="#62b965" class="path1"
+                  d="M1498.899 415.536h237.449c24.589 0 44.522 19.933 44.522 44.522v0c0 24.589-19.933 44.522-44.522 44.522h-237.449c-24.589 0-44.522-19.933-44.522-44.522v0c0-24.589 19.933-44.522 44.522-44.522z"></path>
+            <path fill="#62b965" class="path2"
+                  d="M1498.899 267.13h59.362c24.589 0 44.522 19.933 44.522 44.522v0c0 24.589-19.933 44.522-44.522 44.522h-59.362c-24.589 0-44.522-19.933-44.522-44.522v0c0-24.589 19.933-44.522 44.522-44.522z"></path>
+            <path fill="#62b965" class="path3"
+                  d="M1498.899 593.623h59.362c24.589 0 44.522 19.933 44.522 44.522v0c0 24.589-19.933 44.522-44.522 44.522h-59.362c-24.589 0-44.522-19.933-44.522-44.522v0c0-24.589 19.933-44.522 44.522-44.522z"></path>
+            <path fill="#62b965" class="path4"
+                  d="M1038.841 756.87c-73.766 0-133.565 59.799-133.565 133.565s59.799 133.565 133.565 133.565c73.766 0 133.565-59.799 133.565-133.565v0c0-73.766-59.799-133.565-133.565-133.565zM1038.841 949.797c-32.785 0-59.362-26.577-59.362-59.362s26.577-59.362 59.362-59.362c32.785 0 59.362 26.577 59.362 59.362s-26.577 59.362-59.362 59.362z"></path>
+            <path fill="#62b965" class="path5"
+                  d="M296.812 756.87c-73.766 0-133.565 59.799-133.565 133.565s59.799 133.565 133.565 133.565c73.766 0 133.565-59.799 133.565-133.565v0c0-73.766-59.799-133.565-133.565-133.565zM296.812 949.797c-32.785 0-59.362-26.577-59.362-59.362s26.577-59.362 59.362-59.362c32.785 0 59.362 26.577 59.362 59.362s-26.577 59.362-59.362 59.362z"></path>
+            <path fill="#62b965" class="path6"
+                  d="M517.936 595.107c-8.196 0-14.841-6.644-14.841-14.841v-281.971c0-16.392-13.289-29.681-29.681-29.681h-194.946c-7.619 0-14.569 2.872-19.825 7.593l-258.644 228.372v326.493c0 16.392 13.289 29.681 29.681 29.681h30.601c13.795-0.003 25.391-9.418 28.715-22.173 23.138-89.933 111.024-154.548 207.814-154.548 0.442-0.003 0.964-0.005 1.487-0.005 95.474 0 175.801 64.851 199.334 152.906 3.697 14.402 15.293 23.817 29.088 23.821h282.209c13.795-0.003 25.391-9.418 28.715-22.173 24.692-89.755 105.396-154.445 201.21-154.445s176.518 64.69 200.82 152.775c3.714 14.423 15.31 23.839 29.105 23.843h65.299c16.392 0 29.681-13.289 29.681-29.681v-206.284c0-16.392-13.289-29.681-29.681-29.681h-816.232zM331.895 357.658h67.317c8.196 0 14.841 6.644 14.841 14.841v118.725c0 8.196-6.644 14.841-14.841 14.841h-224.627c-0.003 0-0.007 0-0.011 0-4.918 0-8.904-3.987-8.904-8.904 0-2.735 1.233-5.182 3.174-6.816l153.495-129.213c2.56-2.16 5.897-3.473 9.54-3.473 0.006 0 0.012 0 0.018 0z"></path>
+            <path fill="#62b965" class="path7"
+                  d="M1371.27 29.681c0-16.392-13.289-29.681-29.681-29.681h-712.348c-16.392 0-29.681 13.289-29.681 29.681v445.217c0 16.392 13.289 29.681 29.681 29.681h712.348c16.392 0 29.681-13.289 29.681-29.681v-445.217z"></path>
+        </symbol>
+        <symbol id="icon-truckVTN" viewBox="0 0 1781 1024">
+            <title>truckVTN</title>
+            <path fill="#42a2e5" class="path1"
+                  d="M1498.899 415.536h237.449c24.589 0 44.522 19.933 44.522 44.522s-19.933 44.522-44.522 44.522h-237.449c-24.589 0-44.522-19.933-44.522-44.522s19.933-44.522 44.522-44.522z"></path>
+            <path fill="#42a2e5" class="path2"
+                  d="M1498.899 267.13h59.362c24.589 0 44.522 19.933 44.522 44.522s-19.933 44.522-44.522 44.522h-59.362c-24.589 0-44.522-19.933-44.522-44.522s19.933-44.522 44.522-44.522z"></path>
+            <path fill="#42a2e5" class="path3"
+                  d="M1498.899 593.623h59.362c24.589 0 44.522 19.933 44.522 44.522s-19.933 44.522-44.522 44.522h-59.362c-24.589 0-44.522-19.933-44.522-44.522s19.933-44.522 44.522-44.522z"></path>
+            <path fill="#42a2e5" class="path4"
+                  d="M1038.841 756.87c-73.766 0-133.565 59.799-133.565 133.565s59.799 133.565 133.565 133.565c73.766 0 133.565-59.799 133.565-133.565s-59.799-133.565-133.565-133.565zM1038.841 949.797c-32.785 0-59.362-26.577-59.362-59.362s26.577-59.362 59.362-59.362c32.785 0 59.362 26.577 59.362 59.362s-26.577 59.362-59.362 59.362z"></path>
+            <path fill="#42a2e5" class="path5"
+                  d="M296.812 756.87c-73.766 0-133.565 59.799-133.565 133.565s59.799 133.565 133.565 133.565c73.766 0 133.565-59.799 133.565-133.565s-59.799-133.565-133.565-133.565zM296.812 949.797c-32.785 0-59.362-26.577-59.362-59.362s26.577-59.362 59.362-59.362c32.785 0 59.362 26.577 59.362 59.362s-26.577 59.362-59.362 59.362z"></path>
+            <path fill="#42a2e5" class="path6"
+                  d="M517.936 595.107c-8.196 0-14.841-6.644-14.841-14.841v-281.971c0-16.392-13.289-29.681-29.681-29.681h-194.946c-7.619 0-14.569 2.872-19.825 7.593l-258.644 228.372v326.493c0 16.392 13.289 29.681 29.681 29.681h30.601c13.795-0.003 25.391-9.418 28.715-22.173 23.138-89.933 111.024-154.548 207.814-154.548 0.442-0.003 0.964-0.005 1.487-0.005 95.474 0 175.801 64.851 199.334 152.906 3.697 14.402 15.293 23.817 29.088 23.821h282.209c13.795-0.003 25.391-9.418 28.715-22.173 24.692-89.755 105.396-154.445 201.21-154.445s176.518 64.69 200.82 152.775c3.714 14.423 15.31 23.839 29.105 23.843h65.299c16.392 0 29.681-13.289 29.681-29.681v-206.284c0-16.392-13.289-29.681-29.681-29.681h-816.232zM331.895 357.658h67.317c8.196 0 14.841 6.644 14.841 14.841v118.725c0 8.196-6.644 14.841-14.841 14.841h-224.627c-0.003 0-0.007 0-0.011 0-4.918 0-8.904-3.987-8.904-8.904 0-2.735 1.233-5.182 3.174-6.816l153.495-129.213c2.56-2.16 5.897-3.473 9.54-3.473 0.006 0 0.012 0 0.018 0z"></path>
+            <path fill="#42a2e5" class="path7"
+                  d="M1371.27 29.681c0-16.392-13.289-29.681-29.681-29.681h-712.348c-16.392 0-29.681 13.289-29.681 29.681v445.217c0 16.392 13.289 29.681 29.681 29.681h712.348c16.392 0 29.681-13.289 29.681-29.681v-445.217z"></path>
+        </symbol>
+
+        <symbol id="icon-user_male" viewBox="0 0 50 50">
+            <path fill="none" stroke="#818485" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                  d="M30.933 32.528c-.146-1.612-.09-2.737-.09-4.21.73-.383 2.038-2.825 2.26-4.888.573-.047 1.478-.607 1.743-2.818.143-1.187-.425-1.855-.77-2.065.933-2.81 2.873-11.5-3.59-12.397-.664-1.168-2.367-1.76-4.58-1.76-8.854.164-9.922 6.687-7.98 14.157-.346.21-.914.878-.772 2.065.266 2.21 1.17 2.77 1.744 2.818.22 2.062 1.58 4.505 2.312 4.888 0 1.473.055 2.598-.09 4.21C19.366 37.238 7.545 35.916 7 45h38c-.545-9.084-12.315-7.762-14.067-12.472z"/>
+        </symbol>
+
+        <symbol id="icon-usp1" viewBox="0 0 1024 1024">
+            <title>usp1</title>
+            <path fill="#828282" class="path1"
+                  d="M904.796 219.737h-804.269c-55.527 0-100.517 45.023-100.517 100.517v603.202c0 55.527 44.99 100.55 100.517 100.55h804.269c55.527 0 100.517-45.023 100.517-100.55v-603.202c0-55.494-44.99-100.517-100.517-100.517zM904.796 270.012c27.714 0 50.275 22.528 50.275 50.242v603.202c0 27.714-22.561 50.275-50.275 50.275h-804.269c-27.714 0-50.275-22.561-50.275-50.275v-603.202c0-27.714 22.561-50.242 50.275-50.242h804.269z"></path>
+            <path fill="#828282" class="path2"
+                  d="M276.467 68.938c0-27.747-22.495-50.275-50.275-50.275-27.747 0-50.242 22.528-50.242 50.275v75.413c0 27.747 22.495 50.242 50.242 50.242 27.78 0 50.275-22.495 50.275-50.242v-75.413z"></path>
+            <path fill="#828282" class="path3"
+                  d="M829.397 68.938c0-27.747-22.495-50.275-50.275-50.275-27.747 0-50.242 22.528-50.242 50.275v75.413c0 27.747 22.495 50.242 50.242 50.242 27.78 0 50.275-22.495 50.275-50.242v-75.413z"></path>
+            <path fill="#828282" class="path4" d="M653.464 496.201h-326.722v-50.275h351.86l-25.138 50.275z"></path>
+            <path fill="#828282" class="path5"
+                  d="M678.598 445.935l-175.93 427.272h-50.275l175.93-427.272h50.275z"></path>
+            <path fill="#f15356" class="path6"
+                  d="M904.796 68.938h-50.275v75.413c0 41.555-33.825 75.38-75.38 75.38-41.588 0-75.413-33.825-75.413-75.38v-75.413h-402.135v75.413c0 41.555-33.825 75.38-75.38 75.38-41.588 0-75.413-33.825-75.413-75.38v-75.413h-50.275c-55.527 0-100.517 45.023-100.517 100.517v175.963h1005.304v-175.963c0-55.494-44.99-100.517-100.517-100.517z"></path>
+        </symbol>
+        <symbol id="icon-usp2" viewBox="0 0 1024 1024">
+            <title>usp2</title>
+            <path fill="#828282" class="path1" d="M706.080 829.216h24.32v-243.488h-24.32v243.488z"></path>
+            <path fill="#828282" class="path2" d="M633.056 829.216h24.32v-73.024h-24.32v73.024z"></path>
+            <path fill="#828282" class="path3" d="M633.056 707.488h24.32v-73.056h-24.32v73.056z"></path>
+            <path fill="#828282" class="path4"
+                  d="M413.914 110.79l-328.288 328.288c-48.032 48-85.632 138.816-85.632 206.72v378.208h48.704v-378.208c0-54.72 32.672-133.6 71.36-172.288l293.856-293.856v-68.864z"></path>
+            <path fill="#828282" class="path5"
+                  d="M409.67 982.89l-25.76-41.312c75.68-47.136 120.832-128.224 120.832-216.896 0-28-4.768-56.032-14.176-83.232l-4.992-14.4 172.768-172.8c15.104-15.072 23.392-35.136 23.392-56.448 0-21.344-8.288-41.408-23.392-56.48-30.176-30.176-82.752-30.176-112.96 0l-288.096 288.096-34.432-34.432 288.096-288.096c24.288-24.288 56.576-37.664 90.912-37.664s66.624 13.376 90.912 37.664c24.288 24.256 37.664 56.544 37.664 90.912 0 34.336-13.376 66.624-37.664 90.88l-151.52 151.52c8.096 27.744 12.192 56.064 12.192 84.48 0 105.6-53.728 202.144-143.776 258.208z"></path>
+            <path fill="#828282" class="path6"
+                  d="M576.237 891.101c-9.664 43.616-30.592 88.512-56.8 116.128l17.664 16.768c31.584-33.28 55.904-87.2 65.152-138.464l-26.016 5.568z"></path>
+            <path fill="#828282" class="path7"
+                  d="M925.216 1.392h-438.272c-53.76 0-97.376 43.616-97.376 97.376v365.248l48.704-48.704v-316.544c0-26.848 21.824-48.672 48.672-48.672h438.272c26.848 0 48.704 21.824 48.704 48.672v730.464c0 26.848-21.856 48.672-48.704 48.672h-433.696c-9.664 16.896-21.184 31.52-32.96 44 9.056 2.784 18.432 4.704 28.384 4.704h438.272c53.792 0 97.376-43.616 97.376-97.376v-730.464c0-53.76-43.584-97.376-97.376-97.376z"></path>
+            <path fill="#3facb3" class="path8" d="M779.136 1.376h97.376v925.216h-97.376v-925.216z"></path>
+        </symbol>
+        <symbol id="icon-usp3" viewBox="0 0 1024 1024">
+            <title>usp3</title>
+            <path fill="#97d079" class="path1"
+                  d="M435.010 713.216l-177.591-177.62 47.221-47.192 130.37 130.37 284.35-284.379 47.221 47.221-331.571 331.6z"></path>
+            <path fill="#828282" class="path2"
+                  d="M511.988-0.003l-85.899 80.165-110.036-41.194-48.684 106.935-117.409 4.067-4.096 117.409-106.906 48.684 41.194 110.036-80.165 85.928 80.165 85.87-41.194 110.036 106.906 48.713 4.096 117.409 117.409 4.067 48.684 106.906 110.036-41.165 85.899 80.135 85.928-80.135 110.036 41.165 48.684-106.906 117.409-4.067 4.067-117.409 106.935-48.713-41.194-110.036 80.165-85.87-80.165-85.928 41.194-110.036-106.935-48.684-4.067-117.409-117.409-4.067-48.684-106.935-110.036 41.194-85.928-80.165zM456.487 112.696l55.501-51.785 75.688 70.597 25.805-9.684 71.153-26.595 31.481 69.105 11.41 25.103 103.483 3.569 2.604 75.922 0.965 27.531 94.179 42.891-36.25 96.958 70.597 75.717-70.597 75.659 9.655 25.805 26.595 71.153-94.179 42.891-0.965 27.531-2.604 75.922-103.483 3.599-42.891 94.208-96.958-36.279-75.688 70.597-75.688-70.597-96.929 36.279-31.481-69.135-11.44-25.073-103.453-3.599-2.633-75.922-0.936-27.531-94.208-42.891 36.279-96.958-70.627-75.659 70.627-75.717-36.279-96.958 94.208-42.891 0.936-27.531 2.633-75.922 103.453-3.569 42.92-94.208 96.929 36.279 20.187-18.812z"></path>
+            <path fill="#828282" class="path3"
+                  d="M512 183.653c-181.043 0-328.353 147.28-328.353 328.353 0 181.043 147.31 328.353 328.353 328.353 40.404 0 79.872-7.256 117.263-21.563 87.128-33.324 156.204-102.429 189.528-189.528 14.307-37.42 21.563-76.859 21.563-117.263 0-37.566-6.29-74.401-18.695-109.48-21.621-61.118-60.562-114.103-112.669-153.249-57.168-42.92-125.279-65.624-196.988-65.624zM512 851.476c-187.187 0-339.471-152.283-339.471-339.471s152.283-339.471 339.471-339.471c74.138 0 144.56 23.464 203.688 67.847 53.833 40.463 94.12 95.232 116.473 158.427 12.815 36.279 19.31 74.372 19.31 113.196 0 41.779-7.49 82.564-22.294 121.242-34.436 90.083-105.852 161.47-195.935 195.935-38.678 14.804-79.462 22.294-121.242 22.294z"></path>
+        </symbol>
+        <symbol id="icon-usp4" viewBox="0 0 1741 1024">
+            <title>usp4</title>
+            <path fill="#828282" class="path1"
+                  d="M1329.193 459.244l5.257 29.833h250.675l-5.257-29.833h-250.675z"></path>
+            <path fill="#828282" class="path2"
+                  d="M1389.848 144.394h-241.527l71.817 407.347 22.118 125.338h438.682l-22.084-125.338-99.465-282.010c-24.405-69.222-100.318-125.338-169.54-125.338zM1389.848 207.063c42.394 0 95.027 39.799 110.421 83.524l97.758 277.129 8.226 46.694h-311.398l-12.971-73.557-58.88-333.79h166.844z"></path>
+            <path fill="#828282" class="path3"
+                  d="M1400.743 708.417c-86.528 0-156.672 70.144-156.672 156.672s70.144 156.672 156.672 156.672c86.528 0 156.672-70.144 156.672-156.672s-70.144-156.672-156.672-156.672zM1400.743 771.086c51.849 0 94.003 42.155 94.003 94.003s-42.155 94.003-94.003 94.003c-51.849 0-94.003-42.155-94.003-94.003s42.155-94.003 94.003-94.003z"></path>
+            <path fill="#828282" class="path4"
+                  d="M523.377 710.656c-86.528 0-156.672 70.144-156.672 156.672s70.144 156.672 156.672 156.672c86.528 0 156.672-70.144 156.672-156.672s-70.144-156.672-156.672-156.672zM523.377 773.325c51.849 0 94.003 42.155 94.003 94.003s-42.155 94.003-94.003 94.003c-51.849 0-94.003-42.155-94.003-94.003s42.155-94.003 94.003-94.003z"></path>
+            <path fill="#828282" class="path5" d="M711.383 865.089h501.35l-5.53-31.334h-501.35l5.53 31.334z"></path>
+            <path fill="#828282" class="path6"
+                  d="M165.83 614.414l44.203 250.675h125.338l-11.059-62.669h-62.669l-22.084-125.338h1378.714l22.084 125.338h-62.669l11.059 62.669h125.338l-44.203-250.675h-1504.051z"></path>
+            <path fill="#f49934" class="path7" d="M350.205 238.397h-344.678l-5.53-31.334h344.678l5.53 31.334z"></path>
+            <path fill="#f49934" class="path8" d="M372.306 363.738h-344.678l-5.53-31.334h344.678l5.53 31.334z"></path>
+            <path fill="#f49934" class="path9" d="M394.407 489.076h-344.678l-5.53-31.334h344.678l5.53 31.334z"></path>
+            <path fill="#828282" class="path10"
+                  d="M969.554 19.057h-908.698l22.084 125.338h62.669l-11.025-62.669h846.029c34.543 0 67.618 28.126 73.694 62.669l82.91 470.016h-908.732l-11.025-62.669h-62.669l22.084 125.338h1034.035l-93.935-532.685c-12.186-69.222-78.199-125.338-147.422-125.338z"></path>
+        </symbol>
+        <symbol id="icon-usp5" viewBox="0 0 1024 1024">
+            <title>usp5</title>
+            <path fill="#828282" class="path1"
+                  d="M470.709 898.918c-111.411 0-216.132-43.383-294.912-122.163s-122.163-183.501-122.163-294.912c0-111.411 43.383-216.132 122.163-294.912s183.501-122.163 294.912-122.163c111.411 0 216.132 43.383 294.912 122.163s122.163 183.501 122.163 294.912c0 111.411-43.383 216.132-122.163 294.912s-183.501 122.163-294.912 122.163zM991.208 897.69l-139.81-139.776c58.163-79.838 90.010-175.411 90.010-276.070 0-125.747-48.947-243.951-137.865-332.834-88.917-88.917-207.121-137.865-332.834-137.865-125.747 0-243.951 48.947-332.834 137.865-88.917 88.883-137.865 207.087-137.865 332.834 0 125.713 48.947 243.917 137.865 332.834 88.883 88.917 207.087 137.865 332.834 137.865 100.659 0 196.233-31.846 276.070-90.010l139.81 139.81c28.877 28.877 75.708 28.877 104.619 0 28.877-28.911 28.877-75.742 0-104.653z"></path>
+            <path fill="#828282" class="path2"
+                  d="M421.1 142.022c-10.308 0.546-22.050 1.058-34.509 4.028-6.281 1.195-12.834 2.458-19.627 3.789-6.622 2.048-13.414 4.164-20.446 6.349-14.336 3.789-28.194 10.991-43.008 17.408-13.824 8.26-29.116 15.428-42.325 26.18-14.131 9.523-26.59 21.538-39.526 33.007-11.435 12.971-23.484 25.395-33.007 39.526-10.718 13.244-17.92 28.535-26.146 42.325-6.417 14.848-13.619 28.706-17.408 43.042-2.185 6.997-4.301 13.824-6.349 20.412-1.331 6.793-2.594 13.346-3.789 19.661-2.97 12.39-3.516 24.269-4.062 34.645-0.922 10.342-1.024 19.183-0.444 26.487 0.683 14.575 1.468 22.938 1.468 22.938s1.57-8.226 3.721-22.699c0.751-7.27 2.423-16.009 5.12-25.6 2.389-9.694 4.881-20.48 9.045-32.085 1.911-5.769 3.925-11.776 5.973-18.022 2.56-6.007 5.222-12.254 7.953-18.637 4.71-13.073 13.005-25.327 19.456-38.878 8.363-12.561 16.145-25.975 26.214-38.161 9.011-12.937 20.48-24.201 31.198-36.011 11.844-10.718 23.074-22.153 36.011-31.198 12.22-10.001 25.6-17.852 38.161-26.18 13.551-6.451 25.839-14.711 38.878-19.456 6.417-2.731 12.629-5.359 18.671-7.953 6.212-2.048 12.22-4.062 17.988-5.973 11.537-4.164 22.46-6.69 32.222-9.079 9.694-2.697 18.33-4.369 25.498-5.086 14.336-2.15 22.665-3.755 22.665-3.755s-8.26-0.785-23.006-1.468c-7.373-0.58-16.316-0.478-26.59 0.444z"></path>
+            <path fill="#70b1cc" class="path3"
+                  d="M477.621 691.391c66.082 0 122.334-27.238 122.334-93.901 0-44.066-26.692-71.339-86.972-86.391l-35.362-8.704v188.996zM459.052 301.793c-78.234 2.901-107.827 40.004-107.827 88.132 0 54.477 37.103 70.144 84.070 80.589l23.757 5.222v-173.943zM459.052 713.441c-85.197-7.543-142.609-46.387-142.609-146.125h22.016c0 72.465 40.619 119.433 120.593 124.075v-193.058l-27.238-6.383c-49.289-11.571-102.605-30.72-102.605-102.025 0-25.498 7.509-106.086 129.843-110.148v-28.399h18.569v28.399c80.009 1.741 131.584 39.424 134.485 127.522h-22.016c-4.642-75.947-45.807-104.346-112.469-106.086v179.746l45.227 10.991c76.527 18.569 99.123 57.993 99.123 105.54 0 85.197-72.465 114.756-144.35 115.951v50.995h-18.569v-50.995z"></path>
+        </symbol>
+
+        <symbol id="icon-deletecircle" viewBox="0 0 1024 1024">
+            <title>deletecircle</title>
+            <path fill="#fff" class="path1"
+                  d="M567.698 512.008l250.64 250.64-55.698 55.698-250.64-250.64-250.632 250.632-55.698-55.698 250.632-250.632-250.64-250.64 55.698-55.698 250.64 250.64 250.648-250.648 55.698 55.698-250.648 250.648zM512 1024c282.77 0 512-229.23 512-512s-229.23-512-512-512c-282.77 0-512 229.23-512 512s229.23 512 512 512z"/>
+        </symbol>
+
+        <symbol id="icon-sort_time" viewBox="0 0 3072 1024">
+            <title>sort_time</title>
+            <path class="path1"
+                  d="M2568.046 226.509h-50.469l-17.335 324.827 4.462 34.011 242.907 216.137 38.4-39.351-200.923-215.333-17.042-320.293z"></path>
+            <path class="path2"
+                  d="M2560 944.764c-218.843 0-396.215-177.371-396.215-396.215 0-218.77 177.371-396.142 396.215-396.142s396.215 177.371 396.215 396.142c0 218.843-177.371 396.215-396.215 396.215zM2560 73.121c-262.583 0-475.429 212.919-475.429 475.429 0 262.583 212.846 475.429 475.429 475.429s475.429-212.846 475.429-475.429c0-262.51-212.846-475.429-475.429-475.429z"></path>
+            <path class="path3" d="M0 438.857h1462.857v146.286h-1462.857v-146.286z"></path>
+            <path class="path4" d="M0 0h1901.714v146.286h-1901.714v-146.286z"></path>
+            <path class="path5" d="M0 877.714h1024v146.286h-1024v-146.286z"></path>
+        </symbol>
+
+        <symbol id="icon-sort_like" viewBox="0 0 2999 1024">
+            <title>sort_like</title>
+            <path class="path1" d="M0 585.143h1462.857v-146.286h-1462.857v146.286z"></path>
+            <path class="path2" d="M0 146.286h1901.714v-146.359h-1901.714v146.359z"></path>
+            <path class="path3" d="M0 1024h1024v-146.286h-1024v146.286z"></path>
+            <path class="path4" d="M1955.182 977.481h186.149v-558.592h-186.149v558.592z"></path>
+            <path class="path5"
+                  d="M2732.471 977.452h-404.919c-51.2 0-93.111-41.911-93.111-93.111v-474.77c0-23.259 9.289-46.519 27.941-65.17l297.838-297.838c0 0 93.111 23.259 93.111 111.689 0 32.549-60.489 214.089-60.489 214.089h293.23c51.2 0 93.111 41.911 93.111 93.111v60.489c0 18.651-4.681 41.911-13.97 60.562l-148.992 335.067c-13.897 32.622-46.519 55.881-83.749 55.881z"></path>
+        </symbol>
+
+        <symbol id="icon-buyer" viewBox="0 0 30 30">
+            <title>Group</title>
+            <g fill="none" fill-rule="evenodd">
+                <path d="M29.688 18.757l-3.76 1.483 1.173 3.862-3.998-.07-.38 4-3.69-1.586-1.895 3.552-2.793-2.896-3.103 2.585L9.76 25.93l-3.862 1.206.07-4.034-4-.38 1.585-3.69L0 17.173l2.896-2.828L.31 11.24 4.07 9.76 2.895 5.93l4 .07.38-4.035 3.69 1.62L12.86 0l2.794 2.896 3.103-2.55 1.483 3.723 3.862-1.174-.07 4.035 4 .38L26.446 11l3.552 1.86-2.896 2.794 2.586 3.103z"
+                      fill="#EF413D"/>
+                <path d="M29 5L18 16l-5-5" stroke="#FFF" stroke-width="2"/>
+            </g>
+        </symbol>
+
+        <symbol id="icon-comment_phone" viewBox="0 0 1065 1024">
+            <title>comment_phone</title>
+            <path class="path1"
+                  d="M614.4 61.44c0-33.792-27.648-61.44-61.44-61.44h-491.52c-33.792 0-61.44 27.648-61.44 61.44v368.64c0 33.792 27.648 61.44 61.44 61.44h430.080l122.88 122.88v-552.96zM491.52 368.64h-368.64v-61.44h368.64v61.44zM491.52 276.48h-368.64v-61.44h368.64v61.44zM491.52 184.32h-368.64v-61.44h368.64v61.44z"></path>
+            <path class="path2"
+                  d="M819.2 221.184c-4.096 0-4.096 0-8.192 4.096s-16.384 16.384-16.384 24.576c0 8.192 0 28.672-4.096 45.056-8.192 20.48-16.384 73.728-28.672 102.4s-16.384 45.056-4.096 61.44c12.288 20.48 90.112 98.304 90.112 98.304s-20.48 40.96-45.056 65.536c-20.48 28.672-53.248 69.632-94.208 102.4-40.96 36.864-86.016 69.632-131.072 90.112-45.056-45.056-81.92-81.92-94.208-90.112s-12.288-12.288-32.768-4.096c-20.48 8.192-49.152 20.48-81.92 24.576-28.672 4.096-61.44 8.192-81.92 12.288s-20.48 4.096-24.576 12.288c-8.192 8.192-12.288 20.48-12.288 24.576v167.936c0 12.288 0 12.288 4.096 20.48s8.192 28.672 8.192 28.672c0 4.096 20.48 12.288 32.768 12.288s57.344 0 86.016-4.096c28.672-4.096 106.496-20.48 135.168-32.768 28.672-8.192 122.88-40.96 237.568-126.976 106.496-81.92 184.32-192.512 229.376-282.624s69.632-188.416 73.728-237.568c8.192-49.152 8.192-69.632 8.192-81.92-4.096-12.288-16.384-24.576-24.576-28.672s-20.48-8.192-32.768-8.192h-90.112c-45.056 0-98.304 0-98.304 0v0z"></path>
+        </symbol>
+
+
+        <symbol id="icon-arrow_forward" viewBox="0 0 24 24">
+            <title>arrow-right</title>
+            <path class="path1"
+                  d="M14 4q0.422 0 0.711 0.289l7 7q0.289 0.289 0.289 0.711t-0.289 0.711l-7 7q-0.289 0.289-0.711 0.289-0.43 0-0.715-0.285t-0.285-0.715q0-0.422 0.289-0.711l5.297-5.289h-15.586q-0.414 0-0.707-0.293t-0.293-0.707 0.293-0.707 0.707-0.293h15.586l-5.297-5.289q-0.289-0.289-0.289-0.711 0-0.43 0.285-0.715t0.715-0.285z"></path>
+        </symbol>
+
+        <symbol id="icon-close" viewBox="0 0 24 24">
+            <title>close</title>
+            <path class="path1"
+                  d="M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z"
+                  stroke="#fff"></path>
+        </symbol>
+
+        <symbol id="icon-history" viewBox="0 0 64 64">
+            <g>
+                <g>
+                    <path d="m34.688,3.315c-15.887,0-28.812,12.924-28.81,28.729-0.012,0.251-0.157,4.435 1.034,8.941l-3.881-2.262c-0.964-0.56-2.192-0.235-2.758,0.727-0.558,0.96-0.234,2.195 0.727,2.755l9.095,5.302c0.019,0.01 0.038,0.013 0.056,0.022 0.097,0.052 0.196,0.09 0.301,0.126 0.071,0.025 0.14,0.051 0.211,0.068 0.087,0.019 0.173,0.025 0.262,0.033 0.062,0.006 0.124,0.025 0.186,0.025 0.035,0 0.068-0.012 0.104-0.014 0.034-0.001 0.063,0.007 0.097,0.004 0.05-0.005 0.095-0.026 0.144-0.034 0.097-0.017 0.189-0.038 0.282-0.068 0.078-0.026 0.155-0.057 0.23-0.093 0.084-0.04 0.163-0.084 0.241-0.136 0.071-0.046 0.139-0.096 0.203-0.15 0.071-0.06 0.134-0.125 0.197-0.195 0.059-0.065 0.11-0.133 0.159-0.205 0.027-0.04 0.063-0.069 0.087-0.11 0.018-0.031 0.018-0.067 0.033-0.098 0.027-0.055 0.069-0.103 0.093-0.162l3.618-8.958c0.417-1.032-0.081-2.207-1.112-2.624-1.033-0.414-2.207,0.082-2.624,1.114l-1.858,4.6c-1.24-4.147-1.099-8.408-1.095-8.525 0-13.664 11.117-24.78 24.779-24.78 13.663,0 24.779,11.116 24.779,24.78 0,13.662-11.116,24.778-24.779,24.778-1.114,0-2.016,0.903-2.016,2.016s0.901,2.016 2.016,2.016c15.888,0 28.812-12.924 28.812-28.81-0.002-15.888-12.926-28.812-28.813-28.812z"/>
+                    <path d="m33.916,36.002c0.203,0.084 0.417,0.114 0.634,0.129 0.045,0.003 0.089,0.027 0.134,0.027 0.236,0 0.465-0.054 0.684-0.134 0.061-0.022 0.118-0.054 0.177-0.083 0.167-0.08 0.321-0.182 0.463-0.307 0.031-0.027 0.072-0.037 0.103-0.068l12.587-12.587c0.788-0.788 0.788-2.063 0-2.851-0.787-0.788-2.062-0.788-2.851,0l-11.632,11.631-10.439-4.372c-1.033-0.431-2.209,0.053-2.64,1.081-0.43,1.027 0.055,2.208 1.08,2.638l11.688,4.894c0.004,0.001 0.008,0.001 0.012,0.002z"/>
+                </g>
+            </g>
+        </symbol>
+
+        <symbol id="icon-delete_sweep" viewBox="0 0 24 24">
+            <title>delete_sweep</title>
+            <path class="path1"
+                  d="M14.016 5.016v1.969h-12v-1.969h3l0.984-1.031h3.984l1.031 1.031h3zM3 18v-9.984h9.984v9.984c0 1.078-0.891 2.016-1.969 2.016h-6c-1.078 0-2.016-0.938-2.016-2.016zM15 12h6v2.016h-6v-2.016zM15 8.016h6.984v1.969h-6.984v-1.969zM15 15.984h3.984v2.016h-3.984v-2.016z"></path>
+        </symbol>
+
+        <symbol id="icon-incredible-title" viewBox="0 0 302 32">
+            <title>incredible-title</title>
+            <path fill="#fe5353" class="inc_path1"
+                  d="M81.342 19.198c-0.023 0.569-0.080 1.129-0.171 1.68s-0.226 1.077-0.403 1.577c-0.177 0.5-0.42 0.945-0.729 1.336-0.4-0.241-0.766-0.454-1.098-0.638s-0.686-0.385-1.064-0.603c0.069-0.368 0.123-0.77 0.163-1.206s0.060-0.913 0.060-1.431c0-0.103 0-0.23 0-0.379s-0.011-0.287-0.034-0.414v-15.891h3.311v14.306c0 0.54-0.011 1.095-0.034 1.663zM71.236 18.172c-0.559-0.581-1.073-1.11-1.543-1.587s-0.97-0.991-1.499-1.542l3.042-3.085c0.558 0.567 1.084 1.099 1.576 1.598s0.988 0.995 1.488 1.487c-0.544 0.566-1.058 1.099-1.543 1.598s-0.992 1.010-1.521 1.531zM74.214 20.372l-0.001 3.295-43.213 0.049c-0.683-0.067-1.346-0.257-1.988-0.569-0.674-0.328-1.302-0.768-1.885-1.321-0.583 0.541-1.208 0.978-1.877 1.312-0.57 0.285-1.586 0.469-3.042 0.552v0.052l-11.764-0.008c-0.137 0.736-0.307 1.414-0.507 2.035s-0.444 1.15-0.73 1.587c-0.607 0.897-1.452 1.624-2.534 2.182s-2.419 0.837-4.011 0.837c-0.412 0-0.839-0.020-1.28-0.060s-0.902-0.106-1.383-0.198v-3.191c0.401 0.138 0.819 0.238 1.254 0.302s0.865 0.095 1.288 0.095c0.55 0 1.085-0.063 1.606-0.19s0.996-0.325 1.426-0.595c0.429-0.27 0.793-0.621 1.091-1.052s0.504-0.957 0.618-1.578c0.057-0.817 0.106-1.667 0.146-2.553s0.060-1.811 0.060-2.777c0-0.218 0-0.46 0-0.724 0-0.276-0.006-0.523-0.017-0.742v-5.951h3.315v6.658c0 0.161 0 0.351 0 0.569s-0.003 0.446-0.009 0.681c-0.006 0.236-0.012 0.472-0.017 0.707s-0.014 0.451-0.026 0.647l10.683-0.029c2.902-0.092 2.925-0.4 3.359-0.872 0.217-0.236 0.388-0.518 0.514-0.846s0.189-0.693 0.189-1.096v-6.422h3.273v6.422c0 0.403 0.066 0.768 0.197 1.096s0.303 0.61 0.514 0.846c0.211 0.236 0.46 0.429 0.745 0.578s0.583 0.248 0.891 0.293v0.035l24.681 0.009c0.48 0 0.9-0.072 1.26-0.215s0.654-0.336 0.883-0.577c0.229-0.241 0.4-0.513 0.514-0.818s0.172-0.611 0.172-0.921c0-0.333-0.060-0.657-0.18-0.973s-0.297-0.6-0.531-0.852c-0.234-0.252-0.529-0.453-0.883-0.603s-0.766-0.224-1.235-0.224h-9.448c-0.469 0.023-0.912-0.020-1.329-0.129s-0.783-0.281-1.097-0.517c-0.315-0.235-0.563-0.522-0.746-0.861s-0.274-0.732-0.274-1.179v-0.207c0-0.080 0.006-0.161 0.017-0.241 0.046-0.356 0.129-0.68 0.249-0.973s0.26-0.571 0.42-0.835c0.16-0.264 0.343-0.519 0.549-0.766s0.423-0.502 0.652-0.766c0.034-0.046 0.066-0.089 0.094-0.129s0.054-0.077 0.077-0.112c0.823-0.941 1.646-1.882 2.469-2.824s1.646-1.888 2.469-2.841c0.457 0.402 0.874 0.766 1.252 1.093s0.783 0.675 1.217 1.042l-5.984 6.921h9.482c0.869 0 1.675 0.158 2.418 0.474s1.383 0.738 1.92 1.265c0.537 0.528 0.96 1.145 1.269 1.851s0.463 1.444 0.463 2.213c0 0.666-0.217 1.567-0.652 2.703l12.943-0.065zM41.227 9.539c0.057-0.39 0.151-0.746 0.283-1.067s0.292-0.622 0.48-0.904c0.189-0.281 0.397-0.557 0.626-0.826s0.463-0.548 0.703-0.835l4.184-4.838 1.44 1.291-7.579 8.764c-0.16-0.493-0.206-1.021-0.137-1.584zM9.337 8.975c-0.559-0.582-1.074-1.112-1.545-1.591s-0.971-0.993-1.501-1.546l3.046-3.092c0.559 0.568 1.085 1.102 1.578 1.602s0.989 0.997 1.49 1.49c-0.545 0.568-1.059 1.102-1.545 1.602s-0.993 1.012-1.523 1.535zM20.594 28.797l2.839-2.807 2.839 2.807-2.839 2.807-2.839-2.807-2.839 2.807-2.839-2.807 2.839-2.807 2.839 2.807z"></path>
+            <path fill="#fe5353" class="inc_path2"
+                  d="M186.693 19.892c-0.326 0.716-0.764 1.346-1.314 1.89s-1.185 0.982-1.906 1.314c-0.721 0.333-1.482 0.521-2.284 0.567-0.79-0.023-1.568-0.203-2.335-0.541s-1.465-0.793-2.095-1.366c-0.664 0.642-1.371 1.106-2.12 1.392s-1.508 0.458-2.275 0.515c-0.756-0.011-1.517-0.18-2.284-0.507s-1.471-0.793-2.112-1.4c-0.584 0.538-1.213 0.974-1.889 1.306-0.644 0.317-1.313 0.508-2.009 0.575v0.026l-41.036-0.027c-0.684-0.067-1.345-0.255-1.983-0.566-0.67-0.327-1.302-0.765-1.897-1.315-0.584 0.538-1.21 0.974-1.88 1.306-0.57 0.283-1.162 0.465-1.777 0.549v0.052l-28.016-0.038v-3.297l27.689 0.036v-0.034c0.309-0.046 0.604-0.143 0.884-0.292s0.529-0.341 0.747-0.576c0.217-0.235 0.389-0.515 0.515-0.842s0.189-0.69 0.189-1.091v-6.392h3.297v6.392c0 0.401 0.063 0.765 0.189 1.091s0.298 0.607 0.515 0.842c0.217 0.235 0.466 0.427 0.747 0.576s0.575 0.247 0.884 0.292v0.034h3.022c-0.195-0.527-0.343-1.022-0.446-1.486s-0.154-0.891-0.154-1.28v-3.248c0-0.836 0.16-1.621 0.481-2.354s0.755-1.375 1.305-1.924c0.549-0.55 1.193-0.985 1.932-1.306s1.525-0.481 2.361-0.481c0.835 0 1.623 0.16 2.361 0.481s1.382 0.756 1.932 1.306c0.549 0.55 0.984 1.192 1.305 1.924s0.481 1.518 0.481 2.354v3.248c0 0.39-0.054 0.816-0.163 1.28s-0.26 0.96-0.455 1.486h18.423c0.481 0 0.901-0.071 1.262-0.215s0.655-0.335 0.884-0.576c0.229-0.241 0.4-0.513 0.515-0.816s0.172-0.61 0.172-0.919c0-0.332-0.060-0.656-0.18-0.971s-0.298-0.599-0.532-0.851c-0.235-0.252-0.53-0.452-0.884-0.601s-0.767-0.223-1.236-0.223h-9.461c-0.469 0.023-0.913-0.020-1.331-0.129s-0.784-0.281-1.099-0.516c-0.315-0.235-0.564-0.521-0.747-0.859s-0.275-0.73-0.275-1.177v-0.206c0-0.080 0.006-0.16 0.017-0.241 0.046-0.355 0.129-0.679 0.249-0.971s0.26-0.57 0.421-0.833c0.16-0.263 0.344-0.518 0.549-0.765s0.423-0.501 0.653-0.765c0.034-0.046 0.066-0.089 0.094-0.129s0.054-0.077 0.077-0.112c0.824-0.939 1.648-1.879 2.472-2.818s1.648-1.884 2.473-2.835c0.458 0.401 0.876 0.765 1.253 1.091s0.784 0.673 1.219 1.040l-5.992 6.908h9.495c0.87 0 1.677 0.158 2.421 0.473s1.385 0.736 1.923 1.263c0.538 0.527 0.962 1.143 1.271 1.847s0.464 1.441 0.464 2.208c0 0.665-0.218 1.564-0.653 2.698h2.953v-0.034c0.309-0.046 0.607-0.143 0.893-0.292s0.538-0.341 0.756-0.576c0.217-0.235 0.389-0.515 0.515-0.842s0.189-0.69 0.189-1.091v-6.392h3.279v6.392c0 0.447 0.080 0.848 0.24 1.203s0.369 0.653 0.627 0.893c0.258 0.241 0.552 0.424 0.884 0.55s0.67 0.189 1.013 0.189c0.343 0 0.681-0.063 1.013-0.189s0.627-0.309 0.884-0.55c0.258-0.24 0.466-0.538 0.627-0.893s0.24-0.756 0.24-1.203v-6.392h3.297v6.392c0 0.447 0.077 0.845 0.232 1.194s0.361 0.644 0.618 0.885c0.258 0.24 0.549 0.424 0.876 0.55s0.661 0.195 1.004 0.206c0.343-0.011 0.678-0.080 1.004-0.206s0.618-0.309 0.876-0.55c0.258-0.241 0.466-0.535 0.627-0.885s0.24-0.747 0.24-1.194v-6.392h3.279v6.461c0 0.813-0.163 1.578-0.489 2.294zM134.402 14.436c0-0.504-0.080-0.939-0.24-1.306s-0.369-0.667-0.627-0.902c-0.258-0.235-0.555-0.409-0.893-0.524s-0.678-0.166-1.022-0.155c-0.343 0.023-0.681 0.1-1.013 0.232s-0.627 0.318-0.884 0.558c-0.258 0.241-0.464 0.536-0.618 0.885s-0.232 0.753-0.232 1.211v3.11c0 0.447 0.077 0.845 0.232 1.194s0.361 0.644 0.618 0.885c0.257 0.241 0.552 0.427 0.884 0.558s0.67 0.204 1.013 0.215h-0.017c0.355 0.023 0.698-0.020 1.030-0.129s0.629-0.281 0.893-0.516c0.263-0.235 0.475-0.535 0.635-0.902s0.24-0.802 0.24-1.306v-3.11zM179.872 5.92l-3.131 3.113-3.131-3.113-3.131 3.113-3.131-3.113 3.131-3.113 3.131 3.113 3.131-3.113 3.131 3.113 3.131-3.113 3.131 3.113-3.131 3.113-3.131-3.113zM140.944 9.488c0.057-0.389 0.152-0.745 0.283-1.065s0.292-0.621 0.481-0.902c0.189-0.28 0.398-0.555 0.627-0.825s0.464-0.547 0.704-0.833l4.19-4.828 1.442 1.289-7.589 8.746c-0.16-0.492-0.206-1.019-0.137-1.581zM128.849 3.113l3.131-3.113 3.131 3.113-3.131 3.113-3.131-3.113zM93.744 15.13l-3.131 3.113-3.131-3.113 3.131-3.113 3.131 3.113 3.131-3.113 3.131 3.113-3.131 3.113-3.131-3.113z"></path>
+            <path fill="#5F5F5F" class="inc_path3"
+                  d="M301.706 19.859c-0.291 0.708-0.691 1.336-1.199 1.882s-1.105 0.99-1.79 1.329c-0.589 0.292-1.211 0.479-1.867 0.563v0.050h-12.7v-0.027c-0.684-0.067-1.346-0.256-1.988-0.569-0.675-0.328-1.303-0.768-1.886-1.321-0.583 0.541-1.208 0.979-1.877 1.312-0.571 0.285-1.586 0.469-3.043 0.553v0.052h-1.916l-3.778 0.033v-0.027c-0.684-0.067-1.344-0.257-1.981-0.57-0.669-0.328-1.295-0.769-1.878-1.323-0.641 0.588-1.329 1.049-2.067 1.383s-1.501 0.513-2.29 0.536c-0.789 0-1.561-0.173-2.316-0.519s-1.458-0.818-2.11-1.418c-0.686 0.646-1.398 1.115-2.136 1.409s-1.495 0.47-2.273 0.527c-0.755-0.011-1.512-0.182-2.273-0.51s-1.467-0.798-2.118-1.409c-0.583 0.542-1.209 0.98-1.878 1.314-0.637 0.319-1.304 0.511-1.998 0.579v0.009c-0.017-0.001-0.034-0.003-0.051-0.005-0.017 0.002-0.034 0.003-0.052 0.005v-0.009c-0.684-0.067-1.347-0.257-1.99-0.57-0.675-0.328-1.304-0.769-1.887-1.323-0.583 0.542-1.209 0.98-1.878 1.314-0.643 0.322-1.321 0.515-2.033 0.58v0.025h-25.507v-0.026c-0.75-0.067-1.451-0.262-2.101-0.588-0.68-0.34-1.275-0.784-1.784-1.331s-0.909-1.176-1.201-1.884-0.437-1.467-0.437-2.274v-14.471h3.276v14.402c0 0.404 0.066 0.77 0.197 1.098s0.303 0.611 0.515 0.847c0.211 0.236 0.46 0.43 0.746 0.579s0.583 0.248 0.892 0.294v0.035h2.436l-0.017-6.051c0-0.841 0.16-1.631 0.48-2.369s0.755-1.383 1.304-1.936 1.192-0.991 1.93-1.314c0.738-0.322 1.524-0.484 2.359-0.484 0.549 0 1.083 0.078 1.604 0.233s1.009 0.375 1.467 0.657c0.457 0.282 0.878 0.622 1.261 1.020s0.718 0.838 1.004 1.323h2.933c0.835 0 1.618 0.162 2.35 0.484s1.372 0.761 1.921 1.314c0.549 0.553 0.983 1.202 1.304 1.945s0.48 1.536 0.48 2.377l0.017 2.801h2.487v-0.035c0.309-0.046 0.606-0.144 0.892-0.294s0.537-0.343 0.755-0.579c0.217-0.236 0.389-0.519 0.515-0.847s0.189-0.694 0.189-1.098v-6.432h3.276v6.432c0 0.404 0.066 0.77 0.197 1.098s0.303 0.611 0.515 0.847c0.211 0.236 0.46 0.43 0.746 0.579 0.27 0.142 0.55 0.236 0.84 0.285 0.29-0.049 0.571-0.143 0.841-0.285 0.286-0.15 0.534-0.343 0.746-0.579s0.383-0.519 0.515-0.847c0.131-0.328 0.197-0.694 0.197-1.098v-6.432h3.276v6.432c0 0.45 0.080 0.853 0.24 1.21s0.369 0.657 0.626 0.899c0.257 0.242 0.551 0.427 0.883 0.553s0.669 0.19 1.012 0.19c0.343 0 0.678-0.063 1.004-0.19s0.618-0.311 0.875-0.553 0.466-0.542 0.626-0.899c0.16-0.357 0.24-0.761 0.24-1.21v-6.432h3.311v6.432c0 0.45 0.077 0.85 0.232 1.202s0.36 0.648 0.617 0.89c0.257 0.242 0.549 0.427 0.875 0.553s0.66 0.196 1.004 0.207c0.343-0.011 0.678-0.080 1.003-0.207s0.618-0.311 0.875-0.553c0.257-0.242 0.466-0.539 0.626-0.89s0.24-0.752 0.24-1.202v-6.432h3.276v6.432c0 0.404 0.066 0.77 0.197 1.098s0.303 0.611 0.515 0.847c0.211 0.236 0.457 0.43 0.738 0.579s0.575 0.248 0.883 0.294v0.034l3.349-0.028h1.454v-0.035c1.451-0.046 2.32-0.144 2.606-0.294s0.537-0.342 0.754-0.578c0.217-0.236 0.388-0.518 0.514-0.846s0.189-0.693 0.189-1.097v-6.423h3.274v6.423c0 0.403 0.066 0.768 0.197 1.097s0.303 0.61 0.514 0.846c0.211 0.236 0.46 0.429 0.746 0.579s0.583 0.248 0.891 0.294v0.035h12.271v-0.035c0.308-0.046 0.605-0.144 0.891-0.294s0.534-0.342 0.745-0.578c0.211-0.236 0.382-0.518 0.514-0.846s0.197-0.693 0.197-1.097v-6.423h3.272v6.492c0 0.806-0.146 1.563-0.437 2.27zM222.302 14.432c0-0.507-0.080-0.945-0.24-1.314s-0.369-0.671-0.626-0.908c-0.257-0.236-0.555-0.412-0.892-0.527s-0.678-0.167-1.021-0.156c-0.343 0.023-0.68 0.101-1.012 0.233s-0.626 0.32-0.883 0.562c-0.257 0.242-0.466 0.539-0.626 0.89s-0.24 0.758-0.24 1.219v5.999h2.779c0.343 0 0.68-0.052 1.012-0.156s0.626-0.274 0.883-0.51c0.257-0.236 0.466-0.536 0.626-0.899s0.24-0.798 0.24-1.305v-3.129zM230.587 17.596c0-0.346-0.063-0.689-0.189-1.029s-0.312-0.64-0.557-0.899c-0.246-0.259-0.546-0.469-0.901-0.631s-0.761-0.242-1.218-0.242h-2.11v2.818c0 0.392-0.054 0.821-0.163 1.288s-0.26 0.966-0.455 1.495h5.592v-2.801zM260.175 5.844l-3.129 3.12-3.129-3.12-3.129 3.12-3.129-3.121 3.129-3.12 3.129 3.12 3.129-3.12 3.129 3.12 3.129-3.12 3.129 3.12-3.129 3.121-3.129-3.12zM232.496 5.843l3.129-3.12 3.129 3.12-3.129 3.121-3.129-3.121zM201.9 21.893c-0.555 0.559-1.198 1.003-1.93 1.331s-1.51 0.493-2.333 0.493h-4.288v-3.32h4.22c0.48 0 0.901-0.083 1.261-0.251s0.658-0.383 0.892-0.648c0.234-0.265 0.412-0.568 0.532-0.908s0.186-0.677 0.197-1.011c-0.057-0.403-0.217-0.836-0.48-1.297s-0.592-0.925-0.986-1.392c-0.395-0.467-0.835-0.931-1.321-1.392s-0.975-0.899-1.467-1.314l2.316-2.576c0.595 0.507 1.192 1.072 1.793 1.694s1.146 1.28 1.638 1.971c0.492 0.692 0.898 1.406 1.218 2.144s0.503 1.47 0.549 2.196c0 0.819-0.163 1.597-0.489 2.334s-0.766 1.386-1.321 1.945zM273.097 28.879l3.129-3.12 3.129 3.121-3.129 3.121-3.129-3.12-3.129 3.12-3.129-3.121 3.129-3.121 3.129 3.12zM288.581 28.879l3.129-3.12 3.129 3.12 3.129-3.12 3.129 3.121-3.129 3.121-3.129-3.12-3.129 3.12-3.129-3.12-3.129 3.12-3.129-3.121 3.129-3.121 3.129 3.12z"></path>
+        </symbol>
+
+        <symbol id="icon-incredible-title-secret" viewBox="0 0 302 32">
+            <title>incredible-title</title>
+            <path class="inc_path1"
+                  d="M81.342 19.198c-0.023 0.569-0.080 1.129-0.171 1.68s-0.226 1.077-0.403 1.577c-0.177 0.5-0.42 0.945-0.729 1.336-0.4-0.241-0.766-0.454-1.098-0.638s-0.686-0.385-1.064-0.603c0.069-0.368 0.123-0.77 0.163-1.206s0.060-0.913 0.060-1.431c0-0.103 0-0.23 0-0.379s-0.011-0.287-0.034-0.414v-15.891h3.311v14.306c0 0.54-0.011 1.095-0.034 1.663zM71.236 18.172c-0.559-0.581-1.073-1.11-1.543-1.587s-0.97-0.991-1.499-1.542l3.042-3.085c0.558 0.567 1.084 1.099 1.576 1.598s0.988 0.995 1.488 1.487c-0.544 0.566-1.058 1.099-1.543 1.598s-0.992 1.010-1.521 1.531zM74.214 20.372l-0.001 3.295-43.213 0.049c-0.683-0.067-1.346-0.257-1.988-0.569-0.674-0.328-1.302-0.768-1.885-1.321-0.583 0.541-1.208 0.978-1.877 1.312-0.57 0.285-1.586 0.469-3.042 0.552v0.052l-11.764-0.008c-0.137 0.736-0.307 1.414-0.507 2.035s-0.444 1.15-0.73 1.587c-0.607 0.897-1.452 1.624-2.534 2.182s-2.419 0.837-4.011 0.837c-0.412 0-0.839-0.020-1.28-0.060s-0.902-0.106-1.383-0.198v-3.191c0.401 0.138 0.819 0.238 1.254 0.302s0.865 0.095 1.288 0.095c0.55 0 1.085-0.063 1.606-0.19s0.996-0.325 1.426-0.595c0.429-0.27 0.793-0.621 1.091-1.052s0.504-0.957 0.618-1.578c0.057-0.817 0.106-1.667 0.146-2.553s0.060-1.811 0.060-2.777c0-0.218 0-0.46 0-0.724 0-0.276-0.006-0.523-0.017-0.742v-5.951h3.315v6.658c0 0.161 0 0.351 0 0.569s-0.003 0.446-0.009 0.681c-0.006 0.236-0.012 0.472-0.017 0.707s-0.014 0.451-0.026 0.647l10.683-0.029c2.902-0.092 2.925-0.4 3.359-0.872 0.217-0.236 0.388-0.518 0.514-0.846s0.189-0.693 0.189-1.096v-6.422h3.273v6.422c0 0.403 0.066 0.768 0.197 1.096s0.303 0.61 0.514 0.846c0.211 0.236 0.46 0.429 0.745 0.578s0.583 0.248 0.891 0.293v0.035l24.681 0.009c0.48 0 0.9-0.072 1.26-0.215s0.654-0.336 0.883-0.577c0.229-0.241 0.4-0.513 0.514-0.818s0.172-0.611 0.172-0.921c0-0.333-0.060-0.657-0.18-0.973s-0.297-0.6-0.531-0.852c-0.234-0.252-0.529-0.453-0.883-0.603s-0.766-0.224-1.235-0.224h-9.448c-0.469 0.023-0.912-0.020-1.329-0.129s-0.783-0.281-1.097-0.517c-0.315-0.235-0.563-0.522-0.746-0.861s-0.274-0.732-0.274-1.179v-0.207c0-0.080 0.006-0.161 0.017-0.241 0.046-0.356 0.129-0.68 0.249-0.973s0.26-0.571 0.42-0.835c0.16-0.264 0.343-0.519 0.549-0.766s0.423-0.502 0.652-0.766c0.034-0.046 0.066-0.089 0.094-0.129s0.054-0.077 0.077-0.112c0.823-0.941 1.646-1.882 2.469-2.824s1.646-1.888 2.469-2.841c0.457 0.402 0.874 0.766 1.252 1.093s0.783 0.675 1.217 1.042l-5.984 6.921h9.482c0.869 0 1.675 0.158 2.418 0.474s1.383 0.738 1.92 1.265c0.537 0.528 0.96 1.145 1.269 1.851s0.463 1.444 0.463 2.213c0 0.666-0.217 1.567-0.652 2.703l12.943-0.065zM41.227 9.539c0.057-0.39 0.151-0.746 0.283-1.067s0.292-0.622 0.48-0.904c0.189-0.281 0.397-0.557 0.626-0.826s0.463-0.548 0.703-0.835l4.184-4.838 1.44 1.291-7.579 8.764c-0.16-0.493-0.206-1.021-0.137-1.584zM9.337 8.975c-0.559-0.582-1.074-1.112-1.545-1.591s-0.971-0.993-1.501-1.546l3.046-3.092c0.559 0.568 1.085 1.102 1.578 1.602s0.989 0.997 1.49 1.49c-0.545 0.568-1.059 1.102-1.545 1.602s-0.993 1.012-1.523 1.535zM20.594 28.797l2.839-2.807 2.839 2.807-2.839 2.807-2.839-2.807-2.839 2.807-2.839-2.807 2.839-2.807 2.839 2.807z"></path>
+            <path class="inc_path2"
+                  d="M186.693 19.892c-0.326 0.716-0.764 1.346-1.314 1.89s-1.185 0.982-1.906 1.314c-0.721 0.333-1.482 0.521-2.284 0.567-0.79-0.023-1.568-0.203-2.335-0.541s-1.465-0.793-2.095-1.366c-0.664 0.642-1.371 1.106-2.12 1.392s-1.508 0.458-2.275 0.515c-0.756-0.011-1.517-0.18-2.284-0.507s-1.471-0.793-2.112-1.4c-0.584 0.538-1.213 0.974-1.889 1.306-0.644 0.317-1.313 0.508-2.009 0.575v0.026l-41.036-0.027c-0.684-0.067-1.345-0.255-1.983-0.566-0.67-0.327-1.302-0.765-1.897-1.315-0.584 0.538-1.21 0.974-1.88 1.306-0.57 0.283-1.162 0.465-1.777 0.549v0.052l-28.016-0.038v-3.297l27.689 0.036v-0.034c0.309-0.046 0.604-0.143 0.884-0.292s0.529-0.341 0.747-0.576c0.217-0.235 0.389-0.515 0.515-0.842s0.189-0.69 0.189-1.091v-6.392h3.297v6.392c0 0.401 0.063 0.765 0.189 1.091s0.298 0.607 0.515 0.842c0.217 0.235 0.466 0.427 0.747 0.576s0.575 0.247 0.884 0.292v0.034h3.022c-0.195-0.527-0.343-1.022-0.446-1.486s-0.154-0.891-0.154-1.28v-3.248c0-0.836 0.16-1.621 0.481-2.354s0.755-1.375 1.305-1.924c0.549-0.55 1.193-0.985 1.932-1.306s1.525-0.481 2.361-0.481c0.835 0 1.623 0.16 2.361 0.481s1.382 0.756 1.932 1.306c0.549 0.55 0.984 1.192 1.305 1.924s0.481 1.518 0.481 2.354v3.248c0 0.39-0.054 0.816-0.163 1.28s-0.26 0.96-0.455 1.486h18.423c0.481 0 0.901-0.071 1.262-0.215s0.655-0.335 0.884-0.576c0.229-0.241 0.4-0.513 0.515-0.816s0.172-0.61 0.172-0.919c0-0.332-0.060-0.656-0.18-0.971s-0.298-0.599-0.532-0.851c-0.235-0.252-0.53-0.452-0.884-0.601s-0.767-0.223-1.236-0.223h-9.461c-0.469 0.023-0.913-0.020-1.331-0.129s-0.784-0.281-1.099-0.516c-0.315-0.235-0.564-0.521-0.747-0.859s-0.275-0.73-0.275-1.177v-0.206c0-0.080 0.006-0.16 0.017-0.241 0.046-0.355 0.129-0.679 0.249-0.971s0.26-0.57 0.421-0.833c0.16-0.263 0.344-0.518 0.549-0.765s0.423-0.501 0.653-0.765c0.034-0.046 0.066-0.089 0.094-0.129s0.054-0.077 0.077-0.112c0.824-0.939 1.648-1.879 2.472-2.818s1.648-1.884 2.473-2.835c0.458 0.401 0.876 0.765 1.253 1.091s0.784 0.673 1.219 1.040l-5.992 6.908h9.495c0.87 0 1.677 0.158 2.421 0.473s1.385 0.736 1.923 1.263c0.538 0.527 0.962 1.143 1.271 1.847s0.464 1.441 0.464 2.208c0 0.665-0.218 1.564-0.653 2.698h2.953v-0.034c0.309-0.046 0.607-0.143 0.893-0.292s0.538-0.341 0.756-0.576c0.217-0.235 0.389-0.515 0.515-0.842s0.189-0.69 0.189-1.091v-6.392h3.279v6.392c0 0.447 0.080 0.848 0.24 1.203s0.369 0.653 0.627 0.893c0.258 0.241 0.552 0.424 0.884 0.55s0.67 0.189 1.013 0.189c0.343 0 0.681-0.063 1.013-0.189s0.627-0.309 0.884-0.55c0.258-0.24 0.466-0.538 0.627-0.893s0.24-0.756 0.24-1.203v-6.392h3.297v6.392c0 0.447 0.077 0.845 0.232 1.194s0.361 0.644 0.618 0.885c0.258 0.24 0.549 0.424 0.876 0.55s0.661 0.195 1.004 0.206c0.343-0.011 0.678-0.080 1.004-0.206s0.618-0.309 0.876-0.55c0.258-0.241 0.466-0.535 0.627-0.885s0.24-0.747 0.24-1.194v-6.392h3.279v6.461c0 0.813-0.163 1.578-0.489 2.294zM134.402 14.436c0-0.504-0.080-0.939-0.24-1.306s-0.369-0.667-0.627-0.902c-0.258-0.235-0.555-0.409-0.893-0.524s-0.678-0.166-1.022-0.155c-0.343 0.023-0.681 0.1-1.013 0.232s-0.627 0.318-0.884 0.558c-0.258 0.241-0.464 0.536-0.618 0.885s-0.232 0.753-0.232 1.211v3.11c0 0.447 0.077 0.845 0.232 1.194s0.361 0.644 0.618 0.885c0.257 0.241 0.552 0.427 0.884 0.558s0.67 0.204 1.013 0.215h-0.017c0.355 0.023 0.698-0.020 1.030-0.129s0.629-0.281 0.893-0.516c0.263-0.235 0.475-0.535 0.635-0.902s0.24-0.802 0.24-1.306v-3.11zM179.872 5.92l-3.131 3.113-3.131-3.113-3.131 3.113-3.131-3.113 3.131-3.113 3.131 3.113 3.131-3.113 3.131 3.113 3.131-3.113 3.131 3.113-3.131 3.113-3.131-3.113zM140.944 9.488c0.057-0.389 0.152-0.745 0.283-1.065s0.292-0.621 0.481-0.902c0.189-0.28 0.398-0.555 0.627-0.825s0.464-0.547 0.704-0.833l4.19-4.828 1.442 1.289-7.589 8.746c-0.16-0.492-0.206-1.019-0.137-1.581zM128.849 3.113l3.131-3.113 3.131 3.113-3.131 3.113-3.131-3.113zM93.744 15.13l-3.131 3.113-3.131-3.113 3.131-3.113 3.131 3.113 3.131-3.113 3.131 3.113-3.131 3.113-3.131-3.113z"></path>
+            <path class="inc_path3"
+                  d="M301.706 19.859c-0.291 0.708-0.691 1.336-1.199 1.882s-1.105 0.99-1.79 1.329c-0.589 0.292-1.211 0.479-1.867 0.563v0.050h-12.7v-0.027c-0.684-0.067-1.346-0.256-1.988-0.569-0.675-0.328-1.303-0.768-1.886-1.321-0.583 0.541-1.208 0.979-1.877 1.312-0.571 0.285-1.586 0.469-3.043 0.553v0.052h-1.916l-3.778 0.033v-0.027c-0.684-0.067-1.344-0.257-1.981-0.57-0.669-0.328-1.295-0.769-1.878-1.323-0.641 0.588-1.329 1.049-2.067 1.383s-1.501 0.513-2.29 0.536c-0.789 0-1.561-0.173-2.316-0.519s-1.458-0.818-2.11-1.418c-0.686 0.646-1.398 1.115-2.136 1.409s-1.495 0.47-2.273 0.527c-0.755-0.011-1.512-0.182-2.273-0.51s-1.467-0.798-2.118-1.409c-0.583 0.542-1.209 0.98-1.878 1.314-0.637 0.319-1.304 0.511-1.998 0.579v0.009c-0.017-0.001-0.034-0.003-0.051-0.005-0.017 0.002-0.034 0.003-0.052 0.005v-0.009c-0.684-0.067-1.347-0.257-1.99-0.57-0.675-0.328-1.304-0.769-1.887-1.323-0.583 0.542-1.209 0.98-1.878 1.314-0.643 0.322-1.321 0.515-2.033 0.58v0.025h-25.507v-0.026c-0.75-0.067-1.451-0.262-2.101-0.588-0.68-0.34-1.275-0.784-1.784-1.331s-0.909-1.176-1.201-1.884-0.437-1.467-0.437-2.274v-14.471h3.276v14.402c0 0.404 0.066 0.77 0.197 1.098s0.303 0.611 0.515 0.847c0.211 0.236 0.46 0.43 0.746 0.579s0.583 0.248 0.892 0.294v0.035h2.436l-0.017-6.051c0-0.841 0.16-1.631 0.48-2.369s0.755-1.383 1.304-1.936 1.192-0.991 1.93-1.314c0.738-0.322 1.524-0.484 2.359-0.484 0.549 0 1.083 0.078 1.604 0.233s1.009 0.375 1.467 0.657c0.457 0.282 0.878 0.622 1.261 1.020s0.718 0.838 1.004 1.323h2.933c0.835 0 1.618 0.162 2.35 0.484s1.372 0.761 1.921 1.314c0.549 0.553 0.983 1.202 1.304 1.945s0.48 1.536 0.48 2.377l0.017 2.801h2.487v-0.035c0.309-0.046 0.606-0.144 0.892-0.294s0.537-0.343 0.755-0.579c0.217-0.236 0.389-0.519 0.515-0.847s0.189-0.694 0.189-1.098v-6.432h3.276v6.432c0 0.404 0.066 0.77 0.197 1.098s0.303 0.611 0.515 0.847c0.211 0.236 0.46 0.43 0.746 0.579 0.27 0.142 0.55 0.236 0.84 0.285 0.29-0.049 0.571-0.143 0.841-0.285 0.286-0.15 0.534-0.343 0.746-0.579s0.383-0.519 0.515-0.847c0.131-0.328 0.197-0.694 0.197-1.098v-6.432h3.276v6.432c0 0.45 0.080 0.853 0.24 1.21s0.369 0.657 0.626 0.899c0.257 0.242 0.551 0.427 0.883 0.553s0.669 0.19 1.012 0.19c0.343 0 0.678-0.063 1.004-0.19s0.618-0.311 0.875-0.553 0.466-0.542 0.626-0.899c0.16-0.357 0.24-0.761 0.24-1.21v-6.432h3.311v6.432c0 0.45 0.077 0.85 0.232 1.202s0.36 0.648 0.617 0.89c0.257 0.242 0.549 0.427 0.875 0.553s0.66 0.196 1.004 0.207c0.343-0.011 0.678-0.080 1.003-0.207s0.618-0.311 0.875-0.553c0.257-0.242 0.466-0.539 0.626-0.89s0.24-0.752 0.24-1.202v-6.432h3.276v6.432c0 0.404 0.066 0.77 0.197 1.098s0.303 0.611 0.515 0.847c0.211 0.236 0.457 0.43 0.738 0.579s0.575 0.248 0.883 0.294v0.034l3.349-0.028h1.454v-0.035c1.451-0.046 2.32-0.144 2.606-0.294s0.537-0.342 0.754-0.578c0.217-0.236 0.388-0.518 0.514-0.846s0.189-0.693 0.189-1.097v-6.423h3.274v6.423c0 0.403 0.066 0.768 0.197 1.097s0.303 0.61 0.514 0.846c0.211 0.236 0.46 0.429 0.746 0.579s0.583 0.248 0.891 0.294v0.035h12.271v-0.035c0.308-0.046 0.605-0.144 0.891-0.294s0.534-0.342 0.745-0.578c0.211-0.236 0.382-0.518 0.514-0.846s0.197-0.693 0.197-1.097v-6.423h3.272v6.492c0 0.806-0.146 1.563-0.437 2.27zM222.302 14.432c0-0.507-0.080-0.945-0.24-1.314s-0.369-0.671-0.626-0.908c-0.257-0.236-0.555-0.412-0.892-0.527s-0.678-0.167-1.021-0.156c-0.343 0.023-0.68 0.101-1.012 0.233s-0.626 0.32-0.883 0.562c-0.257 0.242-0.466 0.539-0.626 0.89s-0.24 0.758-0.24 1.219v5.999h2.779c0.343 0 0.68-0.052 1.012-0.156s0.626-0.274 0.883-0.51c0.257-0.236 0.466-0.536 0.626-0.899s0.24-0.798 0.24-1.305v-3.129zM230.587 17.596c0-0.346-0.063-0.689-0.189-1.029s-0.312-0.64-0.557-0.899c-0.246-0.259-0.546-0.469-0.901-0.631s-0.761-0.242-1.218-0.242h-2.11v2.818c0 0.392-0.054 0.821-0.163 1.288s-0.26 0.966-0.455 1.495h5.592v-2.801zM260.175 5.844l-3.129 3.12-3.129-3.12-3.129 3.12-3.129-3.121 3.129-3.12 3.129 3.12 3.129-3.12 3.129 3.12 3.129-3.12 3.129 3.12-3.129 3.121-3.129-3.12zM232.496 5.843l3.129-3.12 3.129 3.12-3.129 3.121-3.129-3.121zM201.9 21.893c-0.555 0.559-1.198 1.003-1.93 1.331s-1.51 0.493-2.333 0.493h-4.288v-3.32h4.22c0.48 0 0.901-0.083 1.261-0.251s0.658-0.383 0.892-0.648c0.234-0.265 0.412-0.568 0.532-0.908s0.186-0.677 0.197-1.011c-0.057-0.403-0.217-0.836-0.48-1.297s-0.592-0.925-0.986-1.392c-0.395-0.467-0.835-0.931-1.321-1.392s-0.975-0.899-1.467-1.314l2.316-2.576c0.595 0.507 1.192 1.072 1.793 1.694s1.146 1.28 1.638 1.971c0.492 0.692 0.898 1.406 1.218 2.144s0.503 1.47 0.549 2.196c0 0.819-0.163 1.597-0.489 2.334s-0.766 1.386-1.321 1.945zM273.097 28.879l3.129-3.12 3.129 3.121-3.129 3.121-3.129-3.12-3.129 3.12-3.129-3.121 3.129-3.121 3.129 3.12zM288.581 28.879l3.129-3.12 3.129 3.12 3.129-3.12 3.129 3.121-3.129 3.121-3.129-3.12-3.129 3.12-3.129-3.12-3.129 3.12-3.129-3.121 3.129-3.121 3.129 3.12z"></path>
+        </symbol>
+
+        <symbol id="icon-secret-deal" viewBox="0 0 47 32">
+            <title>secret-deal</title>
+            <path class="path1" fill="#ff5252"
+                  d="M32.737 19.017c-3.168 0-5.703 0.845-7.603 1.902 2.957 2.536 4.224 5.494 4.435 5.705l0.211 0.423v4.649h16.896v-4.226c-0.211 0-3.59-8.452-13.939-8.452v0z"></path>
+            <path class="path2" fill="#ff5252"
+                  d="M40.129 7.396c0 4.084-3.31 7.396-7.392 7.396s-7.392-3.311-7.392-7.396c0-4.084 3.31-7.396 7.392-7.396s7.392 3.311 7.392 7.396z"></path>
+            <path class="path3" fill="#d13b3b"
+                  d="M6.336 7.396c0-4.015 3.379-7.396 7.392-7.396s7.392 3.381 7.392 7.396c0 4.015-3.379 7.396-7.392 7.396s-7.392-3.381-7.392-7.396v0zM13.728 19.017c-10.349 0-13.728 8.452-13.728 8.452v4.226h27.456v-4.226c0 0-3.379-8.452-13.728-8.452v0z"></path>
+        </symbol>
+
+        <symbol id="icon-secret-deal-dark" viewBox="0 0 47 32">
+            <title>secret-deal</title>
+            <path class="path1" fill="#bfbfbf"
+                  d="M32.737 19.017c-3.168 0-5.703 0.845-7.603 1.902 2.957 2.536 4.224 5.494 4.435 5.705l0.211 0.423v4.649h16.896v-4.226c-0.211 0-3.59-8.452-13.939-8.452v0z"></path>
+            <path class="path2" fill="#bfbfbf"
+                  d="M40.129 7.396c0 4.084-3.31 7.396-7.392 7.396s-7.392-3.311-7.392-7.396c0-4.084 3.31-7.396 7.392-7.396s7.392 3.311 7.392 7.396z"></path>
+            <path class="path3" fill="#bfbfbf"
+                  d="M6.336 7.396c0-4.015 3.379-7.396 7.392-7.396s7.392 3.381 7.392 7.396c0 4.015-3.379 7.396-7.392 7.396s-7.392-3.381-7.392-7.396v0zM13.728 19.017c-10.349 0-13.728 8.452-13.728 8.452v4.226h27.456v-4.226c0 0-3.379-8.452-13.728-8.452v0z"></path>
+        </symbol>
+
+
+        <symbol id="icon-profileicon" viewBox="0 0 30 32">
+            <title>profile</title>
+            <path class="path1" fill="none" stroke="#fff" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M18.605 17.488c1.786-1.191 2.977-3.274 2.977-5.581v-4.465c0-3.721-2.977-6.698-6.698-6.698s-6.698 2.977-6.698 6.698v4.465c0 2.307 1.191 4.391 2.977 5.581v3.721c0 2.605-10.419 2.679-10.419 10.047h28.279c0-7.442-10.419-7.367-10.419-10.047v-3.721z"></path>
+        </symbol>
+
+        <symbol id="icon-logo-white" viewBox="0 0 3803 1024">
+            <title>logo</title>
+            <path fill="#fff" class="path1"
+                  d="M3657.143 658.286h-256c-20.187 0-36.571-16.384-36.571-36.571v-219.429c0-20.187 16.384-36.571 36.571-36.571h256v292.571zM3510.857 219.429h-146.286c-80.786 0-146.286 65.499-146.286 146.286v292.571c0 80.786 65.499 146.286 146.286 146.286h438.857v-585.143h-292.571z"></path>
+            <path fill="#fff" class="path2" d="M2998.857 804.571h146.286v-804.571h-146.286v804.571z"></path>
+            <path fill="#fff" class="path3"
+                  d="M2779.429 658.286h-256c-20.187 0-36.571-16.384-36.571-36.571v-219.429c0-20.187 16.384-36.571 36.571-36.571h256v292.571zM2486.857 219.429c-80.786 0-146.286 65.499-146.286 146.286v292.571c0 80.786 65.499 146.286 146.286 146.286h438.857v-585.143h-438.857z"></path>
+            <path fill="#fff" class="path4" d="M1755.429 0v804.571h146.286v-804.571h-146.286z"></path>
+            <path fill="#fff" class="path5"
+                  d="M2093.722 512l246.857-292.571h-192.037l-246.821 292.571 246.857 292.571h192l-246.857-292.571z"></path>
+            <path fill="#fff" class="path6" d="M1536 146.286h146.286v-146.286h-146.286v146.286z"></path>
+            <path fill="#fff" class="path7" d="M1536 804.571h146.286v-585.143h-146.286v585.143z"></path>
+            <path fill="#fff" class="path8"
+                  d="M1316.571 658.286h-256c-20.187 0-36.571-16.384-36.571-36.571v-219.429c0-20.187 16.384-36.571 36.571-36.571h256v292.571zM1024 219.429c-80.786 0-146.286 65.499-146.286 146.286v292.571c0 80.786 65.499 146.286 146.286 146.286h292.571v36.571c0 20.187-16.384 36.571-36.571 36.571h-271.872l122.77 146.286h185.673c80.786 0 146.286-65.499 146.286-146.286v-658.286h-438.857z"></path>
+            <path fill="#fff" class="path9" d="M658.286 146.286h146.286v-146.286h-146.286v146.286z"></path>
+            <path fill="#fff" class="path10" d="M658.286 804.571h146.286v-585.143h-146.286v585.143z"></path>
+            <path fill="#fff" class="path11"
+                  d="M438.857 658.286h-256c-20.187 0-36.571-16.384-36.571-36.571v-219.429c0-20.187 16.384-36.571 36.571-36.571h256v292.571zM438.857 219.429h-292.571c-80.786 0-146.286 65.499-146.286 146.286v292.571c0 80.786 65.499 146.286 146.286 146.286h438.857v-804.571h-146.286v219.429z"></path>
+        </symbol>
+        <symbol id="icon-emptycarticon" viewBox="0 0 32 32">
+            <title>emptycarticon</title>
+            <path class="path1" fill="#b3b3b3" d="M2.72 0.035h29.139v3.068l-29.066-0.411z"></path>
+            <path class="path2" fill="#f4f4f4" d="M28.162 2.738l3.809-2.711 0.217 28.424-4.193 1.821z"></path>
+            <path class="path3" fill="#c8c8c8" d="M0 1.79h25.435v30.17l-25.435-2.836z"></path>
+            <path class="path4" fill="#ececec" d="M25.443 31.987l2.742-6.079 4.011 2.541z"></path>
+            <path class="path5" fill="#dfdfdf" d="M28.192 25.922v-23.188l-2.757-0.944v30.207z"></path>
+            <path class="path6" fill="#c8c8c8" d="M0.007 1.79h4.732v-1.029z"></path>
+            <path class="path7" fill="#f4f4f4" d="M2.718 1.199v-1.162l2.007 0.741z"></path>
+            <path class="path8" fill="#fff"
+                  d="M5.001 18.801l-0.041 1.169-1.356-0.047c-0.456-0.016-0.838 0.339-0.853 0.792v0l-0.044 1.257c-0.016 0.453 0.341 0.834 0.796 0.849l2.088 0.073 0.142-4.068-0.733-0.026zM4.884 22.142l-1.189-0.042c-0.143-0.006-0.254-0.125-0.25-0.267l0.032-0.928c0.005-0.142 0.125-0.253 0.268-0.249l1.189 0.042-0.050 1.444z"></path>
+            <path class="path9" fill="#fff"
+                  d="M10.215 20.109l-2.089-0.073c-0.456-0.016-0.838 0.339-0.853 0.792v0l-0.044 1.257c-0.016 0.453 0.341 0.834 0.796 0.849l1.357 0.047-0.007 0.193c-0.005 0.138-0.119 0.247-0.258 0.248l-1.262-0.044 0.579 0.75 0.814 0.028c0.453 0.015 0.834-0.336 0.852-0.787v0l0.114-3.261zM7.966 21.946l0.032-0.928c0.005-0.142 0.125-0.253 0.268-0.249l1.191 0.042-0.050 1.443-1.191-0.042c-0.143-0.006-0.254-0.125-0.25-0.267l-0 0.001z"></path>
+            <path class="path10" fill="#fff"
+                  d="M15.658 20.299c-0.456-0.016-0.838 0.339-0.853 0.792v0l-0.044 1.257c-0.016 0.453 0.341 0.834 0.796 0.849l2.088 0.073 0.101-2.899-2.088-0.073zM16.938 22.518l-1.189-0.042c-0.143-0.006-0.254-0.125-0.25-0.267l0.032-0.928c0.005-0.142 0.125-0.253 0.268-0.249l1.189 0.042-0.050 1.444z"></path>
+            <path class="path11" fill="#fff"
+                  d="M20.178 20.457c-0.456-0.016-0.838 0.339-0.853 0.792v0l-0.044 1.257c-0.016 0.453 0.341 0.834 0.796 0.849l2.085 0.073 0.101-2.899-2.085-0.073zM21.458 22.675l-1.189-0.042c-0.143-0.006-0.254-0.125-0.25-0.267l0.032-0.928c0.005-0.142 0.125-0.253 0.268-0.249l1.189 0.042-0.050 1.444z"></path>
+            <path class="path12" fill="#fff"
+                  d="M14.624 23.165l-1.152-1.491 1.253-1.407-0.949-0.033-1.253 1.407 1.152 1.491z"></path>
+            <path class="path13" fill="#fff" d="M11.86 19.041l0.733 0.026-0.142 4.069-0.733-0.026 0.142-4.069z"></path>
+            <path class="path14" fill="#fff" d="M18.168 19.261l0.733 0.026-0.142 4.069-0.733-0.026 0.142-4.069z"></path>
+            <path class="path15" fill="#fff" d="M6.077 19.964l0.733 0.026-0.101 2.899-0.733-0.026 0.101-2.899z"></path>
+            <path class="path16" fill="#fff" d="M6.116 18.84l0.733 0.026-0.025 0.729-0.733-0.026 0.025-0.729z"></path>
+            <path class="path17" fill="#fff" d="M10.596 20.122l0.733 0.026-0.101 2.899-0.733-0.026 0.101-2.899z"></path>
+            <path class="path18" fill="#fff" d="M10.635 18.998l0.733 0.026-0.025 0.729-0.733-0.026 0.025-0.729z"></path>
+            <path class="path19" fill="#b9b9b9"
+                  d="M21.595 6.281v0c0.351 0 0.636 0.319 0.636 0.711 0 8.275-5.782 11.361-9.426 11.363v0c-1.031 0-3.671-0.221-5.981-2.258-2.252-1.992-3.436-5.136-3.436-9.106 0-0.393 0.285-0.711 0.636-0.711v0c0.351 0 0.636 0.319 0.636 0.711 0 3.557 0.994 6.249 2.957 7.983 1.993 1.76 4.291 1.951 5.188 1.951v0c1.376 0 3.46-0.569 5.182-2.156 1.943-1.793 2.971-4.485 2.973-7.784 0.003-0.389 0.286-0.703 0.634-0.704v0z"></path>
+            <path class="path20" fill="#b3b3b3"
+                  d="M4.12 4.711h0.020c0.771 0 1.396 0.625 1.396 1.396v0c0 0.771-0.625 1.396-1.396 1.396h-0.020c-0.771 0-1.396-0.625-1.396-1.396v0c0-0.771 0.625-1.396 1.396-1.396z"></path>
+            <path class="path21" fill="#b3b3b3"
+                  d="M21.019 4.884h0.020c0.771 0 1.396 0.625 1.396 1.396v0c0 0.771-0.625 1.396-1.396 1.396h-0.020c-0.771 0-1.396-0.625-1.396-1.396v0c0-0.771 0.625-1.396 1.396-1.396z"></path>
+            <path class="path22" fill="#fcfcfc"
+                  d="M21.052 5.947v0c0.337 0 0.61 0.271 0.61 0.606 0 7.046-5.545 9.674-9.039 9.675v0c-0.988 0-3.52-0.188-5.735-1.923-2.16-1.696-3.295-4.373-3.295-7.754 0-0.335 0.273-0.606 0.61-0.606v0c0.337 0 0.61 0.271 0.61 0.606 0 3.029 0.953 5.321 2.836 6.798 1.911 1.499 4.115 1.661 4.975 1.661v0c1.319 0 3.318-0.485 4.969-1.835 1.863-1.527 2.849-3.819 2.851-6.628 0.003-0.331 0.274-0.598 0.608-0.6v0z"></path>
+        </symbol>
+        <symbol id="icon-error" viewBox="0 0 32 32">
+            <title>error</title>
+            <path class="path1" fill="#666666"
+                  d="M30.667 28l-14.667-24.4-14.667 24.4h29.333zM17.333 25.333h-2.667v-2.667h2.667v2.667zM17.333 20h-2.667v-8h2.667v8z"></path>
+        </symbol>
+
+        <symbol id="icon-profile-log-in" viewBox="0 0 35 32">
+            <title>login_profile</title>
+            <path class="path1" fill="none" stroke="#8b8c8f" stroke-width="1.7" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M17.391 19.826v-3.478c1.67-1.113 2.783-3.061 2.783-5.217v-4.174c0-3.478-2.783-6.261-6.261-6.261s-6.261 2.783-6.261 6.261v4.174c0 2.157 1.113 4.104 2.783 5.217v3.478c0 2.435-9.739 2.504-9.739 9.391h26.435c0-6.957-9.739-6.887-9.739-9.391v0z"></path>
+            <path class="path2" fill="#4CAF50" stroke="none"
+                  d="M34.783 25.043c0 3.842-3.115 6.957-6.957 6.957s-6.957-3.115-6.957-6.957c0-3.842 3.115-6.957 6.957-6.957s6.957 3.115 6.957 6.957z"></path>
+            <path class="path3" fill="none" stroke="#fff" stroke-width="1.7" stroke-miterlimit="4" stroke-linecap="butt"
+                  stroke-linejoin="miter" d="M32 22.186l-5.341 5.565-3.006-3.132"></path>
+        </symbol>
+
+        <symbol id="icon-share" viewBox="0 0 24 32">
+            <title>share</title>
+            <path class="path1" fill="none" stroke="#97989b" stroke-width="1.2449" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M16.871 6.229l-5.020-5.043-5.020 5.043"></path>
+            <path class="path2" fill="none" stroke="#97989b" stroke-width="1.2449" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M11.852 21.989v-19.964"></path>
+            <path class="path3" fill="none" stroke="#97989b" stroke-width="1.2449" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M6.832 10.641h-5.647v20.173h21.333v-20.173h-5.647"></path>
+        </symbol>
+        <symbol id="icon-gplus" viewBox="0 0 32 32">
+            <title>gplus</title>
+            <path class="path1" fill="#d0422a"
+                  d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+            <path class="path2" fill="#fff"
+                  d="M16.647 16.861l-0.741-0.574c-0.226-0.187-0.535-0.433-0.535-0.885 0-0.453 0.309-0.741 0.577-1.008 0.864-0.678 1.727-1.4 1.727-2.92 0-1.564-0.986-2.386-1.459-2.777h1.275l1.338-0.838h-4.053c-1.112 0-2.715 0.262-3.889 1.229-0.885 0.761-1.316 1.81-1.316 2.755 0 1.604 1.235 3.229 3.415 3.229 0.206 0 0.431-0.020 0.658-0.041-0.102 0.247-0.205 0.453-0.205 0.802 0 0.637 0.328 1.028 0.617 1.397-0.926 0.064-2.656 0.166-3.931 0.947-1.214 0.72-1.584 1.768-1.584 2.508 0 1.523 1.439 2.941 4.423 2.941 3.538 0 5.411-1.953 5.411-3.886 0.001-1.42-0.822-2.119-1.728-2.88v0zM13.952 14.496c-1.77 0-2.572-2.282-2.572-3.659 0-0.536 0.102-1.090 0.452-1.522 0.33-0.412 0.905-0.679 1.441-0.679 1.706 0 2.591 2.303 2.591 3.784 0 0.371-0.041 1.027-0.514 1.502-0.331 0.329-0.885 0.575-1.399 0.575v0zM13.972 22.765c-2.201 0-3.62-1.050-3.62-2.51s1.316-1.954 1.769-2.117c0.863-0.29 1.975-0.33 2.16-0.33 0.206 0 0.309 0 0.472 0.021 1.565 1.111 2.244 1.664 2.244 2.716 0 1.273-1.050 2.221-3.025 2.221v0z"></path>
+            <path class="path3" fill="#fff"
+                  d="M21.842 14.465v-2.056h-1.018v2.056h-2.058v1.027h2.058v2.069h1.018v-2.069h2.068v-1.027z"></path>
+        </symbol>
+        <symbol id="icon-facebook" viewBox="0 0 32 32">
+            <title>facebook</title>
+            <path class="path1" fill="#3b5998"
+                  d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+            <path class="path2" fill="#fff"
+                  d="M17.017 24.508v-7.611h2.561l0.384-2.966h-2.945v-1.894c0-0.859 0.239-1.444 1.474-1.444l1.575-0v-2.653c-0.272-0.036-1.207-0.117-2.295-0.117-2.271 0-3.825 1.383-3.825 3.921v2.187h-2.568v2.966h2.568v7.611h3.071z"></path>
+        </symbol>
+        <symbol id="icon-link" viewBox="0 0 32 32">
+            <title>link</title>
+            <path class="path1" fill="#0083be"
+                  d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+            <path class="path2" fill="#fff"
+                  d="M23.205 9.504c-0.348-0.347-0.916-0.347-1.261 0l-1.809 1.811c-0.742-0.493-1.593-0.737-2.447-0.737-1.138 0-2.29 0.434-3.142 1.302l-2.667 2.666c-1.521 1.519-1.708 3.868-0.566 5.591l-1.809 1.81c-0.348 0.347-0.348 0.912 0 1.257 0.173 0.174 0.399 0.262 0.627 0.262s0.455-0.088 0.628-0.262l1.811-1.81c0.741 0.493 1.597 0.739 2.451 0.739 1.122 0 2.273-0.435 3.142-1.304l2.66-2.666c1.521-1.518 1.711-3.868 0.567-5.59l1.814-1.812c0.349-0.347 0.349-0.91 0-1.257v0zM20.349 15.021c0 0.712-0.278 1.383-0.782 1.885l-2.661 2.666c-0.504 0.505-1.187 0.781-1.884 0.781-0.403 0-0.788-0.098-1.142-0.267l1.311-1.327c0.348-0.346 0.348-0.909 0-1.255-0.332-0.347-0.895-0.347-1.241 0l-1.328 1.325c-0.17-0.352-0.267-0.738-0.267-1.142 0-0.711 0.278-1.383 0.782-1.885l2.65-2.666c0.504-0.504 1.189-0.782 1.901-0.782 0.401 0 0.785 0.099 1.139 0.267l-1.352 1.354c-0.348 0.348-0.348 0.909 0 1.257 0.173 0.172 0.402 0.259 0.628 0.259s0.453-0.087 0.627-0.259l1.351-1.354c0.17 0.352 0.267 0.739 0.267 1.142v0z"></path>
+        </symbol>
+        <symbol id="icon-telegram" viewBox="0 0 32 32">
+            <title>telegram</title>
+            <path class="path1" fill="#3c7ec8"
+                  d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+            <path class="path2" fill="#fff"
+                  d="M22.664 8.634l-16.125 6.217c-1.101 0.441-1.094 1.055-0.201 1.329l4.022 1.255 1.539 4.716c0.187 0.516 0.095 0.721 0.637 0.721 0.418 0 0.604-0.191 0.837-0.418 0.148-0.145 1.028-1 2.011-1.955l4.183 3.089c0.77 0.424 1.326 0.205 1.517-0.715l2.746-12.934c0.281-1.127-0.43-1.638-1.166-1.304v0zM10.991 17.146l9.065-5.716c0.453-0.274 0.867-0.127 0.527 0.175l-7.762 7-0.302 3.222-1.528-4.681z"></path>
+        </symbol>
+        <symbol id="icon-twitter" viewBox="0 0 32 32">
+            <title>twitter</title>
+            <path class="path1" fill="#00abf1"
+                  d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+            <path class="path2" fill="#fff"
+                  d="M20.158 19.992h-3.78c-0.525 0-0.972-0.183-1.339-0.552-0.369-0.369-0.551-0.814-0.551-1.341v-1.342h5.386c0.486 0 0.904-0.174 1.252-0.52 0.347-0.349 0.522-0.765 0.522-1.251 0-0.487-0.174-0.903-0.523-1.251-0.348-0.347-0.768-0.52-1.256-0.52h-5.381v-2.772c0-0.525-0.187-0.974-0.56-1.348-0.371-0.375-0.819-0.563-1.34-0.563-0.536 0-0.992 0.185-1.362 0.552-0.372 0.368-0.558 0.821-0.558 1.36v7.655c0 1.575 0.558 2.919 1.674 4.036 1.117 1.118 2.464 1.676 4.039 1.676h3.779c0.525 0 0.975-0.188 1.35-0.563 0.375-0.373 0.562-0.823 0.562-1.347s-0.187-0.973-0.562-1.348c-0.375-0.374-0.826-0.562-1.351-0.562v0z"></path>
+        </symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 32 32">
+            <title>whatsapp</title>
+            <path class="path1" fill="#65bc54"
+                  d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+            <path class="path2" fill="#fff"
+                  d="M24.828 15.391c0 4.573-3.738 8.28-8.349 8.28-1.464 0-2.839-0.374-4.036-1.030l-4.622 1.468 1.507-4.443c-0.76-1.248-1.198-2.711-1.198-4.275 0-4.573 3.738-8.28 8.349-8.28s8.349 3.707 8.349 8.28v0zM16.48 8.43c-3.871 0-7.019 3.123-7.019 6.961 0 1.523 0.497 2.934 1.337 4.081l-0.877 2.585 2.697-0.857c1.108 0.727 2.436 1.151 3.861 1.151 3.87 0 7.019-3.123 7.019-6.961s-3.149-6.961-7.019-6.961v0zM20.696 17.298c-0.051-0.084-0.188-0.135-0.392-0.237s-1.211-0.593-1.398-0.66c-0.188-0.068-0.324-0.102-0.461 0.101s-0.528 0.66-0.648 0.796c-0.119 0.136-0.238 0.153-0.443 0.051s-0.864-0.316-1.646-1.007c-0.608-0.538-1.019-1.202-1.139-1.405s-0.013-0.313 0.090-0.414c0.092-0.091 0.205-0.237 0.307-0.355s0.136-0.203 0.204-0.339c0.069-0.136 0.034-0.254-0.017-0.356s-0.461-1.1-0.631-1.506-0.341-0.339-0.46-0.339c-0.119 0-0.256-0.017-0.392-0.017s-0.358 0.051-0.546 0.254c-0.188 0.203-0.716 0.694-0.716 1.693s0.733 1.964 0.836 2.099c0.102 0.135 1.415 2.251 3.496 3.064s2.081 0.542 2.456 0.507c0.375-0.033 1.21-0.491 1.381-0.965s0.17-0.88 0.12-0.965v0z"></path>
+        </symbol>
+
+        <symbol id="icon-list" viewBox="0 0 20 20">
+            <title>list</title>
+            <path class="path1"
+                  d="M14.4 9h-5.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1h5.8c0.552 0 0.6-0.447 0.6-1s-0.048-1-0.6-1zM16.4 14h-7.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1h7.8c0.552 0 0.6-0.447 0.6-1s-0.048-1-0.6-1zM8.6 6h7.8c0.552 0 0.6-0.447 0.6-1s-0.048-1-0.6-1h-7.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1zM5.4 9h-1.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1h1.8c0.552 0 0.6-0.447 0.6-1s-0.048-1-0.6-1zM5.4 14h-1.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1h1.8c0.552 0 0.6-0.447 0.6-1s-0.048-1-0.6-1zM5.4 4h-1.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1h1.8c0.552 0 0.6-0.447 0.6-1s-0.048-1-0.6-1z"></path>
+        </symbol>
+
+        <symbol id="icon-filter" viewBox="0 0 30 32">
+            <title>filter</title>
+            <path class="path1" fill="none" stroke="#4a4a4a" stroke-width="1.0785" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M18.242 14.262v16.177l-6.716-4.044v-12.133"></path>
+            <path class="path2" fill="none" stroke="#4a4a4a" stroke-width="1.0785" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M29.15 2.334l-10.909 11.927h-6.716l-10.745-11.459v-2.022h28.206v2.022"></path>
+        </symbol>
+
+        <symbol id="icon-external" viewBox="0 0 30 32">
+            <title>external</title>
+            <path class="path1" fill="none" stroke="#868686" stroke-width="1.5509" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M19.684 10.035l5.965 5.965-5.965 5.965"></path>
+            <path class="path2" fill="none" stroke="#868686" stroke-width="1.5509" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M25.053 15.582h-14.316"></path>
+            <path class="path3" fill="none" stroke="#868686" stroke-width="1.5509" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M28.512 10.035c-2.267-4.891-7.277-8.351-13.004-8.351-7.874 0-14.316 6.442-14.316 14.316s6.442 14.316 14.316 14.316c5.726 0 10.737-3.46 13.004-8.351"></path>
+        </symbol>
+
+        <symbol id="icon-headset" viewBox="0 0 28 32">
+            <title>headset</title>
+            <path class="path1" fill="none" stroke="#868686" stroke-width="1.4545" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M26.182 16.116v-2.444c0-6.72-5.564-12.218-12.364-12.218s-12.364 5.498-12.364 12.218v2.444"></path>
+            <path class="path2" fill="none" stroke="#868686" stroke-width="1.4545" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M21.236 23.447h2.473c1.36 0 2.473-1.1 2.473-2.444v-4.887c0-0.733-0.495-1.222-1.236-1.222h-3.709v8.553z"></path>
+            <path class="path3" fill="none" stroke="#868686" stroke-width="1.4545" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M6.4 23.447h-2.473c-1.36 0-2.473-1.1-2.473-2.444v-4.887c0-0.733 0.495-1.222 1.236-1.222h3.709v8.553z"></path>
+            <path class="path4" fill="none" stroke="#868686" stroke-width="1.4545" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M12.582 29.556h-3.709c-2.72 0-4.945-2.199-4.945-4.887v-1.222"></path>
+            <path class="path5" fill="#868686"
+                  d="M15.055 32h-2.473c-1.36 0-2.473-1.1-2.473-2.444v0c0-1.344 1.113-2.444 2.473-2.444h2.473c1.36 0 2.473 1.1 2.473 2.444v0c0 1.344-1.113 2.444-2.473 2.444v0z"></path>
+        </symbol>
+        <symbol id="icon-sorting" viewBox="0 0 45 32">
+            <title>sorting</title>
+            <path class="path1" fill="none" stroke="#999" stroke-width="1.8286" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M43.785 21.992l-8.128 8.127-8.128-8.128"></path>
+            <path class="path2" fill="none" stroke="#999" stroke-width="1.8286" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M35.657 0.914v28.75"></path>
+            <path class="path3" fill="none" stroke="#999" stroke-width="1.8125" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 0.914h22.857"></path>
+            <path class="path4" fill="none" stroke="#999" stroke-width="1.8095" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 8.229h16.457"></path>
+            <path class="path5" fill="none" stroke="#999" stroke-width="1.8051" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 15.543h12.8"></path>
+            <path class="path6" fill="none" stroke="#999" stroke-width="1.798" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 22.857h9.143"></path>
+            <path class="path7" fill="none" stroke="#999" stroke-width="1.785" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 30.171h5.486"></path>
+        </symbol>
+
+        <symbol id="icon-share-product" viewBox="0 0 32 32">
+            <title>share</title>
+            <path class="path1" fill="#8b8c8f"
+                  d="M32 4.571c0 2.525-2.047 4.571-4.571 4.571s-4.571-2.047-4.571-4.571c0-2.525 2.047-4.571 4.571-4.571s4.571 2.047 4.571 4.571z"></path>
+            <path class="path2" fill="#8b8c8f"
+                  d="M32 27.429c0 2.525-2.047 4.571-4.571 4.571s-4.571-2.047-4.571-4.571c0-2.525 2.047-4.571 4.571-4.571s4.571 2.047 4.571 4.571z"></path>
+            <path class="path3" fill="#8b8c8f"
+                  d="M9.143 16c0 2.525-2.047 4.571-4.571 4.571s-4.571-2.047-4.571-4.571c0-2.525 2.047-4.571 4.571-4.571s4.571 2.047 4.571 4.571z"></path>
+            <path class="path4" fill="none" stroke="#8b8c8f" stroke-width="1.5" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M26.286 4.571l-22.857 11.429 22.857 11.429"></path>
+        </symbol>
+
+        <symbol id="icon-shopping_list" viewBox="0 0 38 32">
+            <title>shopping-list</title>
+            <path class="path1" fill="none" stroke="#8b8c8f" stroke-width="1.8" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M1.6 1.6h35.2v28.8h-35.2v-28.8z"></path>
+            <path class="path2" fill="none" stroke="#8b8c8f" stroke-width="1.8" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M6.4 11.2h12.8"></path>
+            <path class="path3" fill="none" stroke="#8b8c8f" stroke-width="1.8" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M24 9.6l3.2 3.2 4.8-4.8"></path>
+            <path class="path4" fill="none" stroke="#8b8c8f" stroke-width="1.8" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M6.4 20.8h12.8"></path>
+            <path class="path5" fill="none" stroke="#8b8c8f" stroke-width="1.8" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M24 19.2l3.2 3.2 4.8-4.8"></path>
+        </symbol>
+
+
+        <symbol id="icon-login" viewBox="0 0 32 32">
+            <title>login</title>
+            <path class="path1" fill="none" stroke="#8b8c8f" stroke-width="1.5" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M31 16c0 8.284-6.716 15-15 15s-15-6.716-15-15c0-8.284 6.716-15 15-15s15 6.716 15 15z"></path>
+            <path class="path2" fill="#8b8c8f"
+                  d="M17.719 16.678l-8.512 8.64c-0.462 0.468-1.21 0.468-1.67 0s-0.462-1.228 0-1.695l8.513-8.639c0.462-0.468 0.825-0.079 1.285 0.389 0.462 0.468 0.846 0.837 0.384 1.305z"></path>
+            <path class="path3" fill="#8b8c8f"
+                  d="M8.18 20.138c0.462-0.469 0.824-0.859 1.285-0.39l1.751 1.776c0.46 0.468 0.261 1.026-0.198 1.494l-0.485 0.449c-0.462 0.468-0.99 0.691-1.452 0.223l-1.75-1.776c-0.462-0.468-0.077-0.837 0.384-1.304l0.464-0.471z"></path>
+            <path class="path4" fill="#8b8c8f"
+                  d="M20.18 17.871c-1.402 0-2.835-0.67-4.032-1.885-1.056-1.071-1.707-2.359-1.835-3.625-0.14-1.405 0.342-2.713 1.395-3.783 0.929-0.942 2.057-1.44 3.265-1.44 1.403 0 2.835 0.669 4.033 1.885 1.056 1.071 1.707 2.358 1.834 3.624 0.142 1.406-0.341 2.713-1.395 3.782-0.927 0.942-2.057 1.441-3.264 1.441v0zM19.011 8.653c-0.829 0-1.582 0.338-2.238 1.005-0.733 0.744-1.069 1.64-0.974 2.592 0.093 0.918 0.585 1.871 1.386 2.683 0.904 0.918 1.954 1.422 2.958 1.422 0.828 0 1.581-0.338 2.238-1.004 0.733-0.744 1.068-1.64 0.973-2.592-0.093-0.918-0.584-1.87-1.385-2.683-0.904-0.918-1.955-1.424-2.958-1.424v0z"></path>
+        </symbol>
+
+        <symbol id="icon-signup" viewBox="0 0 32 32">
+            <title>signup</title>
+            <path class="path1" fill="none" stroke="#8b8c8f" stroke-width="1.5" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M31 16c0 8.284-6.716 15-15 15s-15-6.716-15-15c0-8.284 6.716-15 15-15s15 6.716 15 15z"></path>
+            <path class="path2" fill="none" stroke="#8b8c8f" stroke-width="1.5" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M21 12.25c0 2.761-2.239 5-5 5s-5-2.239-5-5c0-2.761 2.239-5 5-5s5 2.239 5 5z"></path>
+            <path class="path3" fill="none" stroke="#8b8c8f" stroke-width="1.5" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M8.5 24.75c0-4.142 3.357-7.5 7.5-7.5s7.5 3.358 7.5 7.5"></path>
+        </symbol>
+
+        <symbol viewBox="0 0 38 22" id="icon-back_to_top">
+            <title>left_4</title>
+            <path d="M0 18.9L3.1 22 19 6.1 34.9 22l3.1-3.1L19 0z" fill="#999" fill-rule="evenodd"/>
+        </symbol>
+
+
+        <symbol id="icon-descendant" viewBox="0 0 45 32">
+            <title>sorting</title>
+            <path class="path1" fill="none" stroke="#999" stroke-width="2.8286" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M43.785 21.992l-8.128 8.127-8.128-8.128"></path>
+            <path class="path2" fill="none" stroke="#999" stroke-width="2.8286" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M35.657 0.914v28.75"></path>
+            <path class="path3" fill="none" stroke="#999" stroke-width="2.8125" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 0.914h22.857"></path>
+            <path class="path4" fill="none" stroke="#999" stroke-width="2.8095" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 8.229h16.457"></path>
+            <path class="path5" fill="none" stroke="#999" stroke-width="2.8051" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 15.543h12.8"></path>
+            <path class="path6" fill="none" stroke="#999" stroke-width="2.798" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 22.857h9.143"></path>
+            <path class="path7" fill="none" stroke="#999" stroke-width="2.785" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M0 30.171h5.486"></path>
+        </symbol>
+        <symbol id="icon-up_history" viewBox="0 0 32 32">
+            <title>up_history</title>
+            <path class="path1" fill="#d8d8d8" stroke="#fff" stroke-width="1.4118" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M31.059 16c0 8.317-6.742 15.059-15.059 15.059s-15.059-6.742-15.059-15.059c0-8.317 6.742-15.059 15.059-15.059s15.059 6.742 15.059 15.059z"></path>
+            <path class="path2" fill="none" stroke="#fff" stroke-width="1.4118" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M10.353 8.471h13.176v13.176"></path>
+            <path class="path3" fill="none" stroke="#fff" stroke-width="1.4118" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M8.888 23.112l14.277-14.277"></path>
+        </symbol>
+        <symbol id="icon-right_up" viewBox="0 0 32 32">
+            <title>right_up</title>
+            <path class="path1" fill="none" stroke="#fff" stroke-width="2.8444" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M5.333 1.778h24.889v24.889"></path>
+            <path class="path2" fill="none" stroke="#fff" stroke-width="2.8444" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M2.567 29.433l26.967-26.967"></path>
+        </symbol>
+        <symbol id="icon-rightup" viewBox="0 0 32 32">
+            <title>rightup</title>
+            <path class="path1" fill="none" stroke="#ccc" stroke-width="4.0222" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M5.333 1.778h24.889v24.889"></path>
+            <path class="path2" fill="none" stroke="#ccc" stroke-width="4.0222" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter" d="M2.567 29.433l26.967-26.967"></path>
+        </symbol>
+
+        <symbol id="icon-checkmark_fav" viewBox="0 0 43 32">
+            <title>checkmark</title>
+            <path class="path1"
+                  d="M39.528 0.107l-25.488 25.173-10.368-10.24-3.024 3.093 13.392 13.12 28.512-28.16z"></path>
+        </symbol>
+
+        <symbol id="icon-check" viewBox="0 0 24 24">
+            <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+        </symbol>
+
+        <symbol id="icon-gift" viewBox="0 0 38 32">
+            <title>gift</title>
+            <path class="path1" fill="#fec536" d="M-4.653 8.51l-3.84 20.29 33.414 11.505 9.466-18.352z"></path>
+            <path class="path2" fill="#fec536" d="M-8.048 11.007l43.322 14.917 2.865-8.32-43.322-14.917z"></path>
+            <path class="path3" fill="#f4574e" d="M4.94 33.424l6.423 2.212 8.389-24.363-6.423-2.212z"></path>
+            <path class="path4" fill="#c79b22" d="M-5.304 11.952l-0.16 0.845 37.852 13.033 0.394-0.764z"></path>
+            <path class="path5" fill="#f43b4e"
+                  d="M16.347 9.137c0.118-0.186-0.486-1.316-0.546-1.486-0.767-2.145-1.452-4.328-2.26-6.457-0.742-1.957-2.406-0.573-2.635 0.924-0.123 0.797 0.064 1.093-0.758 1.505-0.909 0.454-1.48 0.776-1.761 1.827-0.267 0.999 0.413 1.352 1.207 1.721 1.62 0.751 3.194 1.668 4.761 2.528 0.405 0.222 0.815 0.435 1.223 0.653 0 0 0.77-1.215 0.77-1.215z"></path>
+            <path class="path6" fill="#f43b4e"
+                  d="M16.53 9.481c2.425-1.54 4.902-3.019 7.283-4.625 0.709-0.478 1.764-0.82 2.006 0.298 0.158 0.729-0.25 1.613-0.562 2.254-0.703 1.446 1.512 2.386 0.144 3.736-1.541 1.519-2.875 0.781-4.727 0.508-0.932-0.138-1.852-0.319-2.779-0.487-0.501-0.091-1.005-0.164-1.506-0.251l0.141-1.432z"></path>
+            <path class="path7" fill="#f4574e"
+                  d="M18.137 10.030c-0.306 0.888-1.272 1.359-2.159 1.054s-1.358-1.272-1.052-2.16c0.306-0.888 1.272-1.36 2.159-1.054s1.358 1.273 1.052 2.16z"></path>
+        </symbol>
+
+
+        <symbol id="icon-check" viewBox="0 0 24 24">
+            <title>check</title>
+            <path d="M9 16.172l10.594-10.594 1.406 1.406-12 12-5.578-5.578 1.406-1.406z"></path>
+        </symbol>
+
+        <symbol id="icon-help" viewBox="0 0 24 24">
+            <title>help</title>
+            <path class="path1" fill="none" stroke="#8b8c8f" stroke-width="1.125" stroke-miterlimit="4"
+                  stroke-linecap="butt" stroke-linejoin="miter"
+                  d="M23.25 12c0 6.213-5.037 11.25-11.25 11.25s-11.25-5.037-11.25-11.25c0-6.213 5.037-11.25 11.25-11.25s11.25 5.037 11.25 11.25z"></path>
+            <path class="path2" fill="#8b8c8f"
+                  d="M11.312 14.535v-0.689c0-0.673 0.151-1.026 0.504-1.514l1.127-1.547c0.588-0.807 0.789-1.193 0.789-1.765 0-0.958-0.672-1.563-1.631-1.563-0.941 0-1.546 0.571-1.748 1.597-0.017 0.101-0.084 0.151-0.185 0.135l-1.059-0.185c-0.101-0.017-0.151-0.084-0.135-0.185 0.253-1.614 1.413-2.673 3.161-2.673 1.815 0 3.042 1.193 3.042 2.858 0 0.807-0.285 1.395-0.857 2.186l-1.126 1.547c-0.336 0.454-0.437 0.689-0.437 1.26v0.538c0 0.101-0.067 0.168-0.168 0.168h-1.11c-0.101 0.002-0.168-0.066-0.168-0.166v0zM11.228 16.149c0-0.101 0.067-0.168 0.168-0.168h1.278c0.101 0 0.168 0.068 0.168 0.168v1.446c0 0.101-0.067 0.168-0.168 0.168h-1.278c-0.102 0-0.168-0.067-0.168-0.168v-1.446z"></path>
+        </symbol>
+
+
+        <symbol viewBox="0 0 32 32" id="faq-form">
+            <title>Group 5</title>
+            <g transform="translate(1 1)" stroke-width="1.5" stroke="#8B8C8F" fill="none" fill-rule="evenodd">
+                <circle cx="15" cy="15" r="15"/>
+                <g transform="translate(6 5)">
+                    <path d="M6.75 6.225L9 3.975l2.25 2.25M5.85 12.113L.037 7.538M12.15 12.113l5.812-4.575M17.962 16.5s-6.9-5.4-7.462-5.85a2.402 2.402 0 0 0-1.5-.525c-.338 0-.938.113-1.5.525-.563.412-7.463 5.85-7.463 5.85"/>
+                    <path d="M15 4.463c1.613 1.425 3 2.662 3 2.662V18H0V7.125s1.387-1.237 3-2.662M5.925 1.875C6.75 1.163 7.35.637 7.5.525 8.025.075 8.662 0 9 0c.338 0 .975.075 1.5.525.15.112.75.638 1.537 1.35"/>
+                    <path d="M3 9.825v-7.95h12v7.95M9 4.5v4.125"/>
+                </g>
+            </g>
+        </symbol>
+        <symbol id="icon-delete_nosweep" viewBox="0 0 24 24">
+            <title>delete_nosweep</title>
+            <g transform="translate(0 1)" stroke-width="1.045" stroke="#A8A9AB" fill="none" fill-rule="evenodd">
+                <path d="M5.824 2.614V1.045C5.824.47 6.3 0 6.882 0h4.236c.582 0 1.058.47 1.058 1.045v1.569M0 2.614h18M9 6.273V19.34M12.176 6.273V19.34M5.824 6.273V19.34"/>
+                <path d="M16.941 2.614v19.34c0 .576-.476 1.046-1.059 1.046H2.118c-.583 0-1.06-.47-1.06-1.045V2.614"/>
+            </g>
+        </symbol>
+        <symbol viewBox="0 0 26 30" id="icon-downloads" xmlns="http://www.w3.org/2000/svg">
+            <title>downloads</title>
+            <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                <path d="M0 25.083V2.917A2.893 2.893 0 0 1 2.927 0h20.488v22.167H2.927A2.893 2.893 0 0 0 0 25.083 2.893 2.893 0 0 0 2.927 28H24"
+                      stroke="#FFF" stroke-width="1.18"/>
+                <g transform="translate(8.78 3.5)" stroke-width="1.167" stroke="#FFFCFD" stroke-linejoin="round">
+                    <path d="M7.024 11.083l-3.512 3.5L0 11.083M3.512 7v7.117M3.512 4.667v1.166M3.512 2.333V3.5M3.512 0v1.167"/>
+                </g>
+            </g>
+        </symbol>
+        <symbol viewBox="0 0 30 30" id="icon-trolle" xmlns="http://www.w3.org/2000/svg">
+            <title>trolle</title>
+            <g transform="translate(1 1)" stroke="#FFF" stroke-width="1.167" fill="none" fill-rule="evenodd"
+               stroke-linejoin="round">
+                <path d="M0 2.333S1.167 0 4.667 0l9.994 25.348 13.058-5.11" stroke-linecap="round"/>
+                <ellipse stroke-linecap="round" cx="10.5" cy="25.667" rx="2.333" ry="2.333"/>
+                <g transform="translate(8.75)">
+                    <path d="M15.797 8.668l3.452 8.672-11.923 4.747-1.668-4.19-1.784-4.481z"/>
+                    <path d="M8.531 14.072l4.336-1.726" stroke-linecap="round"/>
+                    <path d="M12.343 0l3.453 8.672-11.924 4.747-1.705-4.285L.42 4.747z"/>
+                    <path d="M5.077 5.405l4.336-1.727" stroke-linecap="round"/>
+                </g>
+            </g>
+        </symbol>
+        <symbol viewBox="0 0 72 40" id="icon-truck-wing" xmlns="http://www.w3.org/2000/svg">
+            <title>Group 7</title>
+            <g transform="translate(0 2)" fill="none" fill-rule="evenodd">
+                <ellipse cx="5.023" cy="5.143" rx="5.023" ry="5.143" transform="translate(28.81 25.714)" stroke="#FFF"
+                         stroke-width="2.044"/>
+                <ellipse cx="5.023" cy="5.143" rx="5.023" ry="5.143" transform="translate(54.93 25.714)" stroke="#FFF"
+                         stroke-width="2.044"/>
+                <path d="M65.981 30.857h2.01c1.022 0 2.009-1.01 2.009-2.057v-9.89c0-1.799-1.42-3.835-1.42-3.835l-4.145-5.66C63.587 8.37 62.32 7.2 60.958 7.2h-8.037c-1.022 0-2.009 1.011-2.009 2.057V28.8c0 1.043.993 2.049 2.01 2.057h2.009M70 19.543H58.95c-1.006 0-2.01-1.029-2.01-2.057V13.37c0-1.138 1.004-2.057 2.01-2.057h6.877"
+                      stroke="#FFF" stroke-width="2.044"/>
+                <path d="M38.856 30.857h10.201c1.021 0 1.855-.85 1.855-1.894V1.96c0-1.043-.8-1.96-1.82-1.96h-25.46c-1.021 0-1.854.852-1.854 1.894v26.911c0 1.044.987 2.052 2.009 2.052h5.023"
+                      stroke="#FFF" stroke-width="2.042"/>
+                <path d="M14.389 25.043h-.677c-.7 0-1.268.582-1.268 1.298 0 .717.568 1.298 1.268 1.298h.677c.7 0 1.268-.58 1.268-1.298 0-.716-.568-1.298-1.268-1.298zM21.079 18.783H7.49c-.7 0-1.268.58-1.268 1.297s.568 1.298 1.268 1.298H21.08c.7 0 1.268-.58 1.268-1.298 0-.716-.568-1.297-1.268-1.297zM14.857 9.391H1.268C.568 9.391 0 9.972 0 10.69c0 .717.568 1.298 1.268 1.298h13.589c.7 0 1.268-.581 1.268-1.298 0-.717-.568-1.298-1.268-1.298zM27.301 4.696H13.712c-.7 0-1.268.58-1.268 1.298 0 .716.568 1.297 1.268 1.297h13.59c.7 0 1.267-.58 1.267-1.297s-.568-1.298-1.268-1.298z"
+                      fill="#FFF" fill-rule="nonzero"/>
+            </g>
+        </symbol>
+
+        <symbol viewBox="0 0 12 8" id="members-dark">
+            <title>Page 1</title>
+            <defs>
+                <path id="aa" d="M3.345 0H.088v3.38h3.257V0z"/>
+                <path id="ac" d="M3.362 0H.112v3.38h3.25V0z"/>
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+                <g transform="translate(2.1)">
+                    <mask id="ab" fill="#fff">
+                        <use xlink:href="#aa"/>
+                    </mask>
+                    <path d="M1.713 0C.82 0 .088.76.088 1.69c0 .93.733 1.69 1.625 1.69.898 0 1.632-.76 1.632-1.69C3.345.76 2.61 0 1.713 0"
+                          fill="#BFBFBF" mask="url(#ab)"/>
+                </g>
+                <path d="M3.814 5.085c.775 0 1.55.118 2.192.352.501.182.918.432 1.198.727.28.296.428.624.428 1.03v.65H0v-.65c0-.466.193-.833.555-1.155.361-.323.895-.579 1.512-.742a6.93 6.93 0 0 1 1.747-.212zM8.283 5.088a6.853 6.853 0 0 1 1.71.229c.603.166 1.12.421 1.47.74.35.319.537.68.537 1.137v.65H8.232v-.65c0-.576-.233-1.082-.601-1.471a3.08 3.08 0 0 0-.681-.532 7.41 7.41 0 0 1 1.333-.103"
+                      fill="#BFBFBF"/>
+                <g transform="translate(6.45)">
+                    <mask id="ad" fill="#fff">
+                        <use xlink:href="#ac"/>
+                    </mask>
+                    <path d="M1.737 0C.845 0 .112.76.112 1.69c0 .93.733 1.69 1.625 1.69.893 0 1.625-.76 1.625-1.69C3.362.76 2.63 0 1.737 0"
+                          fill="#BFBFBF" mask="url(#ad)"/>
+                </g>
+            </g>
+        </symbol>
+
+        <symbol id="digi_minimal" viewBox="0 0 119 104.5">
+            <path fill="#F05662"
+                  d="M88.1 0H0v73.6c0 17.4 13.4 30.9 30.8 30.9h57.3c17.4 0 30.8-13.4 30.8-30.9V30.2C119 12.8 105.2 0 88.1 0"/>
+            <path fill="#FFFFFF"
+                  d="M103.2 22.7H86.3L61.8 52.2l24.5 29.6h16.9L78.7 52.2zM45.6 22.7H15.8v13.1h26.1c3.7 0 6.9 2.8 6.9 6.1v20c0 3.5-3.4 6.9-6.9 6.9H15.8v13h29.8c9.2 0 16.2-7.1 16.2-16.2V39.1c0-9.1-7.2-16.4-16.2-16.4"/>
+        </symbol>
+
+        <symbol viewBox="0 0 512 512" id="shield">
+            <path d="M452.203 64.405l-13.12-2.624A690.738 690.738 0 0 1 265.557 2.24a21.46 21.46 0 0 0-19.093 0A690.745 690.745 0 0 1 72.939 61.781l-13.12 2.624c-9.963 2.005-17.152 10.752-17.152 20.928v78.549c0 92.629 36.075 179.691 101.547 245.163l96.704 96.704A21.346 21.346 0 0 0 256 512a21.277 21.277 0 0 0 15.083-6.251l96.725-96.704c65.472-65.472 101.525-152.533 101.525-245.163V85.333a21.34 21.34 0 0 0-17.13-20.928zm-94.464 98.582l-106.667 128a21.39 21.39 0 0 1-15.445 7.659c-.299 0-.64.021-.96.021a21.351 21.351 0 0 1-15.083-6.251l-64-64c-8.32-8.341-8.32-21.845 0-30.165 8.341-8.341 21.845-8.341 30.165 0l47.488 47.467 91.712-110.037c7.552-9.045 20.949-10.283 30.059-2.731 9.045 7.53 10.283 20.991 2.731 30.037z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 30 30" id="shop">
+            <path d="M23 14a3.953 3.953 0 0 1-2.005-.554A3.952 3.952 0 0 1 19 14a3.959 3.959 0 0 1-2-.556A3.959 3.959 0 0 1 15 14a3.959 3.959 0 0 1-2-.556A3.959 3.959 0 0 1 11 14c-.73 0-1.405-.211-1.995-.554A3.953 3.953 0 0 1 7 14c-.727 0-1.4-.21-1.988-.55A3.965 3.965 0 0 1 3 14v11a2 2 0 0 0 2 2h12V17h6v10h2a2 2 0 0 0 2-2V14c-.734 0-1.42-.203-2.012-.55-.588.34-1.261.55-1.988.55zm-10 9H7v-6h6v6zM26 6H4V5a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v1zM20 6h-3v4a2 2 0 1 0 4 0l-1-4zM26 6h-3l2 4a2 2 0 1 0 4 0l-3-4z"/>
+            <path d="M20 6h-3v4a2 2 0 1 0 4 0l-1-4zM10 6h3v4a2 2 0 1 1-4 0l1-4zM4 6h3l-2 4a2 2 0 1 1-4 0l3-4z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 91 86" id="digi_seller">
+            <path d="M45.2 8.9l-8.1 6.2-10-1.4-3.8 9.5-9.5 3.8 1.4 10-6.1 8 6.2 8.1-1.4 10 9.5 3.8 3.8 9.4 10-1.4 8.1 6.2 8.1-6.2 10 1.4 3.8-9.4 9.4-3.8-1.4-10 6.2-8.1-6.2-8.1 1.4-10-9.4-3.8-3.8-9.5-10 1.4-8.2-6.1zm18.2 19.9l4.8 4.8L40 61.8 25.6 47.4l4.8-4.8 9.6 9.7 23.4-23.5z"
+                  vectorillustrator:layerName="Layer 1"/>
+        </symbol>
+
+        <symbol id="pixel-perfect-eng-sign" viewBox="0 0 38 31">
+            <g id="bXMLID_1_">
+                <path id="bXMLID_4_" class="bst0" fill="#ef5662" d="M35.9 4h-6.6l-9.5 11.5L29.3 27h6.5l-9.5-11.5z"/>
+                <path id="bXMLID_11_" class="bst1" fill="#77787b"
+                      d="M14.4 4H2v5h11c1.5 0 2 1.5 2 2.8v7.9c0 1.4-.7 2.3-2 2.3H2v5h12.4c3.6 0 5.6-2.3 5.6-5.9V10.7C20 7.2 17.9 4 14.4 4z"/>
+            </g>
+        </symbol>
+
+        <symbol viewBox="0 0 512 512" id="truck_seller">
+            <circle cx="144" cy="400" r="48"/>
+            <circle cx="384" cy="400" r="48"/>
+            <path d="M507.438 223.539l-48-80A31.991 31.991 0 0 0 432 128H320V96c0-17.672-14.328-32-32-32H32C14.328 64 0 78.328 0 96v288c0 17.672 14.328 32 32 32h33.612A80.41 80.41 0 0 1 64 400c0-44.184 35.817-80 80-80s80 35.816 80 80a80.41 80.41 0 0 1-1.612 16H304v-16c0-44.184 35.817-80 80-80s80 35.816 80 80v16h16c17.672 0 32-14.328 32-32V240a31.987 31.987 0 0 0-4.562-16.461zM448 256h-96v-80h64l32 64v16z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 24 25" id="very-happy">
+            <title>happy</title>
+            <g fill-rule="nonzero">
+                <path d="M13.477 18.55H11.4c-2.652 0-4.729-2.043-4.729-4.652a.577.577 0 1 1 1.154 0c0 1.962 1.57 3.499 3.575 3.499h2.077c2.005 0 3.575-1.503 3.575-3.421a.577.577 0 1 1 1.154 0c0 2.565-2.078 4.574-4.73 4.574zM9.73 8.953a.575.575 0 0 1-.408-.169c-.547-.546-1.452-.566-1.975-.042a.577.577 0 0 1-.816-.815c.966-.967 2.618-.947 3.607.041a.577.577 0 0 1-.408.985zM17.578 8.953a.575.575 0 0 1-.408-.169c-.547-.546-1.452-.566-1.975-.042a.577.577 0 1 1-.816-.815c.966-.967 2.618-.947 3.606.041a.577.577 0 0 1-.407.985z"/>
+                <path d="M11.98 24.136C5.374 24.136 0 18.763 0 12.158 0 5.553 5.374.18 11.98.18c6.605 0 11.98 5.373 11.98 11.978 0 6.605-5.375 11.978-11.98 11.978zm0-22.802c-5.97 0-10.826 4.855-10.826 10.824 0 5.969 4.856 10.825 10.826 10.825 5.97 0 10.825-4.856 10.825-10.825 0-5.969-4.856-10.824-10.825-10.824z"/>
+            </g>
+        </symbol>
+        <symbol viewBox="0 0 14 14" id="avatar-inside-a-circle">
+            <title>avatar-inside-a-circle</title>
+            <path d="M14 7c0-3.857-3.143-7-7-7-3.858 0-7 3.143-7 7 0 2.126.964 4.037 2.464 5.322a.233.233 0 0 0 .07.053A6.926 6.926 0 0 0 7.018 14a7.074 7.074 0 0 0 4.447-1.589.28.28 0 0 0 .16-.126C13.072 10.982 14 9.107 14 7.001zM.643 7C.643 3.5 3.5.644 7.001.644c3.5 0 6.357 2.857 6.357 6.358a6.315 6.315 0 0 1-1.785 4.411 4.744 4.744 0 0 0-2.358-3.196 2.73 2.73 0 0 0 .588-1.715 2.79 2.79 0 0 0-2.786-2.786 2.79 2.79 0 0 0-2.786 2.786c0 .644.232 1.232.589 1.715-1.659.928-2.194 2.356-2.355 3.196A6.236 6.236 0 0 1 .643 7.001zm4.215-.482c0-1.179.964-2.143 2.143-2.143 1.179 0 2.143.964 2.143 2.143A2.149 2.149 0 0 1 7 8.661a2.149 2.149 0 0 1-2.143-2.143zm-1.822 5.447c.036-.518.32-2.269 2.25-3.251a2.767 2.767 0 0 0 1.715.588c.643 0 1.25-.231 1.733-.606a4.08 4.08 0 0 1 2.268 3.25 6.365 6.365 0 0 1-3.981 1.41 6.298 6.298 0 0 1-3.985-1.391z"
+                  fill-rule="nonzero" fill="#838383"/>
+        </symbol>
+        <symbol viewBox="0 0 25 25" id="happy">
+            <title>happy copy</title>
+            <g fill-rule="nonzero">
+                <path d="M17.557 9.145a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0zM9.507 9.145a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0zM13.22 19.514h-1.943c-2.463 0-4.466-1.979-4.466-4.41a.577.577 0 1 1 1.154 0c0 1.826 1.454 3.256 3.312 3.256h1.944c1.857 0 3.312-1.407 3.312-3.203a.577.577 0 1 1 1.154 0c0 2.443-1.962 4.357-4.466 4.357z"/>
+                <path d="M12.15 24.48C5.45 24.48 0 19.03 0 12.33 0 5.633 5.45.184 12.15.184S24.3 5.633 24.3 12.33c0 6.699-5.45 12.148-12.15 12.148zm0-23.143c-6.063 0-10.996 4.931-10.996 10.994 0 6.062 4.933 10.995 10.996 10.995 6.063 0 10.996-4.933 10.996-10.995 0-6.063-4.933-10.994-10.996-10.994z"/>
+            </g>
+        </symbol>
+        <symbol viewBox="0 0 24 24" id="no-idea">
+            <title>surprised</title>
+            <g fill-rule="nonzero">
+                <path d="M17.607 16.834H6.837a.577.577 0 0 1 0-1.154h10.77a.577.577 0 1 1 0 1.154zM17.307 8.84a1.38 1.38 0 1 1-2.76 0 1.38 1.38 0 0 1 2.76 0zM9.375 8.84a1.38 1.38 0 1 1-2.758 0 1.38 1.38 0 0 1 2.758 0z"/>
+                <path d="M11.98 23.958C5.374 23.958 0 18.584 0 11.98 0 5.375 5.374.002 11.98.002c6.605 0 11.98 5.373 11.98 11.978 0 6.604-5.375 11.978-11.98 11.978zm0-22.803c-5.97 0-10.826 4.856-10.826 10.825 0 5.968 4.856 10.824 10.826 10.824 5.97 0 10.825-4.856 10.825-10.824 0-5.97-4.856-10.825-10.825-10.825z"/>
+            </g>
+        </symbol>
+        <symbol viewBox="0 0 24 25" id="sad">
+            <title>sad</title>
+            <g fill-rule="nonzero">
+                <path d="M7.248 18.58a.577.577 0 0 1-.577-.577c0-2.622 2.166-4.837 4.73-4.837h2.076c2.607 0 4.729 2.146 4.729 4.782a.577.577 0 1 1-1.154 0c0-2-1.604-3.628-3.575-3.628H11.4c-1.938 0-3.575 1.686-3.575 3.683a.577.577 0 0 1-.577.576zM9.73 8.89a.58.58 0 0 1-.281-.072l-.888-.495a1.36 1.36 0 0 0-1.214.357.577.577 0 0 1-.816-.816c.154-.154.325-.283.509-.387l-.382-.212a.577.577 0 0 1 .561-1.008l1.779.99c.42.115.815.335 1.14.66a.576.576 0 0 1-.409.984zM14.787 8.89a.577.577 0 0 1-.408-.984c.324-.324.72-.544 1.14-.66l1.778-.99a.577.577 0 0 1 .561 1.009l-.382.212c.184.104.355.233.51.387a.577.577 0 1 1-.816.816 1.36 1.36 0 0 0-1.215-.357l-.888.495a.58.58 0 0 1-.28.073z"/>
+                <path d="M11.98 24.136C5.374 24.136 0 18.763 0 12.158 0 5.553 5.374.18 11.98.18c6.605 0 11.98 5.373 11.98 11.978 0 6.605-5.375 11.978-11.98 11.978zm0-22.802c-5.97 0-10.826 4.855-10.826 10.824 0 5.969 4.856 10.825 10.826 10.825 5.97 0 10.825-4.856 10.825-10.825 0-5.969-4.856-10.824-10.825-10.824z"/>
+            </g>
+        </symbol>
+        <symbol viewBox="0 0 25 24" id="very-sad">
+            <title>shouting</title>
+            <g fill-rule="nonzero">
+                <path d="M12.1 19.394a4.688 4.688 0 0 1-4.683-4.682c0-2.582 2.1-4.683 4.682-4.683 2.583 0 4.683 2.1 4.683 4.683 0 2.581-2.1 4.682-4.683 4.682zm0-8.21a3.533 3.533 0 0 0-3.53 3.528 3.533 3.533 0 0 0 3.53 3.528 3.533 3.533 0 0 0 3.528-3.528 3.533 3.533 0 0 0-3.529-3.529zM9.533 8.745a.573.573 0 0 1-.28-.072l-.893-.498a1.374 1.374 0 0 0-1.222.36.577.577 0 1 1-.816-.817 2.43 2.43 0 0 1 .512-.392l-.385-.214a.577.577 0 1 1 .561-1.008l1.768.984c.438.118.838.347 1.164.673a.577.577 0 0 1-.409.984zM14.615 8.745a.577.577 0 0 1-.408-.984 2.59 2.59 0 0 1 1.164-.673l1.768-.984a.576.576 0 1 1 .561 1.008l-.385.214c.186.107.358.238.513.392a.577.577 0 1 1-.816.816 1.369 1.369 0 0 0-1.223-.359l-.893.498a.575.575 0 0 1-.28.072z"/>
+                <path d="M12.24 19.4c-.1 0-.2-.003-.303-.01-2.39-.176-2.932-1.816-2.954-1.886a.577.577 0 0 1 .164-.6c1.009-.911 2.095-1.373 3.227-1.373 1.918 0 3.244 1.341 3.3 1.398.2.206.218.527.043.754-.054.07-1.345 1.717-3.478 1.717zm-1.967-1.933c.237.293.744.698 1.748.772 1.096.08 1.93-.461 2.388-.86-.436-.304-1.164-.694-2.035-.694-.714 0-1.42.263-2.101.782z"/>
+                <path d="M12.157 23.957c-6.606 0-11.98-5.374-11.98-11.979C.177 5.373 5.55 0 12.157 0c6.605 0 11.979 5.373 11.979 11.978 0 6.605-5.374 11.979-11.98 11.979zm0-22.803C6.187 1.154 1.33 6.01 1.33 11.978c0 5.969 4.857 10.825 10.827 10.825 5.969 0 10.825-4.856 10.825-10.825 0-5.968-4.856-10.824-10.825-10.824z"/>
+            </g>
+        </symbol>
+
+    </defs>
+</svg>
+
+<?php require('app/views/include/login.php'); ?>
+
+<input type="hidden" value="<?= $data['idNews']; ?>" id="p_id_get" name="p_id_get">
+<input type="hidden" value="<?= $UserID ?>" id="userIdGet" name="userIdGet">
+<div class="container" style="padding: 0 !important;overflow-x: hidden">
+    <main class="" style="background: rgb(43, 57, 63);">
+        <div class="homepage">
+            <!-- ========== NAVBAR ========== -->
+            <?php require('app/views/include/headerMobile.php'); ?>
+
+            <div dir="rtl" class="popup-container user-loginRegister-panel" data-popup="login-panel">
+        <span>
+            ورود به <?= NAME; ?>
+            <svg class="icon-close-svg cancel"><use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    xlink:href="#icon-close"></use></svg>
+        </span>
+                <div class="popup-content">
+                    <iframe class="contentWrap" src="https://accounts.digikala.com/Load/registrationwebmobile/"
+                            style="width: 100%; height: inherit; border: none; margin: 0 auto;"></iframe>
+                </div>
+
+            </div>
+            <div dir="rtl" class="popup-container user-loginRegister-panel" data-popup="register-panel">
+        <span>
+            به <?= NAME; ?> بپیوندید
+            <svg class="icon-close-svg cancel"><use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    xlink:href="#icon-close"></use></svg>
+        </span>
+                <div class="popup-content">
+
+                </div>
+            </div>
+            <div dir="rtl" class="popup-container user-loginRegister-panel" data-popup="remember-panel">
+        <span>
+            یادآوری کلمه عبور
+            <svg class="icon-close-svg cancel"><use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    xlink:href="#icon-close"></use></svg>
+        </span>
+                <div class="popup-content">
+
+                </div>
+            </div>
+
+            <main class="main">
+                <div class="main__content">
+                    <div class="post-module post-361382 post type-post status-publish format-standard has-post-thumbnail hentry category-74 category-87 category-6 tag-203 tag-70 tag-25767 tag-46364 tag-1863 tag-46360"
+                         id="post-361382">
+                        <article>
+                            <div class="img-wrapper">
+                                <figure class="post-attachment">
+                                    <img alt="<?= Model::summary($news[0]['title'], 100); ?>"
+                                         src="public/images/news/<?= $news['all_images'][0]['i_image']; ?>" width="822"
+                                         height="522"
+                                         class="post-module__img wp-post-image" alt="" data-lazy-loaded="true">
+                                    <figcaption class="hidden-seo">
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="post-module__title">
+                                <i class="icon-clock-icon"></i>
+                                <span style="text-align: center;float: left">
+                                        <?= $news[0]['date_created'] ?>
+                                </span>
+                                <h1 class="_txt"><?= $news[0]['title'] ?>
+                                </h1>
+                            </div>
+                            <div class="post-module__author"><span
+                                        class="post-module__author--name">
+                                        <?= $news[0]['subtitle'] ?>
+                                </span>
+                            </div>
+
+
+                            <div class="post-module__content">
+                                <p>«تاریخچه اختراعی که دنیای گوشی‌های هوشمند را تغییر داد و به سودآورترین محصول جهان
+                                    تبدیل شد.»</p>
+                                <p>«کتابی که پس از خواندش دیگر هرگز به آیفون مثل قبل نگاه نمی‌کنید.»</p>
+                                <p>«یکی از بهترین کتاب‌های حوزه کسب و کار در سال ۲۰۱۶»</p>
+                                <p>این‌ها فقط بخشی از جملات تحسین‌آمیزی هستند که درباره کتاب «یگانه دستگاه» نوشته
+                                    شده‌اند. «یگانه دستگاه: تاریخچه مخفی آیفون» کتابی است که توضیح می‌دهد چطور آیفون
+                                    باعث ایجاد تغییر در جهان شد و اپل را به ارزشمندترین شرکت جهان تبدیل کرد. براین مرچنت
+                                    روزنامه‌نگار کارآزموده حوزه تکنولوژی در این کتاب داستانی را از درون شرکت اپل
+                                    برای‌تان روایت می‌کند که تا به حال نشنیده‌اید. او با مهندسین، مخترعین و
+                                    توسعه‌دهندگانی که در تمام مراحل آفرینش آیفون درگیر بوده‌اند مصاحبه کرده و بسیاری از
+                                    نقاط تاریک و مبهم درباره آیفون را برای خواننده آشکار می‌کند.</p>
+                                <p>اگر پیش از این پاورقی‌های دنباله‌دار ما را مطالعه کرده باشید می‌دانید که دیجی‌کالا مگ
+                                    تا امروز مجموعه‌ کتاب‌های «امپراطوری اپ»، «زندگی‌نامه ایلان ماسک»، «عرضه»، «دنیای
+                                    علی‌بابا» و «راه شیائومی» را ترجمه و به شکل هفتگی منتشر کرده است.</p>
+                                <p>کتاب یگانه دستگاه در قالب&nbsp;۱۸ فصل به همراه مقدمه و پایان‌بندی، مانند پاورقی‌های
+                                    قبلی منتشر خواهد شد. به دلیل حجم قابل‌توجه کتاب هر فصل به چندین بخش تقسیم شده و
+                                    سه‌بار در هر هفته شاهد انتشار یک قسمت از این کتاب خواهیم بود.</p>
+                                <p>قسمت نخست پاورقی دنباله‌دار یگانه دستگاه در روز یکشنبه ۱۷ دی‌ماه منتشر می‌شود. هر
+                                    هفته در روزهای یکشنبه، سه‌شنبه و پنجشنبه منتظر انتشار قسمت جدیدی از این کتاب باشید.
+                                    اگر این پاورقی را دنبال کنید اولین کسانی خواهید بود که کتاب «یگانه دستگاه: تاریخچه
+                                    مخفی آیفون» را به زبان فارسی مطالعه کرده‌اند.</p>
+                                <p>
+                                    <a href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%85%D9%82%D8%AF%D9%85%D9%87/"
+                                       target="_blank" rel="noopener"><img src="public/diginews/The-one-device-03-1.png"
+                                                                           class="aligncenter size-full wp-image-361600"
+                                                                           alt="تاریخچه مخفی آیفون" width="500"
+                                                                           height="171" data-lazy-loaded="true"></a></p>
+                                <h3 style="text-align: center;"><span style="color: #333333;">بخش اول: آزمون تعاملات گسترده‌ی تازه</span>
+                                </h3>
+                                <p>
+                                    <a href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%D8%A7%D9%88%D9%84/"><img
+                                                src="public/diginews/The-one-device-04-2.png"
+                                                class="aligncenter size-full wp-image-368672" alt="" width="500"
+                                                height="171" data-lazy-loaded="true"></a></p>
+                                <p>
+                                    <a href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%D8%AF%D9%88%D9%85/"
+                                       target="_blank" rel="noopener"><img src="public/diginews/The-one-device-05.png"
+                                                                           class="aligncenter size-full wp-image-366082"
+                                                                           alt="یگانه دستگاه" width="500" height="171"
+                                                                           data-lazy-loaded="true"></a></p>
+                                <p>
+                                    <a href="http://www.digikala.com/mag/tag/%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-%d9%81%d8%b5%d9%84-%d8%b3%d9%88%d9%85/"><img
+                                                src="public/diginews/The-one-device-06.png"
+                                                class="aligncenter wp-image-369418 size-full" alt="" width="500"
+                                                height="171" data-lazy-loaded="true"></a> <a
+                                            href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%DA%86%D9%87%D8%A7%D8%B1%D9%85/"><img
+                                                src="public/diginews/The-one-device-07.png"
+                                                class="aligncenter wp-image-375275 size-full" alt="" width="500"
+                                                height="171" data-lazy-loaded="true"></a><a
+                                            href="http://www.digikala.com/mag/tag/%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-%d9%81%d8%b5%d9%84-%d9%be%d9%86%d8%ac%d9%85/"><img
+                                                src="public/diginews/The-one-device-08.png"
+                                                class="aligncenter wp-image-377043 size-full" alt="" width="500"
+                                                height="171" data-lazy-loaded="true"></a></p>
+                                <h3 style="text-align: center;"><span
+                                            style="color: #333333;">بخش دوم: ساخت نمونه اولیه</span></h3>
+                                <h3 style="text-align: center;"><a
+                                            href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%D8%B4%D8%B4%D9%85/"><img
+                                                src="public/diginews/The-one-device-09-2.png"
+                                                class="aligncenter wp-image-389337 size-full" alt="" width="500"
+                                                height="171" data-lazy-loaded="true"></a><a
+                                            href="http://www.digikala.com/mag/tag/%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%81%D8%B5%D9%84-%D9%87%D9%81%D8%AA%D9%85/"><img
+                                                src="public/diginews/The-one-device-10-1.png"
+                                                class="aligncenter wp-image-389339 size-full" alt="" width="500"
+                                                height="171" data-lazy-loaded="true"></a> <a
+                                            href="http://www.digikala.com/mag/tag/%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-%d9%81%d8%b5%d9%84-%d9%87%d8%b4%d8%aa%d9%85/"><img
+                                                src="public/diginews/The-one-device-11-1.png"
+                                                class="aligncenter wp-image-390015 size-full" alt="" width="500"
+                                                height="171" data-lazy-loaded="true"></a> <img
+                                            src="public/diginews/The-one-device-9.png"
+                                            class="aligncenter size-full wp-image-361422" alt="" width="500"
+                                            height="171" data-lazy-loaded="true"> <img
+                                            src="public/diginews/The-one-device-10.png"
+                                            class="aligncenter size-full wp-image-361424" alt="" width="500"
+                                            height="171" data-lazy-loaded="true"> <img
+                                            src="public/diginews/The-one-device-11.png"
+                                            class="aligncenter size-full wp-image-361426" alt="" width="500"
+                                            height="171" data-lazy-loaded="true"></h3>
+                                <h3 style="text-align: center;"><span
+                                            style="color: #333333;">بخش سوم: ورود به آیفون</span></h3>
+                                <h3 style="text-align: center;"><img src="public/diginews/The-one-device-15-1.png"
+                                                                     class="aligncenter size-full wp-image-368678"
+                                                                     alt="" width="500" height="171"
+                                                                     data-lazy-loaded="true"><img
+                                            src="public/diginews/The-one-device-13.png"
+                                            class="aligncenter size-full wp-image-361428" alt="" width="500"
+                                            height="171" data-lazy-loaded="true"> <img
+                                            src="public/diginews/The-one-device-14.png"
+                                            class="aligncenter size-full wp-image-361430" alt="" width="500"
+                                            height="171" data-lazy-loaded="true"> <img
+                                            src="public/diginews/The-one-device-15.png"
+                                            class="aligncenter size-full wp-image-361432" alt="" width="500"
+                                            height="171" data-lazy-loaded="true"> <img
+                                            src="public/diginews/The-one-device-16.png"
+                                            class="aligncenter size-full wp-image-361434" alt="" width="500"
+                                            height="171" data-lazy-loaded="true"><img src="public/diginews/17.png"
+                                                                                      class="aligncenter size-full wp-image-361468"
+                                                                                      alt="" width="500" height="171"
+                                                                                      data-lazy-loaded="true"></h3>
+                                <h3 style="text-align: center;"><span
+                                            style="color: #333333;">بخش چهارم: یگانه دستگاه</span></h3>
+                                <h3><img src="public/diginews/The-one-device-22.png"
+                                         class="aligncenter size-full wp-image-368680" alt="" width="500" height="171"
+                                         data-lazy-loaded="true"><img src="public/diginews/19.png"
+                                                                      class="aligncenter size-full wp-image-361466"
+                                                                      alt="" width="500" height="171"
+                                                                      data-lazy-loaded="true"></h3>
+                                <p>&nbsp;</p>
+                            </div>
+
+                            <div class="post-module__social dialog">
+                                <div class="social-wrapper">
                                                     <span class="post-module__social--btn">
                                 <i class="icon-like-icon"></i>
                                 <span class="_num">۳۵</span>
                               </span>
-                            <span class="post-module__social--sep"></span>
+                                    <span class="post-module__social--sep"></span>
 
-                            <label class="post-module__social--btn  pu">
-                                <i class="icon-share"></i>
-                                <input type="checkbox">
-                                <span class="dialog__info">
+                                    <label class="post-module__social--btn  pu">
+                                        <i class="icon-share"></i>
+                                        <input type="checkbox">
+                                        <span class="dialog__info">
         <span class="dialog__info__wrapper">
           <span class="social-networks">
 
-                      <a class="icon-telegram" rel="nofollow" href="https://telegram.me/share/url?url=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382&amp;text=%D9%BE%D8%A7%D9%88%D8%B1%D9%82%DB%8C%20%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%E2%80%8C%D8%AF%D8%A7%D8%B1%20%DA%A9%D8%AA%D8%A7%D8%A8%20%C2%AB%DB%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87:%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D9%85%D8%AE%D9%81%DB%8C%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%C2%BB%20%23%D8%AF%DB%8C%D8%AC%DB%8C%E2%80%8C%DA%A9%D8%A7%D9%84%D8%A7_%D9%85%DA%AF" target="_blank"></a>
+                      <a class="icon-telegram" rel="nofollow"
+                         href="https://telegram.me/share/url?url=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382&amp;text=%D9%BE%D8%A7%D9%88%D8%B1%D9%82%DB%8C%20%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%E2%80%8C%D8%AF%D8%A7%D8%B1%20%DA%A9%D8%AA%D8%A7%D8%A8%20%C2%AB%DB%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87:%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D9%85%D8%AE%D9%81%DB%8C%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%C2%BB%20%23%D8%AF%DB%8C%D8%AC%DB%8C%E2%80%8C%DA%A9%D8%A7%D9%84%D8%A7_%D9%85%DA%AF"
+                         target="_blank"></a>
 
-                        <a class="icon-g-plus" rel="nofollow" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382" target="_blank"></a>
+                        <a class="icon-g-plus" rel="nofollow"
+                           href="https://plus.google.com/share?url=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382"
+                           target="_blank"></a>
 
-                        <a class="icon-twitter" rel="nofollow" href="http://twitter.com/intent/tweet/?text=%D9%BE%D8%A7%D9%88%D8%B1%D9%82%DB%8C%20%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%E2%80%8C%D8%AF%D8%A7%D8%B1%20%DA%A9%D8%AA%D8%A7%D8%A8%20%C2%AB%DB%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87:%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D9%85%D8%AE%D9%81%DB%8C%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%C2%BB%20%23%D8%AF%DB%8C%D8%AC%DB%8C%E2%80%8C%DA%A9%D8%A7%D9%84%D8%A7_%D9%85%DA%AF&amp;url=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382" target="_blank"></a>
+                        <a class="icon-twitter" rel="nofollow"
+                           href="http://twitter.com/intent/tweet/?text=%D9%BE%D8%A7%D9%88%D8%B1%D9%82%DB%8C%20%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%E2%80%8C%D8%AF%D8%A7%D8%B1%20%DA%A9%D8%AA%D8%A7%D8%A8%20%C2%AB%DB%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87:%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D9%85%D8%AE%D9%81%DB%8C%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%C2%BB%20%23%D8%AF%DB%8C%D8%AC%DB%8C%E2%80%8C%DA%A9%D8%A7%D9%84%D8%A7_%D9%85%DA%AF&amp;url=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382"
+                           target="_blank"></a>
 
-                        <a class="icon-fb" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php?m2w&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382&amp;p[images][0]=http%3A%2F%2Fwww.digikala.com%2Fmag%2Fwp-content%2Fuploads%2F2018%2F01%2Fmain.png&amp;p[title]=%D9%BE%D8%A7%D9%88%D8%B1%D9%82%DB%8C%20%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%E2%80%8C%D8%AF%D8%A7%D8%B1%20%DA%A9%D8%AA%D8%A7%D8%A8%20%C2%AB%DB%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87:%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D9%85%D8%AE%D9%81%DB%8C%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%C2%BB%20%23%D8%AF%DB%8C%D8%AC%DB%8C%E2%80%8C%DA%A9%D8%A7%D9%84%D8%A7_%D9%85%DA%AF&amp;p[summary]=%C2%AB%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%A7%D8%AE%D8%AA%D8%B1%D8%A7%D8%B9%DB%8C%20%DA%A9%D9%87%20%D8%AF%D9%86%DB%8C%D8%A7%DB%8C%20%DA%AF%D9%88%D8%B4%DB%8C%E2%80%8C%D9%87%D8%A7%DB%8C%20%D9%87%D9%88%D8%B4%D9%85%D9%86%D8%AF%20%D8%B1%D8%A7%20%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1%20%D8%AF%D8%A7%D8%AF%20%D9%88%20%D8%A8%D9%87%20%D8%B3%D9%88%D8%AF%D8%A2%D9%88%D8%B1%D8%AA%D8%B1%DB%8C%D9%86%20%D9%85%D8%AD%D8%B5%D9%88%D9%84%20%D8%AC%D9%87%D8%A7%D9%86%20%D8%AA%D8%A8%D8%AF%DB%8C%D9%84%20%D8%B4%D8%AF.%C2%BB%20%C2%AB%DA%A9%D8%AA%D8%A7%D8%A8%DB%8C%20%DA%A9%D9%87%20%D9%BE%D8%B3%20%D8%A7%D8%B2%20%D8%AE%D9%88%D8%A7%D9%86%D8%AF%D8%B4%20%D8%AF%DB%8C%DA%AF%D8%B1%20%D9%87%D8%B1%DA%AF%D8%B2%20%D8%A8%D9%87%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%20%D9%85%D8%AB%D9%84%20%D9%82%D8%A8%D9%84%20%D9%86%DA%AF%D8%A7%D9%87%20%D9%86%D9%85%DB%8C%E2%80%8C%DA%A9%D9%86%DB%8C%D8%AF.%C2%BB%20%C2%AB" target="_blank"></a>
+                        <a class="icon-fb" rel="nofollow"
+                           href="http://www.facebook.com/sharer/sharer.php?m2w&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382&amp;p[images][0]=http%3A%2F%2Fwww.digikala.com%2Fmag%2Fwp-content%2Fuploads%2F2018%2F01%2Fmain.png&amp;p[title]=%D9%BE%D8%A7%D9%88%D8%B1%D9%82%DB%8C%20%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%E2%80%8C%D8%AF%D8%A7%D8%B1%20%DA%A9%D8%AA%D8%A7%D8%A8%20%C2%AB%DB%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87:%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D9%85%D8%AE%D9%81%DB%8C%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%C2%BB%20%23%D8%AF%DB%8C%D8%AC%DB%8C%E2%80%8C%DA%A9%D8%A7%D9%84%D8%A7_%D9%85%DA%AF&amp;p[summary]=%C2%AB%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%A7%D8%AE%D8%AA%D8%B1%D8%A7%D8%B9%DB%8C%20%DA%A9%D9%87%20%D8%AF%D9%86%DB%8C%D8%A7%DB%8C%20%DA%AF%D9%88%D8%B4%DB%8C%E2%80%8C%D9%87%D8%A7%DB%8C%20%D9%87%D9%88%D8%B4%D9%85%D9%86%D8%AF%20%D8%B1%D8%A7%20%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1%20%D8%AF%D8%A7%D8%AF%20%D9%88%20%D8%A8%D9%87%20%D8%B3%D9%88%D8%AF%D8%A2%D9%88%D8%B1%D8%AA%D8%B1%DB%8C%D9%86%20%D9%85%D8%AD%D8%B5%D9%88%D9%84%20%D8%AC%D9%87%D8%A7%D9%86%20%D8%AA%D8%A8%D8%AF%DB%8C%D9%84%20%D8%B4%D8%AF.%C2%BB%20%C2%AB%DA%A9%D8%AA%D8%A7%D8%A8%DB%8C%20%DA%A9%D9%87%20%D9%BE%D8%B3%20%D8%A7%D8%B2%20%D8%AE%D9%88%D8%A7%D9%86%D8%AF%D8%B4%20%D8%AF%DB%8C%DA%AF%D8%B1%20%D9%87%D8%B1%DA%AF%D8%B2%20%D8%A8%D9%87%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%20%D9%85%D8%AB%D9%84%20%D9%82%D8%A8%D9%84%20%D9%86%DA%AF%D8%A7%D9%87%20%D9%86%D9%85%DB%8C%E2%80%8C%DA%A9%D9%86%DB%8C%D8%AF.%C2%BB%20%C2%AB"
+                           target="_blank"></a>
 
-                        <a class="icon-linkedin" rel="nofollow" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382&amp;title=%D9%BE%D8%A7%D9%88%D8%B1%D9%82%DB%8C%20%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%E2%80%8C%D8%AF%D8%A7%D8%B1%20%DA%A9%D8%AA%D8%A7%D8%A8%20%C2%AB%DB%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87:%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D9%85%D8%AE%D9%81%DB%8C%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%C2%BB%20%23%D8%AF%DB%8C%D8%AC%DB%8C%E2%80%8C%DA%A9%D8%A7%D9%84%D8%A7_%D9%85%DA%AF&amp;source=http%3A%2F%2Fwww.digikala.com%2Fmag" target="_blank"></a>
+                        <a class="icon-linkedin" rel="nofollow"
+                           href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.digikala.com%2Fmag%2F%3Fp%3D361382&amp;title=%D9%BE%D8%A7%D9%88%D8%B1%D9%82%DB%8C%20%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%E2%80%8C%D8%AF%D8%A7%D8%B1%20%DA%A9%D8%AA%D8%A7%D8%A8%20%C2%AB%DB%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87:%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D9%85%D8%AE%D9%81%DB%8C%20%D8%A2%DB%8C%D9%81%D9%88%D9%86%C2%BB%20%23%D8%AF%DB%8C%D8%AC%DB%8C%E2%80%8C%DA%A9%D8%A7%D9%84%D8%A7_%D9%85%DA%AF&amp;source=http%3A%2F%2Fwww.digikala.com%2Fmag"
+                           target="_blank"></a>
                     </span>
         </span>
       </span>
 
-                            </label>
-                            <span class="post-module__social--sep"></span>
-                            <span class="post-module__social--btn">
+                                    </label>
+                                    <span class="post-module__social--sep"></span>
+                                    <span class="post-module__social--btn">
                                 <i class="icon-comment"></i>
                                 <span class="_num">۱</span>
                             </span>
-                        </div>
+                                </div>
 
-                        <span class="post-module__social--start post-star-rating">
+                                <span class="post-module__social--start post-star-rating">
     <span class="stars-wrapper ">
       <span class="golden-rate" style="width: 46.83%;"></span>
       <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 22 22" version="1.1">
         <g transform="translate(-2083.000000, -180.000000)">
             <g transform="translate(2083.000000, 180.000000)">
-                <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z" fill="#FFFFFF"></path>
+                <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"
+                      fill="#FFFFFF"></path>
                 <g fill="#9BA4AB">
                     <path d="M5.1624976,21.0990893 C5.06341682,21.0990893 4.96642576,21.0673965 4.88611307,21.0076799 C4.74212327,20.9009996 4.67038005,20.721003 4.70061847,20.5432855 L5.8687317,13.861423 L1.04065674,9.06769891 C0.913779231,8.94129731 0.868144918,8.75309122 0.922685082,8.58165925 C0.977767647,8.40951365 1.12432021,8.28365739 1.30127286,8.25735875 L7.89750831,7.32495367 L10.8813847,1.16620857 C10.9598812,1.00342056 11.1230477,0.9 11.3019039,0.9 C11.4811673,0.9 11.6444205,1.00347549 11.7223443,1.16604556 L14.6305813,7.26963333 L21.3025901,8.25736693 C21.4794876,8.28365739 21.6255975,8.40911262 21.6811733,8.58181772 C21.7357665,8.75341711 21.6901835,8.9420815 21.5630367,9.06781265 L16.7632306,13.7746101 L17.9028345,20.5437444 C17.9326108,20.7214813 17.8609338,20.9013118 17.7176674,21.0078014 C17.5729497,21.1159784 17.3801746,21.1300729 17.2218697,21.044413 L11.3491104,17.8486788 L5.38083897,21.0446056 C5.31314182,21.0805049 5.23813028,21.0990893 5.1624976,21.0990893 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"></path>
                 </g>
@@ -318,7 +1381,8 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 22 22" version="1.1">
         <g transform="translate(-2083.000000, -180.000000)">
             <g transform="translate(2083.000000, 180.000000)">
-                <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z" fill="#FFFFFF"></path>
+                <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"
+                      fill="#FFFFFF"></path>
                 <g fill="#9BA4AB">
                     <path d="M5.1624976,21.0990893 C5.06341682,21.0990893 4.96642576,21.0673965 4.88611307,21.0076799 C4.74212327,20.9009996 4.67038005,20.721003 4.70061847,20.5432855 L5.8687317,13.861423 L1.04065674,9.06769891 C0.913779231,8.94129731 0.868144918,8.75309122 0.922685082,8.58165925 C0.977767647,8.40951365 1.12432021,8.28365739 1.30127286,8.25735875 L7.89750831,7.32495367 L10.8813847,1.16620857 C10.9598812,1.00342056 11.1230477,0.9 11.3019039,0.9 C11.4811673,0.9 11.6444205,1.00347549 11.7223443,1.16604556 L14.6305813,7.26963333 L21.3025901,8.25736693 C21.4794876,8.28365739 21.6255975,8.40911262 21.6811733,8.58181772 C21.7357665,8.75341711 21.6901835,8.9420815 21.5630367,9.06781265 L16.7632306,13.7746101 L17.9028345,20.5437444 C17.9326108,20.7214813 17.8609338,20.9013118 17.7176674,21.0078014 C17.5729497,21.1159784 17.3801746,21.1300729 17.2218697,21.044413 L11.3491104,17.8486788 L5.38083897,21.0446056 C5.31314182,21.0805049 5.23813028,21.0990893 5.1624976,21.0990893 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"></path>
                 </g>
@@ -328,7 +1392,8 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 22 22" version="1.1">
         <g transform="translate(-2083.000000, -180.000000)">
             <g transform="translate(2083.000000, 180.000000)">
-                <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z" fill="#FFFFFF"></path>
+                <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"
+                      fill="#FFFFFF"></path>
                 <g fill="#9BA4AB">
                     <path d="M5.1624976,21.0990893 C5.06341682,21.0990893 4.96642576,21.0673965 4.88611307,21.0076799 C4.74212327,20.9009996 4.67038005,20.721003 4.70061847,20.5432855 L5.8687317,13.861423 L1.04065674,9.06769891 C0.913779231,8.94129731 0.868144918,8.75309122 0.922685082,8.58165925 C0.977767647,8.40951365 1.12432021,8.28365739 1.30127286,8.25735875 L7.89750831,7.32495367 L10.8813847,1.16620857 C10.9598812,1.00342056 11.1230477,0.9 11.3019039,0.9 C11.4811673,0.9 11.6444205,1.00347549 11.7223443,1.16604556 L14.6305813,7.26963333 L21.3025901,8.25736693 C21.4794876,8.28365739 21.6255975,8.40911262 21.6811733,8.58181772 C21.7357665,8.75341711 21.6901835,8.9420815 21.5630367,9.06781265 L16.7632306,13.7746101 L17.9028345,20.5437444 C17.9326108,20.7214813 17.8609338,20.9013118 17.7176674,21.0078014 C17.5729497,21.1159784 17.3801746,21.1300729 17.2218697,21.044413 L11.3491104,17.8486788 L5.38083897,21.0446056 C5.31314182,21.0805049 5.23813028,21.0990893 5.1624976,21.0990893 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"></path>
                 </g>
@@ -338,7 +1403,8 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 22 22" version="1.1">
         <g transform="translate(-2083.000000, -180.000000)">
             <g transform="translate(2083.000000, 180.000000)">
-                <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z" fill="#FFFFFF"></path>
+                <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"
+                      fill="#FFFFFF"></path>
                 <g fill="#9BA4AB">
                     <path d="M5.1624976,21.0990893 C5.06341682,21.0990893 4.96642576,21.0673965 4.88611307,21.0076799 C4.74212327,20.9009996 4.67038005,20.721003 4.70061847,20.5432855 L5.8687317,13.861423 L1.04065674,9.06769891 C0.913779231,8.94129731 0.868144918,8.75309122 0.922685082,8.58165925 C0.977767647,8.40951365 1.12432021,8.28365739 1.30127286,8.25735875 L7.89750831,7.32495367 L10.8813847,1.16620857 C10.9598812,1.00342056 11.1230477,0.9 11.3019039,0.9 C11.4811673,0.9 11.6444205,1.00347549 11.7223443,1.16604556 L14.6305813,7.26963333 L21.3025901,8.25736693 C21.4794876,8.28365739 21.6255975,8.40911262 21.6811733,8.58181772 C21.7357665,8.75341711 21.6901835,8.9420815 21.5630367,9.06781265 L16.7632306,13.7746101 L17.9028345,20.5437444 C17.9326108,20.7214813 17.8609338,20.9013118 17.7176674,21.0078014 C17.5729497,21.1159784 17.3801746,21.1300729 17.2218697,21.044413 L11.3491104,17.8486788 L5.38083897,21.0446056 C5.31314182,21.0805049 5.23813028,21.0990893 5.1624976,21.0990893 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"></path>
                 </g>
@@ -348,7 +1414,8 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 22 22" version="1.1">
                     <g transform="translate(-2083.000000, -180.000000)">
                         <g transform="translate(2083.000000, 180.000000)">
-                            <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z" fill="#FFFFFF"></path>
+                            <path d="M0,0 L22,0 L22,22 L0,22 L0,0 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"
+                                  fill="#FFFFFF"></path>
                             <g fill="#9BA4AB">
                                 <path d="M5.1624976,21.0990893 C5.06341682,21.0990893 4.96642576,21.0673965 4.88611307,21.0076799 C4.74212327,20.9009996 4.67038005,20.721003 4.70061847,20.5432855 L5.8687317,13.861423 L1.04065674,9.06769891 C0.913779231,8.94129731 0.868144918,8.75309122 0.922685082,8.58165925 C0.977767647,8.40951365 1.12432021,8.28365739 1.30127286,8.25735875 L7.89750831,7.32495367 L10.8813847,1.16620857 C10.9598812,1.00342056 11.1230477,0.9 11.3019039,0.9 C11.4811673,0.9 11.6444205,1.00347549 11.7223443,1.16604556 L14.6305813,7.26963333 L21.3025901,8.25736693 C21.4794876,8.28365739 21.6255975,8.40911262 21.6811733,8.58181772 C21.7357665,8.75341711 21.6901835,8.9420815 21.5630367,9.06781265 L16.7632306,13.7746101 L17.9028345,20.5437444 C17.9326108,20.7214813 17.8609338,20.9013118 17.7176674,21.0078014 C17.5729497,21.1159784 17.3801746,21.1300729 17.2218697,21.044413 L11.3491104,17.8486788 L5.38083897,21.0446056 C5.31314182,21.0805049 5.23813028,21.0990893 5.1624976,21.0990893 Z M2.16120678,8.99009283 L6.5927023,13.3907115 C6.6793702,13.4767477 6.71920055,13.6014813 6.69854777,13.7232094 L5.65226342,19.9365989 L11.1304121,17.0031036 C11.2377328,16.9452452 11.3657062,16.9452452 11.4737645,17.0031036 L16.9511756,19.9365989 L15.90526,13.7232094 C15.8846072,13.6014813 15.9244376,13.4771234 16.0111055,13.3907115 L20.442601,8.99009283 L14.3186843,8.08351954 C14.1984556,8.06586147 14.094823,7.98884219 14.0409782,7.87800956 L11.3019039,2.22517011 L8.56282955,7.87838527 C8.50898482,7.98921789 8.40535214,8.06623717 8.28512348,8.08389525 L2.16120678,8.99009283 Z"></path>
                             </g>
@@ -363,31 +1430,69 @@
     </span>
 
 </span>
-                        <small class="rating-message"></small>
-                    </div>
+                                <small class="rating-message"></small>
+                            </div>
 
-                    <div class="_sep"></div>
-                    <div class="post-module__tags">
-                        <span class="post-module__tags--title">برچسب‌ها :</span>
-                        <div class="tag-list">
-                            <a href="http://www.digikala.com/mag/tag/%d8%a2%db%8c%d9%81%d9%88%d9%86/" rel="tag" class="post-tag post-module__tags--item item">آیفون</a><a href="http://www.digikala.com/mag/tag/%d8%a7%d9%be%d9%84/" rel="tag" class="post-tag post-module__tags--item item">اپل</a><a href="http://www.digikala.com/mag/tag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87-%d8%af%d8%a7%d8%b1/" rel="tag" class="post-tag post-module__tags--item item">پاورقی دنباله دار</a><a href="http://www.digikala.com/mag/tag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87/" rel="tag" class="post-tag post-module__tags--item item">پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»</a><a href="http://www.digikala.com/mag/tag/%da%a9%d8%aa%d8%a7%d8%a8/" rel="tag" class="post-tag post-module__tags--item item">کتاب</a><a href="http://www.digikala.com/mag/tag/%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87/" rel="tag" class="post-tag post-module__tags--item item">یگانه دستگاه</a>                        </div>
-                    </div>
+                            <div class="_sep"></div>
+                            <div class="post-module__tags">
+                                <span class="post-module__tags--title">برچسب‌ها :</span>
+                                <div class="tag-list">
+                                    <a href="http://www.digikala.com/mag/tag/%d8%a2%db%8c%d9%81%d9%88%d9%86/" rel="tag"
+                                       class="post-tag post-module__tags--item item">آیفون</a><a
+                                            href="http://www.digikala.com/mag/tag/%d8%a7%d9%be%d9%84/" rel="tag"
+                                            class="post-tag post-module__tags--item item">اپل</a><a
+                                            href="http://www.digikala.com/mag/tag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87-%d8%af%d8%a7%d8%b1/"
+                                            rel="tag" class="post-tag post-module__tags--item item">پاورقی دنباله
+                                        دار</a><a
+                                            href="http://www.digikala.com/mag/tag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87/"
+                                            rel="tag" class="post-tag post-module__tags--item item">پاورقی دنباله‌دار
+                                        کتاب «یگانه دستگاه: تاریخچه مخفی آیفون»</a><a
+                                            href="http://www.digikala.com/mag/tag/%da%a9%d8%aa%d8%a7%d8%a8/" rel="tag"
+                                            class="post-tag post-module__tags--item item">کتاب</a><a
+                                            href="http://www.digikala.com/mag/tag/%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87/"
+                                            rel="tag" class="post-tag post-module__tags--item item">یگانه دستگاه</a>
+                                </div>
+                            </div>
 
-                </article>
+                        </article>
 
-                <div class="comments-template">
-                    <div class="_sep"></div>
-                    <div id="respond" class="comment-respond">
-                        <strong id="reply-title" class="comment-reply-title">دیدگاه شما <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/#respond" style="display:none;"><i class="icon-close"></i>انصراف</a></small></strong>			<form action="http://www.digikala.com/mag/wp-comments-post.php" method="post" id="commentform" class="comment-form">
-                            <div class="comment-form_avatar"><i class="icon-user"></i></div><div class="comment-fields"><div class="input-textbox"><input type="text" name="author" id="author" class="input form-control" placeholder="نام * " value="" tabindex="1"></div>
-                                <div class="input-textbox"><input type="email" name="email" id="email" class="input form-control" placeholder="ایمیل * " value="" tabindex="2"></div>
-                                <p class="cptch_block"><span class="cptch_wrap cptch_math_actions">
-				<label class="cptch_label" for="cptch_input_67"><span class="cptch_span"><input id="cptch_input_67" class="cptch_input cptch_wp_comments" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"></span>
+                        <div class="comments-template">
+                            <div class="_sep"></div>
+                            <div id="respond" class="comment-respond">
+                                <strong id="reply-title" class="comment-reply-title">دیدگاه شما
+                                    <small><a rel="nofollow" id="cancel-comment-reply-link"
+                                              href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/#respond"
+                                              style="display:none;"><i class="icon-close"></i>انصراف</a></small>
+                                </strong>
+                                <form action="http://www.digikala.com/mag/wp-comments-post.php" method="post"
+                                      id="commentform" class="comment-form">
+                                    <div class="comment-form_avatar"><i class="icon-user"></i></div>
+                                    <div class="comment-fields">
+                                        <div class="input-textbox"><input type="text" name="author" id="author"
+                                                                          class="input form-control"
+                                                                          placeholder="نام * " value="" tabindex="1">
+                                        </div>
+                                        <div class="input-textbox"><input type="email" name="email" id="email"
+                                                                          class="input form-control"
+                                                                          placeholder="ایمیل * " value="" tabindex="2">
+                                        </div>
+                                        <p class="cptch_block"><span class="cptch_wrap cptch_math_actions">
+				<label class="cptch_label" for="cptch_input_67"><span class="cptch_span"><input id="cptch_input_67"
+                                                                                                class="cptch_input cptch_wp_comments"
+                                                                                                type="text"
+                                                                                                autocomplete="off"
+                                                                                                name="cptch_number"
+                                                                                                value="" maxlength="2"
+                                                                                                size="2"
+                                                                                                aria-required="true"
+                                                                                                required="required"
+                                                                                                style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"></span>
 					<span class="cptch_span">&nbsp;−&nbsp;</span>
 					<span class="cptch_span">یک</span>
 					<span class="cptch_span">&nbsp;=&nbsp;</span>
 					<span class="cptch_span">هشت</span>
-					<input type="hidden" name="cptch_result" value="F48="><input type="hidden" name="cptch_time" value="1524459965">
+					<input type="hidden" name="cptch_result" value="F48="><input type="hidden" name="cptch_time"
+                                                                                 value="1524459965">
 					<input type="hidden" name="cptch_form" value="wp_comments">
 				</label><span class="cptch_reload_button_wrap hide-if-no-js">
 					<noscript>
@@ -398,86 +1503,108 @@
 						</style>
 					</noscript>
 					<span class="cptch_reload_button dashicons dashicons-update"></span>
-				</span></span></p></div><div class="comment-form-comment"><textarea id="comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true" placeholder="دیدگاه"></textarea></div><p class="form-submit"><input name="submit" type="submit" id="submit-comment" class="comment-submit-btn" value="ارسال دیدگاه"> <input type="hidden" name="comment_post_ID" value="361382" id="comment_post_ID">
-                                <input type="hidden" name="comment_parent" id="comment_parent" value="0">
-                            </p>			</form>
-                    </div><!-- #respond -->
-                    <div id="comments">
+				</span></span></p>
+                                    </div>
+                                    <div class="comment-form-comment"><textarea id="comment" name="comment"
+                                                                                class="form-control" cols="45" rows="8"
+                                                                                aria-required="true"
+                                                                                placeholder="دیدگاه"></textarea></div>
+                                    <p class="form-submit"><input name="submit" type="submit" id="submit-comment"
+                                                                  class="comment-submit-btn" value="ارسال دیدگاه">
+                                        <input type="hidden" name="comment_post_ID" value="361382" id="comment_post_ID">
+                                        <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                                    </p></form>
+                            </div><!-- #respond -->
+                            <div id="comments">
 
-                        <div class="module-title">
-                            <div class="module-title__txt">
-                                <strong class="bold heading">یک دیدگاه</strong>
-                            </div>
-                            <div class="module-title__sep"></div>
-                        </div>
+                                <div class="module-title">
+                                    <div class="module-title__txt">
+                                        <strong class="bold heading">یک دیدگاه</strong>
+                                    </div>
+                                    <div class="module-title__sep"></div>
+                                </div>
 
-                        <div id="commentlist-container">
+                                <div id="commentlist-container">
 
-                            <ol class="post-module__comments commentlist">
+                                    <ol class="post-module__comments commentlist">
 
-                                <li class="comment byuser comment-author-amirelectronic77gmail-com even thread-even depth-1 single-comment _item _person" id="li-comment-200290">
-                                    <div id="comment-200290" class="comment-body">
+                                        <li class="comment byuser comment-author-amirelectronic77gmail-com even thread-even depth-1 single-comment _item _person"
+                                            id="li-comment-200290">
+                                            <div id="comment-200290" class="comment-body">
 
-                                        <div class="_item__user comment-meta ">
-                                            <img src="public/diginews/Default_Profile_Picture1.jpg" width="35" height="35" alt="Amir Sadsaleh" class="avatar avatar-35wp-user-avatar wp-user-avatar-35 alignnone photo avatar-default">                <span class="_item__user--name vcard">
+                                                <div class="_item__user comment-meta ">
+                                                    <img src="public/diginews/Default_Profile_Picture1.jpg" width="35"
+                                                         height="35" alt="Amir Sadsaleh"
+                                                         class="avatar avatar-35wp-user-avatar wp-user-avatar-35 alignnone photo avatar-default">
+                                                    <span class="_item__user--name vcard">
                     <span class="fn">Amir Sadsaleh</span>
                 </span>
-                                            <span class="_item__user--date">
+                                                    <span class="_item__user--date">
                     <i class="icon-clock-icon"></i>
                     <time datetime="۱۳۹۶-۱۰-۲۸ ۰۱:۳۶:۰۴ +۰۳:۳۰" class="_date">۲۸ دی ۱۳۹۶  |  ۰۱:۳۶</time>
                 </span>
-                                        </div>
+                                                </div>
 
-                                        <div class="_item__comment">
-                                            <p>سلام خسته نباشید<br>
-                                                چطور میتونم به متن انگلیسی کتاب دسترسی پیدا بکنم؟<br>
-                                                از کجا میتونم دانلود کنم؟<br>
-                                                لطفا راهنمایی کنید<br>
-                                                خیلی ممنونم</p>
-                                        </div>
+                                                <div class="_item__comment">
+                                                    <p>سلام خسته نباشید<br>
+                                                        چطور میتونم به متن انگلیسی کتاب دسترسی پیدا بکنم؟<br>
+                                                        از کجا میتونم دانلود کنم؟<br>
+                                                        لطفا راهنمایی کنید<br>
+                                                        خیلی ممنونم</p>
+                                                </div>
 
-                                        <div class="_item__user--like-reply">
+                                                <div class="_item__user--like-reply">
 
-                                            <label class="_btn check-handler comment-like-button">
-                                                <input type="checkbox" name="comment_like_200290" value="1" data-id="200290">
-                                                <i class="icon-like-icon "></i>
-                                                <span class="_num comment-like-count">۶</span>
-                                            </label>
-
-
-                                            <span class="comment-like-message"></span>
-
-                                            <span class="_sepe"></span>
-                                            <span class="_btn">
-                        <a rel="nofollow" class="comment-reply-link" href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/?replytocom=200290#respond" onclick="return addComment.moveForm( &quot;comment-200290&quot;, &quot;200290&quot;, &quot;respond&quot;, &quot;361382&quot; )" aria-label="پاسخ به Amir Sadsaleh"><i class="icon-reply-arrow"></i></a>                    </span>
-
-                                        </div>
-
-                                    </div>
-
-                                </li><!-- #comment-## -->
-                            </ol>
-
-                            <div class="module-title pagination-wrapper"></div>            </div>
+                                                    <label class="_btn check-handler comment-like-button">
+                                                        <input type="checkbox" name="comment_like_200290" value="1"
+                                                               data-id="200290">
+                                                        <i class="icon-like-icon "></i>
+                                                        <span class="_num comment-like-count">۶</span>
+                                                    </label>
 
 
-                    </div></div>
-            </div>
-        </div>
-        <div class="main__aside">
-            <div class="post-nav">
+                                                    <span class="comment-like-message"></span>
 
-                <div class="post-nav__body">
-                    <div class="_title">
-                        <span class="bold">مطالب</span>
-                        <span>مرتبط</span>
+                                                    <span class="_sepe"></span>
+                                                    <span class="_btn">
+                        <a rel="nofollow" class="comment-reply-link"
+                           href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/?replytocom=200290#respond"
+                           onclick="return addComment.moveForm( &quot;comment-200290&quot;, &quot;200290&quot;, &quot;respond&quot;, &quot;361382&quot; )"
+                           aria-label="پاسخ به Amir Sadsaleh"><i
+                                    class="icon-reply-arrow"></i></a>                    </span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </li><!-- #comment-## -->
+                                    </ol>
+
+                                    <div class="module-title pagination-wrapper"></div>
+                                </div>
+
+
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="main__aside">
+                    <div class="post-nav">
 
-                    <div class="list-module related-posts">
-                        <a href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-27/" title="پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون» (فصل هشتم/بخش چهارم)" class="list-module__item post">
+                        <div class="post-nav__body">
+                            <div class="_title">
+                                <span class="bold">مطالب</span>
+                                <span>مرتبط</span>
+                            </div>
+
+                            <div class="list-module related-posts">
+                                <a href="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-27/"
+                                   title="پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون» (فصل هشتم/بخش چهارم)"
+                                   class="list-module__item post">
               <span class="image">
-                <img src="public/diginews/S8-4-150x150.jpg" width="150" height="150" class="image__img wp-post-image" alt="" data-lazy-loaded="true">              </span>
-                            <span class="stuff-wrapper">
+                <img src="public/diginews/S8-4-150x150.jpg" width="150" height="150" class="image__img wp-post-image"
+                     alt="" data-lazy-loaded="true">              </span>
+                                    <span class="stuff-wrapper">
             <span class="list-module__item__title">
               پاورقی دنباله‌دار کتاب «یگانه دستگاه: تاریخچه مخفی آیفون» (فصل هشتم/بخش چهارم)            </span>
             <span class="list-module__item__detail">
@@ -486,11 +1613,14 @@
                 <span class="author">کژوان آبهشت</span>
             </span>
           </span>
-                        </a>
-                        <a href="http://www.digikala.com/mag/%d8%a2%db%8c%d9%81%d9%88%d9%86-%d8%b1%da%a9%d9%88%d8%b1%d8%af%d8%af%d8%a7%d8%b1-%d8%aa%d8%ae%d9%84%d9%81-%d8%b4%d8%b1%da%a9%d8%aa%e2%80%8c%d9%87%d8%a7%db%8c-%d9%85%d8%ac%d8%a7%d8%b2-%d8%af%d8%b1/" title="آیفون رکورددار تخلف در طرح رجیستری است" class="list-module__item post">
+                                </a>
+                                <a href="http://www.digikala.com/mag/%d8%a2%db%8c%d9%81%d9%88%d9%86-%d8%b1%da%a9%d9%88%d8%b1%d8%af%d8%af%d8%a7%d8%b1-%d8%aa%d8%ae%d9%84%d9%81-%d8%b4%d8%b1%da%a9%d8%aa%e2%80%8c%d9%87%d8%a7%db%8c-%d9%85%d8%ac%d8%a7%d8%b2-%d8%af%d8%b1/"
+                                   title="آیفون رکورددار تخلف در طرح رجیستری است" class="list-module__item post">
               <span class="image">
-                <img src="public/diginews/iphone-x-homescreen-100735501-orig-150x150.jpg" width="150" height="150" class="image__img wp-post-image" alt="آیفون طرح رجیستری" data-lazy-loaded="true">              </span>
-                            <span class="stuff-wrapper">
+                <img src="public/diginews/iphone-x-homescreen-100735501-orig-150x150.jpg" width="150" height="150"
+                     class="image__img wp-post-image" alt="آیفون طرح رجیستری"
+                     data-lazy-loaded="true">              </span>
+                                    <span class="stuff-wrapper">
             <span class="list-module__item__title">
               آیفون رکورددار تخلف در طرح رجیستری است            </span>
             <span class="list-module__item__detail">
@@ -499,11 +1629,13 @@
                 <span class="author">صوفیا نصرالهی</span>
             </span>
           </span>
-                        </a>
-                        <a href="http://www.digikala.com/mag/%db%b1%db%b2-%da%a9%d8%a7%d8%b1-%d8%a2%db%8c%d9%81%d9%88%d9%86-%d9%82%d9%81%d9%84/" title="۱۲ کار جالب که می‌توان با آیفون قفل انجام داد" class="list-module__item post">
+                                </a>
+                                <a href="http://www.digikala.com/mag/%db%b1%db%b2-%da%a9%d8%a7%d8%b1-%d8%a2%db%8c%d9%81%d9%88%d9%86-%d9%82%d9%81%d9%84/"
+                                   title="۱۲ کار جالب که می‌توان با آیفون قفل انجام داد" class="list-module__item post">
               <span class="image">
-                <img src="public/diginews/iPhone-1-1-150x150.jpg" width="150" height="150" class="image__img wp-post-image" alt="آیفون" data-lazy-loaded="true">              </span>
-                            <span class="stuff-wrapper">
+                <img src="public/diginews/iPhone-1-1-150x150.jpg" width="150" height="150"
+                     class="image__img wp-post-image" alt="آیفون" data-lazy-loaded="true">              </span>
+                                    <span class="stuff-wrapper">
             <span class="list-module__item__title">
               ۱۲ کار جالب که می‌توان با آیفون قفل انجام داد            </span>
             <span class="list-module__item__detail">
@@ -512,11 +1644,14 @@
                 <span class="author">یوسف اسفندیاری</span>
             </span>
           </span>
-                        </a>
-                        <a href="http://www.digikala.com/mag/%d8%a7%d9%88%d9%84%db%8c%d9%86-%d8%a7%d8%b7%d9%84%d8%a7%d8%b9%d8%a7%d8%aa-%d8%a7%d8%b2-%d8%aa%d8%b1%d8%a7%d8%b4%d9%87-%d8%a2%db%8c%d9%81%d9%88%d9%86%e2%80%8c-xs/" title="اولین اطلاعات از تراشه آیفون‌ Xs به بیرون درز کرد" class="list-module__item post">
+                                </a>
+                                <a href="http://www.digikala.com/mag/%d8%a7%d9%88%d9%84%db%8c%d9%86-%d8%a7%d8%b7%d9%84%d8%a7%d8%b9%d8%a7%d8%aa-%d8%a7%d8%b2-%d8%aa%d8%b1%d8%a7%d8%b4%d9%87-%d8%a2%db%8c%d9%81%d9%88%d9%86%e2%80%8c-xs/"
+                                   title="اولین اطلاعات از تراشه آیفون‌ Xs به بیرون درز کرد"
+                                   class="list-module__item post">
               <span class="image">
-                <img src="public/diginews/iPhone-10-1-150x150.jpg" width="150" height="150" class="image__img wp-post-image" alt="" data-lazy-loaded="true">              </span>
-                            <span class="stuff-wrapper">
+                <img src="public/diginews/iPhone-10-1-150x150.jpg" width="150" height="150"
+                     class="image__img wp-post-image" alt="" data-lazy-loaded="true">              </span>
+                                    <span class="stuff-wrapper">
             <span class="list-module__item__title">
               اولین اطلاعات از تراشه آیفون‌ Xs به بیرون درز کرد            </span>
             <span class="list-module__item__detail">
@@ -525,286 +1660,477 @@
                 <span class="author">مجید نوردوست</span>
             </span>
           </span>
-                        </a>
-                    </div>
-                </div>
+                                </a>
+                            </div>
+                        </div>
 
-                <div class="post-nav__top" id="related-products-wrapper">        <div class="_title">        <span class="bold">محصولات</span>        <span>مرتبط در دیجی‌کالا</span>    </div>    <div class="unslider"><div class="product-carousel unslider unslider-horizontal" dir="rtl" style="overflow: hidden;">        <ul class="unslider__roller unslider-wrap unslider-carousel" style="width: 900%; margin-right: -100%; right: -400%;">                        <li class="product-carousel__item unslider-clone" style="width: 11.1111%;">            <a href="http://www.digikala.com/Product/DKP-254007/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="254007">                <img src="public/diginews/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg" class="product-carousel__item--img">                <span class="product-carousel__item--title rtl">گوشي موبايل سامسونگ مدل Galaxy S8 G ...</span>                <span class="product-carousel__item--price"> 3,350,000  <span class="currency">تومان</span></span>            </a>        </li><li class="product-carousel__item" style="width: 11.1111%;">            <a href="http://www.digikala.com/Product/DKP-313420/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="313420">                <img src="public/diginews/Apple-iPhone-X-256GB-Mobile-Phone-1fbd5a.jpg" class="product-carousel__item--img">                <span class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone X ظرفيت  ...</span>                <span class="product-carousel__item--price"> 7,129,000  <span class="currency">تومان</span></span>            </a>        </li>                        <li class="product-carousel__item" style="width: 11.1111%;">            <a href="http://www.digikala.com/Product/DKP-321024/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="321024">                <img src="public/diginews/Apple-iPhone-8-Plus-64GB-Mobile-Phone-156341.jpg" class="product-carousel__item--img">                <span class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone 8 Plus ظ ...</span>                <span class="product-carousel__item--price"> 5,019,000  <span class="currency">تومان</span></span>            </a>        </li>                        <li class="product-carousel__item" style="width: 11.1111%;">            <a href="http://www.digikala.com/Product/DKP-321002/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="321002">                <img src="public/diginews/Apple-iPhone-8-64GB-Mobile-Phone-c9e5f2.jpg" class="product-carousel__item--img">                <span class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone 8 ظرفيت  ...</span>                <span class="product-carousel__item--price"> 4,225,000  <span class="currency">تومان</span></span>            </a>        </li>                        <li class="product-carousel__item unslider-active" style="width: 11.1111%;">            <a href="http://www.digikala.com/Product/DKP-327934/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="327934">                <img src="public/diginews/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="product-carousel__item--img">                <span class="product-carousel__item--title rtl">گوشي موبايل سامسونگ مدل Galaxy Note ...</span>                <span class="product-carousel__item--price"> 4,350,000  <span class="currency">تومان</span></span>            </a>        </li>                        <li class="product-carousel__item" style="width: 11.1111%;">            <a href="http://www.digikala.com/Product/DKP-313421/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="313421">                <img src="public/diginews/Apple-iPhone-8-Plus-256GB-Mobile-Phone-5dc72c.jpg" class="product-carousel__item--img">                <span class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone 8 Plus ظ ...</span>                <span class="product-carousel__item--price"> 5,789,000  <span class="currency">تومان</span></span>            </a>        </li>                        <li class="product-carousel__item" style="width: 11.1111%;">            <a href="http://www.digikala.com/Product/DKP-313419/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="313419">                <img src="public/diginews/Apple-iPhone-8-256GB-Mobile-Phone-526a32.jpg" class="product-carousel__item--img">                <span class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone 8 ظرفيت  ...</span>                <span class="product-carousel__item--price"> 4,789,000  <span class="currency">تومان</span></span>            </a>        </li>                        <li class="product-carousel__item" style="width: 11.1111%;">            <a href="http://www.digikala.com/Product/DKP-254007/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="254007">                <img src="public/diginews/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg" class="product-carousel__item--img">                <span class="product-carousel__item--title rtl">گوشي موبايل سامسونگ مدل Galaxy S8 G ...</span>                <span class="product-carousel__item--price"> 3,350,000  <span class="currency">تومان</span></span>            </a>        </li><li class="product-carousel__item unslider-clone" style="width: 11.1111%;">            <a href="http://www.digikala.com/Product/DKP-313420/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="313420">                <img src="public/diginews/Apple-iPhone-X-256GB-Mobile-Phone-1fbd5a.jpg" class="product-carousel__item--img">                <span class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone X ظرفيت  ...</span>                <span class="product-carousel__item--price"> 7,129,000  <span class="currency">تومان</span></span>            </a>        </li>                </ul>    </div><div class="unslider-nav"><ol><li data-slide="0" class="">1</li><li data-slide="1" class="">2</li><li data-slide="2" class="">3</li><li data-slide="3" class="">4</li><li data-slide="4" class="unslider-active">5</li><li data-slide="5" class="">6</li><li data-slide="6" class="">7</li></ol></div></div>    </div>
+                        <div class="post-nav__top" id="related-products-wrapper">
+                            <div class="_title"><span class="bold">محصولات</span> <span>مرتبط در دیجی‌کالا</span></div>
+                            <div class="unslider">
+                                <div class="product-carousel unslider unslider-horizontal" dir="rtl"
+                                     style="overflow: hidden;">
+                                    <ul class="unslider__roller unslider-wrap unslider-carousel"
+                                        style="width: 900%; margin-right: -100%; right: -400%;">
+                                        <li class="product-carousel__item unslider-clone" style="width: 11.1111%;"><a
+                                                    href="http://www.digikala.com/Product/DKP-254007/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag"
+                                                    target="_blank" class="product-carousel__item"
+                                                    data-scarabitem="254007"> <img
+                                                        src="public/diginews/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"
+                                                        class="product-carousel__item--img"> <span
+                                                        class="product-carousel__item--title rtl">گوشي موبايل سامسونگ مدل Galaxy S8 G ...</span>
+                                                <span class="product-carousel__item--price"> 3,350,000  <span
+                                                            class="currency">تومان</span></span> </a></li>
+                                        <li class="product-carousel__item" style="width: 11.1111%;"><a
+                                                    href="http://www.digikala.com/Product/DKP-313420/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag"
+                                                    target="_blank" class="product-carousel__item"
+                                                    data-scarabitem="313420"> <img
+                                                        src="public/diginews/Apple-iPhone-X-256GB-Mobile-Phone-1fbd5a.jpg"
+                                                        class="product-carousel__item--img"> <span
+                                                        class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone X ظرفيت  ...</span>
+                                                <span class="product-carousel__item--price"> 7,129,000  <span
+                                                            class="currency">تومان</span></span> </a></li>
+                                        <li class="product-carousel__item" style="width: 11.1111%;"><a
+                                                    href="http://www.digikala.com/Product/DKP-321024/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag"
+                                                    target="_blank" class="product-carousel__item"
+                                                    data-scarabitem="321024"> <img
+                                                        src="public/diginews/Apple-iPhone-8-Plus-64GB-Mobile-Phone-156341.jpg"
+                                                        class="product-carousel__item--img"> <span
+                                                        class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone 8 Plus ظ ...</span>
+                                                <span class="product-carousel__item--price"> 5,019,000  <span
+                                                            class="currency">تومان</span></span> </a></li>
+                                        <li class="product-carousel__item" style="width: 11.1111%;"><a
+                                                    href="http://www.digikala.com/Product/DKP-321002/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag"
+                                                    target="_blank" class="product-carousel__item"
+                                                    data-scarabitem="321002"> <img
+                                                        src="public/diginews/Apple-iPhone-8-64GB-Mobile-Phone-c9e5f2.jpg"
+                                                        class="product-carousel__item--img"> <span
+                                                        class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone 8 ظرفيت  ...</span>
+                                                <span class="product-carousel__item--price"> 4,225,000  <span
+                                                            class="currency">تومان</span></span> </a></li>
+                                        <li class="product-carousel__item unslider-active" style="width: 11.1111%;"><a
+                                                    href="http://www.digikala.com/Product/DKP-327934/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag"
+                                                    target="_blank" class="product-carousel__item"
+                                                    data-scarabitem="327934"> <img
+                                                        src="public/diginews/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg"
+                                                        class="product-carousel__item--img"> <span
+                                                        class="product-carousel__item--title rtl">گوشي موبايل سامسونگ مدل Galaxy Note ...</span>
+                                                <span class="product-carousel__item--price"> 4,350,000  <span
+                                                            class="currency">تومان</span></span> </a></li>
+                                        <li class="product-carousel__item" style="width: 11.1111%;"><a
+                                                    href="http://www.digikala.com/Product/DKP-313421/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag"
+                                                    target="_blank" class="product-carousel__item"
+                                                    data-scarabitem="313421"> <img
+                                                        src="public/diginews/Apple-iPhone-8-Plus-256GB-Mobile-Phone-5dc72c.jpg"
+                                                        class="product-carousel__item--img"> <span
+                                                        class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone 8 Plus ظ ...</span>
+                                                <span class="product-carousel__item--price"> 5,789,000  <span
+                                                            class="currency">تومان</span></span> </a></li>
+                                        <li class="product-carousel__item" style="width: 11.1111%;"><a
+                                                    href="http://www.digikala.com/Product/DKP-313419/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag"
+                                                    target="_blank" class="product-carousel__item"
+                                                    data-scarabitem="313419"> <img
+                                                        src="public/diginews/Apple-iPhone-8-256GB-Mobile-Phone-526a32.jpg"
+                                                        class="product-carousel__item--img"> <span
+                                                        class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone 8 ظرفيت  ...</span>
+                                                <span class="product-carousel__item--price"> 4,789,000  <span
+                                                            class="currency">تومان</span></span> </a></li>
+                                        <li class="product-carousel__item" style="width: 11.1111%;"><a
+                                                    href="http://www.digikala.com/Product/DKP-254007/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag"
+                                                    target="_blank" class="product-carousel__item"
+                                                    data-scarabitem="254007"> <img
+                                                        src="public/diginews/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"
+                                                        class="product-carousel__item--img"> <span
+                                                        class="product-carousel__item--title rtl">گوشي موبايل سامسونگ مدل Galaxy S8 G ...</span>
+                                                <span class="product-carousel__item--price"> 3,350,000  <span
+                                                            class="currency">تومان</span></span> </a></li>
+                                        <li class="product-carousel__item unslider-clone" style="width: 11.1111%;"><a
+                                                    href="http://www.digikala.com/Product/DKP-313420/?utm_source=WebWidget&amp;utm_medium=Related&amp;utm_campaign=DigiKalaMag"
+                                                    target="_blank" class="product-carousel__item"
+                                                    data-scarabitem="313420"> <img
+                                                        src="public/diginews/Apple-iPhone-X-256GB-Mobile-Phone-1fbd5a.jpg"
+                                                        class="product-carousel__item--img"> <span
+                                                        class="product-carousel__item--title rtl">گوشي موبايل اپل مدل iPhone X ظرفيت  ...</span>
+                                                <span class="product-carousel__item--price"> 7,129,000  <span
+                                                            class="currency">تومان</span></span> </a></li>
+                                    </ul>
+                                </div>
+                                <div class="unslider-nav">
+                                    <ol>
+                                        <li data-slide="0" class="">1</li>
+                                        <li data-slide="1" class="">2</li>
+                                        <li data-slide="2" class="">3</li>
+                                        <li data-slide="3" class="">4</li>
+                                        <li data-slide="4" class="unslider-active">5</li>
+                                        <li data-slide="5" class="">6</li>
+                                        <li data-slide="6" class="">7</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
 
-                <script type="text/html" id="related-products-tmpl">
+                        <script type="text/html" id="related-products-tmpl">
 
-                    {{ if (SC.page.products.length) { }}
+                            {{ if (SC.page.products.length) { }}
 
-                    <div class="_title">
-                        <span class="bold">محصولات</span>
-                        <span>مرتبط در دیجی‌کالا</span>
-                    </div>
+                            <div class="_title">
+                                <span class="bold">محصولات</span>
+                                <span>مرتبط در دیجی‌کالا</span>
+                            </div>
 
-                    <div class="product-carousel unslider" dir="rtl">
+                            <div class="product-carousel unslider" dir="rtl">
 
-                        <ul class="unslider__roller">
+                                <ul class="unslider__roller">
 
-                            {{ for (var i=0; i < SC.page.products.length; i++) { }}
-                            {{ var p = SC.page.products[i]; }}
+                                    {{ for (var i=0; i < SC.page.products.length; i++) { }}
+                                    {{ var p = SC.page.products[i]; }}
 
-                            <li class="product-carousel__item">
-                                <a href="//www.digikala.com/Product/DKP-{{= p.id }}/?utm_source=WebWidget&utm_medium=Related&utm_campaign=DigiKalaMag" target="_blank" class="product-carousel__item" data-scarabitem="{{= p.id }}">
+                                    <li class="product-carousel__item">
+                                        <a href="//www.digikala.com/Product/DKP-{{= p.id }}/?utm_source=WebWidget&utm_medium=Related&utm_campaign=DigiKalaMag"
+                                           target="_blank" class="product-carousel__item" data-scarabitem="{{= p.id }}">
 
-                                    <img src="{{= p.image.replace('120', '150' ).replace('http:', '') }}" class="product-carousel__item--img">
+                                            <img src="{{= p.image.replace('120', '150' ).replace('http:', '') }}"
+                                                 class="product-carousel__item--img">
 
-                                    <span class="product-carousel__item--title {{ if (isUnicode(p.title) ) { }}rtl{{ } else { }}ltr{{ } }}">{{= ellipsisText(p.title) }}</span>
-                                    <span class="product-carousel__item--price"> {{= formatCurrency(p.price, false, "") }} <span class="currency">تومان</span></span>            </a>
-                            </li>
+                                            <span class="product-carousel__item--title {{ if (isUnicode(p.title) ) { }}rtl{{ } else { }}ltr{{ } }}">{{= ellipsisText(p.title) }}</span>
+                                            <span class="product-carousel__item--price"> {{= formatCurrency(p.price, false, "") }} <span
+                                                        class="currency">تومان</span></span> </a>
+                                    </li>
+
+                                    {{ } }}
+
+                                </ul>
+
+                            </div>
 
                             {{ } }}
 
-                        </ul>
+                        </script>
 
+                        <script>
+                            var ScarabQueue = ScarabQueue || [];
+                            (function (subdomain, id) {
+                                if (document.getElementById(id)) return;
+                                var js = document.createElement('script');
+                                js.id = id;
+                                js.src = subdomain + '.scarabresearch.com/js/123DB8D9CCA58C7C/scarab-v2.js';
+                                var fs = document.getElementsByTagName('script')[0];
+                                fs.parentNode.insertBefore(js, fs);
+                            })('https:' == document.location.protocol ? 'https://recommender' : 'http://cdn', 'scarab-js-api');
+
+                            ScarabQueue.push(['cart', []]);
+                            ScarabQueue.push(['view', '354069']);
+
+                            ScarabQueue.push(['recommend', {
+                                logic: 'RELATED',
+                                containerId: 'related-products-wrapper',
+                                templateId: 'related-products-tmpl',
+                                limit: 7,
+                                success: function (SC, render) {
+                                    render(SC);
+
+                                    jQuery('.product-carousel').unslider({
+                                        keys: false,
+                                        autoplay: true,
+                                        delay: 4000,
+                                        arrows: false,
+                                        nav: true,
+                                        infinite: true
+                                    });
+                                }
+                            }]);
+
+                            ScarabQueue.push(['go']);
+                        </script>
                     </div>
-
-                    {{ } }}
-
-                </script>
-
-                <script>
-                    var ScarabQueue = ScarabQueue || [];
-                    (function (subdomain, id) {
-                        if (document.getElementById(id)) return;
-                        var js = document.createElement('script');
-                        js.id = id;
-                        js.src = subdomain + '.scarabresearch.com/js/123DB8D9CCA58C7C/scarab-v2.js';
-                        var fs = document.getElementsByTagName('script')[0];
-                        fs.parentNode.insertBefore(js, fs);
-                    })('https:' == document.location.protocol ? 'https://recommender' : 'http://cdn', 'scarab-js-api');
-
-                    ScarabQueue.push(['cart', []]);
-                    ScarabQueue.push(['view', '354069']);
-
-                    ScarabQueue.push(['recommend', {
-                        logic: 'RELATED',
-                        containerId: 'related-products-wrapper',
-                        templateId: 'related-products-tmpl',
-                        limit: 7,
-                        success: function (SC, render) {
-                            render(SC);
-
-                            jQuery('.product-carousel').unslider({
-                                keys: false,
-                                autoplay: true,
-                                delay: 4000,
-                                arrows: false,
-                                nav: true,
-                                infinite: true
-                            });
-                        }
-                    }]);
-
-                    ScarabQueue.push(['go']);
-                </script>        </div>
-        </div>
-    </main><footer class="footer">
-        <div class="footer__head">
-            <div class="footer__head--colleagues">
-                <div class="module-title">
-                    <h1 class="module-title__txt">
-                        <span class="bold">رسانه‌های همکار</span>
-                    </h1>
-                    <div class="module-title__sep"></div>
                 </div>
-
-                <div class="colleagues-carousel">
-                    <a href="http://apod.nasa.gov/" title="ناسا" target="_blank" class="icon-logo-apod-03" rel="nofollow"></a>
-                    <a href="http://digikalatech.com/" title="دیجی‌کالا تک" target="_blank" class="icon-digikala-tech-logo" rel="nofollow"></a>
-                    <a href="https://www.digistyle.com/mag/" title="جدیدترین عکس و مدل لباس 2017 مانتو 96 همراه با راهنمای خرید اینترنتی کفش دخترانه زنانه و مردانه" target="_blank" class="icon-digistyle-mag-logo" rel="nofollow"></a>
-                    <a href="http://www.vidoal.com/" title="ویدوال" target="_blank" class="icon-vidoal" rel="nofollow"></a>
-                    <a href="http://www.novinketab.com/" title="کتاب صوتی" target="_blank" class="icon-novin-ketab" rel="nofollow"></a>
-                </div>
-            </div>
-        </div>    <div class="footer__body">
-            <form action="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/" class="news-letter newsletter-form">
-                <label for="news-letter" class="news-letter__txt">
-                    <span class="bold">عضویت</span>
-                    <span>در خبرنامه</span>
-                </label>
-                <input id="news-letter" type="email" name="email" placeholder="آدرس ایمیل خود را وارد کنید" value="" class="news-letter__email" dir="ltr" required="">
-                <button class="news-letter__btn">عضویت</button>
-                <div class="newsletter-message"></div>
-            </form>    </div>
-        <div class="footer__bottom">
-
-            <div class="social-networks">
-                <a href="https://telegram.me/dkmag" title="telegram social" class="icon-telegram" target="_blank"></a>
-
-                <a href="https://www.instagram.com/digikalamag/" title="instagram social" class="icon-instagram" target="_blank"></a>
-
-
-
-                <a href="https://twitter.com/digikalamag" title="twitter social" class="icon-twitter" target="_blank"></a>
-
-            </div>        <div class="copy-right">
-                استفاده از مطالب سایت دیجی‌کالا مگ فقط برای مقاصد غیر تجاری و با ذکر منبع بلامانع است. کلیه حقوق این سایت به
-                <span class="white">شرکت نوآوران فن‌آوازه (فروشگاه آنلاین دیجی‌کالا)</span> تعلق دارد.        </div>
-        </div>
-    </footer>
-</div>
-
-<div id="lock-orientation" dir="rtl" class="hidden">
-    <div class="_wrapper">
-        <div class="thumb"></div>
-        <span>لطفا گوشی خود را به حالت عمودی برگردانید</span>
-    </div>
-</div>
-<div class="pop-up" data-popup="login">
-    <div class="pop-up__top">
-        <i class="icon-close cancel"></i>
-    </div>
-    <div class="pop-up__wrapper">
-        <div class="login-pop">
-            <div class="login-pop__title">ورود به دیجی‌کالا مگ</div>
-            <div class="login-pop__hint">لطفا برای ورود از حساب کاربری دیجی‌کالا استفاده کنید. </div>
-        </div>
-        <form action="http://www.digikala.com/" class="login-pop__form" id="loginForm" onsubmit="event.preventDefault();submitLoginForm(this)">
-            <small class="login-box__hint text-danger" id="response-msg" style="display: none;"></small>
-            <input type="email" dir="ltr" id="username" name="username" required="" placeholder="ایمیل">
-            <input type="password" dir="ltr" name="password" id="pwd" placeholder="رمز ورود">
-            <div class="forgotten">
-                <a target="_blank" class="forgotten__btn" href="http://www.digikala.com/Page/Load/rememberpassword/?utm_source=DigikalaMag&amp;utm_medium=Link&amp;utm_campaign=RememberPassword">رمز عبورم را فراموش کرده ام</a>
-                <span>/</span>
-                <a target="_blank" class="regist" href="http://www.digikala.com/page/Load/registration/?utm_source=DigikalaMag&amp;utm_medium=Link&amp;utm_campaign=Registration">ثبت نام</a>
-            </div>
-            <label class=" remember check-handler">
-                <input type="checkbox" id="remember" name="remember">
-                <span class="_check">مرا به خاطر بسپار</span>
-            </label>
-            <div class="module-title">
-                <button type="submit" class="module-title__btn btn-primary login"> ورود</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<div class="search-box pop-up" role="dialog" data-popup="search">
-    <div class="search-box__top pop-up__top">
-        <i class="icon-close cancel"></i>
-    </div>
-    <div class="search-box__wrapper pop-up__wrapper">
-        <form method="get" action="http://www.digikala.com/mag/s/" role="form">
-            <div class="search-box__wrapper__txt">
-                <input type="search" name="q" id="searchInput" placeholder="جستجو کنید..." maxlength="50" autocomplete="off">
-            </div>
-        </form>
-        <div class="search-box__wrapper__result">
-            <div style="display: block;" class="trend-searches"></div>
-            <div style="display: none;" class="no-result">
-                <img src="data:image/png;base64,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" alt="no-result" class="no-result__img">
-                <span class="no-result__txt">موردی یافت نشد</span>
-            </div>
-            <div style="display: none;" class="search-results tabular">
-                <ul class="tabular__nav">
-                    <li class="current"><span>نتایج جستجو</span></li>
-                    <li><span>پیشنهادها</span></li>
-                    <li><span>محصولات مرتبط</span></li>
-                </ul>
-                <div class="tabular__panel current">
-                    <div style="display: none;" class="no-result inner">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUEAAAETCAYAAACoSLTNAAAAAXNSR0IArs4c6QAAQABJREFUeAHtvQlwXsd173mxcAVAkOAKgvsuUqJoiVosWSVRi23Jlu2JbFYsq/wqsVOucb3YNa8qk9Sblxclfu9VJplKTTIz9ujFy4vHclL0os3yblG2JNKSKImiRIoU9wUA9wXginXO7wIHaFzc7Vvu9937oQ/54W59u/uc7v73OaeXW+VYshIYoxL47ne/W3ettrG+s/Zax3/YuPGKnxieeOKJcb319fUzxo27tHHjxi6/MPZetiVQle3s29xbCeQnARcAayaucpxxTk1fX3/3hN79X9q48YIZ23PPPTf55KXu5X29VbVV1b19NXOmv/dHGzZcNcPY8+xLoDr7LFgOrARylwAaIAAI9VZXV427VrP0iU2bGjUmALC948oKAJB7/X011T3tHUPPNZw9Zl8CbgFnnw3LgZVAbhJoFBP44rWafgCQNweA0AEI98+dNKkbAKxyxtUMx9rtTOhpvDh8bc8qRQLWHK6UkrR85CwBND80QAVCIsA0rqqu7uuRUzPCuqraw48++vBp8549rwwJWBCsjHK0XOQpAT8g9EZlAdArkcq6tiBYWeVpuclDAmFAaAEwD4Fm7BU7MJKxArPZTUAC4gPskdFfb8w1NX39nbVXur337XVlScBqgpVVnpabHCXwhIwCV40aBBmOJGj6zHAIe5Z1CVhNMOslaPOftwSCABANUCP1mz6jz+yxMiRgQbAyytFykaMENm3aNN5PA8QH2F3dux8NUKNUIPyHTZsm6T17rBwJWBCsnLK0nOQggQs9E6aNnAfoODoIwsoRVpB4gbChZ8KUHJLIKaiAcs3Ro0eb2traFh48eHBiTi/bwAVJwIJgQeKzL2dVAtV1zmUz7wqAem80EDJZ+kJRJ0sL4M04ceLEI2fPnv3eAw88cKquru7MxIkTD02ZMuUc9/bu3ZsY6Cqf9ug4JRkY2bZt27jtew5+SpL7lNgY62UR0twB4Ve1SQa2yfXT61Yufnr9+vV2JM7WypJJ4DtPPTW1q7N7Sl111/nHHnuswy9hTGA0QADw85///CW/MHHvCehNrq6u/uC4ceM+Ksc/6O/vXxLx7sGrV6/eOnfuXDtJO0JQhTxOHAS/9a8/+p/EvfL3Tn//0tCMVlXtlxVMf/aFzz7yVGg4+9BKICMSoPOfP3/+dTU1NQ9WVVV9Un63S9YD25wAo8Ovp0fWqwySAOW3pk+f/kW9tsfiSyCwQApNSgqv+ptP/uhvRcv7s9ziqvr7L37ukb+QCjNq3lZu8djQVgKllYDU+ar29vYFoul9WIDvY5L6h+UXOJgiddypra11JLx7lHfcDAOCnZ2d7rmE6RVtsFnolHvD/im6BBLbQCE/AIS//j+Tdzn5X/ljyUogzRI4fPjwtMmTJ98lGtwnzp8//wnx6c0Myi+gB9Ap8HHOPS/p8+7ubjGg+mvkGjB90hvOXhdHAqNLoAjxuiZwb9+PzaiksPvFEPim7Nnxrfqa6Tt5drH3zBqZiPAFp9/5Ir2oGb66pvoPrGlsSsSep0ECW7ZsmbRs2bKbBfQelN8jkqeVYflS0FNg8wM9v/evXbvmXL48MHYjbeMHYhJv9Atn7xUugRHAU3h0MsohfpC39hx6b6QPsKq9prr6sT9+9A9e8Evj29//8b29fX3fEy2weei5+Ag/sHLRdXawZEgi9qQMEti8eXPtqlWrVo4fP/7DAmAyuOfcIb9ACwqQU/OWIz6+fKi3t9fp6Bgaqzk/bdq06RK3dRHlI8yId4oOgt988gef6e93Nmm6UnD91VXV9wcBoIYDCPv6+35taoRSnzZ+8XOf+YGGsUcrgVJIQObrtUyaNOleqbsPy+9BSVM2YPUnee6at2h6+vMPmfvdCxcuOH19A7gnfsHVMkr8Xu6x2DeiJJBfNxUaq9tbDocQEzgKAAnshpGwwy9y5olr5EN7ZSVQFAns37+/8eTJkw/K3Lz/R36tMl/vmGhw3xWA+4wkMAoAATvx/Tny6RGnsbHRPXLN/WISmqTShAkT8AtaSkACxS01yeDAPMDhnOIDHL4KPyNsr+P8iYbyxqX37dFKoBAJyCTkCQ0NDesEZB4SoMPEXRsWn+nXA+jyNXHD0vB7Rlr4BiHJ5yfl8I/uhf1TVAkUHQQFBgcnQg/kUwdB4uSasBd6zXmhI+OKE4cNYyXglQBL0u68885lok09IIAGmNwtbpdhNcvzAiAHAPErxK/niTbnS9I36M6dO3eOX7Nmjf3inSGUYpyOkHIxIrRxWAmkQQKy/naOmKv3COh9QvLzkPzcjyQJ+I3KXpJ+vVGJ5XBDwXhw8vT4GTNmyGorZ0sOUdigMSSQAAhWtYk2uELTZhqMnL+q12HHwbBGEOKyZCUQLYFTp041yCDC7aI9fXzQxF0Q9hYmLlqeanwAYRqJ/OkKEskzYG5BsMgFVXQQlKq0TfraIRB05wHGBMHBsEMsEtfQhT2xEjAkgGko00bWytSVj2LiioZ3sxwDkQytygS9Uvn1jCzndWqaxJJnTPn/lFdE9qVACSQwOtz/9IjUZCI0019G3PO5cMNI2JGPPHGNfGivxpAEHn/88eojR44sFY3vSzKC+1OZLtIhI7KvCzB8TQAQM3EEACroyWoOR3ZlcUdxORfQLNnARjGKxwRBie96u7NMMaQ6Mo4RFWfko/yu7GTp/ORm3xotAbaaEu3ubtHg8Ot9XH5No0MN3MGclbAjtL2gsFm7f/HiRYcldJBMon545syZP8kaD2nOb9FBEGbtsrk0F3l688ZWUwJmt4m29pBocpFbTQF6aEpq5qbVr1eoxGWitHPlyhU3GtF6/7ssoftSoXHa94clkAgIEv0/f++HfycDJDnuIKMZq/r7P3ns03YDBRVHhR6xGubMmbNGzNqP4O8SELtVGvmIj56brGPiKugBfJUKeibPnHuW0B1ramqa7w1jr/OXQGIgKJXZbqWVf7lU5JtSJ9ytpgTI7pMfJu6H5ZfzVlMVKZwQpkRuDkvoOEKiFS5oaWk5GvKKfZSDBBIDQc1DJW+qKmtMbxBn+1+KRsKi+hbl2R6HJUDDZf0rWlyU5sZz08TlPOqd4ZQq++zSpUtOV9fAPGmVZwIct0p5bZF0/lr2L3R3ekogjdRFmTgIwjFmT6Vtry9rTf+9aDP/JOyVRIapqzkBGdIF/zwG+KLIBD1MXQt6/hLzbK2VtJz6pRz/vUzO/rp/birrrm3AeZQnGqAssn9bXh3z8kPTUzNNAUyPfqLlmQ5kcIwDlH7xjLV7pl/QK++EZNEv2ueN8nmAdxKKPzXRFn2ydGo4SzAjmMASvQuANGTmn42lxkyDZBUD0zY4aqP0Ezmgh4bHD1mh+VnKXQLIjR+yR6ayAYQr09xjCn4DLZ6NXAen41QN1vOK38zVgmBwnQh8IpUQH6BLYwEAaRwm6Jkmr8pBjzRQNXEV/LhnqXAJIE9AEAKouC4m0ZFTnxmEgcx6Xsx00hZXcaWYNu6Sy8/QIEglaoBodoCeAp82vCBxmqCHtmdBL0hShd0H9HRrLcomCfLU56F6nkRaaYnTgmBaSqKM+QD0TBOX8ygTF7BTTQ8QtJS8BJA3HYyWF0fb4RQudwuChcswkzGYoIdWEQV6Cnh6zCTTGc80WhodjpYXJjFroS0VJgELgoXJLzNvq19PTdwwvx5MKdjp0Woc6ShqykNNYY4WBAsvFwuChcswlTGg2dFIFPSi/HpoGaaJ6/ENpZLHsZgpyoi1xJCC4ViUQzF5tiBYTGmWMS71EynwcQwzcQE51fI4Wr9eGQsvh6QpK9MviEZvO6wcBOgT1IKgj1Cyckv9eqrthYEeDccEPc4tZVMClN3gXD73KN9OySYjKcm1bQkpKYg42QDkqPwKelF+PbQ708S1fr04Uk5/GBMEqQsWBAsrMwuChckv8bcV9KjsUVNXrF8v8eJIRQJ0bLq/IPXCUmESsCBYmPyK/jaV2vzFMXFV27N+vaIXRyojpJzVL6ij/ta9kX9RWRDMX3ZFeZNKrNoexyjQM01cbQxFyYiNJFMSoOPTrbXoNC0I5l98FgTzl11eb5p+PSpv1NQVgI4Krtqe9evlJfaKe8kLghXHYAkZsiBYAmGrpqdmbliSgBwVXEHPTn8Ik9bYfWZqftQrOlfbQeZXHywI5ie30LfQ7kzgizJxTU0Pzc+SlUCUBOgcqSs6WAYQ0nFayl0CFgRzl9moN0y/HpUxbOoKvbWO4lJprV9vlDjtjZgSoPNUd4oFwZhC8wlmQdBHKFG30OxUu+vo6BiqiEHvmaBHxbVmS5Ck7P1cJEAnmvTWWrnkJyrsE889N3lcR9ec3qr++prqqtrevv6emv6qi91Txh//0sMPX456P6nndrfLGJLdtGlTzZ133rlMKt1HRHPjK2n3hQEZz6yJG0OwNkhBEqAjPn/+vBsHda6xsbEoHey5c+eG8iWf9ywYIySfVd/+t39rrqoaP0c011HxSZuSIF3H//gP/7Bd+Bj4pN5QDpI/sZpggIwPHjw4p76+/h7R4vge7oMSrDEgqFvxMGvpmfmh+VEpLVkJJCkB6hidrQ6M4IdO464yAGBfX02zfEHZVxwDwFjTLOF43uYbKMGbtqUOCnfnzp318nWtOwTMPi4ghra3MEzuCnpUQmvihknKPktSAuwoo6tHWD7H9viFUjE1QdcEvtS1yk8D9OYTjbC7bvzuUpvGY1YTFNAbP23atLWiuT0owv+kFMhN8gvsFNDuTBOXa0tWAuWWAHVSCU0wbeT6AJ1hE7hW5niP66o/PH78xUtdXfV13eMvLuwRBZZ8A5SEl9MDpeRjWIKlTLUMaT3++OPVX/7yl5eICXG/ABigd4+cTwzKCiCn2p6auEFh7X0rgXJJQK0Q/IPMShAgSdW2aAyCOIaXDwB87LGHOgbl1fG97/30cE/VxeUqPze8XpToWNEgKN8HniQmwscAPfk9JDJtCpMrYKfAZ/awYe/YZ1YC5ZYAdVW1QPyD1OG0kDsKbLgC0QDNvHF9xVBgCW8+L8V5yRMsBVOMRp0+ffqrUhn+WtKbEpSmCXjaowaFtfetBHKVgM4fpW4lCUx03iYIpmlrLabBiNyGZnFjAsu1aoKy/lmuqy4OiXYw/NB1KU4qEgTPnDnzF1Lp/ptXgJi4VBgqJT+uLVkJFEsCmKRoYgASP500P2nSpERBkLqsRLrkIy2zE5gHKIrgtKH8iQ8QE9j0CTqmJijhNWypjsPSK1WKCacjJnCLgNsQAFJBAD41dRNO3kY/hiQA2OCDU+DjnHte4nmShJZJhw7oap5MYEwy7ai4mQg97lLXVAY9CMsgCD5A1wQG70wAHBgdPh4VZ7GfV5wqJFMENqqQAL6GhgZn4sSJifbEmp49Vr4EADpWaVy8eNG5cOGC09nZ6U5RAei8AIg2ph1w0pIxQS9p0M2FF6a7MBE6zjuEK/X0GPJVcSAoPMmkzAGiAlqyEihEAmhX7Nt36dIlF/RYJnn58mXX3PWCHukARnS6MtHemTp1qnsshY/OrOtpAkFkwkqQ6uredtFYR6vJ8pz7PCcc4UtNFWcOS8U8o/4Q9cmUWqg2vexKAGADRPjhX0PzCyNMUYCPH0CkdS/snSSemZpg2vyCIhPAr00mTp/3XTtcx9rhRy5/4bOfTUI0kXEGTg6OfDOlAVpbW+8UR/TLZI8KOmVK4OBwSjmw2SqlBAA9gM4EPT8NT/OkJq6CXpoG18zNPNBETe1Q8x/nWMwVI3HSK3eYitMEDx8+/OaqVavwRNdSudEG01RRy13gNn13ZcIIbS8K9FTT02NaZQjoqeYKqOcLgmnlL6l8VZwmiKDOnj27WQ73cF5XV5fKReXkzVJpJEBHaJq4YW4SND06TQCEn2lmlia3+aeCGcyADVSIFWQ1wfzLIDVvSm/4jFSCe8gQlT+NO2ukRlgVmJFc/XoKemrilsuvV2hRmICNRogcsspLobLI5f2KM4dhXoDvV/SEg+fu0f6pbAmopqfHOCauanuV4i4B8ABCZAChGVoFILreVyQI7t69e8+NN96IXVBv/YLRlSCLITBpaeQKemEmLvyplseRDrJSNSSAXUGQowXB6NpdkSC4YcOGHlk69zOp6J9BBDSWUszViha3DZGvBHLx65EGQGcCX6WCnlee8KxEvbcULYFhiUWHzVQI6QWflV7RgmCmSm04s6ZfT7W94aejzzBpTdCrFBN3NKfhd5ABgI/86DiwhNQ1FP7m2H1asSAoS5tewDSAqAiW0i0BbbRoL/zUsR+Uaxq6CXq2oQ9LinrPKheIDsTKZlg2fmcVC4ILFixok6kyfK9gru0R/Yq+/PcAOtXyAL6wwQxyC+gp8NGwx4qJm2tJISMTBK0rKFyCFQuCsC3g97SYRV/mnEZme0QkUT5SE1e1PTqnMKK8FPQ4Zh304B/eoSQHLJCVkqan1/Y4WgLD0hr9LPN3pJH9xARBFrZbKp0EaPRoezRENL4oE1f9egp8WffrKeirtssRgr8kQZDOA9nRyWgeTGAsXQ3IRkoVDYKyzdEW+ZiSWxLaALOuTaS9WqmJq8BHIwwi9esp6GVdU1fQN0HPj/9S1EX8guaH2S0IBtVC6ZSCH2X/ydKlSy+IX3C7cLJOe0QdLMk+d+ngAG2DRg/o8fNr9GZOaYz6q4SyUNBXGYTxb4I+4ZLskJGxgiDlYq0gsxaOPK9oEIRVqaQsoVvHOZWhEhoevJSLtDPRRg8IhJH69RT4KsHEpR6ptheHf+qc8p8k8JnlQHpK5DVp0NW0sngcllQWcx8jz1IBfioN8a8ISmWwlJsEaDyq7dD4OedeEI0Vv14U/wAfv1KBnjc/Wg5a5zlaBcArpYHrigdB2VXjbTEFuqXhjqMBY75lXRvxL8ri3TVBj8YTBnqmiafaTvFyUp6Y4N/U9uLwr9pemvyalIcFweg6VPEguHz58muyhO5FaawPIA4qRZIjc9EiT18I9eshGxo/10EE6HlN3HJpO0F5zPU+/JqgF5d/gA9ZpJV/0ySGP756Z2m0BCoeBGFZevZnpUK4IEhlGOsgiGYD4CnoofmEkQl65TTxwvKYyzNAztT24vKv2l5aQc8rAxME4RG+rRXklVKFjw4ruzJK9gutEDT8sUgKenqMMvG0wSO3NJl4+ZQdvJqgF1UHADnln2NWgUP5oOOH4HusKwB+9WdMaIJbt249cP/99/PV+ymqBWS9YfsVpnmPRq+AxzHKxAPs9JdmE8/kMezcC3pRoK+8A3qVVDfgS0HQWkH+NaYit9f3Y/X06dNPSo/+KM/k28QVt7UWIKegR2UPAz1kQENXbYeGkhUTj7z7kfIP73FAH/4V+CqBfz+ZcA9Z8G1kCI22sbHRPQ/7Y7fXD5NOhp+JJvCcZN8FQSpG1heVo9ko6OkxrHhoAAp6HLMOesq/gh6aXxiZoFcJ/Ifxaj6Db8qeToIfcuKepWEJjAlzGHalAmzWwgc0skgKdnqMY+Ip8CnvWeSbPMOrmvgAH+dR/CvvaHpZ5z/fcqOzg39zV5mxKosgGY4ZEJw9e/YJWUJ3RASxgB4RIKFypJm00ZNXGn5Uo6dya8PnPOvanvKv2l4U/5Sn+Utz2ZYybyYIIsusW0HFll26UaDI3Ar4PSWmwVeJlsqQNhBUcFZNDxAIIxP04CXroAfIKeBxRB5hZAJeJfAfxmshz8x6Tt2yNFICYwoEpQI8J1MEXBBMQ2Wg0Svg6XFk8Yy8wrdDhVZtj+ssk8k/oBcF+vCrvCOHSuEfvpPc4IDOkh/pqMxNYMxyHSpG3scUCEpFeE2FphWi1NoT6aq2A/BRKYNI/Tna8KnIWaXeQRdE58VLzpmz55zzHRedi5cuyU4nXW5HcA0Q7MF5L/IYnLNQLcdaGcQZL7+JE8c7kydNdCZOmOhMaahzpk2Z4kyZUu827toMyUU7O60DlCfljImaZF0E9Kh7EHmwIOiKwv0zpkBw5syZnbKE7nWpbLdojwjAJEmYdFrhOYaBHvmgcpqgl2TDSJJvsL1L+AXwjrS2O2fOnXcudHQ6l69czTHZK4HhAcYmmfLRNK3RaZ4105ktv/Hj0qUhAjyAjtYBv/LnHs+TnMhMvbJba/lXpTEFgohAKtwzgCDnVLykQZCKd/VqcMNXE498oOll3cS7Kppda/tx5+ixduf46TOi7V1G1InQ1atdTtvVU07biVPOu7v3udpU86wZzryWZmdhyxzRGpPVrvyYMjs9wC/Mr0kHR5kDUElr+aRBegAu+eKY1Q7WT+6F3Bszk6VVSKdOnbpJKtwbXFPxpohZlSRR4XSyKukAclRIfgBf1kGPxtTV1e2cO3/e2X/4qHO07USiwBe3rCbJpxQWzGt2li9e6MxomibyTsaVoKCi2p6anEH5VNDT8i8lEFEPySdUX18fqACMtcnSYw4Ed+7cOX7u3LkdUnknUBmmTp2aaI9II7kkvi+t9En3+PCUNNGQ+F2TzzqePnPO2Sfg1378pNPTGz6am3S+/OIHZNAOVy1b4swXUBwnnU8hRHl6Tdyw+Ehf3Rvl7vSuXLkyZJXgg2TllB9ZEPSTSoXdE7/g81I5H4KtSlxCV+zi8pp4gMDZ8x3O+wcOO+0nz4hplT7w85PB7JkznDWrljsLxFTOZTBFQU+1PYAwiAA91fQ50ulxLw2E+0f213SzggUStIRurIFgYd1iGko2jzxIo2bLfRcEqdh28uhIIQJ6qu1xNE28y1euOXsPHnIOHj0u97M15+zEqdPOSfFTLhCf4QduWO1MlwEVP4Ay+Qc4uA4jE/Q494sz7P1SPUMTJW+AODzxy7o7phiyG6sg+Gs1S2nklgYGiUzg88qkp6fXOSoDHrv3HcpjhNcbmyMmYq1TL+ZYXV2dUy9TXyZMGO/+qqtlTpvMjWFKjXww0p1C0y0+R0aVmV7jTquR63wJADh8rE002FPOdSuWOjesXCHpjhsB+lF1AuAwTdy0gp6fjABpgB2CzyRHpP3ST+O9MQmC3/jGNw595StfOSsF0kRviKajoJjGQkoiT/BMY1DgCzPx0P52vLfXaT1+Iu+s1AngzZw+TX5NTvPsmU5DfZ3IvNqVu6uNCDiFgQnzB3v7et2yunr1moCYaHWnzjpnZEDm3PkLrnaTS+YYzHn73d3OocPHnLVrVjozp+Eb9o+BfCnoqYnrHzL9d00QpPwtCA5NS01/4RU7h7K11v+QxvfviJdtx5OcsV/svOcTH2Bvgh7XQUSjB5hoMExzee2td8WXdCkoeOD9KQ31zrzmOc6SBS3ONDE9x9WOc/rEfwjwdsuvX4CNzofJ0GiGuRKuue4etMQrMjJ9zDnKfMSz53MGRAZLVi5Z5CxdNG9oFBneTeDLNW9pDU/n19HB1prBW2uNNZ9gQN+X1iIsXr5OnDjxiFTyHxIjlZ0pA5VEaHYu2Axqe6Zfz49PNfG04fdIY9mxc49ogO+P8An6vWveI56FLXOdpYvnuxofAIfWxcRpfuQL4GMO36SJ7gC9+XpB5wDrORmw2XvosLP/wBE3vVwinD93jnPrB9Y6UxsbQrXSXOJMY9jzoj2r5s8UMa8VNNZAMPfuN42lmkeeRBP6nb4GWFApwswxDZvWI/n3mrhheYVXU9sxG8I1Aa1XXn/TOXDoaFgUI57V1NQ6i0XjW7NyqQw4TJW89DlXZaI4fjwl0qgTrXv8+IRW6YgMGuomOWtXLnMWyeDH/kNHZLXKcclHl2Yh9Hi07bhzWUzte+64xZnWmOz80dCMJPyQjk631sI6MMs+4aRTGf2Y1QQpDZkqs0fAYAXnYZNHeZ5GAvRMbU97d7+8AnpUdhoAPzQ2P9C/ePmK89Lvt8mqj3j+P+JYOL/FuUlGW6dOaXDN0ysyiIEmqVQtYXA5FFvzg3fz58f/FQG1vQePOAeOtMbWaKeIv/JuAUKm1FQisYrp8uWBlTx0hA0NDSPYHGua4FgHwb+TRvxn1IAs+AXx45mgF+bXgycquGp7AKAf6BFO6eLFy84vX3rFOXv2gt4KPTaJxveB61e5U07IyyUBUBP8eBmtr35ynYBu4VWNNNSvydEP9DTD8Kqgz5ENG97csUtWtLRrkNAjK07uuv0m4W1uaLgsPkSOFy4MlDFyYsGASRYETWlU+LksobtHGshm2PTrEcvNPo3cBL04fj0FPY5oe3GpUwDw1y9tcQcWot5hGgtm7zoBQAYVWB+Mv88kGlfdZBlwEt9fvgT/CnrIIYp/wM7k3wv6TPPZd/iI88b2dx00xCiaOH68c8+HbnUHd6LCZu05gyMqTzRB5KZkQVAlMQaObW1tk2VUmCn00l6q3Bn03oZTSjHQ6FXb0cYflj4gR+XVhp8L6JnxMgfvNy9tdU6cOmPe9j0H2G67+UZn0bwWWTYnZpW869XImPoyRQaaAKVcyQR9zsNI+dfBnLj8n5Klflvf2C5TbKL5nSxm/H133S6m8fSwrBTlmXZ68M0E/rj85JM45rDuKsPMCPPD7BYE85Foht8Rv+AWAb4PwgITd0s9b8oLel5A8YqWBg+4aMP3Ps/1mkGQzS+/6hyTidBRxBrcO2+7yWkUzYEBD6/2x/tsVDBFnuMHjENoIwr4NP4w/umgTNDPB2Q1T6x7fv2tnTL5e7/eCjziI7z/7judpqnFHSyBV/hX4Odc+U+6LjIwwpp2CDmaG4mMNRAc1oEDq0BlPxAQekoqgQuCVMakQZBKro2eIyAYRlRQ1fQ4FlNTpdG9+saOWAC4cP5c567b1rtrbs+7ptTofDPXD4AMI/jVRs8xjH94RRsC8IsF+pq3CWLqfnD9jaIBTXDe3vme5CN4PXCHAP5vt7zmfPTeD8ngzkSNIq+jyT/lr6DnjYxnSdZF5KlEnvglqXlqWmk8WhDs6/uFAM3fUTg0yqSJyqY9sF9a2uhV40mqYgoWixZ0UDZBOOiXjRH3Vi5b7Nx+042yiK3fuSDbMfk1XHyDfgBIWBP0AN4wUtBX4C8m6HvTxWzHr1krx7cECHu6g/PGprCvvvWOc9etN+Vk5ufDv4K+N7/FvFatmrLRPCYJusXMe7HjGvMgePTo0feWLFnC9sWTaKBJ94iAGhVQgUQrozZ6QKAUdFzWzr6xY2dkUuzHd7v4AFnd0Snmk+bbfBEAZHWIEg3LBD6973dEHvCsDT8p0PdLm3s1kv7a1Svddctbt709NFjgF36f7JozQ0bE16xcLmXoF2Lg06DwTl1Cm+PoJzN9G361w0MGpeSfdMkrxNGCoJbKGDuuX7++Wz7F+Qth+1OwnnRlAPT0exJa+UstcqaybN223V3JEZb2kkXzndvXr3MBsGNwCyZveBptfd1kd/ItjR75hTV63lfA5wgAIpNyEumvXLpY8i7ugTffkfyPNvU1f0yzYWrQXFn/rATQwXcc/rXTA/CUf42n1EfyoLuek/+xSmNeE6TgpdE+K5XTBcGkfTGkZ47EcV1Kwve1/d33ZD/A8LmA82XFxV233ixZ63fwiZmEtgzQ0Yh1FJh96rjvR4Qzf+UGPb88kqfVK5a5HcOb7+zyC+LeYzDotbd2OPfdeZtobVUu8EWBvmq6yADgSQuRH/gm/6WwgtLCtzcfFgRFIjJV4AXdQAEQrGQ6LnvqsRlqGE2b2ujcKb6vavGVnb/Q4YKbajtoDIAdDZsPG+m29TRunXKBdqiaDsc0gp4f/4AaO8qcF79n2JJBdtN+d89eZ9XSRX7RjBjMQU6lNHF9MxRyEyDUOs9xLO6taUFQKkhzc/MRWVR+SnrEmfSKNHQqR6URWswbb+8M9Xux4QE+wImy0uPU6dPufn4AoJcADEZYlQA7Gjxy45hVYsfpW9fd4Jw9d8HtAIL42CdL8fjCXaN8/hOQg29+yCHNoOflhzyPdRCMv6TAK70KuhZNpV+0m6eVpUr1j+x+/6BMiD6tbPoer5eVIHWyu8vxEydlfekVX8BEs2MuoGkG0vjRIrIKgAA9miwj9z3dXc661SsE0II7QuZXvi9AWFdX706yZ15f0hOcfQuswJuUmxIyMMtU71f60YLgYAkLCP5EC7sSQfDS5avOrr37lEXfI87++fL9DVaCeCdCo90wesg3WWbPmuU0yhZMWdJ4vAxj0uuEYdbRsoyMVRTcAwiaxCWwTAaGwuiY7DpzUr6rnGUyzXVkwm+sUXBXN8YkIaNkL9ObQ4AgDSErvqw4RbX7/f2hn8Jko4NVMh+QlR4XZSkcAEcD4YfJpIDH3Lpi7wYTJ/+FhqE8KVdMP45+Jr6ZBnxet3ypaM5nAweRAIyd7+1x5siSulw+3GSmk4ZzytfcWisNeSplHiwIDkp7/vz5MlPmLMOCq2kwNBIqR5YJHmjwnTJyu+dA+KToJQvmuVvfs5wMbS/IrGXFRFY6B/gH9PhxTrkGETxR3piHpl/vFvEP/up3W0VDGu0XJa5j7Sfl401nR0yZCUojrffhV0GQ+lIu+ua//uA+mZ30R1IURyZOrfvbxx56aGAL7JgZ+vaTP/hkf1X1gtra8T/+dxsfbo35mlPeCVpxc1micLLl/n8Vjec/kpx3UXmJslBQMmgmprajps37+48478hoZhAx0fmTH73XnTh8vqMzKJirDWImppXg1wQ95d8vv4CearmAAOd+4M6Uohe3vOockO37g2jJwvmyEeutIp9sNifkpFtrwaNpBTU1NZWEqe88+dQ66bK3ST/ljqpJWeyYXDXhvkcffTjciS353bx5c+2+1jNPSs43kn8p2rPjxk1cGxcIrU8QqQ2SOMZ/quc0prQTlZUeHF8WPi0qMo597ikAsOX8EfFdhRFmHyO9l8QMDqPJ8lW4NBE8Kv/wzg9ZUHbKv5lfgI7BCzbQ5Zu7bCHFnE00QD8A5F2A7fpVKwQkg5vK0bY2mUsZ3HmYeUjjubo+NG9hGrOGKfaxp7/vPgVA4pY8rL3cf+033//+c6E72w4A4Ol/VQAceNdp6u6+9um4eQwu2bgxVFC4w4cPvynsuPYAjagclSFKnGh6zPLvlLlsCnqMamLueYmG3dF52V3v632m16z3XbFk4ZAGqfe9R+Iyp8R4n5fimvKA/yvyYSUT9OHfD/Ro3Azm4Otl41B2SsHUR/MLAj0/PqY3TQ3dXLVb1hzvO3jU79XM3Cu360c6m1e9wooCwmEAdEYBnqxzj10gFgQNyd9xxx2sIX6ZWzS4NGiDgBuNnBUZfCAH8AMEAAMvSNOwaeBoN2g5aDutMtUljFYsWyTa0fjIbwkzfzAX4AhLM+jZaRlpPXjkmLuxw6Gjre6ABPyboA//XAeBvvIP4MG/bklVSN5ZX3zDdSuGBof88s+3jL0j6n7hcrmnoA+/SddF5KZUiKw0jlyPX3j0D16uqqr+S+97QUAYBoCS/x9/8dFPP+WNK+g6257/IK4KuC9CZwndPUQB0JR6UTkaDenyCzLrlD0qK9oOFVid+vqMIx8YahXHfRABfktlGgiNLaoBEzYJ4mNM2+X7v3wUyW+3Z0zwRfPnOssXLxg1Agv/cfx6xcg3vtBZMgp8/MQp3+j49jErSebOmeX7PO5NwN0sf8oGwow3gSpufHHDeTVB0kW+paQvfu6R//LPT/5A1vE5f2OmK3lZK1vAYhq7PkIAcH/b6e9LmFEaoOT56XUrF/2hHINHwczI5dyCoEcg4mP6JRUOojKWggA7BT0/DcfMgwl6VFyug4idYvgmbxC1SIOdPHGS+1W4oDB6P4kGuPfgYeeV194U3keb8pouO1fvev+ADEy0ykqONc4c2dgVvhX0i9FQGRGvkn9hX8FjeeDCeXMDQZD84nvNFQTjdnpJa4LIEZlSDzknX8WQrZZj3OOffO4zX/vmkz8S3Ov7mvmOAuF3Nj3/EQHAfxKM/oz5nHPJLwC4kU1RvM/CroNbUNhbFfxs9+7de4S9i7AIIEWBUjFEwWBGkImnfi18WWricY6GGgaA5CtMC+T54gXzJY6qyE9SuqYwLxSB0DBoaGxC8Nstr4cCoJkcGuNLr73lnJKPQCn/xWik7KjDLtnskhPWYZAXPikaBpQnTp52Pypv5tt7Dv8AWly/pg7m4OLg3STJ7OiKIdt884pGKBNW/5P3fYCwp+vK/mICIGlYEPRIesOGDT0i7J/p7VJog2blI116ZCo9oMdPl2TRIOJSd3ePzF8L/oYG21+htfB1uCig9+Yvbh40HPGrX5PBnF0yXWfHrvf1cewjIPC7378e61socSLtFW3nivjblNA6/QZY9DnfTJ4rq2WC6Iz4bAE3L1GH6OTw68I/x6BOD/Chg9NOj/IvJuh782ZeU+/SQn/y6Kf/q/TP/9vo/PRP9t7LVwPUeCwIqiSMo1TaZ/UyaTOEdKj0zEtk6gajmAxqcA3o5dsj4w88dyF42sbM6U3OeFkbG4c/3SlGZRJ1BEiYuoKGy2COLkkjLcB5+06UbX9qlDmLc2fPchrkux5+xEfdX371DdGK/J7mdg9g9hKmcRBRFvgFg6hP8nbi5Bm3UyFu+Af0dDAL/r3aHHHSyZiDWfl0ekF5yuU+IKj1jWNYh5BLvPmG/cLnPvPf/IFwOEbJZ14m8HAM1idoymLoXBrwZtV+SqUJanpDmSjw5LjsABO0yoGoZ8+Y7lb4qAERwkYtCaNhIyd+NPQwzfJ98QN2CRB6adaMJudDt93srtnVZ8fFvORD8Bc6Xe+E3hZw73AHUpbJYEkh5JcP7oVNh2yZM7yZql/aR+WDVTOawieU07lR3oCOCTx+8ZX6HvnRjlEBsdR5MNNrGPfp/72j60cbZcrLjeZ997zKuTJhYtWXc/UBeuOxmqBXInItS+hYctPGIxp4WKMmTBrpXMgH1Kncc5tnySAcgz/BgxLwxSRhb2NQ0MOk0/mKYSae6ddsPT56dHXG9GnOx+6/ZwQAkjaDIA9/5F5352quTWI0uVDy03SiyrpBtHW+PhdEnQLY3g/Qwz+DbeZ8RTQ/gNAr26B4S3Xf7IzLnbdNm/prLnT96P/zBUAE0u9Muna1/+dRE6qjZGdBMFhCQ1trac8YHDRdT2jcbAwaRJia9TK4QoP3mmfed2rkQ+sQYf1MPLQ/bxw0HhqT18TrEXOxw6PVEfcHb14XuCJjokzNWX/j9QQbQW0y/7FQk9gPBL28aKLwCegjgyBTnbCdl664nyOAf/XrMV+xVH49zW++RxMEkYX8yoIRCoCCdJ8N40XyF2tlSVgcZWEwLENpeSaV/ieal6yBIA5/RjyDCL9bjUz56A3RAmkA8E3Dx6+lfj18fTzzEmaU+jVp9Pg3uea+0sVLl/V06AjIRX3YnKkpXsI3aA5qeJ/ne628BYN+t4DgKN/8UHKMYk+cNNnlH+0vl8GsoUjKeILWqrMO6Mza29tXljo7YQAoU5ne8+anUCC0IOiV6OC1mHlb9FEcjUnDpuFIfllDG0QNsoyMVRCm2UbjV20H09Z05vtpTDRu08TTdbhoEkFmlJ//Mc5kdDY39ZusDZ+FkJlPeAT00fQAfBP0vfyHmcPkpyNECy8kv6V61+y45PyBUqVLOqEAyCDIqkU3ypTO/+zNUyFAaEHQK83B66VLl/Ilou1cKkAMPkr9gbWs7HwcRHWDmgxaHY0ewAT4OHLPbPSiDLgEYBQ6dYP5hl4a2L06eiPPec1zRrzaOKUh1CwdEdjngjLFnkbTZRQX/pne0ifA6geu6tfErzdzxgyfGIdvXZS5h1km0ySWzu6TpeIlEgAHJ0IzobqYQGhBMKSEpaGUdKpMSFZyehRlJo4TLVCnbgCCQX49tD2vX68QE29a45RRfKCN7j98ZNR97407bvmAw2gw/rgF8iW8j9xzpzdI5DXgBugBePDPOaBvgp6ar4A+YAD/OkkdAKQjaJxSH6jtkokrItMskwmCIocP7d27d2AJVcJMXej+4b/4+QAlD6OmwQCEVdVVf+XNkqsR9l379Xc2b4695dGww8Ybm73GPPqpVHpX9QYoskL4pcKoSro+tL0+j28PbQdTiB9gABBMmDDSrxcWb9QzVlswFYZNSE169Y0dzsymJmfa1NEgqeEmyLvs2ZcPAXb8XO3PiIA4zXmB8MzeilFzNJHThAl8s9d/TmFXwH0j6VSfUu7IYrBzGC+dwE2S4a1JZvqb3//hw/19/Z/zpuEHgBpGNkn4G3mPgai/1nscGU3uaztLXN8y7wedW00wSDJyX/xi26UQXLuSCmGaiSGvle0RjRy/FuZdGI2rHTBLqeyq7eDTMwczeAZ5gSMs3jjPVi1bMioYQPTsL15w3tix0zlz7ry7lvmaTPZmL8RikR8faHVMeWHkFt5nTJ/uHukElH+/9KulF6mtCdYfegJ2ofaLK633TG1Q5PFQ0vmUAY9F3jSkDEZpgN4wAKGvaSxLob1hg65jBwyKoJLvL1++/Nq5c+d+KzzeD59ogzScNBHgDPCRNzVrozRBzDpMPNmKvOTAvlz2Lnx3995R3+0A8N565z33Z8qXvfzuv+uDBfn/aND4+0xNl3tcQ6yuAfNz2S9R3zXzqudhk9Q1TNqPyAftGRIw+oQc/tK9SOiPDKQ/dfVK1d+IFjeVJCTNH7MbTJyJ0JjG//z9H3ZX9ff/F9EDagRQ355S2/Rk3KxaTTBCUgIwz2gQwKbchDaKH0+XZDGKSQMnb6rteKzcUVnmQ0nq+xr10HOjTz76UExCw9pw522igcbrf8+cPe+8KBstFEIAlunXw69pghjTdHIBQNE85P+Apuyfr7Bn/m/EvUunp+Z93HfyCeepH2vFLxjsq8gnAc87jz3yyLHqmtq1Ui7/i2zq8ekvPPrIp+MAoEYja43/VrZCWFpdXXOHjCDfsnHjhpHLjDSgzzFeTfR5cazcEnD5FeYRVA6/IKBnanuchxGVN2ynE95lHmFcYj5esQnf30fu+ZDzq99uGeGTC0qHjSAAeAA0H+I9T6POJ5qhd+hkZKunoWvvSZ7Z9EbjXlP+1Ds6OY7qkgHE8V0mRciMeq91XtwFd0lazyeVHvH+8Wc/dVQO/yfnX3iUv7mR7D5zWN7glxNZTTBCXK+88so+CcJ0GbcCRoFQRHSxHlPx0O7MJWlof35p0xgw0TFxmaSMxjN5cvCyLjLAJgZQHFDRRue+UMQ/LIn71IP3OS1zZkfGCgB6B3EiX0o0gMypDOmM8BnmS/AK4DFdCS2fUWy0fu/UJe0c800nznumX1Dq2MNx3sliGKsJRpTaxo0be+VTnD+VYO7yHQCqmFqFX/IAHpXej7SHppemkvrlZUKEqak+QwDUD1jNdGlshWhhZlzec6a7PHjfXe5o8Z79Bx02TODzoHzhLc1E/vw2X9A852Ray0vUKdX0VPPSuLxHyoyy58d5kkQaSlLvPq7nlXYc5rLSOCsiPwIUzwrYuCBIZcWnlCQBbiYIaqVX0IvS4KLMJJ3HxoaqcYiGaWoFcd7JJQzTZvhBZ2Wb+h8//6tcXi95WAWsoISj6gcdjwl8dDJBZHZ6Wg+Cwhb7Ph0sQDtoDbS0trbOb2lpwWStKLIgGKM4pRJsVo0rSnOKEV1kECo7DUkrfa49PgMf4iCWyuvvP7x4cWBJHVtkhc8oHMgqpl+SIGgKJIjXeHBtxpTcud8mEGZqkyeN7CQBERP0BkHFfGXoHNCjrmnZl0ruQxkwThSAtUOWOnmvPP4XI0hFnFoQjFGMs2fPPiEm8REJukArNJU0KQIImLuWL9GIaIh+GxYQ58XBeYRBgONNFx9i2B573vCFXLPjNfkygaJu8qTETb9c8nxBTPYwqhf/rGqLHKM6ThP0qFdxyyUsD8V6Rn4UBAUUmSpTcSCYrFOhWCWRgnikUQ59wo+KnWZiD8AGAZMgYocZ5uWNiwnkbHwQZrIFpZPPfbTTW9bdMDRoA0DcfvPo/TTzibtY75yXTV2DiF24e3u6Q7fQB+QYzNKttgYGs+J9NyYo3aTum529gOADUg/if+MhqUwVOd7k1JkiZ7Tc0Ulv/rxU3q+SjyjndbnzCpDU19VLNk77ZuV8R6ernQCCXq3L9wW5iTYYNfUm6N1c799w3XJnfsscB7DhMwBogmkhpgxduBCsCU6WvPrtxI1ZC6DwA9gxNbNA5NWoIw3Hjh1bLfl+Jwt5j5tHqwnGlNTp06dZO+l6sDFvSqUZxczeqGCNUwFBf+qSHWZODH6EKa42aK6x9Y+1uHenyi4xi+a3pAYAKW/MwvMyZeXUmbOBzDaIGwNNHPBggIrleHw3xm9JYmAkKXtg+iVFe/1wyrJXcHYsCMYU4Zo1ay5K7/0GwWkQadcGZ0ds99Q+uM19XBDEJE7XXL2YBZdnMMoYt4fO1+SDUczXa5cdrcPWNE+XTwVMmzbNna+Z1i30cxWJCYLSBkq2tVau+cw3vAXBHCQnGmBmttxn2ypGiYPo9NlzAuS9sU1cQIH5i6UgScp5b+8BZ+u27c6ho62lSHKoY2NJGlttAXocuTY7vFNnzofmZ77se5gVUzeUEeOhx3z/4MGDB5NbqmKkW6pTC4I5SFrMoV9ocLNh6L00HVmbO6NpWmCWaMwXZVUC/h7T+R34gjzQSdZhYYrx7LdbX3Neee1NZ+eefc6vf7fVeevdUTuqFyMZ1y+q67BZnWHupu2XAL6Qc2IOB9Fk2XuwaWpj0OPM3qeOAISDVCurk27Ri0o4WhDMoRRlR5kd0su76hB+QXMaRw7RlCQo2+fPlqVpQdTb2yOfrRyY98q+enGIQYGkfYPEv+/gkRHZefe9vSOu871Qv54uSQvbQp80vH69q9e6ZTJ38Mgw30op1eBRvjLI9z2zoxRQ/Fi+8aTxPQuCOZSK+AW7BPh+o6+kfarMgpa5oukFj0IebW13R32ZmB3XhLt8ZfTmpCqPYhx9d2cJZiEySdOvp+twc1mHrX499o05MNhpBCW6YF7lmcLKqwmCleYXtCCopRzzKCD4rAZNu0nMB4H4yHoQ4RfkVy3TNdhOKg6hAbP/XlKEJrVy6aIR0a9dvXLEddiFm78Avx6aoEkAP05/na/HBhS6hT4moEls8nqk7bh5a8T5JBkJntfcPOJeJV0gJ+0o5bjq8OHDwb6WjDFu5wnmWGACgr9S/0jaQZCJuy3iqG+XjQmCaNfe/c4sMeOYznHlaryBj8uyww2gqY0iKO587991+3qnec4smY7S6X6AfV5z8E4zuCTQ9igLflyHERoNDZqjqd2EvcOz9/cfcuA7iFrkY/ZxO5KgOPK5b/IPmCdVJuQNean1I53F3XJraKAwn7yn5R0XBL/73e/WXattrO+svdbxHzZu9C3pJ554YlyvTHaaMW7cJdlZJTlVIC2SCcjHN77xjUN/+qd/6lY2KiCah4JiwCtlvc3HiXbs2iO7nvivcjlyrM1h41I2MGD3kzg+PzQqluSFfYS8UKaXLVrgGwVpm6CH/MMIjQ7QU+DLByTQAvccOBiWjLNY5jTmE3dopD4PqXMK+MjBBH1db+7zWlFuIUMFQeGVrbUqAgSrXACsmbjKcWRbJtkjqHtC7/4vbdw4Ygjsueeem3zyUvfyvt6q2qrq3r6aOdPf+6MNGwb23i6KeLMViUyc7ldzCZ9R1K4t5eQO0Ni85bVQf9ZSAcq7RfuCzskqDa/ZGJR/vl/s9z3goPD53qfRK/ABemH5A4hM0NNyyjdt3mOUmuk6QTRT5gY+dN/dkm7xDSt4hWf45xcG+knXRdJmMAmSfJ1oampqFnmP9DEECSnF96vRAAFAqFe86OOu1Sx9YtOmoXF+ALC948oKAJAw/X011T3tHUPPuTeWiQaaZgIUrpOPG1WFbPR5+Gib+AbPu9NlwuYWevm8JFNsTE3E+zzfaxqbOV+PqSs6X88LgPCHmQYAsAaX1RlBfr188nNVXAS73t8f+uqKpYuLCoDKP3wzX1H59wNABX1MYdYjJ0lYPNqpSLqzT5w4sSjJ9EoVd22jmMAXr9X0A4AkOgCEDkC4f+6kSd0AoPStQ5OEZBWpM6GnMXjxZKlyXsZ0qHhKgCAN07ynz9JyxNRtEb/asbZ23yzBw+vb33E+fPedrlbLwEcccGMFSYdMKG6UL9UVwr+aeKrthaVNOl4T15epItykXLfv3ONckLXWQTRFlsUtWTAv6HGs+4AbP9X2vEBvRgL/gBHAj8bLeSGyN+OOc066uquMlMO98s634ryX5jDV4t+7ggmMKawZVY3wdEePBwAdp65q0uHPf/4j4d901Igq9Eil04rKMe3aIA3l+pVLQxtL+4lTzvsHDrkjxWxnFZdYddIZ8YlPb1zIjAav8/V06gqNyw8AyT/+LjQ8tD1+aH40yCTp1Jlzzp79B0KTWCEj2bm6BEz+4R0TU7fQ13plJmryzwg2n0dV/ksJgOTJlLmA4KfMfGb13K1F+ADR/MZdc5aaGqEwZWiAAGDt4UcffTh4qDGrUigw34AgvXKaqXn2LHdnliPH/LVB8v72zt2uxsjmBRMFdOKuEGFDBlaf1IfsgYiMVNOL6jTQ9Gj4yJRGx3mpifXB20Q71u+x+KU/TVaHXLdiid+jEfcANjQ9lQHnfmCnL8E/fPNDBlynhcx6Lvm6V/ioFSBOt08oQnhD0gUIvRqh+a4FQFMaA5so6J2oRq3hynlkZ5MPXL/aGR8C1kyE3iIDAIwks32V35ZQQTzgO8NHqIRGx6RkXYerfq0gWdG41K+HpseuK2h/5QBAjCK+gdwm2nEYMX8x6HsiAJ3yj7YH/2zGAP9eAESbM/nX+YrwnyYARBbkxyiTyadOnbo+TEZZeDbSnhAfYE/3lT7xuozoemtq+vo7q6/4z7HIApcJ5NE0Q7RnN+8lkGTBUc6QD5lft2Kpq/EFRdbWfsIFADY2ndJQH3u0mIbNtvPsWj1RHPR+Zq2ZJg1JNR2OaZLdoWOt8oH4fWZ2R53PmzvHnRajD+BXNT00Xi/QaTg9qqanxzTxr3kMOpJn6jwkoPhROQQPnbuh0v1nSBN8QkaBq0YNggxkvrd39KhxutlKPndUWm3oVHgqftqJPN+wakXkIv+de/bL7i3H3F4fx79fA4VnGr2O4qqmc0nmDwKGXhBAg1C/3vCnQSe7GpBf/OWSJR96evWNt6Vsg+cfov3ddMN1wmOfq93h0zP9ml7e4QXQN/lXvx4aYJr4jyN3QFBJ8p55v6ALgkEAiAaozOpgiTl9Rp/ZY/p3m9YymjhxvPOBtWtCzSwA4JXX33KOth4XkKqVXaonu6CmJh5OfECPgQ2/wQz8aWzhXyONxVySptM40mbiqWwA7xdfeU3Met/1AhpMphzJlBgBNd1qS7WioQByAo+6hb4J+txLK/9m/sPOPX7B9du2bYs/khYWcZmeVW/atGm8nwaID7C72n/U+B82bUrPfudlEhzJmj14kK+rjNkLTHqhbF2/WsziMGKVxG+3vu4clRUlPZh3AoyAX9DmA8SFtqMNfzIfG5KRYxGS6UMKS7Ksz/jkwItbXnc/+RmWkeZZMx02ShCv8Ihg1AX166HlpdmvNyLjeVzAq2qDovXWzJs37/Y8oknNK9UXeiZMGzkPcHgU2G+wBI2woWfClNRwUMaMUBkUCNEG1DwuY5ZiJY0mctMNq525MmIcRowOvyT7+u0/fMz9KBODJcov75naDg2fKSysnqGBEA6zEI0QDSvNsmFAZ4vweXLwkwNBMpksn9y7ftUSVxbwB+jDr4KeuYV+UByVcl9BEH4E/D+eZb6qq+uc4SE94cQ7CjwaCJksHfKlmSxLI4+8m5UhC35BZZHdWm5fv04+zTlRb/keGTF+Z9f7zvGTZ9xpM+xYjVlLgzcbvQmO3ogYbWY5Hhs0+PnLvOFLdU1eTp054/zixVciR4Ip55ul45g5fboL9mrilmu+XqlkFJSOxyTONAi6Sx++89RTU7s6u6fUVXedf+yxx3x3jcQERgMEAD//+c+P6cnS8g3iIVsIQMA3BmEKoiZ4DgwAACE8SURBVA2lmdBYdRSTY+vxk862t3eFfjcDfvAN3nnrTc7ShfPdb42g4eXjAmCz10kCvMxDLAeRZ/2dOXfe+f0bO2Sy9wg9wCdbVc4H198oLoRlWPeWBiXAkj7t1MRNMqu5uTl8TlFKJWeLNI+CMUGQOW26qBxtiLWraSLMUHOSstcsFWXIOSKbq74pE6X7ZOfoMML8u14+h3mjzI9jviETpJkfmA9hSrNOGTAM0yLzidt8x8s/soDLNgH/d97bF2vXnDUrlzm33XSjmP+2uZiyZWBIrR/pWD4za9asH5rPs3I+PNadlRynLJ8AA42YHpEfWoZpIpc6u+TBBD2/kUszT0yiXr5kocwMrXHXDwOKQURcb7+72zl1+qxoRuscTOMJ48a7y+a84BoUh94nPKOwmNtomRPHT3CPhQIi8aqm5wKeXHOvS76bTP6rZSOJ3fsPOgeOtElWQpjVjMrxnEybuXrtqrgO0j8eqPzDO/5K6mdSRD1XEJROja/QZRIEk5NQUpJPQbx//ud//rhmA58QjUvBhkpXShAE9EibUVvm7LEqgWkr3OOZlwAZzHYaCKY8+ed61ozpTo+AxUkBuCjCFGbnGfhsmtY4tFyuR9LMh/TbJVfcL7vJAJPMvwOf0LyiQNGPf1cWyEN+l0VTZY9EwL7z4mVX420/cTqnbGIun5Z1xHNlE4qwFTc5RVqkwPAP6MMzZc8PYKL80baTrIuUDelCklaL1KX/48UXXxxd6YrEa1LRWP0+D8ma5jDfmAV0mD4C4TBmwCBJouJT+VTj8QM7TZ+KSkPgR97CNAOWi70n20a9JmtmFdQ1nqDjXNkB+qbrr3M/6kQ+LkkjZHpNsYiGTJ4BRPyJ8IO20y3rlWV5k5vPAcB33Ps80+8jExbQqpL39rjaX6tM9cm/jc6ZOcO5587bZN5k+TRCZAy/CnSqifnJmzJn5DpJYpI4MoekPi4Xkzh8qU2SmckzbmsO5yk48zWztwWYqKg0wCQJrc8P/EgX4ADw+Jl5i8oPQLNadpuZIL66rdveigVm+NbQHpcsnOcOHDRN5XvHE11fIRqYXx6j8mE+dwFvULOh8fPTRmeG03P4h2d31FbA84BM79m976CMTBe+B/DxU6edF17e6tz7odvdCeSaZtJHlQGAp/UrKE34p9PQ8g8KV6z7yBolAJJ694AcMgeCybZUVzSV98erCcIhgyM0UAhNkEqYJJnpKehRIUm3GAB8VD4qxLd/2UY/Lo2Tb5rMnzdXtu1a7i7NwwTFJAUM2XIrLtHo+ammGwZ6xAn/8M6yNKb89Mq7771/wP10Zy7gh9zigPZM2Z/xY/ffndMGE3F5J5zyrqAXxb+6YLTTK0b5x82vaQWJ7H4+ffr0B+O+m5ZwFgTzKAk/EGSajPpH8LehiSRJVD4aLBUfEEiCzsvcvq2yjrZVNlXIhapl/43ZM5tkZcVcZ9G8FndHGpx8gCFL6tieygQbzulAAD3V9sLSg19X2xHgQ9aAH3GglR462uoeg76pEhRvo2wW8cFb1onWeMg5dORYULCh+zOmNzn3iUbYUF/4ijHlH9Djp53pUGKeEwV9Bb2kyt+TrO8lAI1JDAkfVw8ePDhl/fr16V9Ib3BjQdAQRtxTPxCk8jJlAEIrSdoXEzevhYYDsPhQ0w75ADofbM+V8MmxlyG7WzfPnuk0Tql3/XTsQXita2AwhzQYVAEM9KfpoNXwYwR5gowgM4jDBgb4L7u6u+RLeqecE2KOs/tN1JpfjdN7XCw7QzMFBl8f4Pnyq2+4ZrQ3nPd6etM05767bnf4tGkuBI+Ah4Ie4B9GQ6AvsqRu0QGkiUyrRNw0t8ydO3dbmvIXlRcLglES8nnuB4JUbCaPQjRaVhSU0izxyWbRbsHbMQGZ17e/65yVCcaFEEvv2I6/bvIEd1SZL9axQQP+SKavuCS1Uk08tErOMcvPy6YNHbLGl9Hpc/I5zvOuUz7/gY46GR2/cc0Kh2+EmHsnAsovvSZAGPGxdfIKEN4rgyWAexh5QQ+ZhhFgx0+1vbCw5X5mWkGixf7nmTNnfq3cecolfQuCuUhrMKwfCPKInVW0V9eP/eQRfWpfwZx9V768tkv22uO8mMQyPoBonDT8gc5DRoFlqgwaY1ePbLvfGw4aueQFzWrpovmyfnpNoDkLEL7y+puuXzEq7ibZYfreu25zpsrEeSVAD7NWtT2uw0hBX0EvSx2oaQUJj2/IV+gGPl0YxnCKnlkQzKMwgkBQ5+kRpeukF02j0ggFhh1X2Hn50LFjkatM0sb/XDHJr79uhfsZAabchBH+yy2ypdjeA4fDgrnPAEI+Gl8/eaILfIBemLanfj3V9srp14tkLiKAaQVJ0P729vYpa9asyczH2CwIRhSw3+MgEEQLRBuEqNSYxJVKjMC2y0DEu3v2ysDJydAGnwYZzAH8Vi13WmReI9pmXAIIfy+DQ3tkmk0UNTTUObd/QHbk9vERotmZJm7a/HpRvEU9N5fQiWb4kdmzZ/8y6p20PLcgmEdJBIEgUZmLyllXXEmVnR4f0wew5zhg8vW5muGBI61O+4mTA3sI5iHTJF6pral15sneicvl4/JM6s4F/Mz8AISvvrnD2b33gHnb9xwf520ChFPFR6gmrmp7vi9UyE1WqmAJQVIv/q8ZM2Z8pVysyR6pky72jp/R098zRVzN7seYGUerrartqK/pOs0XNs28WRA0pRHzPAwEzR6RZWmYxVklQA/AU9ALm7pBWEZWW2VJWtvxU+4EarafLzWhcU2XpXx8A2SFrImul1198jU1lX8An40itssmE4B9FPFtlns/dJszQwZNxgqZVpDwfFj8gotKzfvjjz9e3bx69bzqbmdmWNp945xT7bt2HZPwbgW1IBgmrYBnYSDIXMEsba0VwKKr6bEUECAIItOvhbajWi/TXTo7ZX1xa5tzQlZZsOECH3RPikh75vRpzhzZ9XnRvGb5QFSDO6Umn/RM0OfcJCZ8vyPm/4HD0UDIvENWlkyXj1uNFTKtIJk72Lx48eLjpeIdAJy7au2yqt6eWOsE+2tqO9t279gHEMZ3jpSKm4ynQ4NUQoMARNI80odJqyYuWqvmH4DzAqDp1yKchlV+9cgo7zRZPscP3yEjrWfOnnNOnjrrnOuQj40LQPLB9nzWGDOKzPeN68XsROObKRs/zJg2VeYPDowuax7iHtFuVdPl6OXZjIe5iuzIPV52zmEpXhhdkN20f/PSVmeDACEAPRaI+kBdgmTV1L1y+L57UYI/aIBV3fEAkOwAlrwjp0esJphHAYVpgkRnLipn0nQQWOSRdMGv0MgV9Gj0ponrXekCHwCfTtuAj0IBnfTRFNk5hu2pLnZedi7LEUAELAFNpsbUyPxAd8qMAA8aJsvhGsS0nTRJvkXszh2szsvMBfThW4GP6yCCV9Ovp/yT/zfe3in7Eb4f9OrQ/QY0wjtvFSBsGrpXqSemFSTl/G+yhO6zpeAVH+CFbmf1iLSqqruravuOrVuyxB2p3H7gQEN/T/U82UFjxHrWxnHOrmG1ZUQM9qIQCQAauoSOxlZOEAR0vPPVuOdHgKO53I+BnUJBz5uOC6oCpoJtsqHq+BFz67xhi3Htgq4Beibo+8WPBqygz9GPf8B5/Y1r3GespgmjTtEIX3j5NeeeO26RpYTTw4Im8swEfQA9SR818lISuX1UZF8tx+BeRgMXeGQQxHEMd4sA4LLm6bs2bNhg+jPObt68uWNf+5nVJhDyrgXBAgvA73VAzwRBvzBJ3jNBj/Mg0CMPNHLyqw3fzJcfAJjP03qump5qe2H5hEflnWPcQRQA5ea1q2Wbrip3o9mwNDplOeXmV151NsjKklIAoVfT1/KnnJMEQWTHb1C7ntrW1rZc5BLeS4QJLuYzRoFNkxYN0AOAbkzc++amTcf6u53FGjXvWhBUaRTxaGp+NEQqYdKAAuhq449r4tHoacxJ562IovWNCqBX3gEAbfS+geWmCfqF8M+7N12/2pFdDt2R47B0Wfb3wsu/d5fYzZ4liksRSTs9lUFQPkpRF5Gtbq0l9esjwmbiIMg0GNO4URPYT8Q8e2vPgaFHvGtBcEgcxTuhN6SBqBZG5QNwkiQqHun4EXmhcmrjzzromSYeoBcG+sgD/pG/yqCY/LNd2DrZVBZiCk0QAPGcDR5eEI3w7jtulc+dhs7iIHggwa9qe7mCfjF598sgclYQFLmz5f4/+YVL0z0LggmVBpUBEIRKAYKkpyBIRddGzzGuiZeQKAqOFmCBN/MXFin8mvwn3fBdILzhOqdKAPGtHbsigfC3r7zm3C2DJXGBUPlX4NN6FSQD7fRUBknzb+aDNJUk3Q/t3bt3wvLly6/pvSSOTIQWc3jo27EMgkg6vt+JGHw2lA13EvXQlT0pqgTQOpSovOaAg94v5lErH0caQZaJRk9DV9BDfmFEI1ctl2M5+GcdMl/hk42/nDddIAweD+ATBJtfftUdLGmR75b4Ebwr6HEeRvCvgMexnJ0eeUH+g0A9XgbXbpK8bw3Lf6HPWAnS2981BIKMAjMI4vULyr1aGRiRaTHDZcO7wy210JzY90dIwARBKgQmTJKVk4pXjsY/gukCLtTEo+GrvMKiM0HPlHXYO0k/GwDCFbIlWJV8y3mnaITDjc2bNjte/3br687dH7zF3cxBQV+BL8ysVtBXGaSt3AHiQRCkzrPTdKIgyFK4C33OrCEZyzQYRoEZBFH/IBqgC4CeKTK8aw6qDMVhT8IlEDVPUN82l9BV4tZaymc+R0DP1PS4DiMaujZ6jgBBWgle3pVvGm/b8Y50fv7TkTTvbBB7y7o1zmzZdDaIVLuCb5VBUNg03KdcdSMRyc8OWUJ3Y9L5emLTpgVRy+W8eWD53Jc2bjwSvpeQ9y17nZMEqLBKUSaNhqvkIzJgoT0NhN2IWZbHqLYfAKI1s4s0nQe78TBnkbXYaBlpBkDKj7xff90yAbe17hfywsqUfRlfk81qj586MyIYoM90FviHdybd41KB/7STRzNdK37B4Y0WE8o8a4FZChc3esLyDuHT253G5aYM4eJqgmaPSMOo5K21/IoBk0jNO2SRZRPPj7+oe2wIu0s2oX3znV1DnwENegeN8Nabrne/yULn6QGSoNdSe9/cYFg6uo83Nzc/n3RmH7cbKCQt4uH444IgjZ6lZ9r46dGzXrmHpTD6TE1cgI+f8j065MAkbWSh5p2pNfuFz8I9P78e5vCBo8fkOy37Qn2E8DdBVtDcdevNzsL5LaLtZoHj4DyaGwxLvfh/ZWut/zk4dHGf2K20iitP39jigiAvY/LpvKmsb63lFQYgh4an2p46w73h9FpBT4Ev7Wat5jvoCP/KO0c/s553CXfgaJt8rGpP5GcCAMIPCRAuXtASlGwm7lMXcHkMUqv4BWVUNp007LRKZ/4ynysavIIgDSXJZUulEJYJepyHES4A+FfQ4zrLpKCvMogCffjFhwf/H5AJ1ex+wydMw95jI4mXfr9N3pFvOMueiFkleOc32DG0tLa2zm9paTmaRn4sCCZcKjQApbDKr2HSdiTP2ug5AgRBhGZngl7WTX94Vf5VBkG8cx/+FfSQg5f/lcsWu2bu1m07ZCed4A6EzWk3y4TqT3/8w+7uOWFppvUZsoB/1Y5FLmyt9S9pzO9wC01j7iogT1QE7RGpEDQmExjTxqLmUc08rcR++dSKbgKfX7gs3fOCXhjowxe8m8AXxivy4vOeVfJp0S1vbHd6ZOuwIMJ6OH7ytLNkYWqtyKCsD91HLtQjSNrBJ+RgQdCVxhj8Q2Uwd5VJEwjmauIB6gp6HAH4LBP8K+BzDAN9+IR/E/QAtlyI8Mtl2392n+FLduyhGEQKIEHP034fOSkJ3w+IrGvkOLCWVB+k4Gg1wRIUAmChIEjFZvPSchLaqJp3HMMIkFPQo1JnHfTgVUEP3tH8wrQ95V+Brxj8A4TLFi1wzeeXf/9moGmcdf8xsuI32LE0HDt2jI1P3wmrb+V4ZkGwBFIHRJRoeDQ6GkKpKFcTTxs8+UbzKWVek5AJ/JvAFwZ68ArfKgP4T4JIZ+lCAUL598prb7ofqTLTqa+bLN9MKe6WW2b8pTpHjqoASOf/gKRrQbBUwk9TOqpNqNbFkcqRJNHo9Rdl4qmmp8esgx78mqAXh38FPWRQKqIfXLJwvjNOvo/y9rvvuV/oq6mpcmbNmCk7V692d94uVV6SSscEQelQPiXp/ENSaeUbb+nUkXxzmML3cpknqNk3v8vq/ZaHhinm0UzPGy+grI2eY9ZBD83OBD00vzBS/lUGaeCfbxuzwqRafIVuvhLSQMPkksQzysZYMNAj5w2LFy8e+EBxEgnmEWfpur08MldJr5gaBg22FFtr6cewaeTa4MlHUiZeKcsLbVqBL8qvp/yrDADBtBEfhs/34/Bp48XMD7JH3oMdU634OW+R5y+ZYcp9bkGwRCVggiAVAhMtycZIegAtRzPtErFb9GSQmYKe+lWDEqHhAfSAHr9KAP0gXrNwnzIYBEE2xfiY5NmCYBYKrth5VG2EhgzRkNklJUkq9yh0IbzRSZjaXphfT7UNBb1KAP1CZJe2dykXtUqk42e+4F+kKY9WEyxhadA4FQQ5Jg2CJWSt4KTwHZmgp5pDUMRo0TQu1XST1KqD8mDvx5MAZURHNTgqf93Ro0eb5s+ffzbe28mHsiCYvIyHUjA1FBr8WCcT9KLkQSNCfqrtWdDLVu2h7FQBkDK8S3L/TFo4sCBYwpLAN6U9IuYd2s5Y8lfBMw2BH7yHmbgUixf0kJ2lbEqAzssAQUxiC4LZLMrCck0jpjLorjJoP5UMgoCcqe1FgR6yUODjaEGvsPqWprcpT4M+JqaxFG9V8G4cRuCkT0fkLOnEbPwD2o2CID1j1pdGmWWKzwcNz9T2zOfec0xaE/SsieuVUOVc08FRvnSEAn6zDx8+vEi4O5gGDi0IlrgUzB4xyg9W4qzlnBygR6U2QW/Q+e0bF5odmjAy4FfJWrCvAMb4TcpcFQDZYJittb6VBpFYECxxKdDw+aExARgAoQmMJc5OzsmZoEfew0CPyBXwAD/4BggtjU0JmK4gqRefFClYEBybVWEAGABBCC0qCyBIPi9fvhw5mAHQmdqeBb2xWstH8+2p5/dJB1or9aPs0ySsJji6rBK/Q2XQnTWyYhKrP8crHPXrwRPgZ/16XgnZa5UAdUOtILk3Wbbcv16O2/V5uY4WBMsgeQADDQlTUs3itGtMVF4qMXlWwOPIfUtWAnElQJ1RK0hWNH1U3is7CKZvJXlcaWY4nPaIsACoZEUbrK+vd6ZOnepwZFTbAmCGK2GZso61oCTtgPmCZScLgmUqAnpEJfxtWSALelkopXTnkXqvVo8cb922bdvkcufYgmCZSsAEwaxogmUSlU22giQAAGpnKlZQzbx5824vN3sWBMtUApgF2iPiI4laTVGmbNpkrQSKLgHTJBZl4NaiJ5BjhBYEcxRYMYOb2mBWTOJi8m/jGpsS0M4f7uW8qdxSsCBYxhIwQdCaxGUsCJt0SSXg6fDbS5q4T2LD3nmfh/ZWshLALOBbIJAFwWRlbWMvrwRw+VDHWTZn1nWZgL+pvDmTxQvlzsBYTh8HMaYB02TwCVJR1Gk8luViec++BKjPgB0/ND8/n7fc+4+yuWprubm1IFjmEkAb1EXlVBYLgmUuEJt8XhLQ+a4KfKa25xNhh3T4fzVjxox/9HlW8lsWBEsu8pEJ4hdUEIyoOCNftFdWAmWUAKCnJq5qe2HZEYvnnLzzS3nnafneyDOiAQ74gcJeKtEzC4IlEnRQMuZ0AQuCQVKy99MgAUxarBV+1FWAMIS65PnL8vxZWSf/y+bm5j0ChH0h4cv2yIJg2UQ/kLAuoaNXpVJRwUxgLHP2bPJjWAJx/Hoe8bwrdfhpAcifnT59etuaNWu6PM9TeWlBMAXFgkkMCEL0sBYEU1AoYzQLquVxBAQjtL1j8vx5CfeT8+fP/2758uUdWRSbBcEUlBqgl7WttVIgNpuFIkiAzleBL4aJ2ymg92v5PSP19YWWlpajRchC2aOwIFj2IhjYZFWzoWYxU2csWQkUWwLq1wPwAL8ITY/kX5YwT0vYX86ePXuX1MsBk6XYGStjfBYEyyh8TRrAwyTWnpjKaT/MrtKxx0IkAMiZmp66XYLixEdNPYSol9OnT78rKGyl3LcgmJKSVBAkO1RCC4IpKZgMZkO1PI4KaEFsAHrUPVwyHLk+d+5cUPCKvG9BMCXFSiWU+VNubqIqbkqybLOREgnk4tdDu2NCPvWNn52cb5fNpaQaD/gFqaCYL1RqfDf0ypasBLwSoG6Y2h7XQUSdoh6ZoMc9S8MSsJrgsCzKfoY5gv8G4lhJH2Yvu3AznAE6RhP0ovx6aHfUJTVzLeiFF74FwXD5lPQpvbWCIJXegmBJxZ+qxEzQ4zyMADkFPOqQtSDCpDX6mQXB0TIp2x0qshJgiAZge3GVSGUfdeoK5Q7oUfZhBNgp8AF6tp6ESSv82XCrCw9X0qebNm2adLF3/Iye/p4p1VXOeBLv63e6aqtqO+pruk5v3LgxNYuviykYzBgqNA1CfYMmMBYzLRtXeSWQi1+PnKqJq+BnQa945ZcqD+njjz9e3bx69bzqbmdmGIt945xT7bt2HZPwwR7hsAgKfHb27NmhbnratGkFxjby9UuXLg3tKjNp0iRHvs06MoC9yqQEtFND0+MX5dejM1RND+ArJeiZU2SamppShRFJFH5qGAQA565au6yqt6chDqP9NbWdbbt37CsHECYJgmyrBRBCVH6+8WspexIA9LwmbhgXgJxqeYBfOaeujDUQTI05jAZY1R0PAKlMgCXvyOmRsMqVtWem+Wv9gtkqPbQ7/Hn6AwTDiLJWbc8s97B37LPiSyAVIIgP8ILXBK6q7q6q7Tu2bsmSTtjefuBAQ39P9TynX4zhQcJslndPVZKPEDMILUDNJRoUGoKl9EkAkKOc1MSNAj3K1dT2Smnipk966clRKkCQQRDHMbYeEwBc1jx914YNG8y5AWc3b97csa/9zGoTCAfedSpiNwutFmgFFgRVGuk6Anh0TBwBvbBRXPXrqbbHtaX0SSAVpcIosCkaNEAPALqPucczM6z3XfNZVs9NzY8GZ6l8EqAzYpuzixcvOrJnnntkeSP3vQCofr3Jkyc7U6ZMcRobG526ujp3vqcFwPKVYVTKqdAEmQZjTotSE9gv8zx7a8+BoUc6hWboRgWcmP4hQJDGZk2n0hQs2p2p7XmBzpsL1fLU1PU+t9fpl0AqQDD9YiptDgE8GpdqgTRKu6tMMmUAyCnoIW91QwSlhkaHpq6+Pds5BUkqO/dTAYJMhJa5OkMT4hgEERGe9RPj4LOhR7w7dFG6E76V2kJyaA5JmDo0MgVBjhYEi1e4yJOfgl9YzJStansckyjrsPRL/cwzuFP2bwKXgv9U+ARZCWIyyyiwDIKMAmjuuSPERmDvu8ajxE5Fe9iikV++fNkFQr0u1pEGp0RjtZS/BNDu8OOpX6+zs9O5cuXKUCdjxqxaOBPVGxoahvx6dEJjAQCpz0pmPdd7lXgcbmll5I6lcBf6nFlDWZBpMIwCf3PTphFTZOTeiCkyhOfdofdKdCIV5Wvi8P60JFcFQF24cCGRlDHVaJT0zjTkck6gTYTBhCJFXqa259FuRqWqz9W01XdHBRxbN/qp52OB5dSsGHli06YFUcvlvAXC8rkvbdxYlsnS8knBL4tm8H9LnhKToYIgfDPiaHeV8daAgWvkZJq3UX49wkOAH8BX6RregJRy+tsv8vzKrFmzqN8VT6kwh5Eya4FZChdX4oTlnbjhix1uxowZX5flbTdKg/qBxJ2I70QbK3mnkVsalgDywKRVE5cjU1mCABDA44dMAT5+aNYWAIdlKmet1Gfq9VgBQLhPTIsZIdqYF49nZAOFmOwUHOzgwYNzZK5ZOxHRaKdOnVpwnFmNAADD9aCDGWYH4eVJnvGdghflnWfk/Ndf//rXD0jdCl/D5o3EXo8ZCaQKBFXqY3UrLeXfPMpmDYfkeiH3cNSbAybcq1QC5EzQAwRDCPv2TdECn5F3ftbW1vb2+vXr7WhSiMDso2EJpBIEh7Nnz86cOfOPogV+BUlU8tZagB6mrAJfkFlr1IhDAozPSbifyLuvzJkzZ2DrHSOAPbUSiCOBVIwOx8noWA0jvq/nZc6gC4KV5BcE9LwmbkQZn5d3fg7wif/vhcWLFx+PCG8fWwnEkoAFwVhiKl8gGYXe0tzcjLnnTscBPPAPZpFM0EPT4zqEuoTXlyTcs6Id/mLu3Ll7he/QF0Liso+sBAIlkM3WFMhOZT4Qv+A24exmuGOTVVaTZIEAOcAOExctlvMI2iFhnpH3ftbR0fHm8uXLr0WEt4+tBAqWgNUECxZh8hEIKDwtUzlcEARM0gyC5E/9eoAgmmsItUqY5yT8T8TEfUlAb8TKoZD37CMrgaJJwGqCRRNlchHJaOd6+dbI66TA3Da2aUoLod0p8HGMAL1Oef4reQcT94WWlpaK2gcyLWVi85GbBKwmmJu8yhKaKR8yEHBVfGITAR00rHJN8iVtE/S4DiFmeG+VPD8ta3d/NW/evF3CQ6RNHBKffWQlUHQJWE2w6CJNJkLxC/5UYn6Q2Nmos1S7yqDZmaAHCEfQewKMz8oHo56XFRyvA94R4e1jK4GySsBqgmUVf/zEMSHFFHZBEFBKEgSJ3wS+sFwKSJ6Q58+LefusgN7vFi5ceC4svH1mJZA2CVgQTFuJBORH1sn+Sj+/ycBDMQntzgS9CL8eey39RsI/I7uMvCCgd0hM3NDRj2Lm1cZlJVBsCVgQLLZEE4rv29/+9sGvfvWrZwSgpuOHA7jy3VpL/XoKfGF+PXx4kuZrmLji1/u5DGa8K/fsbg4JlbONtvQSsD7B0ss87xTFL/gv8vLniSCXrbXQ7AA8Bb0Yfr398s7T+PVaW1tflXW4wztt5p17+6KVQDolYDXBdJaLb64ExJ6TDRRcEMQkDttfUEFPgc83wsGbotmhYT5P/LJB7G9lvt6psPD2mZVAJUnAgmCGSlMGHl6QidKYpzWAIACnu8qoX09BD+0viOTZ0FZT+Boxte1WU0HSsvcrXQLWHM5YCcuuMt8Uze0Lmm1AEJ9emF9PwoKIb0oYTNyf262mVHr2aCUgi/KtELIlAQGwGbJ65DXJ9eKInB8Wje8Z0QyfZxOGNWvWXIwIbx9bCYxJCVgQzGCx7927d8r06dO/LiD3iGiF+qlS3WrqGVmH+6JMUrZbTWWwbG2WSy8BC4Kll3nRUpTt9yfK4Mhs8Qd2ypK08wKIoWvYipawjchKoIIk8P8DqBcFgyyjDqcAAAAASUVORK5CYII=" alt="no-result" class="no-result__img">
-                        <span class="no-result__txt">موردی یافت نشد</span>
-                    </div>
-                    <div class="mag-results">
-                        <div class="results-list"></div>
+            </main>
+            <footer class="footer">
+                <div class="footer__head">
+                    <div class="footer__head--colleagues">
                         <div class="module-title">
-                            <a href="http://www.digikala.com/" class="module-title__btn">مشاهده  عناوین بیشتر</a>
+                            <h1 class="module-title__txt">
+                                <span class="bold">رسانه‌های همکار</span>
+                            </h1>
+                            <div class="module-title__sep"></div>
+                        </div>
+
+                        <div class="colleagues-carousel">
+                            <a href="http://apod.nasa.gov/" title="ناسا" target="_blank" class="icon-logo-apod-03"
+                               rel="nofollow"></a>
+                            <a href="http://digikalatech.com/" title="دیجی‌کالا تک" target="_blank"
+                               class="icon-digikala-tech-logo" rel="nofollow"></a>
+                            <a href="https://www.digistyle.com/mag/"
+                               title="جدیدترین عکس و مدل لباس 2017 مانتو 96 همراه با راهنمای خرید اینترنتی کفش دخترانه زنانه و مردانه"
+                               target="_blank" class="icon-digistyle-mag-logo" rel="nofollow"></a>
+                            <a href="http://www.vidoal.com/" title="ویدوال" target="_blank" class="icon-vidoal"
+                               rel="nofollow"></a>
+                            <a href="http://www.novinketab.com/" title="کتاب صوتی" target="_blank"
+                               class="icon-novin-ketab" rel="nofollow"></a>
                         </div>
                     </div>
                 </div>
-                <div class="tabular__panel">
-                    <span class="autocomplete"></span>
-                    <span style="display: none;" class="suggestion"></span>
+                <div class="footer__body">
+                    <form action="http://www.digikala.com/mag/%d9%be%d8%a7%d9%88%d8%b1%d9%82%db%8c-%d8%af%d9%86%d8%a8%d8%a7%d9%84%d9%87%e2%80%8c%d8%af%d8%a7%d8%b1-%da%a9%d8%aa%d8%a7%d8%a8-%db%8c%da%af%d8%a7%d9%86%d9%87-%d8%af%d8%b3%d8%aa%da%af%d8%a7%d9%87-2/"
+                          class="news-letter newsletter-form">
+                        <label for="news-letter" class="news-letter__txt">
+                            <span class="bold">عضویت</span>
+                            <span>در خبرنامه</span>
+                        </label>
+                        <input id="news-letter" type="email" name="email" placeholder="آدرس ایمیل خود را وارد کنید"
+                               value="" class="news-letter__email" dir="ltr" required="">
+                        <button class="news-letter__btn">عضویت</button>
+                        <div class="newsletter-message"></div>
+                    </form>
                 </div>
-                <div class="tabular__panel">
-                    <div class="dk-results">
-                        <div class="dk-results__badge">
-                            <i class="dk-logo-icon">
-                                <i class="icon-d"></i>
-                                <i class="icon-k"></i>
-                            </i>
-                            <span class="_txt">
+                <div class="footer__bottom">
+
+                    <div class="social-networks">
+                        <a href="https://telegram.me/dkmag" title="telegram social" class="icon-telegram"
+                           target="_blank"></a>
+
+                        <a href="https://www.instagram.com/digikalamag/" title="instagram social" class="icon-instagram"
+                           target="_blank"></a>
+
+
+                        <a href="https://twitter.com/digikalamag" title="twitter social" class="icon-twitter"
+                           target="_blank"></a>
+
+                    </div>
+                    <div class="copy-right">
+                        استفاده از مطالب سایت دیجی‌کالا مگ فقط برای مقاصد غیر تجاری و با ذکر منبع بلامانع است. کلیه حقوق
+                        این سایت به
+                        <span class="white">شرکت نوآوران فن‌آوازه (فروشگاه آنلاین دیجی‌کالا)</span> تعلق دارد.
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="lock-orientation" dir="rtl" class="hidden">
+            <div class="_wrapper">
+                <div class="thumb"></div>
+                <span>لطفا گوشی خود را به حالت عمودی برگردانید</span>
+            </div>
+        </div>
+        <div class="pop-up" data-popup="login">
+            <div class="pop-up__top">
+                <i class="icon-close cancel"></i>
+            </div>
+            <div class="pop-up__wrapper">
+                <div class="login-pop">
+                    <div class="login-pop__title">ورود به دیجی‌کالا مگ</div>
+                    <div class="login-pop__hint">لطفا برای ورود از حساب کاربری دیجی‌کالا استفاده کنید.</div>
+                </div>
+                <form action="http://www.digikala.com/" class="login-pop__form" id="loginForm"
+                      onsubmit="event.preventDefault();submitLoginForm(this)">
+                    <small class="login-box__hint text-danger" id="response-msg" style="display: none;"></small>
+                    <input type="email" dir="ltr" id="username" name="username" required="" placeholder="ایمیل">
+                    <input type="password" dir="ltr" name="password" id="pwd" placeholder="رمز ورود">
+                    <div class="forgotten">
+                        <a target="_blank" class="forgotten__btn"
+                           href="http://www.digikala.com/Page/Load/rememberpassword/?utm_source=DigikalaMag&amp;utm_medium=Link&amp;utm_campaign=RememberPassword">رمز
+                            عبورم را فراموش کرده ام</a>
+                        <span>/</span>
+                        <a target="_blank" class="regist"
+                           href="http://www.digikala.com/page/Load/registration/?utm_source=DigikalaMag&amp;utm_medium=Link&amp;utm_campaign=Registration">ثبت
+                            نام</a>
+                    </div>
+                    <label class=" remember check-handler">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="_check">مرا به خاطر بسپار</span>
+                    </label>
+                    <div class="module-title">
+                        <button type="submit" class="module-title__btn btn-primary login"> ورود</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="search-box pop-up" role="dialog" data-popup="search">
+            <div class="search-box__top pop-up__top">
+                <i class="icon-close cancel"></i>
+            </div>
+            <div class="search-box__wrapper pop-up__wrapper">
+                <form method="get" action="http://www.digikala.com/mag/s/" role="form">
+                    <div class="search-box__wrapper__txt">
+                        <input type="search" name="q" id="searchInput" placeholder="جستجو کنید..." maxlength="50"
+                               autocomplete="off">
+                    </div>
+                </form>
+                <div class="search-box__wrapper__result">
+                    <div style="display: block;" class="trend-searches"></div>
+                    <div style="display: none;" class="no-result">
+
+                        <span class="no-result__txt">موردی یافت نشد</span>
+                    </div>
+                    <div style="display: none;" class="search-results tabular">
+                        <ul class="tabular__nav">
+                            <li class="current"><span>نتایج جستجو</span></li>
+                            <li><span>پیشنهادها</span></li>
+                            <li><span>محصولات مرتبط</span></li>
+                        </ul>
+                        <div class="tabular__panel current">
+                            <div style="display: none;" class="no-result inner">
+
+                                <span class="no-result__txt">موردی یافت نشد</span>
+                            </div>
+                            <div class="mag-results">
+                                <div class="results-list"></div>
+                                <div class="module-title">
+                                    <a href="http://www.digikala.com/" class="module-title__btn">مشاهده عناوین بیشتر</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabular__panel">
+                            <span class="autocomplete"></span>
+                            <span style="display: none;" class="suggestion"></span>
+                        </div>
+                        <div class="tabular__panel">
+                            <div class="dk-results">
+                                <div class="dk-results__badge">
+                                    <i class="dk-logo-icon">
+                                        <i class="icon-d"></i>
+                                        <i class="icon-k"></i>
+                                    </i>
+                                    <span class="_txt">
                               <span>محصولات مرتبط در</span>
                               <span class="bold">فروشگاه اینترنتی دیجی‌کالا</span>
                             </span>
-                        </div>
-                        <div class="dk-results__items"></div>
-                        <div class="module-title">
-                            <a href="http://www.digikala.com/" class="module-title__btn">مشاهده  محصولات بیشتر</a>
+                                </div>
+                                <div class="dk-results__items"></div>
+                                <div class="module-title">
+                                    <a href="http://www.digikala.com/" class="module-title__btn">مشاهده محصولات
+                                        بیشتر</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div><script type="text/javascript" src="public/diginews/jquery.form.min.js.download"></script>
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
-    /* ]]> */
-</script>
-<script type="text/javascript" src="public/diginews/scripts.js.download"></script>
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var theme_object = {"ajax_url":"https:\/\/www.digikala.com\/mag\/wp-admin\/admin-ajax.php","post_id":"361382"};
-    var profile_object = {"delete_folder_confirmation":"\u0622\u06cc\u0627 \u0645\u0637\u0645\u0626\u0646 \u0647\u0633\u062a\u06cc\u062f \u0645\u06cc\u062e\u0648\u0627\u0647\u06cc\u062f \u0627\u06cc\u0646 \u067e\u0648\u0634\u0647 \u0631\u0627 \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f\u061f","remove_from_wishlist_confirmation":"\u0622\u06cc\u0627 \u0645\u0637\u0645\u0626\u0646 \u0647\u0633\u062a\u06cc\u062f \u0645\u06cc\u062e\u0648\u0627\u0647\u06cc\u062f \u0627\u06cc\u0646 \u0645\u0637\u0644\u0628 \u0631\u0627 \u0627\u0632 \u0644\u06cc\u0633\u062a \u0639\u0644\u0627\u0642\u0647 \u0645\u0646\u062f\u06cc \u0647\u0627  \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f\u061f","successful_request":"\u062f\u0631\u062e\u0648\u0627\u0633\u062a \u0634\u0645\u0627 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u0627\u0646\u062c\u0627\u0645 \u0634\u062f.","login_first":"\u0644\u0637\u0641\u0627 \u0627\u0628\u062a\u062f\u0627 \u0648\u0627\u0631\u062f \u0634\u0648\u06cc\u062f."};
-    /* ]]> */
-</script>
-<script type="text/javascript" src="public/diginews/theme.min.js.download"></script>
-<script type="text/javascript" src="public/diginews/jquery.popupmanager.min.js.download"></script>
-<script type="text/javascript" src="public/diginews/comment-reply.min.js.download"></script>
-<script type="text/javascript" src="public/diginews/jquery.sonar.min.js.download"></script>
-<script type="text/javascript" src="public/diginews/images-lazy-load.min.js.download"></script>
-<script type="text/javascript" src="public/diginews/comments-numbered.min.js.download"></script>
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var search_api_object = {"magSearchApiUrl":"https:\/\/www.digikala.com\/mag\/api\/theme\/v1\/search","magSearchUrl":"https:\/\/www.digikala.com\/mag\/s\/?q=","digikalaSearchApi":"https:\/\/search.digikala.com\/api\/SearchApi\/","digikalaSearchUrl":"https:\/\/www.digikala.com\/Search?q=","digikalaFileUrl":"https:\/\/file.digi-kala.com\/digikala\/","digikalaProductUrl":"https:\/\/www.digikala.com\/Product\/DKP-","ajaxPerPage":"20"};
-    /* ]]> */
-</script>
-<script type="text/javascript" src="public/diginews/search.min.js.download"></script>
-<script type="text/javascript" id="">(function(a,e,f,g,b,c,d){a[b]||(a.GlobalSnowplowNamespace=a.GlobalSnowplowNamespace||[],a.GlobalSnowplowNamespace.push(b),a[b]=function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].q=a[b].q||[],c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d))})(window,document,"script","https://d1fc8wv8zag5ca.cloudfront.net/2.6.2/sp.js","snowplow");
-    snowplow("newTracker","cf","clickstream2.digikala.com",{appId:"magazine_digikala",platform:"pc",cookieDomain:".digikala.com",discoverRootDomain:!0,cookieName:"magsp",encodeBase64:!0,respectDoNotTrack:!1,pageUnloadTimer:500,forceUnsecureTracker:!1,useCookies:!0,bufferSize:5,maxPostBytes:45E3,contexts:{webPage:!0,performanceTiming:!0,gaCookies:!0,geolocation:!1}});var LoadTimeCheckCount=0;
-    function waitForLoadTime(){"complete"===document.readyState?window.snowplow("trackPageView"):12>LoadTimeCheckCount?(LoadTimeCheckCount++,setTimeout(waitForLoadTime,500)):window.snowplow("trackPageView")}waitForLoadTime();</script>
+        <script type="text/javascript" src="public/diginews/jquery.form.min.js.download"></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var _wpcf7 = {"recaptcha": {"messages": {"empty": "Please verify that you are not a robot."}}};
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="public/diginews/scripts.js.download"></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var theme_object = {
+                "ajax_url": "https:\/\/www.digikala.com\/mag\/wp-admin\/admin-ajax.php",
+                "post_id": "361382"
+            };
+            var profile_object = {
+                "delete_folder_confirmation": "\u0622\u06cc\u0627 \u0645\u0637\u0645\u0626\u0646 \u0647\u0633\u062a\u06cc\u062f \u0645\u06cc\u062e\u0648\u0627\u0647\u06cc\u062f \u0627\u06cc\u0646 \u067e\u0648\u0634\u0647 \u0631\u0627 \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f\u061f",
+                "remove_from_wishlist_confirmation": "\u0622\u06cc\u0627 \u0645\u0637\u0645\u0626\u0646 \u0647\u0633\u062a\u06cc\u062f \u0645\u06cc\u062e\u0648\u0627\u0647\u06cc\u062f \u0627\u06cc\u0646 \u0645\u0637\u0644\u0628 \u0631\u0627 \u0627\u0632 \u0644\u06cc\u0633\u062a \u0639\u0644\u0627\u0642\u0647 \u0645\u0646\u062f\u06cc \u0647\u0627  \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f\u061f",
+                "successful_request": "\u062f\u0631\u062e\u0648\u0627\u0633\u062a \u0634\u0645\u0627 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u0627\u0646\u062c\u0627\u0645 \u0634\u062f.",
+                "login_first": "\u0644\u0637\u0641\u0627 \u0627\u0628\u062a\u062f\u0627 \u0648\u0627\u0631\u062f \u0634\u0648\u06cc\u062f."
+            };
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="public/diginews/theme.min.js.download"></script>
+        <script type="text/javascript" src="public/diginews/jquery.popupmanager.min.js.download"></script>
+        <script type="text/javascript" src="public/diginews/comment-reply.min.js.download"></script>
+        <script type="text/javascript" src="public/diginews/jquery.sonar.min.js.download"></script>
+        <script type="text/javascript" src="public/diginews/images-lazy-load.min.js.download"></script>
+        <script type="text/javascript" src="public/diginews/comments-numbered.min.js.download"></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var search_api_object = {
+                "magSearchApiUrl": "https:\/\/www.digikala.com\/mag\/api\/theme\/v1\/search",
+                "magSearchUrl": "https:\/\/www.digikala.com\/mag\/s\/?q=",
+                "digikalaSearchApi": "https:\/\/search.digikala.com\/api\/SearchApi\/",
+                "digikalaSearchUrl": "https:\/\/www.digikala.com\/Search?q=",
+                "digikalaFileUrl": "https:\/\/file.digi-kala.com\/digikala\/",
+                "digikalaProductUrl": "https:\/\/www.digikala.com\/Product\/DKP-",
+                "ajaxPerPage": "20"
+            };
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="public/diginews/search.min.js.download"></script>
+        <script type="text/javascript" id="">(function (a, e, f, g, b, c, d) {
+                a[b] || (a.GlobalSnowplowNamespace = a.GlobalSnowplowNamespace || [], a.GlobalSnowplowNamespace.push(b), a[b] = function () {
+                    (a[b].q = a[b].q || []).push(arguments)
+                }, a[b].q = a[b].q || [], c = e.createElement(f), d = e.getElementsByTagName(f)[0], c.async = 1, c.src = g, d.parentNode.insertBefore(c, d))
+            })(window, document, "script", "https://d1fc8wv8zag5ca.cloudfront.net/2.6.2/sp.js", "snowplow");
+            snowplow("newTracker", "cf", "clickstream2.digikala.com", {
+                appId: "magazine_digikala",
+                platform: "pc",
+                cookieDomain: ".digikala.com",
+                discoverRootDomain: !0,
+                cookieName: "magsp",
+                encodeBase64: !0,
+                respectDoNotTrack: !1,
+                pageUnloadTimer: 500,
+                forceUnsecureTracker: !1,
+                useCookies: !0,
+                bufferSize: 5,
+                maxPostBytes: 45E3,
+                contexts: {webPage: !0, performanceTiming: !0, gaCookies: !0, geolocation: !1}
+            });
+            var LoadTimeCheckCount = 0;
 
-<script type="text/javascript" src="public/diginews/unslider.min.js.download"></script>
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var cptch_vars = {"nonce":"bbd69475f3","ajaxurl":"https:\/\/www.digikala.com\/mag\/wp-admin\/admin-ajax.php","enlarge":""};
-    /* ]]> */
-</script>
-<script type="text/javascript" src="public/diginews/front_end_script.js.download"></script>
-<!-- Start GoogleAnalytics Javascript -->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-111268541-1', 'auto');
-    ga('send', 'pageview');
-</script>
-<!-- End GoogleAnalytics Javascript -->
-
-<!-- Start Alexa Certify Javascript -->
-<script type="text/javascript">
-    _atrk_opts = { atrk_acct:"qfWte1awQa00Uf", domain:"digikala.com",dynamic: true};
-    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
-</script>
-<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=qfWte1awQa00Uf" style="display:none" height="1" width="1" alt="" /></noscript>
-<!-- End Alexa Certify Javascript -->
-
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistration().then(function(registration) {
-            if(registration) {
-                registration.unregister()
+            function waitForLoadTime() {
+                "complete" === document.readyState ? window.snowplow("trackPageView") : 12 > LoadTimeCheckCount ? (LoadTimeCheckCount++, setTimeout(waitForLoadTime, 500)) : window.snowplow("trackPageView")
             }
-        })
-    }
-</script>
-<div class="dialog__overlay" data-popup="menu"></div></body></html>
+
+            waitForLoadTime();</script>
+
+        <script type="text/javascript" src="public/diginews/unslider.min.js.download"></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var cptch_vars = {
+                "nonce": "bbd69475f3",
+                "ajaxurl": "https:\/\/www.digikala.com\/mag\/wp-admin\/admin-ajax.php",
+                "enlarge": ""
+            };
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="public/diginews/front_end_script.js.download"></script>
+        <!-- Start GoogleAnalytics Javascript -->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-111268541-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <!-- End GoogleAnalytics Javascript -->
+
+        <!-- Start Alexa Certify Javascript -->
+        <script type="text/javascript">
+            _atrk_opts = {atrk_acct: "qfWte1awQa00Uf", domain: "digikala.com", dynamic: true};
+            (function () {
+                var as = document.createElement('script');
+                as.type = 'text/javascript';
+                as.async = true;
+                as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(as, s);
+            })();
+        </script>
+        <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=qfWte1awQa00Uf" style="display:none"
+                       height="1" width="1" alt=""/></noscript>
+        <!-- End Alexa Certify Javascript -->
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistration().then(function (registration) {
+                    if (registration) {
+                        registration.unregister()
+                    }
+                })
+            }
+        </script>
+        <div class="dialog__overlay" data-popup="menu"></div>
+</body>
+</html>

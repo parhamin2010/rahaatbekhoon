@@ -215,9 +215,9 @@ $newsVip = $data['getNewsVip'];
                                          width="284" height="180" class="image__img wp-post-image"
                                          alt="<?= $newsVipInfo['title'] ?>">
                                     <span class="item__txt">
-                                                <span><?= $newsVipInfo['title'] ?></span>
+                                                <span style="font-size: 10pt;text-align: right;"><?= Model::summary($newsVipInfo['title'],100); ?></span>
                                             </span>
-                                    <span class="item__details">
+                                    <span class="item__details" style="width: 100%;">
                                                 <time
                                                     datetime="<?= $newsVipInfo['date_created'] ?>"
                                                     class="item__details--date"><?= $newsVipInfo['date_created'] ?></time>

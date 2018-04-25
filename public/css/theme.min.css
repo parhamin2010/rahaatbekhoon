@@ -3803,12 +3803,12 @@ label.check-handler input[type=checkbox]:checked + ._check:before, label.check-h
     height: 85px;
     line-height: 24px;
     color: #6a7075;
-    padding: 0 40px;
+    padding: 0 20px;
     font-size: 15px
 }
 
 .carousel__body__item .item__details {
-    margin: 0 150px 20px 5px
+    margin: 0 70px 20px 5px
 }
 
 .carousel__body__item .item__details--img {

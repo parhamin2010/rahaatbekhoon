@@ -4,8 +4,8 @@
     set_time_limit(0); // run script forever
     ini_set("log_errors", 0);
     require_once 'core/config.php';
-    //require_once 'public/library/medoo/jdf.php';
-    //date_default_timezone_set('Asia/Tehran');
+    require_once 'public/library/medoo/jdf.php';
+    date_default_timezone_set('Asia/Tehran');
     
     $link=array(
         "servername" => SERVER_NAME,
@@ -35,12 +35,14 @@
             $num=$result->fetchColumn();
             
             if ($num==0) {
-                $sql="INSERT INTO `tbl_news` (title,image_id ,subtitle,description) VALUES (?,?,?,?)";
+                $sql="INSERT INTO `tbl_news` (title,image ,link,description,cat_id,date_created) VALUES (?,?,?,?,?,?)";
                 $result= $connect -> prepare($sql);
                 $result->bindValue(1,$item->title);
                 $result->bindValue(2,$item->enclosure['url']);
                 $result->bindValue(3,$item->link);
                 $result->bindValue(4,$item->description);
+                $result->bindValue(5,$rows['cat_id']);
+                $result->bindValue(6,$item->pubDate);
                 $query = $result->execute();
             }
         }

@@ -25,11 +25,9 @@
         
         function getNews()
         {
-            $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+            $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c
-                ON a.image_id=c.i_id
                 WHERE a.status=1
                 ORDER BY a.date_created DESC LIMIT 30";
             $result = $this->doSelect($sql);
@@ -39,12 +37,10 @@
         
         function sliders()
         {
-            $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+            $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
-                WHERE a.status=1 AND a.vip=1
+                WHERE a.status=1
                 ORDER BY a.date_created DESC LIMIT 5";
             $result = $this->doSelect($sql);
             
@@ -74,11 +70,9 @@
         
         function getsuggestNews()
         {
-            $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+            $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.status=1
                 ORDER BY rand() DESC LIMIT 4";
             $result = $this->doSelect($sql);
@@ -88,14 +82,11 @@
         
         function getTopNews()
         {
-            $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+            $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.status=1
                 ORDER BY a.view DESC LIMIT 6";
-//        $param = array($id);
             $result = $this->doSelect($sql);
             
             return $result;
@@ -124,11 +115,9 @@
         
         function getNewsVip()
         {
-            $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+            $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.status=1
                 ORDER BY a.n_id DESC LIMIT 36";
             $result = $this->doSelect($sql);

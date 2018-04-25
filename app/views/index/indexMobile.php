@@ -1320,12 +1320,10 @@ Model::sessionInit();
                                         <?= $newsInfo['name']; ?>
                                     </p>
                                 <img style="width: 100%;height: 100%" class="incredible__image"
-                                     src="public/images/news/<?= $newsInfo['i_image']; ?>">
+                                     src="<?= $newsInfo['image']; ?>">
                             </span>
                             <div>
                                 <p style="float: left;margin-left:10px;margin-right:10px "><?= $newsInfo['date_created']; ?></p>
-                                <p style="float: left;margin-right:10px "><?= $newsInfo['time']; ?></p>
-                                <p style="float: right;color: #00a65a;margin-right:10px "><?= $newsInfo['title_no']; ?></p>
                             </div>
                         </a>
 
@@ -1362,12 +1360,10 @@ Model::sessionInit();
                                         <?= $newsInfo['name']; ?>
                                     </p>
                                 <img style="width: 100%;height: 100%" class="incredible__image"
-                                     src="public/images/news/<?= $newsInfo['i_image']; ?>">
+                                     src="<?= $newsInfo['image']; ?>">
                             </span>
                             <div>
                                 <p style="float: left;margin-left:10px;margin-right:10px "><?= $newsInfo['date_created']; ?></p>
-                                <p style="float: left;margin-right:10px "><?= $newsInfo['time']; ?></p>
-                                <p style="float: right;color: #00a65a;margin-right:10px "><?= $newsInfo['title_no']; ?></p>
                             </div>
                         </a>
                         <?php

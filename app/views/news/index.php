@@ -164,14 +164,14 @@
                                         <div class="post-module__content">
                                             <figure class="post-attachment"
                                                     style="margin-bottom: 10px;float: left;position: relative;padding: 10px">
-                                                <a href="public/images/news/<?= $news['all_images'][0]['i_image']; ?>"
+                                                <a href="<?= $news[0]['image']; ?>"
                                                    data-lightbox="image-1"
                                                    data-title="<?= $news[0]['title']; ?>">
                                                     <img alt="<?= Model::summary($news[0]['title'], 100); ?>"
                                                          onerror="this.src='public/images/album-default.jpg'"
                                                          class="album-cover"
                                                          style="height: 300px;border-radius: 10px"
-                                                         src="public/images/news/<?= $news['all_images'][0]['i_image']; ?>"/>
+                                                         src="<?= $news[0]['image']; ?>"/>
                                                     <div class="zoom-overlay"></div>
                                                 </a>
                                                 <figcaption class="hidden-seo">
@@ -182,16 +182,8 @@
                                     <span style="text-align: right">
                                         <?= $news[0]['date_created'] ?>
                                     </span>
-                                                &nbsp;&nbsp;&nbsp;
-                                                &nbsp;&nbsp;&nbsp;
-                                                <span style="text-align: left">
-                                        <?= $news[0]['time'] ?>
-                                    </span><br>
                                             <p style="font-weight: bold;font-size: 14pt">
                                                 <?= $news[0]['title'] ?>
-                                            </p>
-                                            <p style="position: relative;text-align: justify;direction: rtl;margin-top: -20px">
-                                                <?= $news[0]['subtitle'] ?>
                                             </p>
                                             <p style="position: relative;text-align: justify;direction: rtl;margin-top: -20px">
                                                 <?= htmlspecialchars_decode($news[0]['description']) ?>
@@ -268,7 +260,7 @@
                                                                     <img onload="this.nextElementSibling.remove()"
                                                                          class="error-page__suggestion--item-img"
                                                                          style="height: 80%;"
-                                                                         src="public/images/news/<?= $newsInfo['i_image']; ?>"
+                                                                         src="<?= $newsInfo['image']; ?>"
                                                                          alt="mobile"/>
                                                                     <img class="error-page__suggestion--item-img-holder"
                                                                          src="public/images/placeholder.png"
@@ -433,7 +425,7 @@
                                                             <a href="news/<?= $newsInfo['n_id']; ?>"
                                                                title="<?= $newsInfo['title']; ?>"
                                                                class="image-wrapper">
-                                                                <img src="public/images/news/<?= $newsInfo['i_image']; ?>"
+                                                                <img src="<?= $newsInfo['image']; ?>"
                                                                      width="60"
                                                                      height="60"
                                                                      class="image-wrapper__img wp-post-image"
@@ -446,8 +438,7 @@
                                                                    class="detail-wrapper__title"><?= Model::summary($newsInfo['title'], 90); ?></a>
                                                                 <div class="detail-wrapper__time"
                                                                      style="text-align: left">
-                                                    <span class="detail-wrapper__time--detail"><?= $newsInfo['date_created']; ?>
-                                                        &nbsp;<?= $newsInfo['time']; ?></span>
+                                                    <span class="detail-wrapper__time--detail"><?= $newsInfo['date_created']; ?></span>
                                                                     <i class="icon-clock-icon"
                                                                        style="margin-top: 5px;margin-right: 5px"></i>
                                                                 </div>

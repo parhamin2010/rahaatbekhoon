@@ -209,9 +209,9 @@ $newsVip = $data['getNewsVip'];
                                 ?>
                                 <a href="news/<?= $newsVipInfo['n_id'] ?>"
                                    class="carousel__body__item" title="<?= $newsVipInfo['title'] ?>">
-                                    <img src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
+                                    <img src="<?= $newsVipInfo['image'] ?>"
                                          onerror="this.src='public/images/default.png'"
-                                         data-lazy-src="public/images/news/<?= $newsVipInfo['i_image'] ?>"
+                                         data-lazy-src="<?= $newsVipInfo['image'] ?>"
                                          width="284" height="180" class="image__img wp-post-image"
                                          alt="<?= $newsVipInfo['title'] ?>">
                                     <span class="item__txt">
@@ -219,9 +219,8 @@ $newsVip = $data['getNewsVip'];
                                             </span>
                                     <span class="item__details">
                                                 <time
-                                                    datetime="<?= $newsVipInfo['time'] ?>&nbsp;<?= $newsVipInfo['date_created'] ?>"
-                                                    class="item__details--date"><?= $newsVipInfo['time'] ?>
-                                                    &nbsp;<?= $newsVipInfo['date_created'] ?></time>
+                                                    datetime="<?= $newsVipInfo['date_created'] ?>"
+                                                    class="item__details--date"><?= $newsVipInfo['date_created'] ?></time>
                                                 <i class="icon-clock-icon" style="margin-right: 5px"></i>
                                             </span>
                                 </a>
@@ -275,7 +274,7 @@ $newsVip = $data['getNewsVip'];
                                             <img
                                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                                                 onerror="this.src='public/images/default.png'"
-                                                data-lazy-src="public/images/news/<?= $newsInfo['i_image'] ?>"
+                                                data-lazy-src="<?= $newsInfo['image'] ?>"
                                                 width="284" height="180" class="image__img wp-post-image"
                                                 alt="<?= $newsInfo['title'] ?>">
 

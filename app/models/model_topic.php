@@ -10,11 +10,9 @@ class model_topic extends Model
 
     function getsuggestNews()
     {
-        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+        $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.status=1
                 ORDER BY rand() DESC LIMIT 4";
         $result = $this->doSelect($sql);
@@ -23,11 +21,9 @@ class model_topic extends Model
 
     function getTopNews($id)
     {
-        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+        $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.status=1 AND a.cat_id=?
                 ORDER BY a.view DESC LIMIT 6";
         $param = array($id);
@@ -60,11 +56,9 @@ class model_topic extends Model
 
     function getNews($id)
     {
-        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+        $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.status=1 AND a.cat_id=?
                 ORDER BY a.n_id DESC LIMIT 4";
         $params = array($id);
@@ -81,11 +75,9 @@ class model_topic extends Model
             
             $position = ($page_number * ITEM_PER_PAGE);
             
-            $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+            $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.status=1 AND a.cat_id=?
                 ORDER BY a.n_id DESC LIMIT $position, " . ITEM_PER_PAGE;
             $params = array($post["id"]);
@@ -98,7 +90,7 @@ class model_topic extends Model
 
                                                     <a href="news/' . $result['n_id'] . '"
                                                        title="' . $result['title'] . '" class="image__linker">
-                                                        <img src="public/images/news/' . $result['i_image'] . '"
+                                                        <img src="' . $result['image'] . '"
                                                              onerror="this.src=\'public/images/default.png\'"
                                                              width="284" height="180" class="image__img wp-post-image"
                                                              alt="' . $result['title'] . '"> </a>
@@ -129,8 +121,7 @@ class model_topic extends Model
                                                    class="masonry-gallery__item__title">' . self::summary($result['title'],70) . '</a>
 
                                                 <div class="masonry-gallery__item__detail" style="float: left">
-                                        <span class="past-time">' . $result['time'] . '
-                                            &nbsp;' . $result['date_created'] . '</span>
+                                        <span class="past-time">' . $result['date_created'] . '</span>
                                                     <i class="icon-clock-icon" style="margin-right: 5px"></i>
                                                 </div>
                                             </div>';
@@ -154,12 +145,10 @@ class model_topic extends Model
     
     function getNewsVip($id)
     {
-        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+        $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
-                WHERE a.status=1 AND a.vip=1 AND a.cat_id=?
+                WHERE a.status=1 AND a.cat_id=?
                 ORDER BY a.n_id DESC LIMIT 36";
         $params = array($id);
         $result = $this->doSelect($sql, $params);

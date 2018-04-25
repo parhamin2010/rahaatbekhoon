@@ -1,6 +1,6 @@
 <?php
 
-class Jeyhoon
+class RaahatBekhon
 {
 
     public $controler = 'index';

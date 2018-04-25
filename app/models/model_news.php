@@ -23,6 +23,23 @@
     
             return $result;
         }
+    
+        function calViewer($id,$ip)
+        {
+            $sql = "SELECT * FROM `tbl_view` WHERE `news_id` = ? AND `ip` = ? AND `date` = ?";
+            $params = array($id, $ip, self::jaliliDate());
+            $res = $this->doSelect($sql, $params);
+        
+            if (sizeof($res) == 0) {
+                $sql = "INSERT INTO tbl_view (news_id,ip,date) VALUES (?,?,?)";
+                $value = array($id, $ip, self::jaliliDate());
+                $this->doQuery($sql, $value);
+            
+                $sql = "UPDATE tbl_news SET view=view+1 WHERE n_id=?";
+                $param = array($id);
+                $this->doQuery($sql, $param);
+            }
+        }
         
         function getCountNews()
         {

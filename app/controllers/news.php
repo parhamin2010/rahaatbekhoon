@@ -17,6 +17,8 @@
                     $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
                     Model::sessionInit();
                     $UserID = Model::sessionGet('userId');
+    
+                    $this->model->calViewer($id,$_SERVER['REMOTE_ADDR']);
                     $infoUser = $this->model->getinfoUser($UserID);
                     $getNews = $this->model->getNews($id);
                     $RateStatus = $this->model->getRating($UserID, "track-" . $id);

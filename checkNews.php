@@ -18,9 +18,7 @@
     $db_name=$link['dbname'];
     $dsn="mysql:host=$server_name;dbname=$db_name";
     
-    
     $connect = new PDO($dsn,$link['username'],$link['password'],$attr);
-    
     
     $sql="SELECT link,cat_id FROM tbl_rss where status=1";
     $res = $connect ->  query($sql);
@@ -47,7 +45,5 @@
             }
         }
     }
-    
     file_put_contents("lastUpdateNews.txt", jdate('l, Y/n/d'));
-
 ?>

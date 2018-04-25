@@ -1,6 +1,6 @@
 <?php
-$activeMenu = 'news';
-$activeSubMenu = 'newsAdd';
+    $activeMenu = 'news';
+    $activeSubMenu = 'newsAdd';
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,9 +9,9 @@ $activeSubMenu = 'newsAdd';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title><?= NAME; ?> | افزودن خبر جدید</title>
+    <title><?= NAME; ?> | افزودن سایت جدید</title>
     <!-- Favicon -->
-<!--    <link rel="stylesheet" href="public/panel/plugins/ckeditor/ckeditor.js">-->
+    <!--    <link rel="stylesheet" href="public/panel/plugins/ckeditor/ckeditor.js">-->
     <?php require('app/views/include/favicon.php'); ?>
 
     <link href="public/css/pace-theme-flash.css" rel="stylesheet"/>
@@ -29,18 +29,21 @@ $activeSubMenu = 'newsAdd';
     <link rel="stylesheet" href="public/library/offlinealert/themes/offline-language-persian.css"/>
 
     <script src="public/js/sample.js" type="text/javascript"></script>
-    <link href="public/css/sample.css" rel="stylesheet" type="text/css" />
+    <link href="public/css/sample.css" rel="stylesheet" type="text/css"/>
 
     <script src="http://code.highcharts.com/stock/highstock.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://code.highcharts.com/maps/modules/map.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- <script src="https://code.highcharts.com/maps/modules/data.js"></script> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/codemirror.min.js'></script>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/codemirror.min.css' type="text/css" rel="stylesheet"></link>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/theme/neo.min.css' type="text/css" rel="stylesheet"></link>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/codemirror.min.css' type="text/css"
+          rel="stylesheet"></link>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/theme/neo.min.css' type="text/css"
+          rel="stylesheet"></link>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/mode/javascript/javascript.min.js'></script>
 
-    <script src="https://code.highcharts.com/adapters/standalone-framework.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.highcharts.com/adapters/standalone-framework.js" type="text/javascript"
+            charset="utf-8"></script>
     <script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://code.highcharts.com/highcharts-3d.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://code.highcharts.com/modules/data.js" type="text/javascript" charset="utf-8"></script>
@@ -74,7 +77,7 @@ $activeSubMenu = 'newsAdd';
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                <small>افزودن خبر جدید</small>
+                <small>افزودن سایت جدید</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="<?= URL; ?>adminpanel/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -91,105 +94,48 @@ $activeSubMenu = 'newsAdd';
                     <!-- general form elements disabled -->
                     <div class="box box-warning">
                         <div class="box-header with-border">
-                            <h3 class="box-title">افزودن خبر جدید</h3>
+                            <h3 class="box-title">افزودن سایت جدید</h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="box-body">
                                 <div class='row'>
 
-                                    <div class='col-md-6'>
+                                    <div class='col-md-5'>
                                         <div class="form-group" style="text-align:right">
-                                            <label align="right" for="titleNews">:عنوان خبر</label>
+                                            <label align="right" for="titleNews">:عنوان سایت</label>
                                             <input style="border-radius: 3px;text-align:right" type="text"
                                                    class="form-control" id="titleNews" name="titleNews" required>
                                         </div>
                                     </div>
 
-                                    <div class='col-md-6'>
+                                    <div class='col-md-5'>
+                                        <div class="form-group" style="text-align:right">
+                                            <label align="right" for="linkNews">:لینک خبرخوان</label>
+                                            <input style="border-radius: 3px;text-align:left" type="text"
+                                                   class="form-control" id="linkNews" name="linkNews" required>
+                                        </div>
+                                    </div>
+
+                                    <div class='col-md-2'>
                                         <div class="form-group" style="text-align:right">
                                             <label for="categoryNews">: دسته بندی</label>
                                             <select id="categoryNews" name="categoryNews" class="form-control select2"
                                                     style="border-radius: 3px;width: 100%;direction: rtl"
                                                     required>
                                                 <?php
-                                                $categories = $data['category'];
-                                                foreach ($categories as $category) {
-                                                    ?>
-                                                    <option value="<?= $category['id']; ?>"><?= $category['name']; ?></option>
-                                                    <?php
-                                                }
+                                                    $categories = $data['category'];
+                                                    foreach ($categories as $category) {
+                                                        if ($category['main_cat'] == 1) {
+                                                            ?>
+                                                            <option value="<?= $category['id']; ?>">
+                                                                <?= $category['name']; ?>
+                                                            </option>
+                                                            <?php
+                                                        }
+                                                    }
                                                 ?>
                                             </select>
-                                        </div>
-                                    </div>
-
-                                    <div class='col-md-4'>
-                                        <div class="form-group" style="text-align:right">
-                                            <label align="right" for="numberNews">:عدد خبر</label>
-                                            <input style="border-radius: 3px;text-align:left" type="text"
-                                                   class="form-control" id="numberNews" name="numberNews" required>
-                                        </div>
-                                    </div>
-
-                                    <div class='col-md-4'>
-                                        <div class="form-group" style="text-align:right">
-                                            <label for="typeNews">: نوع خبر</label>
-                                            <select id="typeNews" name="typeNews" class="form-control select2"
-                                                    style="border-radius: 3px;width: 100%;direction: rtl"
-                                                    required>
-                                                <option value="0">معمولی</option>
-                                                <option value="1">ویژه</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class='col-md-4'>
-                                        <div class="form-group" style="text-align:right">
-                                            <label for="showNews">: نوع نمایش خبر</label>
-                                            <select id="showNews" name="showNews" class="form-control select2"
-                                                    style="border-radius: 3px;width: 100%;direction: rtl"
-                                                    required>
-                                                <option value="1">مستطیل</option>
-                                                <option value="2">مربع</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class='col-md-12'>
-                                        <div class="form-group" style="text-align:right">
-                                            <label align="right" for="descNews">:متن خبر</label>
-                                            <textarea style="border-radius: 3px;resize: vertical;text-align:right"
-                                                      class="form-control" rows="8" id="descNews"
-                                                      name="descNews"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class='col-md-6'>
-                                        <div class="form-group" style="text-align:right">
-                                            <label align="right" for="subtitleNews">:خلاصه خبر</label>
-                                            <textarea style="border-radius: 3px;resize: vertical;text-align:right"
-                                                      class="form-control" rows="8" id="subtitleNews"
-                                                      name="subtitleNews"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class='col-md-6'>
-                                        <div class="form-group" style="text-align:right">
-                                            <label style="direction: rtl;" for="tagNews">برچسب ها (با استفاده از , از یکدیگر جدا نمایید):</label>
-                                            <textarea style="border-radius: 3px;resize: vertical;text-align:right"
-                                                      class="form-control" rows="8" id="tagNews"
-                                                      name="tagNews"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class='col-md-6'>
-                                        <div class="form-group" style="text-align:right">
-                                            <label for="imageNews" style="direction: rtl;">انتخاب کاور خبر (سایز مناسب:145*288 یا 290*294):</label>
-                                            <br/>
-                                            <input style="float: right;" type='file' id="imageNews"/>
-                                            <br/>
-                                            <img style="margin-left: 50px;width: 50%" id="blah"/>
                                         </div>
                                     </div>
                                 </div>
@@ -225,26 +171,9 @@ $activeSubMenu = 'newsAdd';
 <script src="public/library/offlinealert/offline.min.js"></script>
 <script src="public/js/pace.min.js"></script>
 
-<script type="text/javascript" src="public/panel/plugins/ckeditor/ckeditor.js"></script>
-<script src="http://editor.highcharts.com/integrations/ckeditor.js" type="text/javascript" charset="utf-8" ></script>
-
 <script src="public/js/jquery.noty.packaged.js"></script>
 <!-- CK Editor -->
 <script src="public/js/countdown.js"></script>
-
-<script>
-    CKEDITOR.replace( 'descNews',
-        {
-            allowedContent: true,
-            extraPlugins: 'highcharts',
-            filebrowserBrowseUrl :'<?= URL; ?>public/panel/plugins/ckeditor/filemanager/browser/default/browser.html?Connector=<?= URL; ?>public/panel/plugins/ckeditor/filemanager/connectors/php/connector.php',
-            filebrowserImageBrowseUrl : '<?= URL; ?>public/panel/plugins/ckeditor/filemanager/browser/default/browser.html?Type=Image&Connector=<?= URL; ?>public/panel/plugins/ckeditor/filemanager/connectors/php/connector.php',
-            filebrowserFlashBrowseUrl :'<?= URL; ?>public/panel/plugins/ckeditor/filemanager/browser/default/browser.html?Type=Flash&Connector=<?= URL; ?>public/panel/plugins/ckeditor/filemanager/connectors/php/connector.php',
-            filebrowserUploadUrl  :'<?= URL; ?>public/panel/plugins/ckeditor/filemanager/connectors/php/upload.php?Type=File',
-            filebrowserImageUploadUrl : '<?= URL; ?>public/panel/plugins/ckeditor/filemanager/connectors/php/upload.php?Type=Image',
-            filebrowserFlashUploadUrl : '<?= URL; ?>public/panel/plugins/ckeditor/filemanager/connectors/php/upload.php?Type=Flash'
-        });
-</script>
 
 <script type="text/javascript">
     $(document).ajaxStart(function () {
@@ -253,72 +182,33 @@ $activeSubMenu = 'newsAdd';
 </script>
 
 <script>
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    $("#imageNews").change(function () {
-        readURL(this);
-    });
-</script>
-
-<script>
     $("#btnsubmit").on('click', function () {
         var titleNews = document.getElementById("titleNews").value;
         var categoryNews = document.getElementById("categoryNews").value;
-        var numberNews = document.getElementById("numberNews").value;
-        var typeNews = document.getElementById("typeNews").value;
-        var showNews = document.getElementById("showNews").value;
-        var descNews = CKEDITOR.instances['descNews'].getData();
-        var subtitleNews = document.getElementById("subtitleNews").value;
-        var tagNews = document.getElementById("tagNews").value;
-        var input = document.getElementById("imageNews");
+        var linkNews = document.getElementById("linkNews").value;
 
         if (titleNews == "") {
-            generate('warning', '<div class="activity-item" style="text-align:right" dir="rtl">عنوان خبر را وارد کنید.</div>');
-        } else if (numberNews == "") {
-            generate('warning', '<div class="activity-item" style="text-align:right" dir="rtl">عدد خبر را وارد کنید.</div>');
-        } else if (subtitleNews == "") {
-            generate('warning', '<div class="activity-item" style="text-align:right" dir="rtl">عنوان فرعی خبر را وارد کنید.</div>');
+            generate('warning', '<div class="activity-item" style="text-align:right" dir="rtl">عنوان سایت را وارد کنید.</div>');
+        } else if (linkNews == "") {
+            generate('warning', '<div class="activity-item" style="text-align:right" dir="rtl">لینک خبرخوان را وارد کنید.</div>');
         }
         else {
-            file = input.files[0];
-            if (file != undefined) {
-                formData = new FormData();
-                if (!!file.type.match(/image.*/)) {
-                    formData.append("image", file);
-                    formData.append("titleNews", titleNews);
-                    formData.append("categoryNews", categoryNews);
-                    formData.append("numberNews", numberNews);
-                    formData.append("typeNews", typeNews);
-                    formData.append("showNews", showNews);
-                    formData.append("descNews", descNews);
-                    formData.append("subtitleNews", subtitleNews);
-                    formData.append("tagNews", tagNews);
-                    $.ajax({
-                            url: "adminpanel/addNews",
-                            type: "POST",
-                            data: formData,
-                            processData: false,
-                            contentType: false,
-                            success: function (data) {
-                                generate('success', '<div class="activity-item" style="text-align:right" dir="rtl">خبر جدید ثبت شد.</div>');
-                                window.location.href = 'adminpanel/news';
-                            }
-                        }
-                    );
-                } else {
-                    generate('warning', '<div class="activity-item" style="text-align:right" dir="rtl">یک تصویر معتبر انتخاب کنید.</div>');
+            formData = new FormData();
+            formData.append("titleNews", titleNews);
+            formData.append("categoryNews", categoryNews);
+            formData.append("linkNews", linkNews);
+            $.ajax({
+                    url: "adminpanel/addNews",
+                    type: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
+                        generate('success', '<div class="activity-item" style="text-align:right" dir="rtl">سایت جدید باموفقیت ثبت شد.</div>');
+                        window.location.href = 'adminpanel/news/newsSource';
+                    }
                 }
-            } else {
-                generate('warning', '<div class="activity-item" style="text-align:right" dir="rtl">یک تصویر انتخاب کنید.</div>');
-            }
+            );
         }
     })
     ;

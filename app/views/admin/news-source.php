@@ -1,6 +1,6 @@
 <?php
 $activeMenu = 'news';
-$activeSubMenu = 'newsManage';
+$activeSubMenu = 'newsSource';
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +9,7 @@ $activeSubMenu = 'newsManage';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title><?= NAME; ?> | لیست اخبار</title>
+    <title><?= NAME; ?> | لیست منابع</title>
     <!-- Favicon -->
     <?php require('app/views/include/favicon.php'); ?>
 
@@ -50,11 +50,11 @@ $activeSubMenu = 'newsManage';
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                <small>لیست اخبار</small>
+                <small>لیست منابع</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="<?= URL; ?>adminpanel/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="<?= URL; ?>adminpanel/news"><i class="fa fa-clone"></i> News</a></li>
+                <li><a href="<?= URL; ?>adminpanel/newsSource"><i class="fa fa-clone"></i> Sources</a></li>
             </ol>
         </section>
 
@@ -72,10 +72,8 @@ $activeSubMenu = 'newsManage';
                                 <thead>
                                 <tr>
                                     <th style="text-align:center;width: 40px">ردیف</th>
-                                    <th style="text-align:center">عنوان خبر</th>
-                                    <th style="text-align:center;width: 80px">دسته بندی</th>
-                                    <th style="text-align:center;width: 50px">تصویر</th>
-                                    <th style="text-align:center;width: 80px">تاریخ ثبت</th>
+                                    <th style="text-align:center">عنوان سایت</th>
+                                    <th style="text-align:center;">دسته بندی</th>
                                     <th style="text-align:center;width: 50px">وضعیت</th>
                                     <th style="text-align:center;width: 100px">عملیات</th>
                                 </tr>
@@ -83,21 +81,19 @@ $activeSubMenu = 'newsManage';
                                 <tbody>
                                 <?php
                                 $i = 1;
-                                $news = $data['news'];
-                                foreach ($news as $newsInfo) {
+                                $rss = $data['rss'];
+                                foreach ($rss as $rssInfo) {
                                     ?>
-                                    <tr id="news-row-<?= $newsInfo['n_id']; ?>">
+                                    <tr id="news-row-<?= $rssInfo['n_id']; ?>">
                                         <td style="text-align:center;vertical-align: middle"><?= $i; ?></td>
-                                        <td title="<?= $newsInfo['title']; ?>" style="text-align:center;vertical-align: middle"><?= Model::summary($newsInfo['title'],90); ?></td>
-                                        <td style="text-align:center;vertical-align: middle"><?= $newsInfo['name']; ?></td>
-                                        <td style="text-align:center;vertical-align: middle"><img
-                                                    onerror="this.src='public/images/Album+Cover+icon2-01.png'"
-                                                    style="width: 50px;height: 50px;border-radius: 5%;"
-                                                    alt="<?= $newsInfo['title']; ?>"
-                                                    src="public/images/news/<?= $newsInfo['i_image']; ?>"></td>
-                                        <td style="text-align:center;vertical-align: middle"><?= $newsInfo['date_created']; ?></td>
+                                        <td title="<?= $rssInfo['title']; ?>" style="text-align:center;vertical-align: middle">
+                                            <a href="<?= $rssInfo['link']; ?>" style="color: inherit" target="_blank">
+                                            <?= $rssInfo['title']; ?>
+                                            </a>
+                                        </td>
+                                        <td style="text-align:center;vertical-align: middle"><?= $rssInfo['name']; ?></td>
                                         <td style="text-align:center;vertical-align: middle">
-                                            <?php if ($newsInfo['status'] == 1) {
+                                            <?php if ($rssInfo['status'] == 1) {
                                                 ?>
                                                 <span class="label label-success">فعال</span>
                                                 <?php
@@ -109,12 +105,16 @@ $activeSubMenu = 'newsManage';
                                             ?>
                                         </td>
                                         <td style="text-align:center;vertical-align: middle">
+                                            <a class="btn btn-warning btn-xs"
+                                               href="adminpanel/news/newsEdit/<?= $rssInfo['n_id']; ?>">
+                                                <i class="fa fa-pencil-square-o"></i>
+                                            </a>
                                             <button data-toggle="modal"
                                                     data-target="#del-Modal"
-                                                    id="btn-del-style-<?= $newsInfo['n_id']; ?>"
-                                                    data-id="<?= $newsInfo['n_id']; ?>"
-                                                    data-mask="<?= $newsInfo['i_id']; ?>"
-                                                    data-inputmask="<?= $newsInfo['i_image']; ?>"
+                                                    id="btn-del-style-<?= $rssInfo['n_id']; ?>"
+                                                    data-id="<?= $rssInfo['n_id']; ?>"
+                                                    data-mask="<?= $rssInfo['i_id']; ?>"
+                                                    data-inputmask="<?= $rssInfo['i_image']; ?>"
                                                     class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>
                                             </button>
                                         </td>

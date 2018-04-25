@@ -223,6 +223,17 @@ class model_adminpanel extends Model
         return $result;
     }
 
+    function getRssInfo()
+    {
+        $sql = "SELECT a.*,b.name FROM tbl_rss a
+                LEFT JOIN tbl_category b 
+                ON a.cat_id=b.id
+                ORDER BY a.r_id DESC ";
+        $result = $this->doSelect($sql);
+
+        return $result;
+    }
+
     function GetNews($id)
     {
         $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
@@ -271,29 +282,16 @@ class model_adminpanel extends Model
 
     function getCategory()
     {
-        $sql = "SELECT id,name FROM tbl_category WHERE status=1 ORDER BY  name ASC ";
+        $sql = "SELECT id,name,main_cat FROM tbl_category WHERE status=1 ORDER BY  name ASC ";
         $result = $this->doSelect($sql);
         return $result;
     }
 
     function addnews($post)
     {
-        $dir = "public/images/news/";
-        move_uploaded_file($_FILES["image"]["tmp_name"], $dir . $_FILES["image"]["name"]);
-
-        $sql = "INSERT INTO tbl_images (i_image,i_status) VALUES (?,1)";
-        $value = array($_FILES["image"]["name"]);
-        $this->doQuery($sql, $value);
-        $imgId = Model::$conn->lastInsertId();
-
-        $sql2 = "INSERT INTO tbl_news (cat_id,vip,title	,title_no,subtitle,image_id,description,tag,
-                     date_created,time,model)
-                     VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-        $params = [$post['categoryNews'], $post['typeNews'], $post['titleNews'], $post['numberNews'],
-            $post['subtitleNews'], $imgId, htmlspecialchars($post['descNews']), $post['tagNews'],
-            self::jaliliDate(), self::jaliliDate("H:i"), $post['showNews']];
+        $sql2 = "INSERT INTO tbl_rss (title	,link ,cat_id) VALUES (?,?,?)";
+        $params = [$post['titleNews'], $post['linkNews'], $post['categoryNews']];
         $this->doQuery($sql2, $params);
-
         echo "ok";
     }
 

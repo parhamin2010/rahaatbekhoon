@@ -47,7 +47,7 @@
             echo 'active';
         } ?>">
             <a style="cursor: pointer">
-                <i class="fa fa-clone fa-fw"></i> <span>اخبار</span>
+                <i class="fa fa-newspaper-o fa-fw"></i> <span>اخبار و رویدادها</span>
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
@@ -57,7 +57,14 @@
                             echo 'fa-circle';
                         } else {
                             echo 'fa-circle-o';
-                        } ?>"></i> افزودن خبر جدید</a></li>
+                        } ?>"></i> افزودن سایت جدید</a></li>
+                <li class="<?php if ($activeSubMenu == 'newsSiteManage') {
+                    echo 'active';
+                } ?>"><a href="adminpanel/news/newsSource"><i class="fa <?php if ($activeSubMenu == 'newsSiteManage') {
+                            echo 'fa-circle';
+                        } else {
+                            echo 'fa-circle-o';
+                        } ?>"></i> مدیریت منابع</a></li>
                 <li class="<?php if ($activeSubMenu == 'newsManage') {
                     echo 'active';
                 } ?>"><a href="adminpanel/news"><i class="fa <?php if ($activeSubMenu == 'newsManage') {
@@ -65,6 +72,30 @@
                         } else {
                             echo 'fa-circle-o';
                         } ?>"></i> مدیریت اخبار</a></li>
+            </ul>
+        </li>
+        <li class="treeview <?php if ($activeMenu == 'mag') {
+            echo 'active';
+        } ?>">
+            <a style="cursor: pointer">
+                <i class="fa fa-clone fa-fw"></i> <span>نشریات و مجلات</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li class="<?php if ($activeSubMenu == 'magAdd') {
+                    echo 'active';
+                } ?>"><a href="adminpanel/news/newsAdd"><i class="fa <?php if ($activeSubMenu == 'magAdd') {
+                            echo 'fa-circle';
+                        } else {
+                            echo 'fa-circle-o';
+                        } ?>"></i> افزودن نشریه جدید</a></li>
+                <li class="<?php if ($activeSubMenu == 'magManage') {
+                    echo 'active';
+                } ?>"><a href="adminpanel/news"><i class="fa <?php if ($activeSubMenu == 'magManage') {
+                            echo 'fa-circle';
+                        } else {
+                            echo 'fa-circle-o';
+                        } ?>"></i> مدیریت</a></li>
             </ul>
         </li>
         <li class="treeview <?php if ($activeMenu == 'member') {

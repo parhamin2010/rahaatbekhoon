@@ -103,6 +103,17 @@ class adminPanel extends Controller
                 $data = array('category' => $category, 'infoAdmin' => $infoAdmin, 'newComment' => $newComment,
                     'newContact' => $newContact);
                 $this->view('admin/news-add', $data);
+            } else if ($func != '' && $func == "newsSource") {
+                Model::sessionInit();
+                unset($_SESSION["attrId"]);
+                $AdminID = Model::sessionGet('adminId');
+                $infoAdmin = $this->model->getinfoAdmin($AdminID);
+                $RssInfo = $this->model->getRssInfo();
+                $newComment = $this->model->getnewComment();
+                $newContact = $this->model->getnewContact();
+                $data = array('rss' => $RssInfo, 'infoAdmin' => $infoAdmin, 'newComment' => $newComment,
+                              'newContact' => $newContact);
+                $this->view('admin/news-source', $data);
             } else if ($func != '' && is_numeric($attrId) && $func == "newsEdit") {
                 $id_isset = $this->model->getIssetNews($attrId);
                 if (sizeof($id_isset) > 0) {

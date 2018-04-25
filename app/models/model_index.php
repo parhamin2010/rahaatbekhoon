@@ -29,7 +29,7 @@
                 LEFT JOIN tbl_category b
                 ON a.cat_id=b.id
                 WHERE a.status=1
-                ORDER BY a.date_created DESC LIMIT 16";
+                ORDER BY a.date_created DESC LIMIT 12";
             $result = $this->doSelect($sql);
             
             return $result;

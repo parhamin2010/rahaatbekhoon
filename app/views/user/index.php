@@ -6,7 +6,7 @@ Model::sessionInit();
 <head>
     <base href="<?= URL; ?>">
     <meta charset="UTF-8">
-    <title><?= NAME; ?> | <?= $news['0']['name']; ?></title>
+    <title><?= NAME; ?> | پنل کاربری</title>
 
     <meta name="description"
           content="<?= NAME; ?>"/>

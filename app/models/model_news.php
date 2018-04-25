@@ -8,15 +8,19 @@
             parent::__construct();
         }
         
-        function getsuggestNews()
+        function getsuggestNews($id)
         {
+            $sql1 = "SELECT cat_id FROM tbl_news WHERE n_id=?";
+            $result1 = $this->doSelect($sql1, array($id), 1);
+    
             $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                WHERE a.status=1
-                ORDER BY rand() DESC LIMIT 4";
-            $result = $this->doSelect($sql);
-            
+                WHERE a.status=1 AND a.cat_id=?
+                ORDER BY RAND() LIMIT 4";
+            $params = array($result1['cat_id']);
+            $result = $this->doSelect($sql, $params);
+    
             return $result;
         }
         

@@ -24,7 +24,7 @@
                     $iconfavCheck = $this->model->iconfavCheck($UserID, "track-" . $id);
                     $sameNews = $this->model->sameNews($id);
                     $getCategory = $this->model->getCategory();
-                    $getsuggestNews = $this->model->getsuggestNews();
+                    $getsuggestNews = $this->model->getsuggestNews($id);
 
                     $data = array('infoUser'     => $infoUser, 'getNews' => $getNews, 'RateStatus' => $RateStatus,
                                   'iconfavCheck' => $iconfavCheck, 'comment' => $comment, 'sameNews' => $sameNews,

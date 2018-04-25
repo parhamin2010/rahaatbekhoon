@@ -29,7 +29,7 @@
                 LEFT JOIN tbl_category b
                 ON a.cat_id=b.id
                 WHERE a.status=1
-                ORDER BY a.date_created DESC LIMIT 30";
+                ORDER BY a.date_created DESC LIMIT 16";
             $result = $this->doSelect($sql);
             
             return $result;
@@ -41,7 +41,7 @@
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
                 WHERE a.status=1
-                ORDER BY a.date_created DESC LIMIT 5";
+                ORDER BY a.view DESC LIMIT 5";
             $result = $this->doSelect($sql);
             
             return $result;
@@ -119,7 +119,7 @@
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
                 WHERE a.status=1
-                ORDER BY a.n_id DESC LIMIT 36";
+                ORDER BY a.n_id DESC LIMIT 30";
             $result = $this->doSelect($sql);
             
             return $result;

@@ -128,7 +128,7 @@
                                                 <a href="news/<?= $newsInfo['n_id'] ?>"
                                                    title="<?= $newsInfo['title'] ?>"
                                                    style="padding: 20px 15px;font-size: 13px;text-align: right !important;"
-                                                   class="masonry-gallery__item__title"><?= $newsInfo['title'] ?></a>
+                                                   class="masonry-gallery__item__title"><?= Model::summary($newsInfo['title'],60); ?></a>
 
                                                 <div class="masonry-gallery__item__detail" style="float: left">
                                         <span class="past-time"><?= $newsInfo['date_created'] ?></span>

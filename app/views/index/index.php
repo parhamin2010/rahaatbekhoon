@@ -193,7 +193,7 @@ $newsVip = $data['getNewsVip'];
                 ?>
                 <div class="homepage__main">
                     <section class="carousel" style="height: 100%;">
-                        <div class="module-title">
+                        <div class="module-title" style="width: 85%;">
                             <div class="module-title">
                                 <h1 class="module-title__txt">
                                     <span class="bold">آخرین </span><span>اخبار</span></h1>
@@ -203,7 +203,7 @@ $newsVip = $data['getNewsVip'];
                                    class="module-title__btn">مشاهده عناوین بیشتر</a>
                             </div>
                         </div>
-                        <div class="carousel__body load-failed">
+                        <div class="carousel__body load-failed" style="width: 90%">
                             <?php
                             foreach ($newsVip as $newsVipInfo) {
                                 ?>

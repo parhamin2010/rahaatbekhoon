@@ -1799,7 +1799,7 @@ button, input[type=button], input[type=file], input[type=reset], input[type=subm
 }
 
 .masonry-gallery__item__detail {
-    margin: 0 55px 20px 5px
+    margin: 0 165px 20px 5px
 }
 
 .masonry-gallery__item__detail .author {
@@ -3808,7 +3808,7 @@ label.check-handler input[type=checkbox]:checked + ._check:before, label.check-h
 }
 
 .carousel__body__item .item__details {
-    margin: 0 70px 20px 5px
+    margin: 0 190px 20px 5px
 }
 
 .carousel__body__item .item__details--img {
@@ -7246,7 +7246,7 @@ body.error404 .homepage__top--sep, body.error404 .self-grow-wrapper {
     }
 
     .carousel__body, .footer, .home__page .carousel .module-title, .home__page .media-gallery .module-title, .home__page .media-gallery__body, body.page-template-page-podcast .breadcrumbs, body.page-template-page-podcast .media-header, body.page-template-page-video .breadcrumbs, body.page-template-page-video .media-header {
-        width: 85%;
+        width: 100%;
         margin: -20px auto
     }
 

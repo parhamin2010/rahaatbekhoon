@@ -10,11 +10,9 @@ class model_rss extends Model
     function getNews()
     {
 
-        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+        $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c
-                ON a.image_id=c.i_id
                 WHERE a.status=1
                 ORDER BY a.date_created DESC LIMIT 15";
         $results = $this->doSelect($sql);
@@ -33,9 +31,9 @@ class model_rss extends Model
         foreach ($results as $result) {
             $item = new rssGenerator_item();
             $item->title = $result['title'];
-            $item->description = $result['subtitle'];
+            $item->description = $result['description'];
             $item->link = URL.'news/'.$result['n_id'];
-            $item->enclosure_url = URL.'public/images/news/'.$result['i_image'];
+            $item->enclosure_url = $result['image'];
             $item->enclosure_type = 'image/jpeg';
             $item->pubDate = $result['date_created'];
             $rss_channel->items[] = $item;

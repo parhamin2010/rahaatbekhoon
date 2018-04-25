@@ -33,8 +33,8 @@
                         <hr>
                         <p style="float:right;padding-top: 12px;color: #b2b9bd">شبکه های اجتماعی ما :</p>
                         <ul class='right social-linkbox' style="float: left">
-                            <li><a target='_blank' title='فیس بوک'
-                                   href='https://www.facebook.com/irandall'><i
+                            <li><a target='_blank' title='خبرخوان'
+                                   href='rss'><i
                                         class='icon icon-footer-facebook'></i></a></li>
                             <li><a target='_blank' title='توییتر'
                                    href='https://www.twitter.com/irandall'><i

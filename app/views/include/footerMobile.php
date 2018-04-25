@@ -47,8 +47,8 @@
                         <hr>
                         <p style="padding-top: 12px;color: #b2b9bd">شبکه های اجتماعی ما</p><br>
                         <ul class='right social-linkbox' style="text-align: center;margin-top: -25px;padding-right: 115px">
-                            <li style="float: right;margin: 5px"><a target='_blank' title='فیس بوک'
-                                   href='https://www.facebook.com/irandall'>
+                            <li style="float: right;margin: 5px"><a target='_blank' title='خبرخوان'
+                                   href='rss'>
                                     <i
                                         class='fa fa-facebook-official' style="font-size: 25pt;color: ghostwhite"></i></a></li>
                             <li style="float: right;margin: 5px"><a target='_blank' title='توییتر'

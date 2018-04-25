@@ -100,7 +100,7 @@
                                                     <a href="news/<?= $newsInfo['n_id'] ?>"
                                                        title="<?= $newsInfo['title'] ?>" class="image__linker">
                                                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                             data-lazy-src="public/images/news/<?= $newsInfo['i_image'] ?>"
+                                                             data-lazy-src="<?= $newsInfo['image'] ?>"
                                                              width="284" height="180" class="image__img wp-post-image"
                                                              alt="<?= $newsInfo['title'] ?>"> </a>
 
@@ -127,11 +127,10 @@
                                                 <a href="news/<?= $newsInfo['n_id'] ?>"
                                                    title="<?= $newsInfo['title'] ?>"
                                                    style="padding: 20px 15px;font-size: 13px;text-align: right !important;"
-                                                   class="masonry-gallery__item__title"><?= $newsInfo['title'] ?></a>
+                                                   class="masonry-gallery__item__title"><?= Model::summary($newsInfo['title'],60) ?></a>
 
-                                                <div class="masonry-gallery__item__detail" style="float: left">
-                                        <span class="past-time"><?= $newsInfo['time'] ?>
-                                            &nbsp;<?= $newsInfo['date_created'] ?></span>
+                                                <div class="masonry-gallery__item__detail" style="float: left;width:100%">
+                                        <span class="past-time"><?= $newsInfo['date_created'] ?></span>
                                                     <i class="icon-clock-icon" style="margin-right: 5px"></i>
                                                 </div>
                                             </div>

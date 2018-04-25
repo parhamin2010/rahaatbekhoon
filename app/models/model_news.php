@@ -282,9 +282,9 @@
                                                 <a href="news/' . $result['n_id'] . '"
                                                    title="' . $result['title'] . '"
                                                    style="padding: 20px 15px;font-size: 13px;text-align: right !important;"
-                                                   class="masonry-gallery__item__title">' . self::summary($result['title'],70) . '</a>
+                                                   class="masonry-gallery__item__title">' . self::summary($result['title'],60) . '</a>
 
-                                                <div class="masonry-gallery__item__detail" style="float: left">
+                                                <div class="masonry-gallery__item__detail" style="float: left;width:100%">
                                         <span class="past-time">' . $result['date_created'] . '</span>
                                                     <i class="icon-clock-icon" style="margin-right: 5px"></i>
                                                 </div>

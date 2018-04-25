@@ -14,4 +14,6 @@
 <link rel="manifest" href="public/images/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="public/images/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#6f0000">
+<meta name="msapplication-navbutton-color" content="#6f0000">
+<meta name="apple-mobile-web-app-status-bar-style" content="#6f0000">

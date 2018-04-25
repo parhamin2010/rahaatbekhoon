@@ -76,7 +76,6 @@ $activeSubMenu = 'newsManage';
                                     <th style="text-align:center;width: 80px">دسته بندی</th>
                                     <th style="text-align:center;width: 50px">تصویر</th>
                                     <th style="text-align:center;width: 80px">تاریخ ثبت</th>
-                                    <th style="text-align:center;width: 50px">وضعیت</th>
                                     <th style="text-align:center;width: 100px">عملیات</th>
                                 </tr>
                                 </thead>
@@ -96,18 +95,6 @@ $activeSubMenu = 'newsManage';
                                                     alt="<?= $newsInfo['title']; ?>"
                                                     src="<?= $newsInfo['image']; ?>"></td>
                                         <td style="text-align:center;vertical-align: middle"><?= $newsInfo['date_created']; ?></td>
-                                        <td style="text-align:center;vertical-align: middle">
-                                            <?php if ($newsInfo['status'] == 1) {
-                                                ?>
-                                                <span class="label label-success">فعال</span>
-                                                <?php
-                                            } else {
-                                                ?>
-                                                <span class="label label-danger">غیرفعال</span>
-                                                <?php
-                                            }
-                                            ?>
-                                        </td>
                                         <td style="text-align:center;vertical-align: middle">
                                             <button data-toggle="modal"
                                                     data-target="#del-Modal"

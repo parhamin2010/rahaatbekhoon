@@ -84,18 +84,25 @@
             <ul class="treeview-menu">
                 <li class="<?php if ($activeSubMenu == 'magAdd') {
                     echo 'active';
-                } ?>"><a href="adminpanel/news/newsAdd"><i class="fa <?php if ($activeSubMenu == 'magAdd') {
+                } ?>"><a href="adminpanel/mags/magAdd"><i class="fa <?php if ($activeSubMenu == 'magAdd') {
                             echo 'fa-circle';
                         } else {
                             echo 'fa-circle-o';
-                        } ?>"></i> افزودن نشریه جدید</a></li>
-                <li class="<?php if ($activeSubMenu == 'magManage') {
+                        } ?>"></i> افزودن نشریه/مجله جدید</a></li>
+                <li class="<?php if ($activeSubMenu == 'magsSiteManage') {
                     echo 'active';
-                } ?>"><a href="adminpanel/news"><i class="fa <?php if ($activeSubMenu == 'magManage') {
+                } ?>"><a href="adminpanel/mags/magsSource"><i class="fa <?php if ($activeSubMenu == 'magsSiteManage') {
                             echo 'fa-circle';
                         } else {
                             echo 'fa-circle-o';
-                        } ?>"></i> مدیریت</a></li>
+                        } ?>"></i> مدیریت منابع</a></li>
+                <li class="<?php if ($activeSubMenu == 'magsManage') {
+                    echo 'active';
+                } ?>"><a href="adminpanel/mags"><i class="fa <?php if ($activeSubMenu == 'magsManage') {
+                            echo 'fa-circle';
+                        } else {
+                            echo 'fa-circle-o';
+                        } ?>"></i> مدیریت نشریات و مجلات</a></li>
             </ul>
         </li>
         <li class="treeview <?php if ($activeMenu == 'member') {

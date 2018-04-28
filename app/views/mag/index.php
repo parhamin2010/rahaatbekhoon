@@ -129,7 +129,7 @@ $newsTop = $data['getTopNews'];
                             <a href="mag/<?= $newsTop[0]['n_id'] ?>"
                                id="tile-4-6-0" title="<?= $newsTop[0]['title'] ?>"
                                target="_self" class="tiles__item">
-                                <img src="public/images/mag/<?= $newsTop[0]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[0]['image'] ?>"
                                      alt="<?= $newsTop[0]['title'] ?>" width="100%"
                                      height="100%" class="tiles__item--img" style="position: absolute;z-index: 0">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -145,7 +145,7 @@ $newsTop = $data['getTopNews'];
                             ?>
                             <a href="mag/<?= $newsTop[1]['n_id'] ?>"
                                id="tile-4-6-1" title="<?= $newsTop[1]['title'] ?>" target="_self" class="tiles__item">
-                                <img src="public/images/mag/<?= $newsTop[1]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[1]['image'] ?>"
                                      alt="<?= $newsTop[1]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -162,7 +162,7 @@ $newsTop = $data['getTopNews'];
                             <a href="mag/<?= $newsTop[2]['n_id'] ?>"
                                id="tile-4-6-2" title="<?= $newsTop[2]['title'] ?>" target="_self"
                                class="tiles__item hor">
-                                <img src="public/images/mag/<?= $newsTop[2]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[2]['image'] ?>"
                                      alt="<?= $newsTop[2]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -179,7 +179,7 @@ $newsTop = $data['getTopNews'];
                             <a href="mag/<?= $newsTop[3]['n_id'] ?>"
                                id="tile-4-6-3" title="<?= $newsTop[3]['title'] ?>" target="_self"
                                class="tiles__item hor">
-                                <img src="public/images/mag/<?= $newsTop[3]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[3]['image'] ?>"
                                      alt="<?= $newsTop[3]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -196,7 +196,7 @@ $newsTop = $data['getTopNews'];
                             <a href="mag/<?= $newsTop[4]['n_id'] ?>"
                                id="tile-4-6-4"
                                title="<?= $newsTop[4]['title'] ?>" target="_self" class="tiles__item">
-                                <img src="public/images/mag/<?= $newsTop[4]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[4]['image'] ?>"
                                      alt="<?= $newsTop[4]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -213,7 +213,7 @@ $newsTop = $data['getTopNews'];
                             <a href="mag/<?= $newsTop[5]['n_id'] ?>"
                                id="tile-4-6-5"
                                title="<?= $newsTop[5]['title'] ?>" target="_self" class="tiles__item">
-                                <img src="public/images/mag/<?= $newsTop[5]['i_image'] ?>"
+                                <img src="public/images/mag/<?= $newsTop[5]['image'] ?>"
                                      alt="<?= $newsTop[5]['title'] ?>" width="100%" height="100%"
                                      class="tiles__item--img">
                                 <div style="width: 100%;height:160px">&nbsp;</div>
@@ -243,8 +243,8 @@ $newsTop = $data['getTopNews'];
                                 ?>
                                 <a href="mag/<?= $newsVipInfo['n_id'] ?>"
                                    class="carousel__body__item" title="<?= $newsVipInfo['title'] ?>">
-                                    <img src="public/images/mag/<?= $newsVipInfo['i_image'] ?>"
-                                         data-lazy-src="public/images/mag/<?= $newsVipInfo['i_image'] ?>"
+                                    <img src="public/images/mag/<?= $newsVipInfo['image'] ?>"
+                                         data-lazy-src="public/images/mag/<?= $newsVipInfo['image'] ?>"
                                          width="284" height="180" class="image__img wp-post-image"
                                          alt="<?= $newsVipInfo['title'] ?>">
                                     <span class="item__txt">
@@ -308,7 +308,7 @@ $newsTop = $data['getTopNews'];
                                             <a href="mag/<?= $newsInfo['n_id'] ?>"
                                                title="<?= $newsInfo['title'] ?>" class="image__linker">
                                                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                     data-lazy-src="public/images/mag/<?= $newsInfo['i_image'] ?>"
+                                                     data-lazy-src="public/images/mag/<?= $newsInfo['image'] ?>"
                                                      width="284" height="180" class="image__img wp-post-image"
                                                      alt="<?= $newsInfo['title'] ?>"> </a>
 

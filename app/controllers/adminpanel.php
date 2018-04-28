@@ -88,6 +88,76 @@ class adminPanel extends Controller
         $this->model->readMessage($_POST);
     }
 
+    function mags($func = '', $attrId = 0)
+    {
+        if ($this->checkLoginAdmin == false) {
+            header("Location:" . URL . "adminpanel/login");
+        } else {
+            if ($func != '' && $func == "magAdd") {
+                Model::sessionInit();
+                $AdminID = Model::sessionGet('adminId');
+                $infoAdmin = $this->model->getinfoAdmin($AdminID);
+                $newComment = $this->model->getnewComment();
+                $newContact = $this->model->getnewContact();
+                $category = $this->model->getCategory();
+                $data = array('category' => $category, 'infoAdmin' => $infoAdmin, 'newComment' => $newComment,
+                    'newContact' => $newContact);
+                $this->view('admin/mags-add', $data);
+            } else if ($func != '' && $func == "magsSource") {
+                Model::sessionInit();
+                unset($_SESSION["attrId"]);
+                $AdminID = Model::sessionGet('adminId');
+                $infoAdmin = $this->model->getinfoAdmin($AdminID);
+                $MagsList = $this->model->getMagsList();
+                $newComment = $this->model->getnewComment();
+                $newContact = $this->model->getnewContact();
+                $data = array('mag' => $MagsList, 'infoAdmin' => $infoAdmin, 'newComment' => $newComment,
+                              'newContact' => $newContact);
+                $this->view('admin/mags-source', $data);
+            } else if ($func != '' && is_numeric($attrId) && $func == "magsEdit") {
+                $id_isset = $this->model->getIssetNews($attrId);
+                if (sizeof($id_isset) > 0) {
+                    Model::sessionInit();
+                    $AdminID = Model::sessionGet('adminId');
+                    $infoAdmin = $this->model->getinfoAdmin($AdminID);
+                    $newsInfoEdit = $this->model->getNewsInfoEdit($attrId);
+                    $newComment = $this->model->getnewComment();
+                    $newContact = $this->model->getnewContact();
+                    $category = $this->model->getCategory();
+                    $data = array('newsInfo' => $newsInfoEdit, 'attrId' => $attrId,
+                        'infoAdmin' => $infoAdmin, 'newComment' => $newComment,
+                        'category' => $category, 'newContact' => $newContact);
+                    $this->view('admin/mags-edit', $data);
+                } else {
+                    $detect = new Mobile_Detect;
+                    $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
+
+                    $getsuggestNews = $this->model->getsuggestNews();
+                    $getCategory =$this->model->getCategoryNotFound();
+                    $data = array('getsuggestNews' => $getsuggestNews,'getCategory' => $getCategory);
+
+                    if($deviceType=='computer') {
+                        $this->view('notfound/index', $data);
+                    }
+                    else {
+                        $this->view('notfound/indexMobile', $data);
+                    }
+                }
+            }  else {
+                Model::sessionInit();
+                unset($_SESSION["attrId"]);
+                $AdminID = Model::sessionGet('adminId');
+                $infoAdmin = $this->model->getinfoAdmin($AdminID);
+                $newsInfo = $this->model->getmagsInfo();
+                $newComment = $this->model->getnewComment();
+                $newContact = $this->model->getnewContact();
+                $data = array('news' => $newsInfo, 'infoAdmin' => $infoAdmin, 'newComment' => $newComment,
+                    'newContact' => $newContact);
+                $this->view('admin/mags', $data);
+            }
+        }
+    }
+
     function news($func = '', $attrId = 0)
     {
         if ($this->checkLoginAdmin == false) {
@@ -161,6 +231,11 @@ class adminPanel extends Controller
     function addNews()
     {
         $this->model->addnews($_POST);
+    }
+    
+    function addMags()
+    {
+        $this->model->addmags($_POST);
     }
 
     function editNews()

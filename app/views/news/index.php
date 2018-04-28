@@ -162,13 +162,14 @@
                                      id="post-368348" style="padding: 0 30px;">
                                     <article>
                                         <div class="post-module__content">
+                                            <?php if($news[0]['image']!=null){?>
                                             <figure class="post-attachment"
                                                     style="margin-bottom: 10px;float: left;position: relative;padding: 10px">
                                                 <a href="<?= $news[0]['image']; ?>"
                                                    data-lightbox="image-1"
                                                    data-title="<?= $news[0]['title']; ?>">
                                                     <img alt="<?= Model::summary($news[0]['title'], 100); ?>"
-                                                         onerror="this.src='public/images/album-default.jpg'"
+                                                         onerror="this.src='public/images/default.png'"
                                                          class="album-cover"
                                                          style="height: 300px;border-radius: 10px"
                                                          src="<?= $news[0]['image']; ?>"/>
@@ -177,6 +178,7 @@
                                                 <figcaption class="hidden-seo">
                                                 </figcaption>
                                             </figure>
+                                            <?php } ?>
 
                                             <p style="position: relative;text-align: justify;direction: rtl">
                                     <span style="text-align: right">

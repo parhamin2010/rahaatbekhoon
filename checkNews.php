@@ -3,6 +3,7 @@
     ignore_user_abort(1); // run script in background
     set_time_limit(0); // run script forever
     ini_set("log_errors", 0);
+    error_reporting(E_ERROR | E_PARSE);
     require_once 'core/config.php';
     require_once 'public/library/medoo/jdf.php';
     date_default_timezone_set('Asia/Tehran');
@@ -13,6 +14,7 @@
         "username" => USERNAME,
         "password" => PASSWORD,
     );
+    
     $attr = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8mb4');
     $server_name=$link['servername'];
     $db_name=$link['dbname'];

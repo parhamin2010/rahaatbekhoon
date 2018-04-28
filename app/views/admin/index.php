@@ -387,7 +387,7 @@ $values = implode(',', $values);
                 x: 'center',
                 y: 'top',
                 padding: [10, 0, 20, 0],
-                text: 'نمودار مطالب ثبت شده در 10 روز اخیر',
+                text: 'نمودار اخبار ثبت شده در 10 روز اخیر',
                 textStyle: {
                     fontSize: 14,
                     fontWeight: 'normal'

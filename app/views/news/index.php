@@ -263,7 +263,7 @@
                                                                          src="<?= $newsInfo['image']; ?>"
                                                                          alt="mobile"/>
                                                                     <img class="error-page__suggestion--item-img-holder"
-                                                                         src="public/images/placeholder.png"
+                                                                         src="public/images/default.png"
                                                                          alt="placeholder"/>
                                                                     <span class="error-page__suggestion--item-img-caption"
                                                                           style="font-size: 8pt"><?= Model::summary($newsInfo['title'], 70); ?></span>
@@ -427,7 +427,8 @@
                                                                class="image-wrapper">
                                                                 <img src="<?= $newsInfo['image']; ?>"
                                                                      width="60"
-                                                                     height="60"
+                                                                     height="50"
+                                                                     onerror="this.src='public/images/default.png'"
                                                                      class="image-wrapper__img wp-post-image"
                                                                      style="border-radius:3px"
                                                                      alt="<?= $newsInfo['title']; ?>"

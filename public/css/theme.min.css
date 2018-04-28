@@ -8127,7 +8127,7 @@ body.attachment:not(.page-template) .topics__content, body.page:not(.page-templa
 
 .post-module img {
     max-width: 100%;
-    height: auto
+    height: 80%;
 }
 
 .gallery-slider {

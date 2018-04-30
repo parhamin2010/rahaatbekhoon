@@ -35,10 +35,10 @@
             $sql = "SELECT count(*) AS Count FROM tbl_user WHERE level=2";
             $result['userCount'] = $this->doSelect($sql);
             
-            $sql = "SELECT count(*) AS Count FROM tbl_user WHERE level=3";
+            $sql = "SELECT count(*) AS Count FROM tbl_view";
             $result['artistCount'] = $this->doSelect($sql);
             
-            $sql = "SELECT count(*) AS Count FROM tbl_news";
+            $sql = "SELECT count(*) AS Count FROM tbl_mags";
             $result['vipNews'] = $this->doSelect($sql);
             
             $sql = "SELECT count(*) AS Count FROM tbl_news";

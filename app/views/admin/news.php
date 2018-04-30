@@ -87,10 +87,10 @@ $activeSubMenu = 'newsManage';
                                     ?>
                                     <tr id="news-row-<?= $newsInfo['n_id']; ?>">
                                         <td style="text-align:center;vertical-align: middle"><?= $i; ?></td>
-                                        <td title="<?= $newsInfo['title']; ?>" style="text-align:center;vertical-align: middle"><?= Model::summary($newsInfo['title'],90); ?></td>
+                                        <td title="<?= $newsInfo['title']; ?>" style="text-align:center;vertical-align: middle"><a style="color: inherit" title="<?= $newsInfo['title']; ?>"><?= Model::summary($newsInfo['title'],100); ?></a></td>
                                         <td style="text-align:center;vertical-align: middle"><?= $newsInfo['name']; ?></td>
                                         <td style="text-align:center;vertical-align: middle"><img
-                                                    onerror="this.src='public/images/Album+Cover+icon2-01.png'"
+                                                    onerror="this.src='public/images/default.png'"
                                                     style="width: 50px;height: 50px;border-radius: 5%;"
                                                     alt="<?= $newsInfo['title']; ?>"
                                                     src="<?= $newsInfo['image']; ?>"></td>

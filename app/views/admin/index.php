@@ -84,12 +84,12 @@ $values = implode(',', $values);
                     <div class="small-box bg-aqua">
                         <div class="inner">
                             <h3><?= $data['bannerTop']['newsCount']['0']['Count'] ?></h3>
-                            <p>مطالب ثبت شده</p>
+                            <p>اخبار ثبت شده</p>
                         </div>
                         <div class="icon">
-                            <i style="padding: 10px 0;font-size: 80px;" class="ion ion-disc"></i>
+                            <i style="padding: 10px 0;font-size: 80px;" class="ion ion-ios-paper-outline"></i>
                         </div>
-                        <a href="adminpanel/albums" class="small-box-footer"><i class="fa fa-arrow-circle-left"></i>
+                        <a href="adminpanel/news" class="small-box-footer"><i class="fa fa-arrow-circle-left"></i>
                             اطلاعات بیشتر </a>
                     </div>
                 </div>
@@ -100,12 +100,12 @@ $values = implode(',', $values);
                         <div class="inner">
                             <h3><?= $data['bannerTop']['vipNews']['0']['Count'] ?></h3>
 
-                            <p>اخبار ویژه</p>
+                            <p>نشریات ثبت شده</p>
                         </div>
                         <div class="icon">
                             <i style="padding: 10px 0;font-size: 80px;" class="ion ion-android-done-all"></i>
                         </div>
-                        <a href="adminpanel/orders" class="small-box-footer"><i class="fa fa-arrow-circle-left"></i>
+                        <a href="adminpanel/mags" class="small-box-footer"><i class="fa fa-arrow-circle-left"></i>
                             اطلاعات بیشتر </a>
                     </div>
                 </div>
@@ -132,12 +132,12 @@ $values = implode(',', $values);
                         <div class="inner">
                             <h3><?= $data['bannerTop']['artistCount']['0']['Count'] ?></h3>
 
-                            <p>مدیران ثبت شده</p>
+                            <p>تعداد بازدید مطالب</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-ios-people-outline"></i>
+                            <i class="ion ion-ios-glasses-outline"></i>
                         </div>
-                        <a href="adminpanel/artists" class="small-box-footer"><i class="fa fa-arrow-circle-left"></i>
+                        <a href="#" class="small-box-footer"><i class="fa fa-arrow-circle-left"></i>
                             اطلاعات بیشتر </a>
                     </div>
                 </div>

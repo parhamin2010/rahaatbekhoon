@@ -76,7 +76,7 @@ class model_user extends Model
         $this->doQuery($sql, $value);
         echo "delete";
     }
- 
+    
     function submitEdit($post, $check)
     {
         if ($post['password-new']) {

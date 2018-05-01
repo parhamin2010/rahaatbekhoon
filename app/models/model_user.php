@@ -14,7 +14,7 @@ class model_user extends Model
         $data = self::doSelect($sql);
         return $data;
     }
-
+ 
     function getsuggestNews()
     {
         $sql = "SELECT a.*,b.name FROM tbl_news a

@@ -33,21 +33,6 @@ class model_about extends Model
         return $result;
     }
 
-    function getBestSellingTrack()
-    {
-        $sql = "SELECT p_id,p_name,p_publication_date,s_name,s_id,i_image
-                FROM tbl_product a 
-                LEFT JOIN tbl_album b 
-                ON a.album_id=b.a_id 
-                LEFT JOIN tbl_artist c 
-                ON b.artist_id=c.s_id 
-                LEFT JOIN tbl_images d
-                on a.images_id=d.i_id
-                WHERE a.p_status=1 ORDER BY p_publication_date DESC LIMIT 6";
-        $result = $this->doSelect($sql);
-        return $result;
-    }
-
 }
 
 

@@ -83,8 +83,8 @@ $values = implode(',', $values);
                     <!-- small box -->
                     <div class="small-box bg-aqua">
                         <div class="inner">
-                            <h3><?= $data['bannerTop']['newsCount']['0']['Count'] ?></h3>
                             <p>اخبار ثبت شده</p>
+                            <h4 style="margin-top: 30px;margin-bottom:12px"><?= $data['bannerTop']['newsCount']['0']['Count'] ?></h4>
                         </div>
                         <div class="icon">
                             <i style="padding: 10px 0;font-size: 80px;" class="ion ion-ios-paper-outline"></i>
@@ -98,9 +98,8 @@ $values = implode(',', $values);
                     <!-- small box -->
                     <div class="small-box bg-green">
                         <div class="inner">
-                            <h3><?= $data['bannerTop']['vipNews']['0']['Count'] ?></h3>
-
                             <p>نشریات ثبت شده</p>
+                            <h4 style="margin-top: 30px;margin-bottom:12px"><?= $data['bannerTop']['vipNews']['0']['Count'] ?></h4>
                         </div>
                         <div class="icon">
                             <i style="padding: 10px 0;font-size: 80px;" class="ion ion-android-done-all"></i>
@@ -114,9 +113,8 @@ $values = implode(',', $values);
                     <!-- small box -->
                     <div class="small-box bg-yellow">
                         <div class="inner">
-                            <h3><?= $data['bannerTop']['userCount']['0']['Count'] ?></h3>
-                            <!--              print_r($data['bannerTop']);              -->
                             <p>کاربران ثبت شده</p>
+                            <h4 style="margin-top: 30px;margin-bottom:12px"><?= $data['bannerTop']['userCount']['0']['Count'] ?></h4>
                         </div>
                         <div class="icon">
                             <i class="ion ion-ios-person-outline"></i>
@@ -130,14 +128,14 @@ $values = implode(',', $values);
                     <!-- small box -->
                     <div class="small-box bg-red">
                         <div class="inner">
-                            <h3><?= $data['bannerTop']['artistCount']['0']['Count'] ?></h3>
+                            <p>آخرین بررسی</p>
+                            <h5 style="margin-top: 30px;margin-bottom:12px"><?= file_get_contents("lastUpdateNews.txt"); ?></h5>
 
-                            <p>تعداد بازدید مطالب</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-ios-glasses-outline"></i>
+                            <i style="padding: 10px 0;font-size: 80px;" class="ion ion-ios-reload"></i>
                         </div>
-                        <a href="#" class="small-box-footer"><i class="fa fa-arrow-circle-left"></i>
+                        <a style="cursor:pointer" data-toggle="modal" data-target="#info-Modal1" class="small-box-footer"><i class="fa fa-arrow-circle-left"></i>
                             اطلاعات بیشتر </a>
                     </div>
                 </div>
@@ -176,7 +174,7 @@ $values = implode(',', $values);
                     <!-- TABLE: LATEST ORDERS -->
                     <div class="box box-info">
                         <div class="box-header with-border">
-                            <h3 class="box-title">آخرین مطالب</h3>
+                            <h3 class="box-title">آخرین اخبار ثبت شده</h3>
 
                             <div class="box-tools pull-right">
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
@@ -300,6 +298,31 @@ $values = implode(',', $values);
             <!-- /.row -->
         </section>
         <!-- /.content -->
+
+        <div dir="rtl" class="modal fade" id="info-Modal1" role="dialog">
+            <div class="modal-dialog" style="width: 300px;">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="color: #fff;background: #2484c6;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">آخرین بررسی</h4>
+                    </div>
+                    <div class="modal-body" style="padding: 0 15px;text-align: right;text-align: right;">
+                        <div id="form-regular-delete" class="login-fold" style="display: inline;block">
+                            <p class="email-wrap">
+                                <label style="font-size: .9em;color: #777;display: inline-block;margin-top: 10px;font-weight: 700;">در این بخش آخرین زمان بررسی تعداد اعضای کانال ها مشخص می گردد.<br/><br/>
+                                    برای تنظیم زمان مورد نظر می بایست در کرون جاب هاست تنظیمات مربوطه را انجام دهید.</label>
+                                <input id="del-val" type="hidden" value="#"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer"
+                         style="margin-top: 10px !important;font-size: .8em;background: #f8f8f8;padding: 15px;text-align: left;border-bottom: 1px solid #e5e5e5;">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">متوجه شدم</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">

@@ -16,11 +16,9 @@ class model_notfound extends Model
 
     function getsuggestNews()
     {
-        $sql = "SELECT a.*,b.name,c.i_image,c.i_id FROM tbl_news a
+        $sql = "SELECT a.*,b.name FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
-                LEFT JOIN tbl_images c 
-                ON a.image_id=c.i_id
                 WHERE a.status=1
                 ORDER BY rand() DESC LIMIT 4";
         $result = $this->doSelect($sql);

@@ -51,5 +51,5 @@
             }
         }
     }
-    file_put_contents("lastUpdateNews.txt", jdate('l, Y/n/d'));
+    file_put_contents("lastUpdateNews.txt", jdate('l, H:i:s Y/n/d'));
 ?>

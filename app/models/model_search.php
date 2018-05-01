@@ -25,21 +25,6 @@ class model_search extends Model
         return $result;
     }
 
-    function getBestSellingTrack()
-    {
-        $sql = "SELECT p_id,p_name,p_publication_date,s_name,s_id,i_image
-                FROM tbl_product a 
-                LEFT JOIN tbl_album b 
-                ON a.album_id=b.a_id 
-                LEFT JOIN tbl_artist c 
-                ON b.artist_id=c.s_id 
-                LEFT JOIN tbl_images d
-                ON a.images_id=d.i_id
-                WHERE a.p_status=1 ORDER BY p_publication_date DESC LIMIT 6";
-        $result = $this->doSelect($sql);
-        return $result;
-    }
-
     function Find()
     {
         $search = $_POST['getInfo'];
@@ -61,8 +46,6 @@ class model_search extends Model
         $sql = "SELECT * FROM tbl_album a
                 LEFT JOIN tbl_artist c
                 ON a.artist_id = c.s_id
-                LEFT JOIN tbl_images d
-                ON a.a_cover = d.i_image
                 WHERE  a.a_name LIKE '%" . $search . "%'";
         $result['findAlbum'] = $this->doSelect($sql);
 

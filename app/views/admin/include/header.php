@@ -1,11 +1,11 @@
 <!-- Logo -->
-<a href="<?= URL; ?>adminpanel/dashboard" class="logo">
+<a href="<?= URL; ?>" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
     <span class="logo-mini">
                 <img src="public/images/favicon/favicon-32x32.png">
             </span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>پنل</b> مدیریت</span>
+    <span class="logo-lg">مدیریت پنل <b><?= NAME; ?></b></span>
 </a>
 
 <!-- Header Navbar: style can be found in header.less -->

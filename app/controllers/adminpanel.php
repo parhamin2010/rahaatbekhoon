@@ -271,6 +271,23 @@ class adminPanel extends Controller
         }
     }
 
+    function ads()
+    {
+        if ($this->checkLoginAdmin == false) {
+            header("Location:" . URL . "adminpanel/login");
+        } else {
+            Model::sessionInit();
+            $AdminID = Model::sessionGet('adminId');
+            $infoAdmin = $this->model->getinfoAdmin($AdminID);
+            $userGetlist = $this->model->userGetlist();
+            $newComment = $this->model->getnewComment();
+            $newContact = $this->model->getnewContact();
+            $data = array('users' => $userGetlist, 'infoAdmin' => $infoAdmin, 'newComment' => $newComment,
+                'newContact' => $newContact);
+            $this->view('admin/ads', $data);
+        }
+    }
+
     function comments()
     {
         if ($this->checkLoginAdmin == false) {

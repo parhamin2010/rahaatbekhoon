@@ -1,5 +1,5 @@
 .skin-blue .main-header .navbar {
-    background-color: #3c8dbc
+    background-color: #6f0000
 }
 
 .skin-blue .main-header .navbar .nav > li > a {
@@ -25,7 +25,7 @@
 }
 
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-    background-color: #367fa9
+    background-color: #9f191f
 }
 
 @media (max-width: 767px) {
@@ -38,22 +38,22 @@
     }
 
     .skin-blue .main-header .navbar .dropdown-menu li a:hover {
-        background: #367fa9
+        background: #9f191f
     }
 }
 
 .skin-blue .main-header .logo {
-    background-color: #367fa9;
+    background-color: #9f191f;
     color: #fff;
     border-bottom: 0 solid transparent
 }
 
 .skin-blue .main-header .logo:hover {
-    background-color: #357ca5
+    background-color: #6f0000
 }
 
 .skin-blue .main-header li.user-header {
-    background-color: #3c8dbc
+    background-color: #6f0000
 }
 
 .skin-blue .content-header {
@@ -84,7 +84,7 @@
 .skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
     color: #fff;
     background: #1e282c;
-    border-right-color: #3c8dbc
+    border-right-color: #6f0000
 }
 
 .skin-blue .sidebar-menu > li > .treeview-menu {
@@ -150,17 +150,17 @@
 }
 
 .skin-blue.layout-top-nav .main-header > .logo {
-    background-color: #3c8dbc;
+    background-color: #6f0000;
     color: #fff;
     border-bottom: 0 solid transparent
 }
 
 .skin-blue.layout-top-nav .main-header > .logo:hover {
-    background-color: #3b8ab8
+    background-color: #9f191f
 }
 
 .skin-blue-light .main-header .navbar {
-    background-color: #3c8dbc
+    background-color: #6f0000
 }
 
 .skin-blue-light .main-header .navbar .nav > li > a {
@@ -186,7 +186,7 @@
 }
 
 .skin-blue-light .main-header .navbar .sidebar-toggle:hover {
-    background-color: #367fa9
+    background-color: #9f191f
 }
 
 @media (max-width: 767px) {
@@ -199,22 +199,22 @@
     }
 
     .skin-blue-light .main-header .navbar .dropdown-menu li a:hover {
-        background: #367fa9
+        background: #9f191f
     }
 }
 
 .skin-blue-light .main-header .logo {
-    background-color: #3c8dbc;
+    background-color: #6f0000;
     color: #fff;
     border-bottom: 0 solid transparent
 }
 
 .skin-blue-light .main-header .logo:hover {
-    background-color: #3b8ab8
+    background-color: #9f191f
 }
 
 .skin-blue-light .main-header li.user-header {
-    background-color: #3c8dbc
+    background-color: #6f0000
 }
 
 .skin-blue-light .content-header {
@@ -255,7 +255,7 @@
 }
 
 .skin-blue-light .sidebar-menu > li.active {
-    border-right-color: #3c8dbc
+    border-right-color: #6f0000
 }
 
 .skin-blue-light .sidebar-menu > li.active > a {
@@ -338,13 +338,13 @@
 }
 
 .skin-blue.layout-top-nav .main-header > .logo {
-    background-color: #3c8dbc;
+    background-color: #6f0000;
     color: #fff;
     border-bottom: 0 solid transparent
 }
 
 .skin-blue.layout-top-nav .main-header > .logo:hover {
-    background-color: #3b8ab8
+    background-color: #9f191f
 }
 
 .skin-black .main-header {

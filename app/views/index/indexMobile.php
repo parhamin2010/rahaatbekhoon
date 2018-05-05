@@ -1320,6 +1320,7 @@ Model::sessionInit();
                                         <?= $newsInfo['name']; ?>
                                     </p>
                                 <img style="width: 100%;height: 100%" class="incredible__image"
+                                     onerror="this.src='public/images/default.png'"
                                      src="<?= $newsInfo['image']; ?>">
                             </span>
                             <div>
@@ -1360,6 +1361,7 @@ Model::sessionInit();
                                         <?= $newsInfo['name']; ?>
                                     </p>
                                 <img style="width: 100%;height: 100%" class="incredible__image"
+                                     onerror="this.src='public/images/default.png'"
                                      src="<?= $newsInfo['image']; ?>">
                             </span>
                             <div>

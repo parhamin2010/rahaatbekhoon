@@ -138,6 +138,13 @@
                 } ?>
             </a>
         </li>
+        <li class="treeview <?php if ($activeMenu == 'ads') {
+            echo 'active';
+        } ?>">
+            <a href="adminpanel/ads">
+                <i class="fa fa-trello fa-fw"></i> <span>تبلیغات</span>
+            </a>
+        </li>
         <li class="treeview <?php if ($activeMenu == 'setting') {
             echo 'active';
         } ?>">

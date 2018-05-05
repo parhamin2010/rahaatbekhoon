@@ -983,7 +983,7 @@ button, input[type=button], input[type=file], input[type=reset], input[type=subm
 
 .social-networks [class*=icon-] {
     font-size: 20px;
-    margin-right: 25px;
+    margin-right: 12px;
     cursor: pointer
 }
 
@@ -3808,7 +3808,7 @@ label.check-handler input[type=checkbox]:checked + ._check:before, label.check-h
 }
 
 .carousel__body__item .item__details {
-    margin: 0 190px 20px 5px
+    margin: 0 20px 20px;
 }
 
 .carousel__body__item .item__details--img {

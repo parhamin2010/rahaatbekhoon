@@ -3,7 +3,7 @@
     define('URL_FOOTER', "http://raahatbekhon.ir");
     define('SERVER_NAME', "localhost");
     define('NAME', "راحت بخون");
-    define('VERSION', "0.0.1");
+    define('VERSION', "1.5.0");
     define('USERNAME', "root");
     define('PASSWORD', "");
     define('PREFIX', "");

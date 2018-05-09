@@ -1,12 +1,12 @@
 <?php
-Model::sessionInit();
-$activeMenu = 'dashboard';
-$activeSubMenu = 'not';
-$orderStat = $data['orderStat'];
-$keys = array_keys($orderStat);
-
-$values = array_values($orderStat);
-$values = implode(',', $values);
+    Model::sessionInit();
+    $activeMenu = 'dashboard';
+    $activeSubMenu = 'not';
+    $orderStat = $data['orderStat'];
+    $keys = array_keys($orderStat);
+    
+    $values = array_values($orderStat);
+    $values = implode(',', $values);
 ?>
 <!DOCTYPE html>
 <html>
@@ -84,7 +84,7 @@ $values = implode(',', $values);
                     <div class="small-box bg-aqua">
                         <div class="inner">
                             <p>اخبار ثبت شده</p>
-                            <h4 style="margin-top: 30px;margin-bottom:12px"><?= $data['bannerTop']['newsCount']['0']['Count'] ?></h4>
+                            <h4 style="margin-top: 30px;margin-bottom:12px"><?= number_format($data['bannerTop']['newsCount']['0']['Count']); ?></h4>
                         </div>
                         <div class="icon">
                             <i style="padding: 10px 0;font-size: 80px;" class="ion ion-ios-paper-outline"></i>
@@ -99,7 +99,7 @@ $values = implode(',', $values);
                     <div class="small-box bg-green">
                         <div class="inner">
                             <p>نشریات ثبت شده</p>
-                            <h4 style="margin-top: 30px;margin-bottom:12px"><?= $data['bannerTop']['vipNews']['0']['Count'] ?></h4>
+                            <h4 style="margin-top: 30px;margin-bottom:12px"><?= number_format($data['bannerTop']['vipNews']['0']['Count']); ?></h4>
                         </div>
                         <div class="icon">
                             <i style="padding: 10px 0;font-size: 80px;" class="ion ion-android-done-all"></i>
@@ -114,7 +114,7 @@ $values = implode(',', $values);
                     <div class="small-box bg-yellow">
                         <div class="inner">
                             <p>کاربران ثبت شده</p>
-                            <h4 style="margin-top: 30px;margin-bottom:12px"><?= $data['bannerTop']['userCount']['0']['Count'] ?></h4>
+                            <h4 style="margin-top: 30px;margin-bottom:12px"><?= number_format($data['bannerTop']['userCount']['0']['Count']); ?></h4>
                         </div>
                         <div class="icon">
                             <i class="ion ion-ios-person-outline"></i>
@@ -196,31 +196,31 @@ $values = implode(',', $values);
                                     </tr>
                                     </thead>
                                     <tbody>
-
+                                    
                                     <?php
-                                    $all_order_data = $data['latesrNews'];
-                                    if (sizeof($all_order_data) > 0) {
-                                        foreach ($all_order_data as $order_data) {
+                                        $all_order_data = $data['latesrNews'];
+                                        if (sizeof($all_order_data) > 0) {
+                                            foreach ($all_order_data as $order_data) {
+                                                ?>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="<?= URL; ?>news/<?= $order_data['n_id']; ?>"><?= Model::summary($order_data['title'],70); ?></a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="<?= URL; ?>topic/category/<?= $order_data['id']; ?>"><?= $order_data['name']; ?></a>
+                                                    </td>
+                                                    <td>
+                                                        <?= $order_data['date_created']; ?>
+                                                    </td>
+                                                </tr>
+                                            <?php }
+                                        } else {
                                             ?>
-                                            <tr>
-                                                <td>
-                                                    <a target="_blank" href="<?= URL; ?>news/<?= $order_data['n_id']; ?>"><?= Model::summary($order_data['title'],70); ?></a>
-                                                </td>
-                                                <td>
-                                                    <a target="_blank" href="<?= URL; ?>topic/category/<?= $order_data['id']; ?>"><?= $order_data['name']; ?></a>
-                                                </td>
-                                                <td>
-                                                    <?= $order_data['date_created']; ?>
-                                                </td>
-                                            </tr>
-                                        <?php }
-                                    } else {
-                                        ?>
-                                        <div class="text-center" style="padding-bottom: 10px !important;">
-                                            متاسفانه در حال حاضر محصولی را خریداری نکرده اید!
-                                        </div>
-                                        <?php
-                                    }
+                                            <div class="text-center" style="padding-bottom: 10px !important;">
+                                                متاسفانه در حال حاضر محصولی را خریداری نکرده اید!
+                                            </div>
+                                            <?php
+                                        }
                                     ?>
                                     </tbody>
                                 </table>
@@ -255,35 +255,35 @@ $values = implode(',', $values);
                         <div class="box-body no-padding">
                             <ul class="users-list clearfix">
                                 <?php
-                                $all_user_data = $data['userGetlatest'];
-                                foreach ($all_user_data as $user_data) {
-                                    if ($user_data['image'] == "0") {
-                                        $url = "https://www.gravatar.com/avatar/" . md5(strtolower(trim($user_data['email']))) . "?d=identicon&r=x";
-                                    } else {
-                                        $url = $user_data['image'];
-                                    }
-                                    ?>
+                                    $all_user_data = $data['userGetlatest'];
+                                    foreach ($all_user_data as $user_data) {
+                                        if ($user_data['image'] == "0") {
+                                            $url = "https://www.gravatar.com/avatar/" . md5(strtolower(trim($user_data['email']))) . "?d=identicon&r=x";
+                                        } else {
+                                            $url = $user_data['image'];
+                                        }
+                                        ?>
 
-                                    <li>
-                                        <img onerror="this.src='public/images/user-default-image.jpg'" width="80px"
-                                             src="<?= $url; ?>" alt="User Image">
-                                        <a class="users-list-name" href="#" dir="rtl"
-                                           title="<?= $user_data['name']; ?>"><?= $user_data['name']; ?></a>
-                                        <span class="users-list-date" title="<?= $user_data['registery_date']; ?>">
+                                        <li>
+                                            <img onerror="this.src='public/images/user-default-image.jpg'" width="80px"
+                                                 src="<?= $url; ?>" alt="User Image">
+                                            <a class="users-list-name" href="#" dir="rtl"
+                                               title="<?= $user_data['name']; ?>"><?= $user_data['name']; ?></a>
+                                            <span class="users-list-date" title="<?= $user_data['registery_date']; ?>">
                                             <?php
-                                            $date = Model::jaliliToMiladi($user_data['registery_date']);
-                                            $resDate = Model::days_away_to($date);
-                                            if ($resDate == 0) {
-                                                echo "امروز";
-                                            } else if ($resDate == 1) {
-                                                echo "دیروز";
-                                            } else {
-                                                echo $resDate . " روز قبل";
-                                            }
+                                                $date = Model::jaliliToMiladi($user_data['registery_date']);
+                                                $resDate = Model::days_away_to($date);
+                                                if ($resDate == 0) {
+                                                    echo "امروز";
+                                                } else if ($resDate == 1) {
+                                                    echo "دیروز";
+                                                } else {
+                                                    echo $resDate . " روز قبل";
+                                                }
                                             ?>
                                         </span>
-                                    </li>
-                                <?php } ?>
+                                        </li>
+                                    <?php } ?>
                             </ul>
                             <!-- /.users-list -->
                         </div>

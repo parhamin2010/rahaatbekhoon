@@ -4,7 +4,7 @@
     $UserID = Model::sessionGet('userId');
     $UserEmail = Model::sessionGet('email');
     $UserName = Model::sessionGet('name');
-    $desc=json_decode($data['getNewsFullText'], true);
+    $desc = json_decode($data['getNewsFullText'], TRUE);
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#" style="transform: none;">
@@ -159,13 +159,13 @@
                     <div class="main__content" style="transform: none;">
                         <div class="topics wrapper" style="transform: none;margin-bottom: 40px;">
                             <div class="topics__content">
-                                <div class="post-module post-368348 post type-post status-publish format-standard has-post-thumbnail hentry category-74 category-94 category-87 category-89 tag-flamethrower tag-the-boring-company tag-46990 tag-518 tag-133"
+                                <div class="post-module row post-368348 post type-post status-publish format-standard has-post-thumbnail hentry category-74 category-94 category-87 category-89 tag-flamethrower tag-the-boring-company tag-46990 tag-518 tag-133"
                                      id="post-368348" style="padding: 0 30px;">
                                     <article>
-                                        <div class="post-module__content">
-                                            <?php if($news[0]['image']!=null){?>
+                                        <div class="col-md-12">
+                                            <?php if ($news[0]['image'] != NULL) { ?>
                                                 <figure class="post-attachment"
-                                                        style="margin-bottom: 10px;float: left;position: relative;padding: 10px">
+                                                        style="float: right;position: relative;padding: 10px">
                                                     <a href="<?= $news[0]['image']; ?>"
                                                        data-lightbox="image-1"
                                                        data-title="<?= $news[0]['title']; ?>">
@@ -181,16 +181,25 @@
                                                 </figure>
                                             <?php } ?>
 
-                                            <p style="position: relative;text-align: justify;direction: rtl">
-                                    <span style="text-align: right">
-                                        <?= $news[0]['date_created'] ?>
-                                    </span>
-                                            <p style="font-weight: bold;font-size: 14pt">
-                                                <?= $news[0]['title'] ?>
-                                            </p>
-                                            <p style="position: relative;text-align: justify;direction: rtl;margin-top: -20px">
-                                                <?= htmlspecialchars_decode($desc['rss']['channel']['item']['description'])!="[unable to retrieve full-text content]" ? htmlspecialchars_decode($desc['rss']['channel']['item']['description']):htmlspecialchars_decode($news[0]['description']); ?>
-                                            </p>
+                                        </div>
+                                        <div class="col-md-12" style="margin-top: 20px">
+                                            <div class="row">
+                                                <div class="col-md-2" style="margin-top: 5px;">
+                                                    <span style="text-align: right">
+                                                        <?= $news[0]['time'] . " - " . $news[0]['date_created'] ?>
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-10" style="line-height: 2;">
+                                                    <p style="margin-bottom: 36px;font-weight: bold;font-size: 11pt">
+                                                        <?= $news[0]['title'] ?>
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-12" style="font-size: 10pt;line-height: 2;">
+                                                    <p style="position: relative;text-align: justify;direction: rtl;margin-top: -20px">
+                                                        <?= htmlspecialchars_decode($desc['rss']['channel']['item']['description']) != "[unable to retrieve full-text content]" ? htmlspecialchars_decode($desc['rss']['channel']['item']['description']) : htmlspecialchars_decode($news[0]['description']); ?>
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                         <?php
                                             if ($news[0]['tag'] != '0') {
@@ -214,8 +223,9 @@
                                             }
                                         ?>
                                     </article>
-                                    <div class="col-md-12 col-sm-12 ">
-                                        <div style="color: #9ba4ab;float: left;">
+                                    <div class="col-md-12 col-sm-12 " style="margin-top: 20px;">
+                                        <div class="col-md-6" style="padding-left: 0px;">
+                                            <div style="color: #9ba4ab;float: left;">
                                                 <span class="social-networks">
                                                          <a class="icon-telegram" rel="nofollow"
                                                             href="https://telegram.me/share/url?url=<?= URL ?>news/<?= $news[0]['n_id'] ?>&amp;text=<?= $news[0]['title'] ?>"
@@ -242,6 +252,16 @@
                                                             target="_blank">
                                                          </a>
                                                    </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" style="padding-right: 0px;">
+                                            <div class="post-module__content" style="font-size: 10pt;">
+                                                <span> منبع :</span>&nbsp;
+                                                <a style="color: inherit" title="<?= $news[0]['sourceName']; ?>"
+                                                   href="<?= $news[0]['link']; ?>" target="_blank">
+                                                    <?= $news[0]['sourceName']; ?>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <section>
@@ -282,10 +302,11 @@
                                     <div class="comments-template">
                                         <div class="_sep"></div>
                                         <?php
-                                            if ($UserID == false) {
+                                            if ($UserID == FALSE) {
                                                 ?>
                                                 <div id="respond" class="comment-respond">
-                                                    <label class="info-title" for="InputComments">برای ثبت نظر می بایست ابتدا
+                                                    <label class="info-title" for="InputComments">برای ثبت نظر می بایست
+                                                        ابتدا
                                                         <a style="cursor: pointer" data-toggle="modal"
                                                            data-target="#Google-Login-Modal"
                                                            id="signin">وارد</a> شوید.</label>
@@ -293,11 +314,13 @@
                                             
                                             <?php } else { ?>
                                                 <div id="respond" class="comment-respond">
-                                                    <strong id="reply-title" class="comment-reply-title" style="float: right">دیدگاه شما
+                                                    <strong id="reply-title" class="comment-reply-title"
+                                                            style="float: right">دیدگاه شما
                                                         <small>
                                                             <a rel="nofollow" id="cancel-comment-reply-link"
                                                                href="blog//#respond"
-                                                               style="display:none;"><i class="icon-close"></i>انصراف</a>
+                                                               style="display:none;"><i
+                                                                        class="icon-close"></i>انصراف</a>
                                                         </small>
                                                     </strong>
                                                     <br>
@@ -323,14 +346,16 @@
                                                         </div>
 
                                                         <div class="comment-form-comment">
-                                            <textarea id="InputComments" name="InputComments" style="border: 0;overflow: hidden;"
+                                            <textarea id="InputComments" name="InputComments"
+                                                      style="border: 0;overflow: hidden;"
                                                       class="form-control" cols="45"
                                                       rows="8" aria-required="true"
                                                       placeholder="ثبت دیدگاه"></textarea>
                                                         </div>
                                                         <p class="form-submit" style="margin-top: 45px">
                                                             <button id="btn-send-comment"
-                                                                    style="float:left;color: #000;border: 1px solid;" type="button"
+                                                                    style="float:left;color: #000;border: 1px solid;"
+                                                                    type="button"
                                                                     class="comment-submit-btn btn-upper btn btn-primary checkout-page-button">
                                                                 ارسال دیدگاه
                                                             </button>
@@ -346,7 +371,8 @@
                                                     ?>
                                                     <div class="module-title">
                                                         <div class="module-title__txt">
-                                                            <strong class="bold heading"><?= sizeof($comments); ?> دیدگاه</strong>
+                                                            <strong class="bold heading"><?= sizeof($comments); ?>
+                                                                دیدگاه</strong>
                                                         </div>
                                                         <div class="module-title__sep"></div>
                                                     </div>
@@ -439,6 +465,7 @@
                                                             <div class="detail-wrapper">
                                                                 <a href="news/<?= $newsInfo['n_id']; ?>"
                                                                    title="<?= $newsInfo['title']; ?>"
+                                                                   style="font-size: 11px;"
                                                                    class="detail-wrapper__title"><?= Model::summary($newsInfo['title'], 90); ?></a>
                                                                 <div class="detail-wrapper__time"
                                                                      style="text-align: left">
@@ -555,7 +582,8 @@
             <script>(function (w, d, s, l, i) {
                     w[l] = w[l] || [];
                     w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-                    var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                    var f = d.getElementsByTagName(s)[0], j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
                     j.async = true;
                     j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
                     f.parentNode.insertBefore(j, f);
@@ -618,7 +646,6 @@
                     src='public/js/video-js-player.min.js?ver=2.0.5'></script>
 
             <script type='text/javascript' src='public/js/media-player.min.js?ver=2.0.5'></script>
-
 
 
 </body>

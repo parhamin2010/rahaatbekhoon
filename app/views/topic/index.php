@@ -6,7 +6,7 @@
 <head>
     <base href="<?= URL; ?>">
     <meta charset="UTF-8">
-    <title><?= NAME; ?> | لیست اخبار</title>
+    <title><?= NAME; ?> | لیست اخبار <?= $data['getNews'][0]['name']; ?></title>
 
     <meta name="description"
           content="<?= NAME; ?>"/>
@@ -111,11 +111,6 @@
                                                        class="image__badge"><?= $newsInfo['name'] ?></a>
                                                     <span class="image__fav">
                                                             <span class="popularity">
-                                                              <span class="popularity__comments">
-                                                                <i class="icon-comment"></i>
-                                                                <span style="margin-top: -5px;margin-left: 5px;"
-                                                                      class="popularity__comments--num">۰</span>
-                                                              </span>
                                                               <span class="popularity__likes">
                                                                 <i class="icon-view"></i>
                                                                 <span style="margin-top: -5px;margin-left: 5px;"

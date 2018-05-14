@@ -1,9 +1,10 @@
 <?php
-Model::sessionInit();
-$news = $data['getNews'];
-$UserID = Model::sessionGet('userId');
-$UserEmail = Model::sessionGet('email');
-$UserName = Model::sessionGet('name');
+    Model::sessionInit();
+    $news = $data['getNews'];
+    $UserID = Model::sessionGet('userId');
+    $UserEmail = Model::sessionGet('email');
+    $UserName = Model::sessionGet('name');
+    $desc = json_decode($data['getNewsFullText'], TRUE);
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#" style="transform: none;">

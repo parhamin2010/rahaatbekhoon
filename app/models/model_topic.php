@@ -101,11 +101,6 @@ class model_topic extends Model
                                                        class="image__badge">' . $result['name'] . '</a>
                                                     <span class="image__fav">
                                                             <span class="popularity">
-                                                              <span class="popularity__comments">
-                                                                <i class="icon-comment"></i>
-                                                                <span style="margin-top: -5px;margin-left: 5px;"
-                                                                      class="popularity__comments--num">۰</span>
-                                                              </span>
                                                               <span class="popularity__likes">
                                                                 <i class="icon-view"></i>
                                                                 <span style="margin-top: -5px;margin-left: 5px;"

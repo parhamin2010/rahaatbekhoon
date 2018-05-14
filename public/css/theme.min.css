@@ -4616,7 +4616,7 @@ body.page-template-page-video .media-page {
 }
 
 .post-nav__body .related-posts__item {
-    min-height: 110px;
+    min-height: 80px;
     border-right: 5px solid transparent;
     padding: 10px 10px 10px 10px;
     cursor: pointer

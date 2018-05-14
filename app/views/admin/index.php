@@ -1,12 +1,12 @@
 <?php
-    Model::sessionInit();
-    $activeMenu = 'dashboard';
-    $activeSubMenu = 'not';
-    $orderStat = $data['orderStat'];
-    $keys = array_keys($orderStat);
-    
-    $values = array_values($orderStat);
-    $values = implode(',', $values);
+Model::sessionInit();
+$activeMenu = 'dashboard';
+$activeSubMenu = 'not';
+$orderStat = $data['orderStat'];
+$keys = array_keys($orderStat);
+
+$values = array_values($orderStat);
+$values = implode(',', $values);
 ?>
 <!DOCTYPE html>
 <html>
@@ -196,31 +196,31 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    
+
                                     <?php
-                                        $all_order_data = $data['latesrNews'];
-                                        if (sizeof($all_order_data) > 0) {
-                                            foreach ($all_order_data as $order_data) {
-                                                ?>
-                                                <tr>
-                                                    <td>
-                                                        <a target="_blank" href="<?= URL; ?>news/<?= $order_data['n_id']; ?>"><?= Model::summary($order_data['title'],70); ?></a>
-                                                    </td>
-                                                    <td>
-                                                        <a target="_blank" href="<?= URL; ?>topic/category/<?= $order_data['id']; ?>"><?= $order_data['name']; ?></a>
-                                                    </td>
-                                                    <td>
-                                                        <?= $order_data['date_created']; ?>
-                                                    </td>
-                                                </tr>
-                                            <?php }
-                                        } else {
+                                    $all_order_data = $data['latesrNews'];
+                                    if (sizeof($all_order_data) > 0) {
+                                        foreach ($all_order_data as $order_data) {
                                             ?>
-                                            <div class="text-center" style="padding-bottom: 10px !important;">
-                                                متاسفانه در حال حاضر محصولی را خریداری نکرده اید!
-                                            </div>
-                                            <?php
-                                        }
+                                            <tr>
+                                                <td>
+                                                    <a target="_blank" href="<?= URL; ?>news/<?= $order_data['n_id']; ?>"><?= Model::summary($order_data['title'],70); ?></a>
+                                                </td>
+                                                <td>
+                                                    <a target="_blank" href="<?= URL; ?>topic/category/<?= $order_data['id']; ?>"><?= $order_data['name']; ?></a>
+                                                </td>
+                                                <td>
+                                                    <?= $order_data['date_created']; ?>
+                                                </td>
+                                            </tr>
+                                        <?php }
+                                    } else {
+                                        ?>
+                                        <div class="text-center" style="padding-bottom: 10px !important;">
+                                            متاسفانه در حال حاضر محصولی را خریداری نکرده اید!
+                                        </div>
+                                        <?php
+                                    }
                                     ?>
                                     </tbody>
                                 </table>
@@ -255,35 +255,35 @@
                         <div class="box-body no-padding">
                             <ul class="users-list clearfix">
                                 <?php
-                                    $all_user_data = $data['userGetlatest'];
-                                    foreach ($all_user_data as $user_data) {
-                                        if ($user_data['image'] == "0") {
-                                            $url = "https://www.gravatar.com/avatar/" . md5(strtolower(trim($user_data['email']))) . "?d=identicon&r=x";
-                                        } else {
-                                            $url = $user_data['image'];
-                                        }
-                                        ?>
+                                $all_user_data = $data['userGetlatest'];
+                                foreach ($all_user_data as $user_data) {
+                                    if ($user_data['image'] == "0") {
+                                        $url = "https://www.gravatar.com/avatar/" . md5(strtolower(trim($user_data['email']))) . "?d=identicon&r=x";
+                                    } else {
+                                        $url = $user_data['image'];
+                                    }
+                                    ?>
 
-                                        <li>
-                                            <img onerror="this.src='public/images/user-default-image.jpg'" width="80px"
-                                                 src="<?= $url; ?>" alt="User Image">
-                                            <a class="users-list-name" href="#" dir="rtl"
-                                               title="<?= $user_data['name']; ?>"><?= $user_data['name']; ?></a>
-                                            <span class="users-list-date" title="<?= $user_data['registery_date']; ?>">
+                                    <li>
+                                        <img onerror="this.src='public/images/user-default-image.jpg'" width="80px"
+                                             src="<?= $url; ?>" alt="User Image">
+                                        <a class="users-list-name" href="#" dir="rtl"
+                                           title="<?= $user_data['name']; ?>"><?= $user_data['name']; ?></a>
+                                        <span class="users-list-date" title="<?= $user_data['registery_date']; ?>">
                                             <?php
-                                                $date = Model::jaliliToMiladi($user_data['registery_date']);
-                                                $resDate = Model::days_away_to($date);
-                                                if ($resDate == 0) {
-                                                    echo "امروز";
-                                                } else if ($resDate == 1) {
-                                                    echo "دیروز";
-                                                } else {
-                                                    echo $resDate . " روز قبل";
-                                                }
+                                            $date = Model::jaliliToMiladi($user_data['registery_date']);
+                                            $resDate = Model::days_away_to($date);
+                                            if ($resDate == 0) {
+                                                echo "امروز";
+                                            } else if ($resDate == 1) {
+                                                echo "دیروز";
+                                            } else {
+                                                echo $resDate . " روز قبل";
+                                            }
                                             ?>
                                         </span>
-                                        </li>
-                                    <?php } ?>
+                                    </li>
+                                <?php } ?>
                             </ul>
                             <!-- /.users-list -->
                         </div>

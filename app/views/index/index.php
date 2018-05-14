@@ -216,7 +216,7 @@
                                                  alt="<?= $newsVipInfo['title'] ?>">
                                             <span style="margin-top: -33px;margin-right: 14px;padding: 3px 7px;background: #fff;color: #1d1d1d;width: fit-content;font-size: 12px;border-radius: 2px;"><?= $newsVipInfo['name'] ?></span>
                                             <span class="item__txt">
-                                                <span style="font-size: 10pt;text-align: right;"><?= Model::summary($newsVipInfo['title'], 100); ?></span>
+                                                <span style="font-size: 9pt;text-align: right;"><?= Model::summary($newsVipInfo['title'], 100); ?></span>
                                             </span>
                                             <span class="item__details">
                                                 <i class="icon-news"></i>
@@ -263,7 +263,7 @@
                         <div class="topics">
                             <div class="topics__content">
                                 <section class="masonry-gallery" style="    margin-right: 23px;">
-                                    <h2 class="disappear">آخرین نشریات</h2>
+                                    <h2 class="disappear">آخرین عنوان‌ها</h2>
                                     
                                     <?php
                                         foreach ($news as $newsInfo) {
@@ -273,8 +273,9 @@
                                                     <span class="image__mask"></span>
 
                                                     <img
-                                                            src="<?= $newsInfo['image'] ?>"
+                                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                                                             onerror="this.src='public/images/default.png'"
+                                                            data-lazy-src="<?= $newsInfo['image'] ?>"
                                                             width="284" height="180" class="image__img wp-post-image"
                                                             alt="<?= $newsInfo['title'] ?>">
 

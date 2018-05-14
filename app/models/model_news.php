@@ -68,10 +68,13 @@
         
         function getNews($id)
         {
-            $sql = "SELECT a.*,b.name FROM tbl_news a
+            $sql = "SELECT a.*,b.name,c.title as sourceName FROM tbl_news a
                 LEFT JOIN tbl_category b 
                 ON a.cat_id=b.id
+                LEFT JOIN tbl_rss c
+                ON a.source_id=c.r_id
                 WHERE a.status=1 AND a.n_id=? limit 4";
+            
             $result = $this->doSelect($sql, array($id));
             
             $image_id = @$result[0]['image_id'];

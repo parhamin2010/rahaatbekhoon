@@ -75,7 +75,6 @@ $activeSubMenu = 'newsManage';
                                     <th style="text-align:center">عنوان خبر</th>
                                     <th style="text-align:center;width: 150px">دسته بندی</th>
                                     <th style="text-align:center;width: 50px">تصویر</th>
-                                    <th style="text-align:center;width: 50px">بازدید</th>
                                     <th style="text-align:center;width: 80px">تاریخ ثبت</th>
                                     <th style="text-align:center;width: 100px">عملیات</th>
                                 </tr>
@@ -95,7 +94,6 @@ $activeSubMenu = 'newsManage';
                                                     style="width: 50px;height: 50px;border-radius: 5%;"
                                                     alt="<?= $newsInfo['title']; ?>"
                                                     src="<?= $newsInfo['image']; ?>"></td>
-                                        <td style="text-align:center;vertical-align: middle"><?= $newsInfo['view']; ?></td>
                                         <td style="text-align:center;vertical-align: middle"><?= $newsInfo['date_created']; ?></td>
                                         <td style="text-align:center;vertical-align: middle">
                                             <button data-toggle="modal"

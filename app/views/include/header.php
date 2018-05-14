@@ -100,7 +100,7 @@ $level = Model::sessionGet('level');
                     <a href="contact" title="ارتباط با ما">ارتباط با ما</a>
                 </li>
             </ul>
-            <div class="promotion-badge"><a href="raahatbekhar.com">فروشگاه اینترنتی راحت بخر</a></div>
+            <div class="promotion-badge"><a href="http://raahatbekhar.com" target="_blank">فروشگاه اینترنتی راحت بخر</a></div>
         </div>
     </div>
 </nav>

@@ -263,7 +263,7 @@
                         <div class="topics">
                             <div class="topics__content">
                                 <section class="masonry-gallery" style="    margin-right: 23px;">
-                                    <h2 class="disappear">آخرین عنوان‌ها</h2>
+                                    <h2 class="disappear">آخرین نشریات</h2>
                                     
                                     <?php
                                         foreach ($news as $newsInfo) {
@@ -273,9 +273,8 @@
                                                     <span class="image__mask"></span>
 
                                                     <img
-                                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                            src="<?= $newsInfo['image'] ?>"
                                                             onerror="this.src='public/images/default.png'"
-                                                            data-lazy-src="<?= $newsInfo['image'] ?>"
                                                             width="284" height="180" class="image__img wp-post-image"
                                                             alt="<?= $newsInfo['title'] ?>">
 

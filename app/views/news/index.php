@@ -4,6 +4,7 @@
     $UserID = Model::sessionGet('userId');
     $UserEmail = Model::sessionGet('email');
     $UserName = Model::sessionGet('name');
+    $desc=json_decode($data['getNewsFullText'], true);
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#" style="transform: none;">
@@ -163,21 +164,21 @@
                                     <article>
                                         <div class="post-module__content">
                                             <?php if($news[0]['image']!=null){?>
-                                            <figure class="post-attachment"
-                                                    style="margin-bottom: 10px;float: left;position: relative;padding: 10px">
-                                                <a href="<?= $news[0]['image']; ?>"
-                                                   data-lightbox="image-1"
-                                                   data-title="<?= $news[0]['title']; ?>">
-                                                    <img alt="<?= Model::summary($news[0]['title'], 100); ?>"
-                                                         onerror="this.src='public/images/default.png'"
-                                                         class="album-cover"
-                                                         style="height: 300px;border-radius: 10px"
-                                                         src="<?= $news[0]['image']; ?>"/>
-                                                    <div class="zoom-overlay"></div>
-                                                </a>
-                                                <figcaption class="hidden-seo">
-                                                </figcaption>
-                                            </figure>
+                                                <figure class="post-attachment"
+                                                        style="margin-bottom: 10px;float: left;position: relative;padding: 10px">
+                                                    <a href="<?= $news[0]['image']; ?>"
+                                                       data-lightbox="image-1"
+                                                       data-title="<?= $news[0]['title']; ?>">
+                                                        <img alt="<?= Model::summary($news[0]['title'], 100); ?>"
+                                                             onerror="this.src='public/images/default.png'"
+                                                             class="album-cover"
+                                                             style="height: 300px;border-radius: 10px"
+                                                             src="<?= $news[0]['image']; ?>"/>
+                                                        <div class="zoom-overlay"></div>
+                                                    </a>
+                                                    <figcaption class="hidden-seo">
+                                                    </figcaption>
+                                                </figure>
                                             <?php } ?>
 
                                             <p style="position: relative;text-align: justify;direction: rtl">
@@ -188,7 +189,7 @@
                                                 <?= $news[0]['title'] ?>
                                             </p>
                                             <p style="position: relative;text-align: justify;direction: rtl;margin-top: -20px">
-                                                <?= htmlspecialchars_decode($news[0]['description']) ?>
+                                                <?= htmlspecialchars_decode($desc['rss']['channel']['item']['description'])!="[unable to retrieve full-text content]" ? htmlspecialchars_decode($desc['rss']['channel']['item']['description']):htmlspecialchars_decode($news[0]['description']); ?>
                                             </p>
                                         </div>
                                         <?php
@@ -289,7 +290,7 @@
                                                            data-target="#Google-Login-Modal"
                                                            id="signin">وارد</a> شوید.</label>
                                                 </div><!-- #respond -->
-            
+                                            
                                             <?php } else { ?>
                                                 <div id="respond" class="comment-respond">
                                                     <strong id="reply-title" class="comment-reply-title" style="float: right">دیدگاه شما
@@ -396,7 +397,7 @@
                                                                         </div>
 
                                                                     </li><!-- #comment-## -->
-                                    
+                                                                    
                                                                     <?php
                                                                 }
                                                             ?>
@@ -441,7 +442,7 @@
                                                                    class="detail-wrapper__title"><?= Model::summary($newsInfo['title'], 90); ?></a>
                                                                 <div class="detail-wrapper__time"
                                                                      style="text-align: left">
-                                                    <span class="detail-wrapper__time--detail"><?= $newsInfo['date_created']; ?></span>
+                                                                    <span class="detail-wrapper__time--detail"><?= $newsInfo['date_created']; ?></span>
                                                                     <i class="icon-clock-icon"
                                                                        style="margin-top: 5px;margin-right: 5px"></i>
                                                                 </div>
@@ -504,7 +505,7 @@
             <script src="public/js/Track-player.js"></script>
             <script src="public/js/wow.min.js"></script>
             <script src="public/js/pace.js"></script>
-            
+
             <script type="text/javascript">
                 $("#btn-send-comment").on('click', function () {
                     var message = document.getElementById("InputComments").value;
@@ -534,7 +535,7 @@
                     }
                 });
             </script>
-            
+
 
             <script type="text/javascript" src="public/DigiWeb_files/scripts.js"></script>
 

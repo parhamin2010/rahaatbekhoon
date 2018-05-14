@@ -9,7 +9,6 @@
         
         function index($id = '')
         {
-
             if ($id != '' && is_numeric($id)) {
                 $id_isset = $this->model->getIssetNews($id);
                 if (sizeof($id_isset) > 0) {
@@ -21,14 +20,15 @@
                     $this->model->calViewer($id,$_SERVER['REMOTE_ADDR']);
                     $infoUser = $this->model->getinfoUser($UserID);
                     $getNews = $this->model->getNews($id);
-                    $RateStatus = $this->model->getRating($UserID, "track-" . $id);
+                    $getNewsFullText = $this->model->getNewsFullText($id);
+                    $RateStatus = $this->model->getRating($UserID, "news-" . $id);
                     $comment = $this->model->getComment($id);
-                    $iconfavCheck = $this->model->iconfavCheck($UserID, "track-" . $id);
+                    $iconfavCheck = $this->model->iconfavCheck($UserID, "news-" . $id);
                     $sameNews = $this->model->sameNews($id);
                     $getCategory = $this->model->getCategory();
                     $getsuggestNews = $this->model->getsuggestNews($id);
 
-                    $data = array('infoUser'     => $infoUser, 'getNews' => $getNews, 'RateStatus' => $RateStatus,
+                    $data = array('infoUser'     => $infoUser, 'getNews' => $getNews, 'getNewsFullText' => $getNewsFullText, 'RateStatus' => $RateStatus,
                                   'iconfavCheck' => $iconfavCheck, 'comment' => $comment, 'sameNews' => $sameNews,
                                   'getCategory'  => $getCategory, 'getsuggestNews' => $getsuggestNews, 'idNews' => $id);
 

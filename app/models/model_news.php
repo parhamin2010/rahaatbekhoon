@@ -86,6 +86,15 @@
             return $result;
         }
         
+        function getNewsFullText($id)
+        {
+            $sql = "SELECT link FROM tbl_news WHERE status=1 AND n_id=?";
+            $res = $this->doSelect($sql, array($id));
+            
+            $result=@file_get_contents(URL."public/library/fulltextRss/makefulltextfeed.php?url=".@$res[0]['link']."&format=json");
+            return $result;
+        }
+        
         function imageInfo($imgID)
         {
             $sql = "SELECT * FROM tbl_images WHERE i_id=?";
